@@ -1,0 +1,23 @@
+/* ==UserStyle==
+@name         ✦ [Wikiwand] Clean
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Removes ads and unnecessary elements from Wikiwand
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/wikiwand/clean.user.css
+==/UserStyle== */
+
+@-moz-document domain("wikiwand.com") {
+    footer,
+    div:has(> header > [class^="_title_"]), /* Subscription ad */
+    .adn-footer,
+    .ad-between-sections,
+    .ad-mid-section,
+    div[class^="_wrapper_"]:has(button), /* Subscription ad */
+    div[class^="_ai_"] /* AI in sidebar */ {
+        display: none !important;
+    }
+}
