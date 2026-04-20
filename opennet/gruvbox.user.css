@@ -119,7 +119,7 @@
     /* Logo replacement */
     img[src*="opennet2"],
     img[src*="opennet_new"] {
-        content: url("https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/opennet/assets/logo.webp") !important;
+        content: url("https://cdn.jsdelivr.net/gh/koresent/userstyles@main/opennet/assets/logo.webp") !important;
         display: block !important;
         max-width: 249px !important;
         height: auto !important;
