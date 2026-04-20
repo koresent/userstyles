@@ -1,60 +1,30 @@
 /* ==UserStyle==
-@name        ✦ [OpenNET] Gruvbox
-@namespace   github.com/koresent/userstyles
-@version     1.0.1
-@description Gruvbox theme for OpenNET.ru
-@author      Koresent
-@license     GPL-3.0
-@homepageURL https://github.com/koresent/userstyles
-@supportURL  https://github.com/koresent/userstyles/issues
-@updateURL   https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/opennet/gruvbox.user.css
-
-@advanced dropdown theme "Theme" {
-    dark "Dark Medium*" <<<EOT
-    --bg-main: #282828;
-    --bg-card: #3c3836;
-    --bg-card-alt: #1d2021;
-    --bg-header: #504945;
-    --bg-code: #1d2021;
-    --text-main: #ebdbb2;
-    --text-bright: #fbf1c7;
-    --text-muted: #a89984;
-    --accent: #b8bb26;
-    --accent-hover: #fabd2f;
-    --border: #504945;
-    EOT;
-    dark-hard "Dark Hard" <<<EOT
-    --bg-main: #1d2021;
-    --bg-card: #282828;
-    --bg-card-alt: #141617;
-    --bg-header: #3c3836;
-    --bg-code: #141617;
-    --text-main: #ebdbb2;
-    --text-bright: #fbf1c7;
-    --text-muted: #a89984;
-    --accent: #b8bb26;
-    --accent-hover: #fabd2f;
-    --border: #3c3836;
-    EOT;
-    light "Light" <<<EOT
-    --bg-main: #fbf1c7;
-    --bg-card: #ebdbb2;
-    --bg-card-alt: #f2e5bc;
-    --bg-header: #d5c4a1;
-    --bg-code: #f2e5bc;
-    --text-main: #3c3836;
-    --text-bright: #282828;
-    --text-muted: #7c6f64;
-    --accent: #98971a;
-    --accent-hover: #d79921;
-    --border: #bdae93;
-    EOT;
-}
+@name         ✦ [OpenNET] Gruvbox Dark
+@namespace    github.com/koresent/userstyles
+@version      2.0.0
+@description  Gruvbox Dark theme for OpenNET
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/opennet/gruvbox.user.css
 ==/UserStyle== */
 
 @-moz-document domain("opennet.ru") {
     :root {
-        /*[[theme]]*/
+        /* Dark Medium Theme */
+        --bg-main: #282828;
+        --bg-card: #3c3836;
+        --bg-card-alt: #1d2021;
+        --bg-header: #504945;
+        --bg-code: #1d2021;
+        --text-main: #ebdbb2;
+        --text-bright: #fbf1c7;
+        --text-muted: #a89984;
+        --accent: #b8bb26;
+        --accent-hover: #fabd2f;
+        --border: #504945;
+
         --border-radius: 8px;
     }
 

@@ -1,63 +1,30 @@
 /* ==UserStyle==
-@name        ✦ [Boo] Gruvbox
-@namespace   github.com/koresent/userstyles
-@version     1.0.0
-@description Gruvbox theme for Boo.world
-@author      Koresent
-@license     GPL-3.0
-@homepageURL https://github.com/koresent/userstyles
-@supportURL  https://github.com/koresent/userstyles/issues
-@updateURL   https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/boo/gruvbox.user.css
-
-@advanced dropdown theme "Theme" {
-    dark "Dark Medium*" <<<EOT
-    --bg-main: #282828;
-    --border-main: #504945;
-    --bg-enneagram: #83a598;
-    --bg-potential: #fabd2f;
-    --fcm-text: #282828;
-    --fcm-frame: #ebdbb2;
-    --fcm-accent: #b8bb26;
-    --fcm-error: #fb4934;
-    --rgb-primary: 40 40 40;
-    --rgb-primary-dark: 235 219 178;
-    --rgb-accent: 184 187 38;
-    --rgb-super-love: 211 134 155;
-    EOT;
-    dark-hard "Dark Hard" <<<EOT
-    --bg-main: #1d2021;
-    --border-main: #3c3836;
-    --bg-enneagram: #83a598;
-    --bg-potential: #fabd2f;
-    --fcm-text: #1d2021;
-    --fcm-frame: #fbf1c7;
-    --fcm-accent: #b8bb26;
-    --fcm-error: #fb4934;
-    --rgb-primary: 29 32 33;
-    --rgb-primary-dark: 251 241 199;
-    --rgb-accent: 184 187 38;
-    --rgb-super-love: 211 134 155;
-    EOT;
-    light "Light" <<<EOT
-    --bg-main: #fbf1c7;
-    --border-main: #bdae93;
-    --bg-enneagram: #458588;
-    --bg-potential: #d79921;
-    --fcm-text: #fbf1c7;
-    --fcm-frame: #3c3836;
-    --fcm-accent: #98971a;
-    --fcm-error: #cc241d;
-    --rgb-primary: 251 241 199;
-    --rgb-primary-dark: 40 40 40;
-    --rgb-accent: 152 151 26;
-    --rgb-super-love: 177 98 134;
-    EOT;
-}
+@name         ✦ [Boo] Gruvbox Dark
+@namespace    github.com/koresent/userstyles
+@version      2.0.0
+@description  Gruvbox Dark theme for Boo
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/boo/gruvbox.user.css
 ==/UserStyle== */
 
 @-moz-document domain("boo.world") {
     :root {
-        /*[[theme]]*/
+        /* Dark Medium Theme */
+        --bg-main: #282828;
+        --border-main: #504945;
+        --bg-enneagram: #83a598;
+        --bg-potential: #fabd2f;
+        --fcm-text: #282828;
+        --fcm-frame: #ebdbb2;
+        --fcm-accent: #b8bb26;
+        --fcm-error: #fb4934;
+        --rgb-primary: 40 40 40;
+        --rgb-primary-dark: 235 219 178;
+        --rgb-accent: 184 187 38;
+        --rgb-super-love: 211 134 155;
 
         --fcm-text-color-primary: var(--fcm-text);
         --fcm-frame-color-neutral: var(--fcm-frame);

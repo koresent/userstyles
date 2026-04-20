@@ -1,37 +1,35 @@
 /* ==UserStyle==
-@name        ✦ [Greasy Fork] Gruvbox
-@namespace   github.com/openstyles/stylus
-@version     1.0.0
-@description Gruvbox theme for GreasyFork and SleazyFork
-@author      Koresent
-@license     GPL-3.0
-@homepageURL https://github.com/koresent/userstyles
-@supportURL  https://github.com/koresent/userstyles/issues
-@updateURL   https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/greasyfork/gruvbox.user.css
+@name         ✦ [Greasy Fork] Gruvbox Dark
+@namespace    github.com/openstyles/stylus
+@version      2.0.0
+@description  Gruvbox Dark theme for Greasy Fork and Sleazy Fork
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/greasyfork/gruvbox.user.css
 ==/UserStyle== */
 
 @-moz-document domain("greasyfork.org"), domain("sleazyfork.org") {
     :root {
-        /* Base Colors */
-        --bg-main: #282828;
-        --bg-darker: #1d2021;
-        --bg-container: #32302f;
-        --bg-active: #3c3836;
-        --bg-gray: #504945;
+        /* Dark Medium Theme */
+        --bg0: #282828;
+        --bg0_h: #1d2021;
+        --bg0_s: #32302f;
+        --bg1: #3c3836;
+        --bg2: #504945;
 
-        /* Text Colors */
-        --fg-main: #ebdbb2;
-        --fg-light: #fbf1c7;
-        --fg-dim: #a89984;
-        --fg-gray: #928374;
+        --fg0: #fbf1c7;
+        --fg1: #ebdbb2;
+        --fg4: #a89984;
+        --gray: #928374;
 
-        /* Accents */
-        --accent-green: #b8bb26;
-        --accent-green-dark: #98971a;
-        --accent-purple: #d3869b;
-        --accent-red: #fb4934;
-        --accent-blue: #83a598;
-        --accent-orange: #fe8019;
+        --red: #fb4934;
+        --green: #b8bb26;
+        --green-dark: #98971a;
+        --blue: #83a598;
+        --purple: #d3869b;
+        --orange: #fe8019;
     }
 
     /* Base Reset */
@@ -41,28 +39,28 @@
     }
 
     body {
-        background-color: var(--bg-main);
-        color: var(--fg-main);
+        background-color: var(--bg0);
+        color: var(--fg1);
         font-family: sans-serif;
     }
 
     /* Header & Navigation */
     #main-header,
     #Head {
-        background-color: var(--bg-darker) !important;
+        background-color: var(--bg0_h) !important;
         background-image: none !important;
-        border-bottom: 2px solid var(--accent-green);
-        color: var(--fg-light) !important;
+        border-bottom: 2px solid var(--green);
+        color: var(--fg0) !important;
     }
 
     #main-header a {
-        color: var(--fg-light) !important;
+        color: var(--fg0) !important;
     }
 
     #main-header .subtitle,
     .subtitle {
         text-shadow: none;
-        color: var(--fg-dim);
+        color: var(--fg4);
     }
 
     /* Logo Filter */
@@ -72,10 +70,10 @@
 
     /* Header User Info Select */
     #nav-user-info select {
-        border: 1px solid var(--bg-active) !important;
-        background: var(--bg-main) !important;
+        border: 1px solid var(--bg1) !important;
+        background: var(--bg0) !important;
         border-radius: 5px !important;
-        color: var(--fg-main) !important;
+        color: var(--fg1) !important;
     }
 
     #nav-user-info select:focus {
@@ -85,10 +83,10 @@
     /* Search Inputs */
     .home-search input[type="search"],
     .sidebar-search input[type="search"] {
-        background: var(--bg-darker) !important;
+        background: var(--bg0_h) !important;
         border: none !important;
         border-radius: 5px !important;
-        color: var(--fg-main) !important;
+        color: var(--fg1) !important;
     }
 
     .home-search input[type="search"]:focus,
@@ -110,82 +108,82 @@
     form.external-login-form,
     form.new_user,
     #additional-info > div {
-        background: var(--bg-container) !important;
-        border: 1px solid var(--bg-gray) !important;
-        color: var(--fg-main);
+        background: var(--bg0_s) !important;
+        border: 1px solid var(--bg2) !important;
+        color: var(--fg1);
     }
 
     /* Project Description */
     .user-content {
-        background: var(--bg-active) !important;
-        border-left: 4px solid var(--accent-green-dark) !important;
+        background: var(--bg1) !important;
+        border-left: 4px solid var(--green-dark) !important;
         padding: 1em !important;
         overflow-x: auto;
-        color: var(--fg-main);
+        color: var(--fg1);
     }
 
     /* Tabs & Active States */
     .tabs .current,
     #script-links .current {
-        background: var(--bg-active) !important;
-        border-top: 7px solid var(--accent-green-dark) !important;
-        color: var(--fg-light) !important;
+        background: var(--bg1) !important;
+        border-top: 7px solid var(--green-dark) !important;
+        color: var(--fg0) !important;
         font-weight: bold;
     }
 
     .tabs li {
-        background: var(--bg-main);
-        border: 1px solid var(--bg-gray);
+        background: var(--bg0);
+        border: 1px solid var(--bg2);
         border-bottom: none;
     }
 
     /* List Options (Sidebar) */
     .list-option-group .list-current {
-        background: var(--bg-active) !important;
-        border-left: 7px solid var(--accent-green-dark) !important;
+        background: var(--bg1) !important;
+        border-left: 7px solid var(--green-dark) !important;
         margin: 0 0 0 -4px;
         padding: 0.4em 1em 0.4em calc(1em - 3px);
-        color: var(--fg-light) !important;
+        color: var(--fg0) !important;
     }
 
     /* Links & General Elements */
     a,
     body:not(.Settings) a:not(.Button):not(.ChangePicture) {
-        color: var(--accent-green);
+        color: var(--green);
         text-decoration: none;
     }
 
     a:hover {
-        color: var(--fg-light);
+        color: var(--fg0);
         text-decoration: underline;
     }
 
     a:visited {
-        color: var(--accent-purple);
+        color: var(--purple);
     }
 
     /* Pagination */
     #Panel .FilterMenu .Active a,
     #Panel .PanelCategories .Active a,
     .pagination .current {
-        background: var(--accent-green) !important;
-        color: var(--bg-main) !important;
+        background: var(--green) !important;
+        color: var(--bg0) !important;
         font-weight: bold;
     }
 
     .pagination > a:hover,
     .list-option-group a:hover,
     .tabs li:hover {
-        background: var(--bg-gray) !important;
+        background: var(--bg2) !important;
     }
 
     /* Buttons */
     input[type="submit"],
     .Button {
-        background: var(--accent-green) !important;
+        background: var(--green) !important;
         border: none !important;
         border-radius: 5px !important;
-        color: var(--bg-main) !important;
+        color: var(--bg0) !important;
         font-weight: bold;
         cursor: pointer;
     }
@@ -196,7 +194,7 @@
 
     input[type="submit"]:hover,
     .Button:hover {
-        background: var(--fg-light) !important;
+        background: var(--fg0) !important;
     }
 
     input[type="submit"]:focus,
@@ -213,44 +211,44 @@
     pre,
     code,
     #code-container {
-        background: var(--bg-darker) !important;
-        color: var(--fg-main) !important;
-        border: 1px solid var(--bg-gray) !important;
+        background: var(--bg0_h) !important;
+        color: var(--fg1) !important;
+        border: 1px solid var(--bg2) !important;
     }
 
     .CodeRay {
-        background: var(--bg-darker) !important;
-        color: var(--fg-main) !important;
+        background: var(--bg0_h) !important;
+        color: var(--fg1) !important;
     }
 
     .CodeRay .line-numbers {
-        background-color: var(--bg-main) !important;
-        color: var(--fg-gray) !important;
-        border-right: 1px solid var(--bg-gray) !important;
+        background-color: var(--bg0) !important;
+        color: var(--gray) !important;
+        border-right: 1px solid var(--bg2) !important;
     }
 
     /* Syntax Tokens */
     .CodeRay .comment {
-        color: var(--fg-gray) !important;
+        color: var(--gray) !important;
         font-style: italic;
     }
     .CodeRay .keyword {
-        color: var(--accent-red) !important;
+        color: var(--red) !important;
         font-weight: bold;
     }
     .CodeRay .string {
-        color: var(--accent-green) !important;
+        color: var(--green) !important;
     }
     .CodeRay .function {
-        color: var(--accent-blue) !important;
+        color: var(--blue) !important;
     }
     .CodeRay .integer,
     .CodeRay .predefined-constant {
-        color: var(--accent-purple) !important;
+        color: var(--purple) !important;
     }
     .CodeRay .key,
     .CodeRay .char {
-        color: var(--accent-orange) !important;
+        color: var(--orange) !important;
     }
 
     /* Remove delimeter */
