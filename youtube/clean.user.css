@@ -1,0 +1,188 @@
+/* ==UserStyle==
+@name         ✦ [YouTube] Clean
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Interface cleanup: removes distractions, shorts, and redundant UI elements.
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/youtube/clean.user.css
+==/UserStyle== */
+
+@-moz-document domain("youtube.com") {
+    /* --- SECTION: SIDEBAR (GUIDE) CLEANUP --- */
+    ytd-guide-section-renderer.style-scope:nth-child(1) > div:nth-child(2) > ytd-guide-entry-renderer:nth-child(2), /* Sidebar: Shorts */
+    ytd-guide-section-renderer.style-scope:nth-child(4), /* Sidebar: YouTube Kids, Music, etc. */
+    ytd-guide-section-renderer.style-scope:nth-child(3), /* Sidebar: News, Gaming, Music */
+    ytd-guide-section-renderer.style-scope:nth-child(5) > div:nth-child(2), /* Sidebar: Settings, Report, Help */
+    ytd-guide-entry-renderer.ytd-guide-collapsible-section-entry-renderer:nth-child(3), /* Sidebar: Your Videos */
+    ytd-guide-downloads-entry-renderer.style-scope, /* Sidebar: Downloads */
+    ytd-guide-collapsible-section-entry-renderer.style-scope:nth-child(4) > div:nth-child(1), /* Sidebar: User Profile */
+    ytd-guide-section-renderer.style-scope:nth-child(1) > div:nth-child(2) > ytd-guide-entry-renderer:nth-child(1), /* Sidebar: Home button */
+    ytd-guide-section-renderer.style-scope:nth-child(5), /* Sidebar: Redundant separator */
+    ytd-guide-section-renderer:has(a[href="/reporthistory"]), /* Sidebar: Report history section */
+    #guide-renderer > div:nth-child(2), /* Sidebar: Footer links */
+    ytd-mini-guide-entry-renderer.style-scope:nth-child(2), /* Mini-guide: Shorts */
+    ytd-mini-guide-entry-renderer.style-scope:nth-child(5), /* Mini-guide: Downloads */
+    ytd-mini-guide-entry-renderer.style-scope:nth-child(4), /* Mini-guide: "You" */
+    ytd-mini-guide-entry-renderer.style-scope:nth-child(1), /* Mini-guide: Home */
+    #guide-button.ytd-masthead, /* Sidebar: Toggle button (hamburger) */
+
+    /* --- SECTION: TOPBAR (MASTHEAD) CLEANUP --- */
+    #end > div:nth-child(2) > ytd-button-renderer:nth-child(1), /* Topbar: Create/Upload button */
+    ytd-notification-topbar-button-renderer.style-scope, /* Topbar: Notifications bell */
+    .ytSearchboxComponentYtdTextInputAssistantWrapper, /* Topbar: Virtual keyboard */
+    #voice-search-button, /* Topbar: Voice search */
+    .ytSearchboxComponentSearchButton, /* Topbar: Search button icon */
+    #country-code.ytd-topbar-logo-renderer, /* Topbar: Country code next to logo */
+
+    /* --- SECTION: VIDEO PAGE & PLAYER UI --- */
+    ytd-menu-renderer.ytd-watch-metadata > div:nth-child(2), /* Video: Save & Clip buttons */
+    ytd-menu-renderer.ytd-watch-metadata > yt-button-shape:nth-child(4), /* Video: Extra options menu (...) */
+    .cbTitleButtonContainer, /* Third-party: DeArrow pencil icon */
+    .cbShowOriginal img.cbShowOriginalImage, .cbTitleButton svg, /* Third-party: DeArrow card icons */
+    #description-inline-expander > div:nth-child(4), /* Video: Redundant description clutter */
+    .yt-core-attributed-string--inline-block-mod, /* Video: Verified badge for author */
+    #show-hide-button, /* Video: Chat replay toggle */
+    .ytp-fullscreen-button, /* Player: Fullscreen button (use double-click) */
+    #sponsor-button, /* Video: "Join" (Sponsorship) button */
+    .annotation, /* Player: On-screen annotations */
+    .ytp-autonav-toggle, /* Player: Autoplay toggle */
+
+    /* --- SECTION: FEED & SEARCH RESULTS --- */
+    ytd-rich-section-renderer.style-scope:nth-child(1), /* Feed: "New for you" section */
+    ytd-rich-shelf-renderer, /* Feed: Shorts shelf */
+    yt-related-chip-cloud-renderer.style-scope, /* Sidebar: Recommendation filters */
+    .yt-content-metadata-view-model__metadata-row--metadata-row-wrap, /* Feed: "New" badge on thumbnails */
+    div#action-menu.style-scope.ytd-comment-view-model, /* Comments: Report button */
+    .ytGridShelfViewModelHostHasBottomButton, /* Search: Shorts in results */
+    #about-these-results, /* Search: "About these results" info */
+    div.ytFlexibleActionsViewModelAction:nth-child(2), /* Channel: "Join" button */
+    #contents ytd-rich-section-renderer, /* Feed: General Shorts containers */
+    ytd-merch-shelf-renderer, /* Video: Merchandise shelf */
+    .yt-lockup-metadata-view-model__menu-button /* Cards: Context menu button */ {
+        display: none !important;
+    }
+
+    /* --- SECTION: STYLING & POLISHING --- */
+
+    /* Remove HD quality badge indicator */
+    .ytp-settings-button.ytp-hd-quality-badge::after {
+        background-image: none !important;
+        background-color: transparent !important;
+    }
+
+    /* Clean up sidebar borders and separators */
+    #sections.ytd-guide-renderer > .ytd-guide-renderer:not(:last-child) {
+        border-bottom: none !important;
+    }
+
+    ytd-guide-collapsible-section-entry-renderer.ytd-guide-section-renderer:not(
+            :first-child
+        ) {
+        border-top: none !important;
+    }
+
+    /* Hide search clear button until hover/focus for cleaner look */
+    .ytSearchboxComponentDesktop .ytSearchboxComponentClearButtonWrapper {
+        opacity: 0;
+        transition: opacity 0.2s ease;
+    }
+
+    .ytSearchboxComponentDesktop:hover .ytSearchboxComponentClearButtonWrapper {
+        opacity: 1;
+    }
+
+    /* Dim secondary recommendations (sidebar) to reduce distraction */
+    #secondary-inner {
+        opacity: 0.1;
+        transition: opacity 0.5s ease;
+    }
+
+    #secondary-inner:hover {
+        opacity: 1;
+    }
+
+    /* Modernized Search Box appearance */
+    .ytSearchboxComponentInputBox {
+        border-right: 1px solid hsl(0, 0%, 18.82%) !important;
+        border-radius: 40px !important;
+    }
+
+    /* Fix layout issues after removing elements */
+    #chat {
+        margin-bottom: 0px !important;
+    }
+
+    /* --- SECTION: GRID LAYOUT OPTIMIZATION --- */
+    /* Revert to higher density grid for large screens */
+    ytd-rich-item-renderer[rendered-from-rich-grid] {
+        @media only screen and (min-width: 1400px) {
+            --ytd-rich-grid-items-per-row: 4 !important;
+        }
+        @media only screen and (min-width: 1700px) {
+            --ytd-rich-grid-items-per-row: 5 !important;
+        }
+        @media only screen and (min-width: 2180px) {
+            --ytd-rich-grid-items-per-row: 6 !important;
+        }
+    }
+
+    ytd-rich-item-renderer[is-in-first-column=""] {
+        margin-left: calc(var(--ytd-rich-grid-item-margin) / 2) !important;
+    }
+
+    #contents {
+        padding-left: calc(
+            var(--ytd-rich-grid-item-margin) / 2 +
+                var(--ytd-rich-grid-gutter-margin)
+        ) !important;
+    }
+
+    /* --- SECTION: CINEMATIC / THEATER MODE --- */
+    /* Auto Theater Mode: Full viewport height and hidden search bar */
+    [theater=""] #full-bleed-container {
+        height: 100vh !important;
+        max-height: 100vh !important;
+        top: 0 !important;
+    }
+
+    #masthead-container,
+    #columns #secondary {
+        transition: all 0.3s ease-in-out 0.5s !important;
+    }
+
+    /* Hide Topbar in Theater/Fullscreen, reveal on hover */
+    body:has([fullscreen=""], [theater=""]):not(
+            :has(ytd-watch-flexy[hidden=""])
+        )
+        #masthead-container:not(:has(.ytSearchboxComponentInputBoxHasFocus)) {
+        top: -40px !important;
+        opacity: 0 !important;
+        transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95) !important;
+    }
+
+    body:has([fullscreen=""], [theater=""]):not(
+            :has(ytd-watch-flexy[hidden=""])
+        )
+        #masthead-container:hover {
+        opacity: 1 !important;
+        top: 0 !important;
+    }
+
+    ytd-app:has([fullscreen=""], [theater=""]):not(
+            :has(ytd-watch-flexy[hidden=""])
+        ) {
+        --ytd-toolbar-height: 0px !important;
+
+        #page-manager {
+            margin: 0 !important;
+        }
+    }
+
+    /* Subtle background for the masthead */
+    #container.ytd-masthead {
+        background-color: #1d20212e !important;
+    }
+}
