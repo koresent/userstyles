@@ -1,0 +1,260 @@
+/* ==UserStyle==
+@name        ✦ [Greasy Fork] Gruvbox
+@namespace   github.com/openstyles/stylus
+@version     1.0.0
+@description Gruvbox theme for GreasyFork and SleazyFork
+@author      Koresent
+@license     GPL-3.0
+@homepageURL https://github.com/koresent/userstyles
+@supportURL  https://github.com/koresent/userstyles/issues
+@updateURL   https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/greasyfork/gruvbox.user.css
+==/UserStyle== */
+
+@-moz-document domain("greasyfork.org"), domain("sleazyfork.org") {
+    :root {
+        /* Base Colors */
+        --bg-main: #282828;
+        --bg-darker: #1d2021;
+        --bg-container: #32302f;
+        --bg-active: #3c3836;
+        --bg-gray: #504945;
+
+        /* Text Colors */
+        --fg-main: #ebdbb2;
+        --fg-light: #fbf1c7;
+        --fg-dim: #a89984;
+        --fg-gray: #928374;
+
+        /* Accents */
+        --accent-green: #b8bb26;
+        --accent-green-dark: #98971a;
+        --accent-purple: #d3869b;
+        --accent-red: #fb4934;
+        --accent-blue: #83a598;
+        --accent-orange: #fe8019;
+    }
+
+    /* Base Reset */
+    * {
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+
+    body {
+        background-color: var(--bg-main);
+        color: var(--fg-main);
+        font-family: sans-serif;
+    }
+
+    /* Header & Navigation */
+    #main-header,
+    #Head {
+        background-color: var(--bg-darker) !important;
+        background-image: none !important;
+        border-bottom: 2px solid var(--accent-green);
+        color: var(--fg-light) !important;
+    }
+
+    #main-header a {
+        color: var(--fg-light) !important;
+    }
+
+    #main-header .subtitle,
+    .subtitle {
+        text-shadow: none;
+        color: var(--fg-dim);
+    }
+
+    /* Logo Filter */
+    #site-name img {
+        filter: sepia(100%);
+    }
+
+    /* Header User Info Select */
+    #nav-user-info select {
+        border: 1px solid var(--bg-active) !important;
+        background: var(--bg-main) !important;
+        border-radius: 5px !important;
+        color: var(--fg-main) !important;
+    }
+
+    #nav-user-info select:focus {
+        outline: none !important;
+    }
+
+    /* Search Inputs */
+    .home-search input[type="search"],
+    .sidebar-search input[type="search"] {
+        background: var(--bg-darker) !important;
+        border: none !important;
+        border-radius: 5px !important;
+        color: var(--fg-main) !important;
+    }
+
+    .home-search input[type="search"]:focus,
+    .sidebar-search input[type="search"]:focus {
+        outline: none !important;
+    }
+
+    /* Content Containers */
+    .script-list,
+    .user-list,
+    .text-content,
+    #script-info,
+    .list-option-group ul,
+    #Panel .FilterMenu,
+    #Panel .PanelCategories,
+    #Panel .MeBox,
+    #Content,
+    .pagination > *,
+    form.external-login-form,
+    form.new_user,
+    #additional-info > div {
+        background: var(--bg-container) !important;
+        border: 1px solid var(--bg-gray) !important;
+        color: var(--fg-main);
+    }
+
+    /* Project Description */
+    .user-content {
+        background: var(--bg-active) !important;
+        border-left: 4px solid var(--accent-green-dark) !important;
+        padding: 1em !important;
+        overflow-x: auto;
+        color: var(--fg-main);
+    }
+
+    /* Tabs & Active States */
+    .tabs .current,
+    #script-links .current {
+        background: var(--bg-active) !important;
+        border-top: 7px solid var(--accent-green-dark) !important;
+        color: var(--fg-light) !important;
+        font-weight: bold;
+    }
+
+    .tabs li {
+        background: var(--bg-main);
+        border: 1px solid var(--bg-gray);
+        border-bottom: none;
+    }
+
+    /* List Options (Sidebar) */
+    .list-option-group .list-current {
+        background: var(--bg-active) !important;
+        border-left: 7px solid var(--accent-green-dark) !important;
+        margin: 0 0 0 -4px;
+        padding: 0.4em 1em 0.4em calc(1em - 3px);
+        color: var(--fg-light) !important;
+    }
+
+    /* Links & General Elements */
+    a,
+    body:not(.Settings) a:not(.Button):not(.ChangePicture) {
+        color: var(--accent-green);
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: var(--fg-light);
+        text-decoration: underline;
+    }
+
+    a:visited {
+        color: var(--accent-purple);
+    }
+
+    /* Pagination */
+    #Panel .FilterMenu .Active a,
+    #Panel .PanelCategories .Active a,
+    .pagination .current {
+        background: var(--accent-green) !important;
+        color: var(--bg-main) !important;
+        font-weight: bold;
+    }
+
+    .pagination > a:hover,
+    .list-option-group a:hover,
+    .tabs li:hover {
+        background: var(--bg-gray) !important;
+    }
+
+    /* Buttons */
+    input[type="submit"],
+    .Button {
+        background: var(--accent-green) !important;
+        border: none !important;
+        border-radius: 5px !important;
+        color: var(--bg-main) !important;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .Button {
+        padding: 0.5em 1em;
+    }
+
+    input[type="submit"]:hover,
+    .Button:hover {
+        background: var(--fg-light) !important;
+    }
+
+    input[type="submit"]:focus,
+    .Button:focus {
+        outline: none !important;
+    }
+
+    /* Charts */
+    canvas {
+        filter: invert(90%) hue-rotate(180deg) brightness(1.1);
+    }
+
+    /* Code Highlighting */
+    pre,
+    code,
+    #code-container {
+        background: var(--bg-darker) !important;
+        color: var(--fg-main) !important;
+        border: 1px solid var(--bg-gray) !important;
+    }
+
+    .CodeRay {
+        background: var(--bg-darker) !important;
+        color: var(--fg-main) !important;
+    }
+
+    .CodeRay .line-numbers {
+        background-color: var(--bg-main) !important;
+        color: var(--fg-gray) !important;
+        border-right: 1px solid var(--bg-gray) !important;
+    }
+
+    /* Syntax Tokens */
+    .CodeRay .comment {
+        color: var(--fg-gray) !important;
+        font-style: italic;
+    }
+    .CodeRay .keyword {
+        color: var(--accent-red) !important;
+        font-weight: bold;
+    }
+    .CodeRay .string {
+        color: var(--accent-green) !important;
+    }
+    .CodeRay .function {
+        color: var(--accent-blue) !important;
+    }
+    .CodeRay .integer,
+    .CodeRay .predefined-constant {
+        color: var(--accent-purple) !important;
+    }
+    .CodeRay .key,
+    .CodeRay .char {
+        color: var(--accent-orange) !important;
+    }
+
+    /* Remove delimeter */
+    #home-script-nav {
+        border-bottom: none;
+    }
+}
