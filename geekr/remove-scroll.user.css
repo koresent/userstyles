@@ -1,0 +1,17 @@
+/* ==UserStyle==
+@name           ✦ [Geekr] Remove Scroll Indicator
+@namespace      github.com/koresent/userstyles
+@version        1.0.0
+@description    Removes the visual scroll indicator from toolbar
+@author         Koresent
+@license        GPL-3.0
+@homepageURL    https://github.com/koresent/userstyles
+@supportURL     https://github.com/koresent/userstyles/issues
+@updateURL      https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/geekr/remove-scroll.user.css
+==/UserStyle== */
+
+@-moz-document domain("geekr.vercel.app") {
+    .MuiToolbar-root.MuiToolbar-gutters::before {
+        background: transparent !important;
+    }
+}
