@@ -1,0 +1,22 @@
+/* ==UserStyle==
+@name         ✦ [Proton Mail] Clean
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Removes clutter and unnecessary elements from Proton Mail
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/proton/clean.user.css
+==/UserStyle== */
+
+@-moz-document domain("mail.proton.me") {
+    /* Tips */
+    .tip-box,
+    /* "Upgrade" button in the top right corner */
+    .topnav-list > div:nth-child(1),
+    /* App switcher */
+    div.md\:block:nth-child(2) {
+        display: none !important;
+    }
+}
