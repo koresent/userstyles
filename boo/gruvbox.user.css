@@ -1,0 +1,127 @@
+/* ==UserStyle==
+@name        ✦ [Boo] Gruvbox
+@namespace   github.com/koresent/userstyles
+@version     1.0.0
+@description Gruvbox theme for Boo.world
+@author      Koresent
+@license     GPL-3.0
+@homepageURL https://github.com/koresent/userstyles
+@supportURL  https://github.com/koresent/userstyles/issues
+@updateURL   https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/boo/gruvbox.user.css
+
+@advanced dropdown theme "Theme" {
+    dark "Dark Medium*" <<<EOT
+    --bg-main: #282828;
+    --border-main: #504945;
+    --bg-enneagram: #83a598;
+    --bg-potential: #fabd2f;
+    --fcm-text: #282828;
+    --fcm-frame: #ebdbb2;
+    --fcm-accent: #b8bb26;
+    --fcm-error: #fb4934;
+    --rgb-primary: 40 40 40;
+    --rgb-primary-dark: 235 219 178;
+    --rgb-accent: 184 187 38;
+    --rgb-super-love: 211 134 155;
+    EOT;
+    dark-hard "Dark Hard" <<<EOT
+    --bg-main: #1d2021;
+    --border-main: #3c3836;
+    --bg-enneagram: #83a598;
+    --bg-potential: #fabd2f;
+    --fcm-text: #1d2021;
+    --fcm-frame: #fbf1c7;
+    --fcm-accent: #b8bb26;
+    --fcm-error: #fb4934;
+    --rgb-primary: 29 32 33;
+    --rgb-primary-dark: 251 241 199;
+    --rgb-accent: 184 187 38;
+    --rgb-super-love: 211 134 155;
+    EOT;
+    light "Light" <<<EOT
+    --bg-main: #fbf1c7;
+    --border-main: #bdae93;
+    --bg-enneagram: #458588;
+    --bg-potential: #d79921;
+    --fcm-text: #fbf1c7;
+    --fcm-frame: #3c3836;
+    --fcm-accent: #98971a;
+    --fcm-error: #cc241d;
+    --rgb-primary: 251 241 199;
+    --rgb-primary-dark: 40 40 40;
+    --rgb-accent: 152 151 26;
+    --rgb-super-love: 177 98 134;
+    EOT;
+}
+==/UserStyle== */
+
+@-moz-document domain("boo.world") {
+    :root {
+        /*[[theme]]*/
+
+        --fcm-text-color-primary: var(--fcm-text);
+        --fcm-frame-color-neutral: var(--fcm-frame);
+        --fcm-frame-color-success: var(--fcm-accent);
+        --fcm-frame-color-warning: var(--fcm-error);
+        --fcm-frame-color-invalid-manual: var(--fcm-error);
+        --fcm-button-color: var(--fcm-accent);
+        --fcm-button-color-hover: var(--fcm-accent);
+        --fcm-button-color-press: var(--fcm-accent);
+        --fcm-primary-button-text-color: var(--fcm-text);
+
+        --primary-color: var(--rgb-primary);
+        --primary-color-dark: var(--rgb-primary-dark);
+        --accent-color: var(--rgb-accent);
+        --super-love-color: var(--rgb-super-love);
+    }
+
+    body,
+    .bg-primary {
+        background: var(--bg-main) !important;
+    }
+
+    .shadow,
+    .shadow-2xs,
+    .shadow-sm,
+    .md\:shadow {
+        box-shadow: none !important;
+        border: 1px solid var(--border-main) !important;
+    }
+
+    .CircularProgressbar-path {
+        stroke: none !important;
+    }
+
+    div.absolute:nth-child(3) {
+        display: none !important;
+    }
+
+    .bg-enneagram {
+        background-color: var(--bg-enneagram) !important;
+    }
+
+    .bg-potential {
+        background-color: var(--bg-potential) !important;
+    }
+
+    .bg-horoscope {
+        background: #0e0017 !important;
+        background-image:
+            radial-gradient(2px 2px at 20% 30%, white, transparent),
+            radial-gradient(1px 1px at 40% 60%, white, transparent),
+            radial-gradient(2px 2px at 70% 80%, white, transparent),
+            radial-gradient(1px 1px at 85% 20%, white, transparent),
+            radial-gradient(1.5px 1.5px at 10% 70%, #cbb2ff, transparent),
+            radial-gradient(2px 2px at 90% 50%, #e0d1ff, transparent),
+            radial-gradient(1px 1px at 60% 10%, #fff, transparent),
+            radial-gradient(1.2px 1.2px at 30% 85%, #ddd, transparent) !important;
+    }
+
+    input,
+    textarea {
+        border-radius: 10px !important;
+        padding: 5px !important;
+        background-color: var(--bg-main);
+        border: 1px solid var(--border-main);
+    }
+}
