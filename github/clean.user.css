@@ -1,0 +1,20 @@
+/* ==UserStyle==
+@name         ✦ [GitHub] Clean
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Remove unnecessary elements and Copilot clutter from GitHub
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/github/clean.user.css
+==/UserStyle== */
+
+@-moz-document domain("github.com") {
+    .footer,
+    div:has(> div[class*="CopilotItems-module__Wrapper"]), /* Copilot in top navigation menu */
+    div[class*="DashboardListView-module__hoverOnly"]:has(.octicon-copilot), /* Copilot icon on dashboard items hover */
+    .copilotPreview__container /* Copilot chat on homepage */ {
+        display: none;
+    }
+}
