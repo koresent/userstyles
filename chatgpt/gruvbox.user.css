@@ -1,0 +1,245 @@
+/* ==UserStyle==
+@name        ✦ [ChatGPT] Gruvbox
+@namespace   github.com/koresent/userstyles
+@version     1.0.0
+@description Gruvbox theme for ChatGPT.com
+@author      Koresent
+@license     GPL-3.0
+@homepageURL https://github.com/koresent/userstyles
+@supportURL  https://github.com/koresent/userstyles/issues
+@updateURL   https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/chatgpt/gruvbox.user.css
+
+@advanced dropdown theme "Theme" {
+    dark "Dark Medium*" <<<EOT
+    --bg0:      #282828;
+    --bg0_h:    #1d2021;
+    --bg1:      #3c3836;
+    --bg2:      #504945;
+    --fg0:      #fbf1c7;
+    --fg1:      #ebdbb2;
+    --fg4:      #a89984;
+    --red:      #fb4934;
+    --green:    #b8bb26;
+    --yellow:   #fabd2f;
+    --blue:     #83a598;
+    --purple:   #d3869b;
+    --aqua:     #8ec07c;
+    --orange:   #fe8019;
+    EOT;
+    dark-hard "Dark Hard" <<<EOT
+    --bg0:      #1d2021;
+    --bg0_h:    #141617;
+    --bg1:      #282828;
+    --bg2:      #3c3836;
+    --fg0:      #fbf1c7;
+    --fg1:      #ebdbb2;
+    --fg4:      #a89984;
+    --red:      #fb4934;
+    --green:    #b8bb26;
+    --yellow:   #fabd2f;
+    --blue:     #83a598;
+    --purple:   #d3869b;
+    --aqua:     #8ec07c;
+    --orange:   #fe8019;
+    EOT;
+}
+==/UserStyle== */
+
+@-moz-document domain("chatgpt.com") {
+    :root {
+        /*[[theme]]*/
+    }
+
+    .dark {
+        --bg-primary: var(--bg0);
+        --bg-secondary: var(--bg0);
+
+        --main-surface-background: var(--bg0);
+        --message-surface: var(--bg0_h);
+
+        --text-primary: var(--fg1);
+        --text-secondary: var(--fg4);
+        --text-tertiary: var(--fg4);
+
+        --border-light: var(--bg1);
+        --border-medium: var(--bg1);
+        --border-heavy: var(--bg1);
+        --bg-elevated-secondary: var(--bg0);
+    }
+
+    /* "Thought for..." timer */
+    .dark .light,
+    .light,
+    html {
+        --interactive-label-tertiary-default: var(--green) !important;
+    }
+    .loading-shimmer > span {
+        color: var(--green);
+    }
+
+    /* Vertical divider line */
+    .border-green-600 {
+        border-color: var(--bg1);
+    }
+
+    /* Buttons */
+    .btn-green {
+        background-color: var(--green);
+        color: var(--bg0);
+    }
+
+    .btn-green:hover {
+        background-color: #a3a634;
+        color: var(--bg0);
+    }
+
+    /* Chat background */
+    .bg-token-main-surface-primary {
+        background-color: var(--main-surface-background);
+    }
+
+    /* Textbox background */
+    .dark\:bg-\[\#303030\]:is(.dark *) {
+        background-color: var(--main-surface-background);
+    }
+
+    /* Voice input icon background */
+    .dark\:bg-white:is(.dark *) {
+        background-color: var(--fg1);
+    }
+
+    /* Voice input icon text color */
+    .dark\:text-black:is(.dark *) {
+        color: var(--bg0);
+    }
+
+    /* Buttons like Search, Reason, Deep research, and Create image */
+    .dark\:bg-\[\#2A4A6D\]:is(.dark *) {
+        background-color: var(--blue);
+        color: var(--bg0);
+    }
+
+    /* Markdown inline */
+    code:not([class*="language-"]) {
+        padding: 0.15rem 0.3rem;
+        border-radius: 4.5px;
+        background-color: var(--bg0_h);
+    }
+
+    /* Fix codeblocks being affected by rule above */
+    pre code {
+        background-color: transparent !important;
+    }
+
+    /* Remove border from codeblocks */
+    .border-token-border-medium {
+        border: none !important;
+    }
+
+    /* Codeblock colors */
+    :is(.light .dark, .dark) {
+        .ͼk {
+            background-color: transparent;
+            color: var(--fg1);
+        }
+        .ͼk .cm-content {
+            caret-color: var(--fg1);
+        }
+        .ͼk .cm-cursor,
+        .ͼk .cm-dropCursor {
+            border-left-color: var(--fg1);
+        }
+        .ͼk.cm-focused .cm-selectionBackgroundm .cm-selectionBackground,
+        .ͼk .cm-content ::selection {
+            background-color: var(--bg1);
+        }
+        .ͼk .cm-activeLine {
+            background-color: var(--bg0_h);
+        }
+        .ͼk .cm-gutters {
+            background-color: var(--bg0_h);
+            color: var(--fg4);
+        }
+        .ͼk .cm-activeLineGutter {
+            background-color: var(--bg1);
+        }
+        .ͼl {
+            color: var(--fg4);
+        }
+        .ͼm {
+            color: var(--blue);
+        }
+        .ͼn {
+            color: var(--purple);
+        }
+        .ͼo {
+            color: var(--yellow);
+        }
+        .ͼp {
+            color: var(--red);
+        }
+        .ͼq {
+            color: var(--orange);
+        }
+        .ͼr {
+            color: var(--green);
+        }
+        .ͼs {
+            color: var(--orange);
+        }
+        .ͼt {
+            color: var(--purple);
+        }
+        .ͼu {
+            color: var(--yellow);
+        }
+        .ͼv {
+            color: var(--blue);
+        }
+        .ͼw {
+            color: var(--blue);
+            text-decoration: underline;
+        }
+        .ͼx {
+            color: var(--red);
+            text-decoration: underline;
+        }
+        .ͼy .cm-lineNumbers .cm-gutterElement {
+            padding-left: 8px;
+        }
+        .ͼy .cm-cursor,
+        .ͼy .cm-dropCursor {
+            border-left-width: 2px;
+        }
+        .ͼy .cm-matchingBracket {
+            outline: 1px solid var(--blue);
+            color: inherit;
+        }
+        .ͼy .cm-nonmatchingBracket {
+            outline: 1px solid var(--red);
+            color: inherit;
+        }
+    }
+
+    /* Send button background */
+    #composer-submit-button,
+    .btn-primary:is(.dark *) {
+        background-color: var(--green);
+    }
+
+    /* Send button icon */
+    #composer-submit-button > svg:nth-child(1) {
+        fill: var(--bg1);
+    }
+
+    /* Unread content badge */
+    .bg-blue-500 {
+        background-color: var(--blue);
+    }
+
+    /* User avatar */
+    .dark\:bg-blue-500:is(.dark *) {
+        color: var(--bg1);
+        background-color: var(--blue);
+    }
+}
