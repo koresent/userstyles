@@ -1,0 +1,182 @@
+/* ==UserStyle==
+@name         ✦ [AlternativeTo] Gruvbox
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Gruvbox theme for AlternativeTo.net
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/alternativeto/gruvbox.user.css
+
+@advanced dropdown theme "Theme" {
+    dark "Dark Medium*" <<<EOT
+    --bg0:      #282828;
+    --bg0_h:    #1d2021;
+    --bg1:      #3c3836;
+    --bg2:      #504945;
+    --bg3:      #665c54;
+    --bg4:      #7c6f64;
+    --fg0:      #fbf1c7;
+    --fg1:      #ebdbb2;
+    --fg4:      #a89984;
+    --red:      #fb4934;
+    --green:    #b8bb26;
+    --yellow:   #fabd2f;
+    --blue:     #83a598;
+    --aqua:     #8ec07c;
+    --gray:     #928374;
+    EOT;
+    dark-hard "Dark Hard" <<<EOT
+    --bg0:      #1d2021;
+    --bg0_h:    #141617;
+    --bg1:      #282828;
+    --bg2:      #3c3836;
+    --bg3:      #504945;
+    --bg4:      #665c54;
+    --fg0:      #fbf1c7;
+    --fg1:      #ebdbb2;
+    --fg4:      #a89984;
+    --red:      #fb4934;
+    --green:    #b8bb26;
+    --yellow:   #fabd2f;
+    --blue:     #83a598;
+    --aqua:     #8ec07c;
+    --gray:     #928374;
+    EOT;
+    light "Light" <<<EOT
+    --bg0:      #fbf1c7;
+    --bg0_h:    #f2e5bc;
+    --bg1:      #ebdbb2;
+    --bg2:      #d5c4a1;
+    --bg3:      #bdae93;
+    --bg4:      #a89984;
+    --fg0:      #282828;
+    --fg1:      #3c3836;
+    --fg4:      #7c6f64;
+    --red:      #9d0006;
+    --green:    #79740e;
+    --yellow:   #b57614;
+    --blue:     #076678;
+    --aqua:     #427b58;
+    --gray:     #928374;
+    EOT;
+}
+==/UserStyle== */
+
+@-moz-document domain("alternativeto.net") {
+    :root {
+        /* Injecting theme variables */
+        /*[[theme]]*/
+
+        --mainBg: var(--bg0);
+        --mainFg: var(--fg1);
+
+        /* Brand accents */
+        --mainBrand: var(--green);
+        --popBrand: var(--yellow);
+        --topBrand: var(--blue);
+        --topBrand10: var(--blue);
+        --headingButton: var(--yellow);
+        --ctaMain: var(--green);
+        --ctaLight: var(--bg2);
+        --ctaLightest: var(--bg1);
+
+        /* Links */
+        --linkColor: var(--blue);
+        --linkColorHeader: var(--yellow);
+        --introBoxLink: var(--blue);
+        --introBoxText: var(--fg1);
+        --introBoxMeta: var(--fg4);
+
+        /* Statuses */
+        --danger: var(--red);
+        --dangerDark: var(--red);
+        --lightDanger: var(--bg1);
+        --positiveGreener: var(--green);
+        --positiveGreenerLight: var(--aqua);
+        --positiveGreenerDark: var(--bg0_h);
+        --negativeLight: var(--bg1);
+
+        --meta: var(--gray);
+        --metaLight: var(--fg4);
+        --footer: var(--bg1);
+        --tab: var(--bg1);
+
+        /* BrandLight */
+        --brandLight1: var(--bg1);
+        --brandLight3: var(--bg2);
+        --brandLight4: var(--bg2);
+        --brandLight5: var(--bg3);
+        --brandLight6: var(--bg2);
+        --brandLight7: var(--bg4);
+        --brandLight8: var(--fg4);
+        --brandLight9: var(--bg4);
+        --brandLight10: var(--bg2);
+        --brandLight11: var(--fg1);
+        --brandLight12: var(--fg0);
+
+        /* Gray scale */
+        --gray50: var(--bg0);
+        --gray100: var(--bg1);
+        --gray150: var(--bg2);
+        --gray200: var(--bg3);
+        --gray250: var(--bg4);
+        --gray300: var(--gray);
+        --gray400: var(--fg4);
+        --gray500: var(--bg3);
+        --gray700: var(--bg2);
+        --gray800: var(--fg1);
+        --gray1000: var(--bg0_h);
+
+        --color-gray-400: var(--fg4);
+        --color-gray-300: var(--gray);
+        --color-gray-200: var(--gray);
+        --color-gray-100: var(--gray);
+    }
+
+    body {
+        background-color: var(--bg0) !important;
+        color: var(--fg1) !important;
+    }
+
+    nav.sticky {
+        background-color: var(--bg0) !important;
+        border-bottom: 1px solid var(--bg2);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Handling transparent backgrounds for specific components */
+    .bg-brand-light10,
+    .IconWithBorder_iconWithBorder__6fi_H,
+    .PageIntroWrapper_wrapper__bHA4J,
+    .bg-brand-light7 {
+        background-color: transparent !important;
+    }
+
+    .Breadcrumbs_wrapper__0Hhr7,
+    .bg-cta-lightest {
+        background-color: var(--bg0_h) !important;
+    }
+
+    /* Text accessibility fixes */
+    .text-brand-light8,
+    .text-gray-700 {
+        color: var(--fg4) !important;
+    }
+
+    .text-brand-light11,
+    .text-gray-800 {
+        color: var(--fg1) !important;
+    }
+
+    ::selection {
+        background: var(--blue);
+        color: var(--bg0);
+    }
+
+    /* Cards borders */
+    div[class*="Card_wrapper"] {
+        border-color: var(--bg2) !important;
+    }
+}
