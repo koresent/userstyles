@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        ✦ [OpenNET] Gruvbox
 @namespace   github.com/koresent/userstyles
-@version     1.0.0
+@version     1.0.1
 @description Gruvbox theme for OpenNET.ru
 @author      Koresent
 @license     GPL-3.0
@@ -10,7 +10,7 @@
 @updateURL   https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/opennet/gruvbox.user.css
 
 @advanced dropdown theme "Theme" {
-    dark "Dark*" <<<EOT
+    dark "Dark Medium*" <<<EOT
     --bg-main: #282828;
     --bg-card: #3c3836;
     --bg-card-alt: #1d2021;
