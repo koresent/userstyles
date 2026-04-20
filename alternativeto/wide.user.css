@@ -1,0 +1,41 @@
+/* ==UserStyle==
+@name         ✦ [AlternativeTo] Wide
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Optimization for ultra-wide monitors on AlternativeTo
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/alternativeto/wide.user.css
+==/UserStyle== */
+
+@-moz-document domain("alternativeto.net") {
+    /* Base containers: expand width for high-resolution screens */
+    @media (min-width: 1920px) {
+        .container,
+        .wide-container {
+            max-width: 90% !important;
+            width: 90% !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            padding-left: 2rem !important;
+            padding-right: 2rem !important;
+        }
+
+        /* App items: expand width to utilize available space */
+        .app-item-container article > div.flex.flex-col {
+            max-width: 100% !important;
+        }
+
+        /* Sidebar and Info box: adjustments to prevent layout breaking */
+        .urlName_infoBox__nCY1M {
+            max-width: 30% !important;
+        }
+
+        /* Image collection: thumbnails scaling */
+        .ImageCollection-modern_thumbnailWrapper__Vm5Ju {
+            max-width: 100% !important;
+        }
+    }
+}
