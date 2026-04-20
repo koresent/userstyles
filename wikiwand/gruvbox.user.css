@@ -1,0 +1,69 @@
+/* ==UserStyle==
+@name         ✦ [Wikiwand] Gruvbox Dark
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Gruvbox dark theme for Wikiwand
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/wikiwand/gruvbox.user.css
+==/UserStyle== */
+
+@-moz-document domain("wikiwand.com") {
+    :root {
+        /* Dark Medium Theme */
+        --bg0: #282828;
+        --bg_ash: #32302f;
+        --bg1: #3c3836;
+        --bg2: #504945;
+        --fg0: #fbf1c7;
+        --fg1: #ebdbb2;
+        --fg4: #a89984;
+        --gray: #928374;
+        --red: #fb4934;
+        --green: #b8bb26;
+        --yellow: #fabd2f;
+        --blue: #83a598;
+        --purple: #d3869b;
+        --orange: #fe8019;
+
+        /* Wikiwand Variable Mapping */
+        --color-foreground: var(--fg1) !important;
+        --color-background: var(--bg0) !important;
+        --color-backdrop: rgba(40, 40, 40, 0.85) !important;
+        --color-backdrop-reverse: rgba(251, 241, 199, 0.1) !important;
+
+        --elevation-1: 0 0 10px rgba(0, 0, 0, 0.5) !important;
+        --elevation-2: 2px 3px 16px rgba(0, 0, 0, 0.6) !important;
+
+        --color-mid: var(--gray) !important;
+        --color-light: var(--fg4) !important;
+        --color-very-light: var(--bg1) !important;
+        --color-border: var(--bg2) !important;
+        --color-ash: var(--bg_ash) !important;
+        --color-ai-bubble: var(--bg1) !important;
+
+        --color-error: var(--red) !important;
+        --color-blue: var(--blue) !important;
+        --color-link: var(--green) !important;
+        --color-blue-light: rgba(131, 165, 152, 0.15) !important;
+
+        --color-pink: var(--purple) !important;
+        --color-pink-light: rgba(211, 134, 155, 0.15) !important;
+
+        --color-green: var(--green) !important;
+        --color-green-light: rgba(184, 187, 38, 0.1) !important;
+
+        --color-orange: var(--orange) !important;
+        --color-orange-light: rgba(254, 128, 25, 0.1) !important;
+
+        --grad: linear-gradient(
+            -45deg,
+            var(--yellow),
+            var(--blue),
+            var(--purple),
+            var(--yellow)
+        );
+    }
+}
