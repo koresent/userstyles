@@ -1,0 +1,51 @@
+/* ==UserStyle==
+@name         ✦ [ChatGPT] Clean
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Removes subscription prompts and clutter from ChatGPT
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/chatgpt/clean.user.css
+==/UserStyle== */
+
+@-moz-document domain("chatgpt.com") {
+    /* Subscription prompts, banners, and clutter */
+    div.absolute.start-1\/2.flex.flex-col.items-center.gap-2.ltr\:-translate-x-1\/2.rtl\:translate-x-1\/2,
+    div.text-token-text-secondary.relative,
+    div.inline-flex.border.border-gray-100,
+    .sm\:bg-primary,
+    #stage-sidebar-tiny-bar > div:nth-child(4),
+    aside.bg-token-main-surface-primary.text-token-text-primary,
+    .pointer-events-none.absolute.start-0.flex.flex-col.items-center.gap-2,
+    div.mx-3\.5.mt-1.mb-2 > button.btn {
+        display: none;
+    }
+
+    /* Adjust input field position */
+    #thread-bottom-container {
+        padding-bottom: 10px;
+    }
+
+    /* Move "Scroll to bottom" button to the right */
+    button.z-30 {
+        position: absolute !important;
+        right: 3% !important;
+        transform: none !important;
+    }
+
+    /* Make user icon less prominent */
+    #radix-_R_6dlkl5q4mj5_
+        > div:nth-child(1)
+        > div:nth-child(1)
+        > div:nth-child(1) {
+        background-color: #fff0;
+    }
+
+    /* Hide scrollbars */
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: transparent transparent;
+    }
+}
