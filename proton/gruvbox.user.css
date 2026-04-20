@@ -1,0 +1,166 @@
+/* ==UserStyle==
+@name         ✦ [Proton Mail] Gruvbox Dark
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Gruvbox Dark theme for Proton Mail
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/proton/gruvbox.user.css
+==/UserStyle== */
+
+@-moz-document domain("mail.proton.me") {
+    :root,
+    .ui-standard {
+        /* Dark Medium Theme */
+        --bg0: #282828;
+        --bg0_h: #1d2021;
+        --bg1: #3c3836;
+        --bg2: #504945;
+        --bg3: #665c54;
+        --bg4: #7c6f64;
+        --fg0: #fbf1c7;
+        --fg1: #ebdbb2;
+        --fg4: #a89984;
+        --red: #cc241d;
+        --green: #98971a;
+        --yellow: #fabd2f;
+        --blue: #458588;
+        --purple: #d3869b;
+        --aqua: #689d6a;
+        --orange: #fe8019;
+
+        /* Proton Variables Mapping */
+        --primary-minor-2: var(--bg0_h);
+        --primary-minor-1: var(--bg0);
+        --primary: var(--green);
+        --primary-major-1: #c7cc4b;
+        --primary-major-2: #d6dc70;
+        --primary-major-3: #e5eb95;
+        --primary-contrast: var(--fg0);
+
+        /* Signals */
+        --signal-danger-minor-2: #3c1518;
+        --signal-danger-minor-1: #4b1a1e;
+        --signal-danger: var(--red);
+        --signal-danger-major-1: #d84842;
+        --signal-danger-major-2: #e46c67;
+        --signal-danger-major-3: #f0908c;
+        --signal-danger-contrast: var(--fg0);
+
+        --signal-warning-minor-2: #3f2a1d;
+        --signal-warning-minor-1: #4e3421;
+        --signal-warning: var(--yellow);
+        --signal-warning-major-1: #fbc854;
+        --signal-warning-major-2: #fcd379;
+        --signal-warning-major-3: #fede9e;
+        --signal-warning-contrast: var(--bg0);
+
+        --signal-success-minor-2: #1c2521;
+        --signal-success-minor-1: #253529;
+        --signal-success: var(--aqua);
+        --signal-success-major-1: #82ac83;
+        --signal-success-major-2: #9cbb9c;
+        --signal-success-major-3: #b6cab6;
+        --signal-success-contrast: var(--fg0);
+
+        --signal-info-minor-2: #1e2527;
+        --signal-info-minor-1: #273135;
+        --signal-info: var(--blue);
+        --signal-info-major-1: #66999b;
+        --signal-info-major-2: #88b2b4;
+        --signal-info-major-3: #aacbcd;
+        --signal-info-contrast: var(--fg0);
+
+        /* Interactivity */
+        --interaction-norm-minor-2: var(--bg0_h);
+        --interaction-norm-minor-1: var(--bg0);
+        --interaction-norm: var(--green);
+        --interaction-norm-major-1: #c7cc4b;
+        --interaction-norm-major-2: #d6dc70;
+        --interaction-norm-major-3: #e5eb95;
+        --interaction-norm-contrast: var(--fg0);
+
+        --interaction-weak-minor-2: var(--bg0);
+        --interaction-weak-minor-1: var(--bg1);
+        --interaction-weak: var(--bg4);
+        --interaction-weak-major-1: #928374;
+        --interaction-weak-major-2: var(--fg4);
+        --interaction-weak-major-3: #bdae93;
+        --interaction-weak-contrast: var(--fg0);
+
+        /* Text & Fields */
+        --text-norm: var(--fg0);
+        --text-weak: var(--fg1);
+        --text-hint: var(--fg4);
+        --text-disabled: #928374;
+        --text-invert: var(--bg0);
+
+        --field-norm: #928374;
+        --field-hover: var(--fg4);
+        --field-disabled: var(--bg4);
+        --focus-outline: var(--green);
+        --focus-ring: rgba(184, 187, 38, 0.3);
+
+        /* Borders & Backgrounds */
+        --border-norm: var(--bg4);
+        --border-weak: var(--bg2);
+        --background-norm: var(--bg0);
+        --background-weak: var(--bg1);
+        --background-strong: var(--bg2);
+        --background-invert: var(--fg0);
+
+        --interaction-default: transparent;
+        --interaction-default-hover: rgba(146, 131, 116, 0.2);
+        --interaction-default-active: rgba(146, 131, 116, 0.4);
+
+        /* Shadows & Overlays */
+        --shadow-norm-opacity: 0.5;
+        --shadow-raised-opacity: 0.44;
+        --shadow-lifted-opacity: 0.75;
+        --backdrop-norm: rgba(40, 40, 40, 0.48);
+        --optional-scrollbar-thumb-color: var(--bg4);
+
+        /* UI Extras */
+        --optional-link-norm: #c7cc4b;
+        --optional-link-hover: #d6dc70;
+        --optional-link-active: #e5eb95;
+        --optional-background-elevated: #32302f;
+        --optional-background-lowered: var(--bg0_h);
+        --optional-email-item-read-text-color: var(--fg1);
+        --optional-mini-calendar-today-color: var(--fg0);
+
+        /* Branding & Promotions */
+        --optional-logo-text-proton-color: var(--fg0);
+        --optional-logo-text-product-color: var(--fg0);
+        --optional-promotion-text-color: var(--fg0);
+        --optional-promotion-text-weak: #d5c4a1;
+        --optional-promotion-interaction-hover: rgba(184, 187, 38, 0.2);
+        --optional-promotion-background-start: rgba(184, 187, 38, 0.3);
+        --optional-promotion-background-end: rgba(184, 187, 38, 0.1);
+        --optional-promotion-secondary-color: var(--purple);
+        --optional-bg-promotion-bw-button: var(--fg0);
+        --optional-text-promotion-bw-button: var(--bg0);
+    }
+
+    /* Logo and specific Icon colors */
+    .logo.with-wordmark path[fill="url(#logo-1-a)"],
+    .logo.with-wordmark path[fill="url(#logo-1-b)"],
+    .logo.with-wordmark path[fill="url(#logo-1-c)"] {
+        fill: var(--green);
+    }
+
+    /* Navigation item custom colors */
+    li.navigation-item:nth-child(12) > a span div svg {
+        color: var(--blue) !important;
+    }
+
+    li.navigation-item:nth-child(13) > a span div svg {
+        color: var(--purple) !important;
+    }
+
+    li.navigation-item:nth-child(14) > a span div svg {
+        color: var(--yellow) !important;
+    }
+}
