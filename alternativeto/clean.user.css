@@ -1,0 +1,36 @@
+/* ==UserStyle==
+@name         ✦ [AlternativeTo] Clean
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Removes clutter and ads from AlternativeTo pages
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/alternativeto/clean.user.css
+==/UserStyle== */
+
+@-moz-document domain("alternativeto.net") {
+    /* Banner and ad slots */
+    [class*="AdsenseAd_adLeaderboard"],
+    [class*="AdsenseAd_adSmallLeaderboard"],
+    [class*="bannerLink"],
+
+    /* Footer and social media */
+    footer,
+    [class*="Footer_footer"],
+    [class*="shareAndMenu"],
+
+    /* Partner blocks */
+    [aria-label="Official partner"],
+    [class*="official-partner"],
+    [class*="bg-official-partner"],
+
+    /* Promoted apps in lists */
+    [class*="AppListItem_isPromoted"],
+
+    /* Remove "AlternativeTo is supported by…" section */
+    main .container > h2:nth-of-type(1) {
+        display: none !important;
+    }
+}
