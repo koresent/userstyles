@@ -1,0 +1,116 @@
+/* ==UserStyle==
+@name         ✦ [Zed Docs] Gruvbox Dark
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Gruvbox Dark theme for Zed Docs
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/zed/gruvbox.user.css
+==/UserStyle== */
+
+@-moz-document domain("zed.dev") {
+    :root {
+        /* Dark Medium Theme */
+        --bg0: #282828;
+        --bg0_h: #1d2021;
+        --bg1: #3c3836;
+        --bg2: #504945;
+        --bg3: #665c54;
+        --fg0: #fbf1c7;
+        --fg1: #ebdbb2;
+        --fg4: #a89984;
+        --red: #fb4934;
+        --green: #b8bb26;
+        --yellow: #fabd2f;
+        --blue: #83a598;
+        --purple: #d3869b;
+        --aqua: #8ec07c;
+        --orange: #fe8019;
+    }
+
+    .dark {
+        --color-scheme: dark;
+        --logo-brightness: brightness(2);
+
+        /* Main surfaces */
+        --bg: var(--bg0);
+        --fg: var(--fg1);
+        --title-color: var(--fg0);
+        --media-bg: var(--bg0_h);
+        --full-contrast: var(--fg0);
+
+        /* Sidebar */
+        --sidebar-bg: var(--bg0);
+        --sidebar-fg: var(--fg1);
+        --sidebar-non-existant: var(--fg4);
+        --sidebar-active: var(--green);
+        --sidebar-active-bg: rgba(184, 187, 38, 0.25);
+
+        /* Borders & Dividers */
+        --border: var(--bg1);
+        --border-light: var(--bg2);
+        --border-hover: var(--bg3);
+        --divider: var(--bg1);
+        --scrollbar: var(--bg2);
+
+        /* Interactive */
+        --icons: var(--fg4);
+        --icons-hover: var(--fg0);
+        --icon-btn-bg-hover: rgba(184, 187, 38, 0.4);
+        --links: var(--blue);
+        --link-line-decoration: rgba(131, 165, 152, 0.4);
+        --link-line-decoration-hover: rgba(131, 165, 152, 0.8);
+
+        /* Code & Syntax */
+        --inline-code-color: var(--yellow);
+        --code-text: var(--fg1);
+        --code-bg: rgba(60, 56, 54, 0.2);
+        --pre-bg: var(--bg0_h);
+        --pre-border: rgba(184, 187, 38, 0.3);
+        --pre-shadow: rgba(184, 187, 38, 0.1);
+        --keybinding-bg: var(--bg1);
+
+        /* UI Elements */
+        --theme-popup-bg: var(--bg1);
+        --theme-popup-border: var(--bg2);
+        --theme-hover: var(--bg3);
+        --quote-bg: rgba(60, 56, 54, 0.4);
+        --quote-border: rgba(80, 73, 69, 0.5);
+        --table-border-color: rgba(60, 56, 54, 0.5);
+        --table-header-bg: rgba(60, 56, 54, 0.5);
+        --table-alternate-bg: rgba(60, 56, 54, 0.4);
+
+        /* Components */
+        --warning-border: rgba(250, 189, 47, 0.2);
+        --warning-bg: rgba(250, 189, 47, 0.1);
+        --warning-icon: var(--yellow);
+
+        --searchbar-bg: rgba(60, 56, 54, 0.5);
+        --searchbar-fg: var(--fg1);
+        --searchbar-border-color: var(--bg2);
+        --searchbar-shadow-color: var(--bg1);
+        --searchresults-header-fg: var(--fg4);
+        --searchresults-border-color: var(--bg2);
+        --searchresults-li-bg: var(--bg1);
+        --search-mark-bg: var(--green);
+
+        --download-btn-bg: rgba(235, 219, 178, 0.1);
+        --download-btn-bg-hover: rgba(184, 187, 38, 0.2);
+        --download-btn-color: var(--fg1);
+        --download-btn-border: rgba(184, 187, 38, 0.2);
+        --download-btn-border-hover: rgba(184, 187, 38, 0.4);
+        --download-btn-shadow: rgba(168, 153, 132, 0.15);
+
+        --toast-bg: rgba(235, 219, 178, 0.05);
+        --toast-border: rgba(184, 187, 38, 0.2);
+        --toast-border-success: rgba(184, 187, 38, 0.3);
+        --toast-border-error: rgba(251, 73, 52, 0.3);
+
+        --footer-btn-bg: rgba(235, 219, 178, 0.01);
+        --footer-btn-bg-hover: rgba(184, 187, 38, 0.05);
+        --footer-btn-border: rgba(235, 219, 178, 0.05);
+        --footer-btn-border-hover: rgba(184, 187, 38, 0.2);
+    }
+}
