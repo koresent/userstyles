@@ -1,0 +1,183 @@
+/* ==UserStyle==
+@name         ✦ [Drawabox] Gruvbox Dark
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Gruvbox Dark theme for Drawabox
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/drawabox/gruvbox.user.css
+==/UserStyle== */
+
+@-moz-document domain("drawabox.com") {
+    :root {
+        /* Dark Medium Theme */
+        --bg0: #282828;
+        --bg0_h: #1d2021;
+        --bg1: #3c3836;
+        --bg2: #504945;
+        --fg: #ebdbb2;
+        --gray: #a89984;
+        --dark-gray: #665c54;
+        --green: #b8bb26;
+        --yellow: #fabd2f;
+        --blue: #83a598;
+    }
+
+    /* Cleanup and layout reset */
+    div.slot:nth-child(6),
+    .audio,
+    div.share,
+    ul.column:nth-child(2),
+    ul.links:nth-child(1),
+    .at-content-ad {
+        display: none !important;
+    }
+
+    /* Section transparency and border reset */
+    .page-body section.lesson-page-section .section-page-summary,
+    .page-body .lesson-page-section.active,
+    .page-body section.lesson-page-section .section-alert,
+    .page-body section.lesson-page-section .section-reminder,
+    .cad-info {
+        background-color: transparent !important;
+        border: none !important;
+    }
+
+    /* Global body and text styles */
+    body,
+    .page-body,
+    .wrapper,
+    .page-body.dark,
+    .overlay-modal {
+        background-color: var(--bg0) !important;
+        color: var(--fg) !important;
+    }
+
+    blockquote {
+        border-left: 3px solid var(--green) !important;
+        padding-left: 15px;
+    }
+
+    /* Header filters */
+    header {
+        filter: hue-rotate(30deg) !important;
+    }
+
+    /* Content blocks and community highlights */
+    .lesson-body .section-nma-learnmore,
+    .lesson-body .section-nma-learnmore .content p.coupon {
+        color: var(--gray) !important;
+    }
+
+    .support-message::after {
+        color: var(--dark-gray) !important;
+    }
+
+    .recommendation a h3,
+    .community-submissions .title h2 {
+        color: var(--blue) !important;
+    }
+
+    /* Profile and navigation backgrounds */
+    .community-reply-login,
+    .community-post
+        .community-user-profile
+        .community-avatar-wrapper
+        .community-avatar-inner-wrapper {
+        background-color: var(--bg0) !important;
+    }
+
+    .navigation-section {
+        background-color: var(--bg0_h) !important;
+    }
+
+    /* Status bars */
+    h3 + .section-title-bar,
+    .section-title-bar-empty {
+        background-color: var(--green) !important;
+    }
+
+    /* Buttons and UI accents */
+    .bar,
+    .community-profile-title .bar,
+    .button,
+    button,
+    input[type="submit"],
+    .student-image-uploader ul li > div .uploader-btn,
+    .sketchbook-tabs li:before,
+    .fa.blip:after {
+        background-color: var(--green) !important;
+        color: var(--bg0) !important;
+    }
+
+    .button:hover,
+    button:hover,
+    .uploader-btn:hover {
+        background-color: var(--fg) !important;
+        color: var(--bg0) !important;
+    }
+
+    /* Submission titles */
+    .community-submissions > ul > li .meta h3,
+    .community-submissions > ul > li .meta h3 a,
+    .homework-submission .meta h3,
+    .homework-submission .meta h3 a {
+        color: var(--yellow) !important;
+        font-weight: bold !important;
+    }
+
+    /* Panels and cards */
+    .panel .panel-head,
+    .homework-submission,
+    .community-post,
+    .community-post .community-post-body,
+    .community-submission-top,
+    .critique-guide-suggestion,
+    aside.sidebar-lesson {
+        background-color: var(--bg1) !important;
+        border: 1px solid var(--bg2) !important;
+        color: var(--fg) !important;
+    }
+
+    /* Sidebar navigation */
+    aside.sidebar-lesson > ul > li.active,
+    aside.sidebar-lesson > ul > li:hover {
+        background-color: var(--bg2) !important;
+        border-left: 4px solid var(--green) !important;
+    }
+
+    aside.sidebar-lesson > ul > li > ul > li.active,
+    aside.sidebar-lesson > ul > li > ul > li:hover {
+        background-color: var(--bg0_h) !important;
+    }
+
+    aside.sidebar-lesson > ul > li.active a,
+    aside.sidebar-lesson > ul > li:hover a {
+        color: var(--green) !important;
+    }
+
+    /* Links and inputs */
+    a {
+        color: var(--blue) !important;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    footer {
+        background-color: var(--bg0_h) !important;
+        border-top: 1px solid var(--bg2) !important;
+    }
+
+    input,
+    textarea,
+    select {
+        background-color: var(--bg0_h) !important;
+        color: var(--fg) !important;
+        border: 1px solid var(--bg2) !important;
+    }
+}
