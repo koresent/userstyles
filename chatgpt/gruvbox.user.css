@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        ✦ [ChatGPT] Gruvbox
 @namespace   github.com/koresent/userstyles
-@version     1.0.0
+@version     1.0.1
 @description Gruvbox theme for ChatGPT.com
 @author      Koresent
 @license     GPL-3.0
@@ -65,6 +65,8 @@
         --border-medium: var(--bg1);
         --border-heavy: var(--bg1);
         --bg-elevated-secondary: var(--bg0);
+
+        --theme-submit-btn-bg: var(--blue);
     }
 
     /* "Thought for..." timer */
