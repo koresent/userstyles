@@ -1,0 +1,29 @@
+/* ==UserStyle==
+@name        ✦ [All] General Enhancements
+@namespace   github.com/koresent/userstyles
+@version     1.0.0
+@description General tweaks for the entire web
+@author      Koresent
+@license     GPL-3.0
+@homepageURL https://github.com/koresent/userstyles
+@supportURL  https://github.com/koresent/userstyles/issues
+@updateURL   https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/general/enhancements.user.css
+==/UserStyle== */
+
+@-moz-document url-prefix("http"), url-prefix("https") {
+    /* Hide annoying Google credential picker popup */
+    #credential_picker_container:has(iframe[src*="accounts.google.com"]) {
+        display: none !important;
+    }
+
+    /* Force smooth scrolling globally */
+    html {
+        scroll-behavior: smooth !important;
+    }
+
+    /* Customize text selection colors */
+    *::selection {
+        background: #b8bb26 !important;
+        color: #1d2021 !important;
+    }
+}
