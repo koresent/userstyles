@@ -1,0 +1,31 @@
+/* ==UserStyle==
+@name         ✦ [Stepik] Clean
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Removes clutter and ads from Stepik pages
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/stepik/clean.user.css
+==/UserStyle== */
+
+@-moz-document domain("stepik.org") {
+    /* Cookie notice */
+    .woof-container,
+    
+    /* Top banner */
+    div.catalog-block[data-kind="banner"][data-appearance="banner_high_height"],
+    
+    /* Bottom banner */
+    div.catalog-block.catalog__block[data-kind="banner"][data-appearance="default"],
+    
+    /* Footer */
+    .page-footer-modern,
+    
+    /* "Teaching" menu item in navbar */
+    li.navbar__menu-item:nth-child(2) 
+    {
+        display: none !important;
+    }
+}
