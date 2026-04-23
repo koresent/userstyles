@@ -1,0 +1,172 @@
+/* ==UserStyle==
+@name         ✦ [Trello] Clean
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Trash removal, paid subscription bypasses, and minor tweaks for Trello.
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/trello/clean.user.css
+==/UserStyle== */
+
+@-moz-document domain("trello.com") {
+    .mgn8Z23aXE6pCQ > ul:nth-child(1) > li:nth-child(10), /* Paid card settings */
+    .mgn8Z23aXE6pCQ > ul:nth-child(1) > li:nth-child(16), /* Paid templates */
+    .i1wbHdQgXTQp5W, /* "Inbox is private" notice */
+    .d3BMtXAyznnIu8 > div:nth-child(1), /* Other Atlassian products button */
+    .aFMxIDv9mXuicr, /* Upgrade to Premium popup in planner */
+    .s1LFVBaNexFJme > div:nth-child(1), /* "Give feedback" button */
+    .JUowlo_EKQ6qpj, /* Paid view switcher */
+    .s1LFVBaNexFJme > div:nth-child(3), /* Help section promo trash */
+    .aFGD9vtcIAqeiM > section:nth-child(3), /* Paid column color settings */
+    .KD3y_TXBO0tdro, /* Board menu paywall ads */
+    .a4u_m0c4imcsY_, /* "Try Trello Premium" promo */
+    .COYYddipoSIbsw, /* Paid settings access promo */
+    .yLp1NcKM1v6sTG > div:nth-child(3) > nav:nth-child(3) > ul:nth-child(1) > li:nth-child(4), /* "Billing" button in settings */
+    .ihoclz1woa4FN2, /* Redundant Inbox setup button */
+    .Kk8OpyYHTpyg69 > li:nth-child(1), /* Feedback in Inbox */
+    .i8O4UxIIGB7SYj > div:nth-child(1), /* Feedback in card view */
+    .CzoW5DEGg3sSfJ, /* Useless divider */
+    section.s7K43upMNnpWe4:nth-child(4) > hgroup:nth-child(2), /* Amazing Fields section */
+    section.s7K43upMNnpWe4:nth-child(4) > div:nth-child(1), /* Amazing Fields icons */
+    [data-testid="check-item-set-due-button"], /* Paid due dates for checklist items */
+    [data-testid="check-item-set-member-button"], /* Paid members for checklist items */
+    .lnxp8HPD2o2m9H /* Jira ads */
+    {
+        display: none !important;
+    }
+
+    /* --- UI TWEAKS & FIXES --- */
+    :root {
+        --ds-border-radius-100: 1.0rem !important; /* Rounded corners */
+        --ds-border-radius-200: 1.0rem !important;
+        --header-height: 50px; /* Measured board header height */
+        --activation-height: 20px; /* Hover activation zone height */
+    }
+
+    /* Trello Desktop fixes */
+    .I1OnjYhOIVQmcX, .nDHMJXuTrhEloH {
+        height: 48px;
+        min-height: 0;
+    }
+
+    .tIz6r8m3gG1ooC::after {
+        height: 0;
+        margin: 0;
+    }
+
+    /* Compact column addition button */
+    .hCjCvLRiJAOgje {
+        width: 40px;
+        height: 40px;
+        font-size: 0px;
+        background-color: #1d202140;
+    }
+
+    /* --- AUTO-HIDE NAVIGATION --- */
+    
+    /* Bottom navigation panel */
+    nav.GuShmlgQU24O2r.V96eTMauHP8kTH {
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        transform: translateY(calc(100% + 2.5rem)) !important;
+        transition: transform 0.3s ease-in-out !important;
+        will-change: transform !important;
+        z-index: 1000 !important;
+    }
+
+    nav.GuShmlgQU24O2r.V96eTMauHP8kTH:hover {
+        transform: translateY(0) !important;
+    }
+
+    /* Header auto-hide */
+    .board-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: var(--header-height);
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+        z-index: 9999;
+        background: var(--ds-surface); /* Remove header blur */
+    }
+
+    /* Invisible hover activation zone for header */
+    .board-header::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: var(--activation-height);
+        z-index: -1;
+    }
+
+    .board-header:hover {
+        transform: translateY(0);
+    }
+
+    /* Layout shift when header is visible */
+    #board {
+        margin-top: 0;
+        transition: margin-top 0.3s ease;
+    }
+
+    .board-header:hover ~ #board {
+        margin-top: var(--header-height);
+    }
+
+    /* --- COMPACT ELEMENTS --- */
+
+    /* Move Search and Create button to the right */
+    .jYmd_yADRUL0GA {
+        justify-content: right;
+    }
+
+    /* Compact search field */
+    .CNpq40UlyINMM8.o9asoS8bPQ8NWX {
+        max-width: 70px;
+        transition: max-width 0.5s ease;
+    }
+
+    /* Expanded search field on focus */
+    .CNpq40UlyINMM8.LAouDCYQKYO_tc {
+        max-width: 500px;
+    }
+
+    /* Hide search placeholder text */
+    .CNpq40UlyINMM8 input {
+        font-size: 0;
+    }
+
+    /* Compact "Create" button with custom styling */
+    .PhzBALMp63PY_y.eTemkd4Uuq3km8 {
+        width: 32px;
+        height: 32px;
+        background-color: #3c3836;
+        border: none;
+        font-size: 0;
+        padding: 0;
+        cursor: pointer;
+        position: relative;
+    }
+
+    /* Custom SVG icon for Create button via pseudo-element */
+    .PhzBALMp63PY_y.eTemkd4Uuq3km8::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 24px;
+        height: 24px;
+        background-color: #ebdbb2;
+        -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C11.4477 3 11 3.44772 11 4V11L4 11C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13H11V20C11 20.5523 11.4477 21 12 21C12.5523 21 13 20.5523 13 20V13H20C20.5523 13 21 12.5523 21 12C21 11.4477 20.5523 11 20 11L13 11V4C13 3.44772 12.5523 3 12 3Z"/></svg>') no-repeat center;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: contain;
+        transform: translate(-50%, -50%);
+    }
+}
