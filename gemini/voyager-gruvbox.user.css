@@ -1,0 +1,222 @@
+/* ==UserStyle==
+@name         ✦ [Gemini Voyager] Gruvbox Dark
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Gruvbox Dark theme for Gemini Voyager
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/gemini/voyager-gruvbox.user.css
+==/UserStyle== */
+
+@-moz-document domain("gemini.google.com"), domain("aistudio.google.com") {
+    /* GLOBAL VARIABLES */
+    :root,
+    .theme-host.dark-theme,
+    .theme-host.light-theme,
+    body.dark-theme,
+    body.light-theme,
+    .gv-pm-panel {
+        /* Gruvbox Palette */
+        --gv-bg0: #1d2021 !important;
+        --gv-bg1: #282828 !important;
+        --gv-bg2: #32302f !important;
+        --gv-bg3: #3c3836 !important;
+        --gv-fg: #ebdbb2 !important;
+        --gv-fg0: #fbf1c7 !important;
+        --gv-accent: #b8bb26 !important;
+        --gv-yellow: #fabd2f !important;
+        --gv-red: #fb4934 !important;
+        --gv-gray: #928374 !important;
+
+        /* Timeline */
+        --timeline-dot-color: var(--gv-gray) !important;
+        --timeline-dot-active-color: var(--gv-accent) !important;
+        --timeline-star-color: var(--gv-yellow) !important;
+        --timeline-tooltip-bg: var(--gv-bg1) !important;
+        --timeline-tooltip-text: var(--gv-fg) !important;
+        --timeline-tooltip-border: var(--gv-bg3) !important;
+        --timeline-bar-bg: rgba(29, 32, 33, 0.9) !important;
+        --timeline-tooltip-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
+
+        /* Folders */
+        --folder-bg: var(--gv-bg1) !important;
+        --folder-text: var(--gv-fg) !important;
+        --folder-border: var(--gv-bg3) !important;
+        --folder-hover-bg: var(--gv-bg2) !important;
+        --folder-active-bg: var(--gv-bg3) !important;
+        --folder-icon-color: var(--gv-gray) !important;
+        --folder-menu-bg: var(--gv-bg1) !important;
+        --folder-selected-accent: var(--gv-accent) !important;
+        --folder-selected-glow: rgba(184, 187, 38, 0.1) !important;
+        --folder-selected-bg-start: var(--gv-bg2) !important;
+        --folder-selected-bg-end: var(--gv-bg1) !important;
+        --folder-selected-border: var(--gv-accent) !important;
+        --folder-dragover-bg: rgba(184, 187, 38, 0.15) !important;
+        --folder-dragover-border: var(--gv-accent) !important;
+
+        /* Prompt Manager Surface */
+        --gv-pm-surface: var(--gv-bg1) !important;
+    }
+
+    /* MAIN PANELS & WRAPPERS */
+    .gv-pm-panel,
+    .timeline-preview-panel,
+    .gv-folder-menu,
+    .gv-folder-dialog,
+    .gv-color-picker-dialog {
+        background: var(--gv-bg1) !important;
+        color: var(--gv-fg) !important;
+        border-color: var(--gv-bg3) !important;
+        box-shadow: var(--timeline-tooltip-shadow) !important;
+    }
+
+    .gv-pm-header,
+    .gv-pm-footer,
+    .timeline-preview-search,
+    .gv-folder-dialog-title {
+        border-color: var(--gv-bg3) !important;
+        background: transparent !important;
+    }
+
+    /* TEXT ELEMENTS */
+    .gv-pm-title,
+    .gv-folder-confirm-message,
+    .gv-folder-dialog-title {
+        color: var(--gv-fg0) !important;
+    }
+
+    .gv-pm-item-text,
+    .gv-folder-name,
+    .gv-conversation-title,
+    .timeline-preview-text {
+        color: var(--gv-fg) !important;
+    }
+
+    .gv-timestamp {
+        color: var(--gv-gray) !important;
+    }
+
+    /* INPUTS & SEARCH */
+    input[type="search"],
+    input[type="text"],
+    textarea,
+    .gv-pm-input-text,
+    .gv-pm-input-tags,
+    .gv-folder-name-input {
+        background: var(--gv-bg2) !important;
+        color: var(--gv-fg) !important;
+        border: 1px solid var(--gv-bg3) !important;
+    }
+
+    input:focus,
+    textarea:focus {
+        border-color: var(--gv-accent) !important;
+        outline: none !important;
+    }
+
+    /* BUTTONS & TRIGGERS */
+    .gv-pm-trigger,
+    .gv-pm-add,
+    .gv-pm-save,
+    .gv-folder-dialog-btn-primary,
+    .gv-folder-import-file-button {
+        background: var(--gv-accent) !important;
+        color: var(--gv-bg0) !important;
+        border: none !important;
+        font-weight: bold !important;
+    }
+
+    .gv-fork-btn {
+        color: var(--mat-icon-button-icon-color);
+    }
+
+    .gv-pm-trigger:hover,
+    .gv-pm-add:hover {
+        filter: brightness(1.1) !important;
+    }
+
+    .gv-pm-cancel,
+    .gv-folder-confirm-btn,
+    .gv-folder-dialog-cancel {
+        background: var(--gv-bg2) !important;
+        color: var(--gv-fg) !important;
+        border-color: var(--gv-bg3) !important;
+    }
+
+    /* LISTS & FOLDERS */
+    .gv-pm-item,
+    .gv-folder-item-header,
+    .timeline-preview-item,
+    .gv-folder-conversation {
+        background: transparent !important;
+        border-radius: 8px !important;
+    }
+
+    .gv-pm-item:hover,
+    .gv-folder-item-header:hover,
+    .timeline-preview-item:hover,
+    .gv-folder-conversation:hover {
+        background: var(--gv-bg2) !important;
+    }
+
+    .gv-pm-item-text:hover {
+        color: var(--gv-accent) !important;
+    }
+
+    /* Deletion & Errors */
+    .gv-pm-del:hover,
+    .gv-pm-del.armed,
+    .gv-folder-confirm-yes,
+    .gv-multi-select-delete-btn {
+        color: var(--gv-red) !important;
+    }
+
+    /* Icons */
+    .gv-folder-icon,
+    .gv-folder-expand-btn,
+    .gv-conversation-icon,
+    .google-symbols,
+    .gv-pm-edit,
+    .gv-pm-del {
+        color: var(--gv-gray) !important;
+    }
+
+    /* FOLDER SELECTION TWEAKS */
+    .gv-folder-conversation-selected,
+    .gv-conversation-selected {
+        background: linear-gradient(
+            to right,
+            var(--folder-selected-glow) 0%,
+            transparent 100%
+        ) !important;
+    }
+
+    .gv-folder-conversation-selected::before,
+    .gv-conversation-selected::before {
+        background-color: var(--gv-accent) !important;
+    }
+
+    /* MARKDOWN & CODE */
+    .gv-md pre,
+    .gv-md code {
+        background: var(--gv-bg0) !important;
+        color: var(--gv-fg0) !important;
+        border: 1px solid var(--gv-bg3) !important;
+    }
+
+    /* Chips */
+    .gv-pm-chip,
+    .gv-pm-tag.active {
+        background: rgba(184, 187, 38, 0.15) !important;
+        color: var(--gv-accent) !important;
+        border: 1px solid rgba(184, 187, 38, 0.3) !important;
+    }
+
+    /* Timeline Bar */
+    .gemini-timeline-bar::before {
+        background-color: var(--gv-bg0) !important;
+        border-left: 1px solid var(--gv-bg3) !important;
+    }
+}
