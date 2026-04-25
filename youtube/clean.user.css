@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         ✦ [YouTube] Clean
 @namespace    github.com/koresent/userstyles
-@version      1.0.0
+@version      1.1.0
 @description  Interface cleanup: removes distractions, shorts, and redundant UI elements.
 @author       Koresent
 @license      GPL-3.0
@@ -28,6 +28,7 @@
     ytd-mini-guide-entry-renderer.style-scope:nth-child(4), /* Mini-guide: "You" */
     ytd-mini-guide-entry-renderer.style-scope:nth-child(1), /* Mini-guide: Home */
     #guide-button.ytd-masthead, /* Sidebar: Toggle button (hamburger) */
+    #header-entry[is-header] a#endpoint, /* Sidebar: Subscriptions button */
 
     /* --- SECTION: TOPBAR (MASTHEAD) CLEANUP --- */
     #end > div:nth-child(2) > ytd-button-renderer:nth-child(1), /* Topbar: Create/Upload button */
@@ -43,25 +44,33 @@
     .cbTitleButtonContainer, /* Third-party: DeArrow pencil icon */
     .cbShowOriginal img.cbShowOriginalImage, .cbTitleButton svg, /* Third-party: DeArrow card icons */
     #description-inline-expander > div:nth-child(4), /* Video: Redundant description clutter */
-    .yt-core-attributed-string--inline-block-mod, /* Video: Verified badge for author */
+    .yt-core-attributed-string--inline-block-mod, /* Video: Verified badge (text) */
+    a.ytAttributedStringLink span.ytIconWrapperHost,
+yt-badge-supported-renderer.ytBadgeSupportedRendererHost,
+.ytBadgeSupportedRendererBadgeShape, /* Video/Channel: Verified badge (icon) */
     #show-hide-button, /* Video: Chat replay toggle */
-    .ytp-fullscreen-button, /* Player: Fullscreen button (use double-click) */
+    .ytp-fullscreen-button, /* Player: Fullscreen button */
     #sponsor-button, /* Video: "Join" (Sponsorship) button */
     .annotation, /* Player: On-screen annotations */
     .ytp-autonav-toggle, /* Player: Autoplay toggle */
+    ytd-rich-grid-media #menu.ytd-rich-grid-media, /* Video Grid: Three dots menu */
+    .ytLockupMetadataViewModelMenuButton, /* Video Grid: Alternative three dots menu */
 
-    /* --- SECTION: FEED & SEARCH RESULTS --- */
+    /* --- SECTION: FEED, CHANNEL & SEARCH RESULTS --- */
     ytd-rich-section-renderer.style-scope:nth-child(1), /* Feed: "New for you" section */
     ytd-rich-shelf-renderer, /* Feed: Shorts shelf */
     yt-related-chip-cloud-renderer.style-scope, /* Sidebar: Recommendation filters */
-    .yt-content-metadata-view-model__metadata-row--metadata-row-wrap, /* Feed: "New" badge on thumbnails */
+    .yt-content-metadata-view-model__metadata-row--metadata-row-wrap, /* Feed: "New" badge */
     div#action-menu.style-scope.ytd-comment-view-model, /* Comments: Report button */
     .ytGridShelfViewModelHostHasBottomButton, /* Search: Shorts in results */
     #about-these-results, /* Search: "About these results" info */
     div.ytFlexibleActionsViewModelAction:nth-child(2), /* Channel: "Join" button */
     #contents ytd-rich-section-renderer, /* Feed: General Shorts containers */
     ytd-merch-shelf-renderer, /* Video: Merchandise shelf */
-    .yt-lockup-metadata-view-model__menu-button /* Cards: Context menu button */ {
+    .yt-lockup-metadata-view-model__menu-button, /* Cards: Context menu button */
+    yt-tab-shape:not([tab-title="Видео"]):not([tab-title="Плейлисты"]):not([tab-title="Videos"]):not([tab-title="Playlists"]), /* Channel: Unnecessary tabs */
+    .tabGroupShapeSlider, /* Channel: Tab slider line */
+    .ytChipBarViewModelChipWrapper:has(button[role="tab"]) /* Feed: Extra sorting chips */ {
         display: none !important;
     }
 
@@ -78,9 +87,7 @@
         border-bottom: none !important;
     }
 
-    ytd-guide-collapsible-section-entry-renderer.ytd-guide-section-renderer:not(
-            :first-child
-        ) {
+    ytd-guide-collapsible-section-entry-renderer.ytd-guide-section-renderer:not(:first-child) {
         border-top: none !important;
     }
 
@@ -134,10 +141,7 @@
     }
 
     #contents {
-        padding-left: calc(
-            var(--ytd-rich-grid-item-margin) / 2 +
-                var(--ytd-rich-grid-gutter-margin)
-        ) !important;
+        padding-left: calc(var(--ytd-rich-grid-item-margin) / 2 + var(--ytd-rich-grid-gutter-margin)) !important;
     }
 
     /* --- SECTION: CINEMATIC / THEATER MODE --- */
@@ -154,26 +158,18 @@
     }
 
     /* Hide Topbar in Theater/Fullscreen, reveal on hover */
-    body:has([fullscreen=""], [theater=""]):not(
-            :has(ytd-watch-flexy[hidden=""])
-        )
-        #masthead-container:not(:has(.ytSearchboxComponentInputBoxHasFocus)) {
+    body:has([fullscreen=""], [theater=""]):not(:has(ytd-watch-flexy[hidden=""])) #masthead-container:not(:has(.ytSearchboxComponentInputBoxHasFocus)) {
         top: -40px !important;
         opacity: 0 !important;
         transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95) !important;
     }
 
-    body:has([fullscreen=""], [theater=""]):not(
-            :has(ytd-watch-flexy[hidden=""])
-        )
-        #masthead-container:hover {
+    body:has([fullscreen=""], [theater=""]):not(:has(ytd-watch-flexy[hidden=""])) #masthead-container:hover {
         opacity: 1 !important;
         top: 0 !important;
     }
 
-    ytd-app:has([fullscreen=""], [theater=""]):not(
-            :has(ytd-watch-flexy[hidden=""])
-        ) {
+    ytd-app:has([fullscreen=""], [theater=""]):not(:has(ytd-watch-flexy[hidden=""])) {
         --ytd-toolbar-height: 0px !important;
 
         #page-manager {
