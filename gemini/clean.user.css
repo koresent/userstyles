@@ -1,0 +1,59 @@
+/* ==UserStyle==
+@name         ✦ [Gemini] Clean
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Hides unnecessary UI elements and promotions on the Gemini page.
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/gemini/clean.user.css
+==/UserStyle== */
+
+@-moz-document domain("gemini.google.com") {
+    /* --- REMOVE UI CLUTTER & PROMOTIONS --- */
+    location-footer.ia-redesign, /* Location indicator */
+    .gems-list-container, /* Gems list container */
+    .bard-logo-container, /* Gemini logo */
+    span.mdc-button__label:nth-child(3), /* 'Tools' label text */
+    .input-buttons-wrapper-bottom, /* Audio chat controls */
+    video-generation-discovery-disclaimer.ng-star-inserted, /* Video generation promotional disclaimer */
+    div.avatar-gutter, /* Gemini avatar gutter */
+    hallucination-disclaimer, /* Hallucination and accuracy disclaimer */
+    .menu-button-wrapper button[data-test-id="more-menu-button"], /* 'More' menu button */
+    thumb-up-button, /* Thumb up button */
+    thumb-down-button, /* Thumb down button */
+    div.scroll-container:has(zero-state-block-picker), /* Zero-state quick action blocks */
+    .upgrade-container, /* Subscription upgrade container */
+    .adv-upsell, /* Advanced upsell banner */
+    g1-dynamic-upsell-button, /* Dynamic upsell button */
+    .pillbox, /* Subscription tier indicator */
+    .toolbox-drawer-item-new-badge /* 'New' feature badge in toolbox */ {
+        display: none !important;
+    }
+
+    /* --- UI TWEAKS & FIXES --- */
+
+    /* Chat input background gradient */
+    .input-gradient::before {
+        top: 0 !important;
+    }
+
+    /* Action buttons positioning below responses */
+    div:has(> regenerate-button) {
+        position: absolute !important;
+        left: 0px !important;
+    }
+
+    /* Share & Export button positioning */
+    div:has(> button[aria-label="Поделиться и экспортировать"]) {
+        position: absolute !important;
+        left: 1.3%;
+    }
+
+    /* Fix margins for the 'Tools' button icon after label removal */
+    .mat-mdc-button > .mat-icon {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
