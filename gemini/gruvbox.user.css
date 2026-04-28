@@ -1,0 +1,1177 @@
+/* ==UserStyle==
+@name         ✦ [Gemini] Gruvbox Dark
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Gruvbox Dark theme for Gemini
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/gemini/gruvbox.user.css
+==/UserStyle== */
+
+@-moz-document domain("gemini.google.com") {
+    body,
+    .warm-yellow-theme,
+    :where(.theme-host),
+    :where(.theme-host):where(.dark-theme),
+    :root .light-theme,
+    :root .dark-theme {
+        color-scheme: dark !important;
+
+        /* --- Gruvbox Dark Palette --- */
+        --gem-sys-color--primary: #b8bb26 !important;
+        --gem-sys-color--on-primary: #282828 !important;
+        --gem-sys-color--primary-container: #504945 !important;
+        --gem-sys-color--on-primary-container: #ebdbb2 !important;
+
+        --gem-sys-color--secondary: #458588 !important;
+        --gem-sys-color--on-secondary: #fbf1c7 !important;
+        --gem-sys-color--secondary-container: #3c3836 !important;
+        --gem-sys-color--on-secondary-container: #ebdbb2 !important;
+
+        --gem-sys-color--tertiary: #b16286 !important;
+        --gem-sys-color--on-tertiary: #fbf1c7 !important;
+        --gem-sys-color--tertiary-container: #504945 !important;
+        --gem-sys-color--on-tertiary-container: #ebdbb2 !important;
+
+        --gem-sys-color--error: #cc241d !important;
+        --gem-sys-color--on-error: #fbf1c7 !important;
+        --gem-sys-color--error-container: #fb4934 !important;
+
+        /* --- Backgrounds and Surfaces --- */
+        --gem-sys-color--surface: #282828 !important;
+        --gem-sys-color--surface-bright: #665c54 !important;
+        --gem-sys-color--surface-container-highest: #665c54 !important;
+        --gem-sys-color--surface-container-high: #504945 !important;
+        --gem-sys-color--surface-container: #3c3836 !important;
+        --gem-sys-color--surface-container-low: #282828 !important;
+        --gem-sys-color--surface-container-lowest: #1d2021 !important;
+        --gem-sys-color--surface-dim: #1d2021 !important;
+        --gem-sys-color--surface-variant: #3c3836 !important;
+
+        /* --- Text and Icons --- */
+        --gem-sys-color--on-surface: #ebdbb2 !important;
+        --gem-sys-color--on-surface-variant: #a89984 !important;
+
+        /* --- Outlines and Dividers --- */
+        --gem-sys-color--outline: #504945 !important;
+        --gem-sys-color--outline-variant: #665c54 !important;
+        --gem-sys-color--outline-low: #3c3836 !important;
+
+        /* --- Miscellaneous --- */
+        --gem-sys-color--inverse-primary: #b8bb26 !important;
+        --gem-sys-color--inverse-surface: #ebdbb2 !important;
+        --gem-sys-color--inverse-on-surface: #282828 !important;
+        --gem-sys-color--scrim: rgba(0, 0, 0, 0.5) !important;
+        --gem-sys-color--shadow: rgba(0, 0, 0, 0.5) !important;
+        --gem-sys-color--primary-fixed: #504945 !important;
+        --gem-sys-color--primary-fixed-dim: #b8bb26 !important;
+        --gem-sys-color--on-primary-fixed: #ebdbb2 !important;
+        --gem-sys-color--on-primary-fixed-variant: #ebdbb2 !important;
+        --gem-sys-color--secondary-fixed: #504945 !important;
+        --gem-sys-color--secondary-fixed-dim: #458588 !important;
+        --gem-sys-color--on-secondary-fixed: #ebdbb2 !important;
+        --gem-sys-color--on-secondary-fixed-variant: #ebdbb2 !important;
+        --gem-sys-color--tertiary-fixed: #504945 !important;
+        --gem-sys-color--tertiary-fixed-dim: #b16286 !important;
+        --gem-sys-color--on-tertiary-fixed: #ebdbb2 !important;
+        --gem-sys-color--on-tertiary-fixed-variant: #ebdbb2 !important;
+
+        /* --- Bard Variables --- */
+
+        /* Neutral Tones */
+        --bard-color-neutral-90: #3c3836 !important;
+        --bard-color-neutral-95: #282828 !important;
+        --bard-color-neutral-96: #1d2021 !important;
+        --bard-color-enterprise-greeting: #504945 !important;
+        --bard-color-custom-primary-container: #3c3836 !important;
+        --bard-color-surface-tint: #ebdbb2 !important;
+        --bard-color-tertiary-60: #b8bb26 !important;
+        --bard-color-surface-3-opacity-11: rgba(184, 187, 38, 0.11) !important;
+        --bard-color-surface-5-opacity-14: rgba(184, 187, 38, 0.14) !important;
+
+        /* Backgrounds */
+        --bard-color-footer-background: #282828 !important;
+        --bard-color-draft-chip-background: #504945 !important;
+        --bard-color-sidenav-background: #1d2021 !important;
+        --bard-color-sidenav-background-v2: #1d2021 !important;
+        --bard-color-inverse-primary-background: #ebdbb2 !important;
+        --bard-color-response-container-flipped-background: #3c3836 !important;
+        --bard-color-lightbox-background: #1d2021 !important;
+        --bard-color-image-placeholder-background: #3c3836 !important;
+        --bard-color-imagen-selection-dialog-background: #282828 !important;
+        --bard-color-icon-container-background: #1d2021 !important;
+        --bard-color-bot-power-up-button-background: #3c3836 !important;
+        --bard-color-bot-logo-bg-default: #282828 !important;
+        --bard-color-resize-canvas-background: #3c3836 !important;
+        --bard-color-surface-dim-tmp: #1d2021 !important;
+        --bard-color-sidenav-tile-background-aurora: #282828 !important;
+
+        /* Text and Links */
+        --bard-color-sos-footer: #a89984 !important;
+        --bard-color-continue-chat-discovery-tooltip-button-text: #83a598 !important;
+        --bard-color-sentence-prefix-color: #fbf1c7 !important;
+        --bard-color-sentence-words-color: #a89984 !important;
+        --bard-color-share-link: #83a598 !important;
+        --bard-color-onegooglebar-product-controls: #ebdbb2 !important;
+        --bard-color-on-new-conversation-button: #ebdbb2 !important;
+        --bard-color-bot-logo-text-default: #a89984 !important;
+        --bard-color-image-lightbox-text: #a89984 !important;
+        --bard-color-gallery-image-card-text: #ebdbb2 !important;
+        --bard-color-sidenav-mobile-controls: #ebdbb2 !important;
+        --bard-color-sidenav-tile-text-aurora: #a89984 !important;
+
+        /* Code Syntax */
+        --bard-color-code-comment: #928374 !important;
+        --bard-color-code-variables: #fb4934 !important;
+        --bard-color-code-literal: #d3869b !important;
+        --bard-color-code-class: #fabd2f !important;
+        --bard-color-code-string: #b8bb26 !important;
+        --bard-color-code-quotes-and-meta: #83a598 !important;
+        --bard-color-code-keyword: #fe8019 !important;
+        --bard-color-code-chip-foreground: #d3869b !important;
+        --bard-color-code-chip-background: #504945 !important;
+        --bard-color-code-chip-background-selected: #665c54 !important;
+
+        /* Fact Check and Highlighting */
+        --bard-color-fact-check-tooltip-entailed-highlight: rgba(
+            184,
+            187,
+            38,
+            0.25
+        ) !important;
+        --bard-color-fact-check-tooltip-entailed-selected: #b8bb26 !important;
+        --bard-color-fact-check-tooltip-contradictory-highlight: rgba(
+            251,
+            73,
+            52,
+            0.25
+        ) !important;
+        --bard-color-fact-check-tooltip-contradictory-selected: #fb4934 !important;
+        --bard-color-fact-check-button-complete: #3c3836 !important;
+        --bard-color-fact-title: #b8bb26 !important;
+        --bard-color-fact-title-invalid: #fe8019 !important;
+        --bard-color-recitation-background: rgba(69, 133, 136, 0.25) !important;
+        --bard-color-chart-highlighted-background: #504945 !important;
+        --bard-color-immersive-editor-comment-selection: #665c54 !important;
+        --bard-color-immersive-editor-comment-selection-focused: #fabd2f !important;
+        --bard-color-immersive-editor-user-selection: #83a598 !important;
+        --bard-color-immersive-learning-correct-background: var(
+            --gem-sys-color--surface-container
+        ) !important;
+        --bard-color-immersive-learning-correct-border: #b8bb26 !important;
+        --bard-color-immersive-learning-incorrect-background: var(
+            --gem-sys-color--surface-container
+        ) !important;
+        --bard-color-immersive-learning-incorrect-border: #cc241d !important;
+        --bard-color-immersive-learning-answered-in-rehearsal-background: var(
+            --gem-sys-color--surface-container
+        ) !important;
+        --bard-color-immersive-learning-answered-in-rehearsal-border: #a89984 !important;
+
+        /* Overlays and Shadows */
+        --bard-color-tooltip-box-shadow: rgba(0, 0, 0, 0.3) !important;
+        --bard-color-image-overlay-background: rgba(
+            40,
+            40,
+            40,
+            0.75
+        ) !important;
+        --bard-color-sidenav-scrim: rgba(0, 0, 0, 0.5) !important;
+
+        /* Avatars and Gradients */
+        --bard-color-bard-avatar-v2-basic-circle-stop-1: #b16286 !important;
+        --bard-color-bard-avatar-v2-basic-circle-stop-2: #458588 !important;
+        --bard-color-bard-avatar-v2-basic-circle-stop-3: #83a598 !important;
+        --bard-color-bard-avatar-v2-advanced-circle-stop-1: #d3869b !important;
+        --bard-color-bard-avatar-v2-advanced-circle-stop-2: #fb4934 !important;
+        --bard-color-bard-avatar-v2-advanced-circle-stop-3: #fe8019 !important;
+        --bard-color-brand-text-gradient-stop-1: #4285f4 !important;
+        --bard-color-brand-text-gradient-stop-2: #9b72cb !important;
+        --bard-color-brand-text-gradient-stop-3: #d96570 !important;
+        --bard-color-brand-text-gradient-v2-stop-1: #3983ff !important;
+        --bard-color-brand-text-gradient-v2-stop-2: #3e6af0 !important;
+        --bard-color-brand-text-gradient-v2-stop-3: #579fff !important;
+
+        /* Forms and Input Fields */
+        --bard-color-form-field-outline: #a89984 !important;
+        --bard-color-form-field-outline-active: #b8bb26 !important;
+        --bard-color-form-field-outline-hover: #ebdbb2 !important;
+        --bard-color-form-field-placeholder: #928374 !important;
+        --bard-color-zero-state-card-selected: #504945 !important;
+        --bard-color-zero-state-prompt-chip-background: #504945 !important;
+        --bard-color-zero-state-prompt-chip-text: #b8bb26 !important;
+        --bard-color-input-area-buttons-hover-background: #504945 !important;
+        --bard-color-input-companion-button-hover-background: #504945 !important;
+        --bard-color-input-companion-button-active-background: #665c54 !important;
+
+        /* Loaders and Skeleton Screens */
+        --bard-color-processing-animation-color-1: #504945 !important;
+        --bard-color-processing-animation-color-2: #1d2021 !important;
+        --bard-color-skeleton-loader-background-1: #282828 !important;
+        --bard-color-skeleton-loader-background-2: #3c3836 !important;
+        --bard-color-skeleton-loader-background-3: #458588 !important;
+        --bard-color-skeleton-loader-background-alt-1: #282828 !important;
+        --bard-color-skeleton-loader-background-alt-2: #b16286 !important;
+        --bard-color-skeleton-loader-background-alt-3: #cc241d !important;
+        --bard-color-skeleton-loader-background-grayscale-1: #282828 !important;
+        --bard-color-skeleton-loader-background-grayscale-2: #3c3836 !important;
+        --bard-color-skeleton-loader-background-grayscale-3: #282828 !important;
+        --bard-color-imagen-loading-gradient-step-1: rgba(
+            40,
+            40,
+            40,
+            0.2
+        ) !important;
+        --bard-color-imagen-loading-gradient-step-2: #282828 !important;
+        --bard-color-imagen-loading-gradient-step-3: #504945 !important;
+
+        /* Buttons and Separators */
+        --bard-color-icon-separator: #665c54 !important;
+        --bard-color-chrome-experiment-badge: #83a598 !important;
+        --bard-color-share-title-card-border: #665c54 !important;
+        --bard-color-share-selected-title-card-border: #b8bb26 !important;
+        --bard-color-share-social-media-icon-focus: #1d2021 !important;
+        --bard-color-share-social-media-icon-background: #504945 !important;
+        --bard-color-onhover-conversation-metadata-button-v2: #504945 !important;
+        --bard-color-new-conversation-button: #3c3836 !important;
+        --bard-color-gallery-separator-line: #665c54 !important;
+        --bard-color-bot-logo-border-default: #665c54 !important;
+
+        /* Banners and Dialogs */
+        --bard-color-pup-banner: #fabd2f !important;
+        --bard-color-get-app-banner-background: #458588 !important;
+        --bard-color-get-app-banner-text: #ebdbb2 !important;
+        --bard-color-get-app-mobile-dialog-text: #ebdbb2 !important;
+        --bard-color-get-app-mobile-dialog-disclaimer: #a89984 !important;
+        --bard-color-get-app-mobile-dialog-background: #282828 !important;
+        --bard-color-get-app-qr-code-border: #ebdbb2 !important;
+        --bard-color-enterprise-disclaimer-encrypted: #fe8019 !important;
+        --bard-color-enterprise-disclaimer-encrypted-background: rgba(
+            254,
+            128,
+            25,
+            0.2
+        ) !important;
+
+        /* Planner */
+        --bard-color-planner-status-indicator-bar-error: #cc241d !important;
+        --bard-color-planner-status-indicator-bar-warning: #fe8019 !important;
+        --bard-color-planner-status-indicator-bar-update: #458588 !important;
+
+        /* Bot Onboarding */
+        --bard-color-bot-onboarding-banner-bg-step-1: rgba(
+            177,
+            98,
+            134,
+            0.3
+        ) !important;
+        --bard-color-bot-onboarding-banner-bg-step-2: rgba(
+            69,
+            133,
+            136,
+            0.3
+        ) !important;
+        --bard-color-bot-onboarding-banner-bg-step-3: rgba(
+            131,
+            165,
+            152,
+            0.3
+        ) !important;
+        --bard-color-bot-onboarding-banner-bg-step-4: rgba(
+            254,
+            128,
+            25,
+            0.3
+        ) !important;
+
+        /* --- Material Design Variables --- */
+
+        --mat-app-background-color: #282828 !important;
+        --mat-app-text-color: #ebdbb2 !important;
+
+        /* Shadows */
+        --mat-app-elevation-shadow-level-0:
+            0px 0px 0px 0px rgba(0, 0, 0, 0.2),
+            0px 0px 0px 0px rgba(0, 0, 0, 0.14),
+            0px 0px 0px 0px rgba(0, 0, 0, 0.12) !important;
+        --mat-app-elevation-shadow-level-1:
+            0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+            0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+            0px 1px 3px 0px rgba(0, 0, 0, 0.12) !important;
+        --mat-app-elevation-shadow-level-2:
+            0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+            0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+            0px 1px 5px 0px rgba(0, 0, 0, 0.12) !important;
+        --mat-app-elevation-shadow-level-3:
+            0px 3px 3px -2px rgba(0, 0, 0, 0.2),
+            0px 3px 4px 0px rgba(0, 0, 0, 0.14),
+            0px 1px 8px 0px rgba(0, 0, 0, 0.12) !important;
+        --mat-app-elevation-shadow-level-4:
+            0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+            0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+            0px 1px 10px 0px rgba(0, 0, 0, 0.12) !important;
+
+        /* Ripple Effects */
+        --mat-ripple-color: rgba(235, 219, 178, 0.1) !important;
+
+        /* Dropdown Options */
+        --mat-option-focus-state-layer-color: rgba(
+            235,
+            219,
+            178,
+            0.12
+        ) !important;
+        --mat-option-hover-state-layer-color: rgba(
+            235,
+            219,
+            178,
+            0.08
+        ) !important;
+        --mat-option-label-text-color: #ebdbb2 !important;
+        --mat-option-selected-state-label-text-color: #b8bb26 !important;
+        --mat-option-selected-state-layer-color: #504945 !important;
+        --mat-optgroup-label-text-color: #a89984 !important;
+
+        /* Checkbox Internals */
+        --mat-pseudo-checkbox-full-disabled-selected-checkmark-color: #282828 !important;
+        --mat-pseudo-checkbox-full-disabled-selected-icon-color: rgba(
+            235,
+            219,
+            178,
+            0.38
+        ) !important;
+        --mat-pseudo-checkbox-full-disabled-unselected-icon-color: rgba(
+            235,
+            219,
+            178,
+            0.38
+        ) !important;
+        --mat-pseudo-checkbox-full-selected-checkmark-color: #282828 !important;
+        --mat-pseudo-checkbox-full-selected-icon-color: #b8bb26 !important;
+        --mat-pseudo-checkbox-full-unselected-icon-color: #a89984 !important;
+        --mat-pseudo-checkbox-minimal-disabled-selected-checkmark-color: rgba(
+            235,
+            219,
+            178,
+            0.38
+        ) !important;
+        --mat-pseudo-checkbox-minimal-selected-checkmark-color: #b8bb26 !important;
+
+        /* Bottom Sheets */
+        --mat-bottom-sheet-container-text-color: #ebdbb2 !important;
+        --mat-bottom-sheet-container-background-color: #3c3836 !important;
+
+        /* Button Toggles */
+        --mat-button-toggle-background-color: transparent !important;
+        --mat-button-toggle-disabled-selected-state-background-color: rgba(
+            235,
+            219,
+            178,
+            0.12
+        ) !important;
+        --mat-button-toggle-disabled-selected-state-text-color: rgba(
+            235,
+            219,
+            178,
+            0.38
+        ) !important;
+        --mat-button-toggle-disabled-state-background-color: transparent !important;
+        --mat-button-toggle-disabled-state-text-color: rgba(
+            235,
+            219,
+            178,
+            0.38
+        ) !important;
+        --mat-button-toggle-divider-color: #a89984 !important;
+        --mat-button-toggle-selected-state-background-color: #504945 !important;
+        --mat-button-toggle-selected-state-text-color: #b8bb26 !important;
+        --mat-button-toggle-state-layer-color: #ebdbb2 !important;
+        --mat-button-toggle-text-color: #ebdbb2 !important;
+
+        /* Dividers */
+        --mat-divider-color: #504945 !important;
+
+        /* Expansion Panels */
+        --mat-expansion-actions-divider-color: #a89984 !important;
+        --mat-expansion-container-background-color: #282828 !important;
+        --mat-expansion-container-text-color: #ebdbb2 !important;
+        --mat-expansion-header-description-color: #a89984 !important;
+        --mat-expansion-header-disabled-state-text-color: rgba(
+            235,
+            219,
+            178,
+            0.38
+        ) !important;
+        --mat-expansion-header-focus-state-layer-color: rgba(
+            235,
+            219,
+            178,
+            0.12
+        ) !important;
+        --mat-expansion-header-hover-state-layer-color: rgba(
+            235,
+            219,
+            178,
+            0.08
+        ) !important;
+        --mat-expansion-header-indicator-color: #a89984 !important;
+        --mat-expansion-header-text-color: #ebdbb2 !important;
+
+        /* Icon */
+        --mat-icon-color: inherit !important;
+
+        /* Sidenav / Sidebar */
+        --mat-sidenav-container-background-color: #282828 !important;
+        --mat-sidenav-container-text-color: #a89984 !important;
+        --mat-sidenav-content-background-color: #282828 !important;
+        --mat-sidenav-content-text-color: #ebdbb2 !important;
+        --mat-sidenav-scrim-color: rgba(0, 0, 0, 0.5) !important;
+
+        /* Buttons */
+        --mat-button-filled-container-color: #b8bb26 !important;
+        --mat-button-filled-disabled-container-color: rgba(
+            235,
+            219,
+            178,
+            0.12
+        ) !important;
+        --mat-button-filled-disabled-label-text-color: rgba(
+            235,
+            219,
+            178,
+            0.38
+        ) !important;
+        --mat-button-filled-disabled-state-layer-color: #a89984 !important;
+        --mat-button-filled-label-text-color: #282828 !important;
+        --mat-button-filled-ripple-color: rgba(40, 40, 40, 0.12) !important;
+        --mat-button-filled-state-layer-color: #282828 !important;
+
+        --mat-button-outlined-disabled-label-text-color: rgba(
+            235,
+            219,
+            178,
+            0.38
+        ) !important;
+        --mat-button-outlined-disabled-outline-color: rgba(
+            235,
+            219,
+            178,
+            0.12
+        ) !important;
+        --mat-button-outlined-disabled-state-layer-color: #a89984 !important;
+        --mat-button-outlined-label-text-color: #b8bb26 !important;
+        --mat-button-outlined-outline-color: #a89984 !important;
+        --mat-button-outlined-ripple-color: rgba(184, 187, 38, 0.12) !important;
+        --mat-button-outlined-state-layer-color: #b8bb26 !important;
+
+        --mat-button-protected-container-color: #282828 !important;
+        --mat-button-protected-disabled-container-color: rgba(
+            235,
+            219,
+            178,
+            0.12
+        ) !important;
+        --mat-button-protected-disabled-label-text-color: rgba(
+            235,
+            219,
+            178,
+            0.38
+        ) !important;
+        --mat-button-protected-disabled-state-layer-color: #a89984 !important;
+        --mat-button-protected-label-text-color: #b8bb26 !important;
+        --mat-button-protected-ripple-color: rgba(
+            184,
+            187,
+            38,
+            0.12
+        ) !important;
+        --mat-button-protected-state-layer-color: #b8bb26 !important;
+
+        --mat-button-text-disabled-label-text-color: rgba(
+            235,
+            219,
+            178,
+            0.38
+        ) !important;
+        --mat-button-text-disabled-state-layer-color: #a89984 !important;
+        --mat-button-text-label-text-color: #b8bb26 !important;
+        --mat-button-text-ripple-color: rgba(184, 187, 38, 0.12) !important;
+        --mat-button-text-state-layer-color: #b8bb26 !important;
+
+        --mat-button-tonal-container-color: #504945 !important;
+        --mat-button-tonal-disabled-container-color: rgba(
+            235,
+            219,
+            178,
+            0.12
+        ) !important;
+        --mat-button-tonal-disabled-label-text-color: rgba(
+            235,
+            219,
+            178,
+            0.38
+        ) !important;
+        --mat-button-tonal-disabled-state-layer-color: #a89984 !important;
+        --mat-button-tonal-label-text-color: #ebdbb2 !important;
+        --mat-button-tonal-ripple-color: rgba(235, 219, 178, 0.12) !important;
+        --mat-button-tonal-state-layer-color: #ebdbb2 !important;
+
+        /* Cards */
+        --mat-card-elevated-container-color: #3c3836 !important;
+        --mat-card-filled-container-color: #3c3836 !important;
+        --mat-card-outlined-container-color: #282828 !important;
+        --mat-card-outlined-outline-color: #504945 !important;
+        --mat-card-subtitle-text-color: #ebdbb2 !important;
+
+        /* Dialogs / Modals */
+        --mat-dialog-container-color: #3c3836 !important;
+        --mat-dialog-subhead-color: #ebdbb2 !important;
+        --mat-dialog-supporting-text-color: #a89984 !important;
+
+        /* Icon Buttons */
+        --mat-icon-button-disabled-icon-color: rgba(
+            235,
+            219,
+            178,
+            0.38
+        ) !important;
+        --mat-icon-button-disabled-state-layer-color: #a89984 !important;
+        --mat-icon-button-icon-color: #a89984 !important;
+        --mat-icon-button-ripple-color: rgba(168, 153, 132, 0.12) !important;
+        --mat-icon-button-state-layer-color: #a89984 !important;
+
+        /* Form Fields */
+        --mat-form-field-disabled-input-text-placeholder-color: rgba(
+            235,
+            219,
+            178,
+            0.38
+        ) !important;
+        --mat-form-field-disabled-leading-icon-color: rgba(
+            235,
+            219,
+            178,
+            0.38
+        ) !important;
+        --mat-form-field-disabled-select-arrow-color: rgba(
+            235,
+            219,
+            178,
+            0.38
+        ) !important;
+        --mat-form-field-disabled-trailing-icon-color: rgba(
+            235,
+            219,
+            178,
+            0.38
+        ) !important;
+        --mat-form-field-enabled-select-arrow-color: #a89984 !important;
+        --mat-form-field-error-focus-trailing-icon-color: #fb4934 !important;
+        --mat-form-field-error-hover-trailing-icon-color: #fb4934 !important;
+        --mat-form-field-error-text-color: #fb4934 !important;
+        --mat-form-field-error-trailing-icon-color: #fb4934 !important;
+        --mat-form-field-filled-active-indicator-color: #a89984 !important;
+        --mat-form-field-filled-caret-color: #b8bb26 !important;
+        --mat-form-field-filled-container-color: #504945 !important;
+        --mat-form-field-filled-disabled-active-indicator-color: rgba(
+            235,
+            219,
+            178,
+            0.38
+        ) !important;
+        --mat-form-field-filled-disabled-container-color: rgba(
+            235,
+            219,
+            178,
+            0.04
+        ) !important;
+        --mat-form-field-filled-disabled-input-text-color: rgba(
+            235,
+            219,
+            178,
+            0.38
+        ) !important;
+        --mat-form-field-filled-disabled-label-text-color: rgba(
+            235,
+            219,
+            178,
+            0.38
+        ) !important;
+        --mat-form-field-filled-error-active-indicator-color: #fb4934 !important;
+        --mat-form-field-filled-error-caret-color: #fb4934 !important;
+        --mat-form-field-filled-error-focus-active-indicator-color: #fb4934 !important;
+        --mat-form-field-filled-error-focus-label-text-color: #fb4934 !important;
+        --mat-form-field-filled-error-hover-active-indicator-color: #fb4934 !important;
+        --mat-form-field-filled-error-hover-label-text-color: #fb4934 !important;
+        --mat-form-field-filled-error-label-text-color: #fb4934 !important;
+        --mat-form-field-filled-focus-active-indicator-color: #b8bb26 !important;
+        --mat-form-field-filled-focus-label-text-color: #b8bb26 !important;
+        --mat-form-field-filled-hover-active-indicator-color: #ebdbb2 !important;
+        --mat-form-field-filled-hover-label-text-color: #a89984 !important;
+        --mat-form-field-filled-input-text-color: #ebdbb2 !important;
+        --mat-form-field-filled-input-text-placeholder-color: #a89984 !important;
+        --mat-form-field-filled-label-text-color: #a89984 !important;
+        --mat-form-field-focus-select-arrow-color: #b8bb26 !important;
+        --mat-form-field-leading-icon-color: #a89984 !important;
+        --mat-form-field-outlined-caret-color: #b8bb26 !important;
+        --mat-form-field-outlined-disabled-input-text-color: rgba(
+            235,
+            219,
+            178,
+            0.38
+        ) !important;
+        --mat-form-field-outlined-disabled-label-text-color: rgba(
+            235,
+            219,
+            178,
+            0.38
+        ) !important;
+        --mat-form-field-outlined-disabled-outline-color: rgba(
+            235,
+            219,
+            178,
+            0.12
+        ) !important;
+        --mat-form-field-outlined-error-caret-color: #fb4934 !important;
+        --mat-form-field-outlined-error-focus-label-text-color: #fb4934 !important;
+        --mat-form-field-outlined-error-focus-outline-color: #fb4934 !important;
+        --mat-form-field-outlined-error-hover-label-text-color: #fb4934 !important;
+        --mat-form-field-outlined-error-hover-outline-color: #fb4934 !important;
+        --mat-form-field-outlined-error-label-text-color: #fb4934 !important;
+        --mat-form-field-outlined-error-outline-color: #fb4934 !important;
+        --mat-form-field-outlined-focus-label-text-color: #b8bb26 !important;
+        --mat-form-field-outlined-focus-outline-color: #b8bb26 !important;
+        --mat-form-field-outlined-hover-label-text-color: #ebdbb2 !important;
+        --mat-form-field-outlined-hover-outline-color: #ebdbb2 !important;
+        --mat-form-field-outlined-input-text-color: #ebdbb2 !important;
+        --mat-form-field-outlined-input-text-placeholder-color: #a89984 !important;
+        --mat-form-field-outlined-label-text-color: #a89984 !important;
+        --mat-form-field-outlined-outline-color: #a89984 !important;
+        --mat-form-field-select-disabled-option-text-color: rgba(
+            31,
+            31,
+            31,
+            0.38
+        ) !important;
+        --mat-form-field-select-option-text-color: #ebdbb2 !important; /* Dropdown Text */
+        --mat-form-field-state-layer-color: #ebdbb2 !important;
+        --mat-form-field-trailing-icon-color: #a89984 !important;
+
+        /* Lists */
+        --mat-list-active-indicator-color: #504945 !important;
+        --mat-list-list-item-container-color: transparent !important;
+        --mat-list-list-item-disabled-label-text-color: #ebdbb2 !important;
+        --mat-list-list-item-disabled-leading-icon-color: #ebdbb2 !important;
+        --mat-list-list-item-disabled-state-layer-color: #ebdbb2 !important;
+        --mat-list-list-item-disabled-trailing-icon-color: #ebdbb2 !important;
+        --mat-list-list-item-focus-label-text-color: #ebdbb2 !important;
+        --mat-list-list-item-focus-state-layer-color: #ebdbb2 !important;
+        --mat-list-list-item-hover-label-text-color: #ebdbb2 !important;
+        --mat-list-list-item-hover-state-layer-color: #ebdbb2 !important;
+        --mat-list-list-item-label-text-color: #ebdbb2 !important;
+        --mat-list-list-item-leading-avatar-color: #83a598 !important;
+        --mat-list-list-item-leading-icon-color: #a89984 !important;
+        --mat-list-list-item-selected-trailing-icon-color: #b8bb26 !important;
+        --mat-list-list-item-supporting-text-color: #a89984 !important;
+        --mat-list-list-item-trailing-icon-color: #a89984 !important;
+        --mat-list-list-item-trailing-supporting-text-color: #a89984 !important;
+
+        /* Slide Toggles */
+        --mat-slide-toggle-disabled-label-text-color: #ebdbb2 !important;
+        --mat-slide-toggle-disabled-selected-handle-color: #282828 !important;
+        --mat-slide-toggle-disabled-selected-icon-color: #ebdbb2 !important;
+        --mat-slide-toggle-disabled-selected-track-color: #ebdbb2 !important;
+        --mat-slide-toggle-disabled-unselected-handle-color: #ebdbb2 !important;
+        --mat-slide-toggle-disabled-unselected-icon-color: #504945 !important;
+        --mat-slide-toggle-disabled-unselected-track-color: #504945 !important;
+        --mat-slide-toggle-disabled-unselected-track-outline-color: #ebdbb2 !important;
+        --mat-slide-toggle-label-text-color: #ebdbb2 !important;
+        --mat-slide-toggle-selected-focus-handle-color: #83a598 !important;
+        --mat-slide-toggle-selected-focus-state-layer-color: #b8bb26 !important;
+        --mat-slide-toggle-selected-focus-track-color: #b8bb26 !important;
+        --mat-slide-toggle-selected-handle-color: #282828 !important;
+        --mat-slide-toggle-selected-hover-handle-color: #83a598 !important;
+        --mat-slide-toggle-selected-hover-state-layer-color: #b8bb26 !important;
+        --mat-slide-toggle-selected-hover-track-color: #b8bb26 !important;
+        --mat-slide-toggle-selected-icon-color: #b8bb26 !important; /* Inner Toggle Icon */
+        --mat-slide-toggle-selected-pressed-handle-color: #83a598 !important;
+        --mat-slide-toggle-selected-pressed-state-layer-color: #b8bb26 !important;
+        --mat-slide-toggle-selected-pressed-track-color: #b8bb26 !important;
+        --mat-slide-toggle-selected-track-color: #b8bb26 !important;
+        --mat-slide-toggle-track-outline-color: #a89984 !important;
+        --mat-slide-toggle-unselected-focus-handle-color: #a89984 !important;
+        --mat-slide-toggle-unselected-focus-state-layer-color: #ebdbb2 !important;
+        --mat-slide-toggle-unselected-focus-track-color: #504945 !important;
+        --mat-slide-toggle-unselected-handle-color: #a89984 !important;
+        --mat-slide-toggle-unselected-hover-handle-color: #a89984 !important;
+        --mat-slide-toggle-unselected-hover-state-layer-color: #ebdbb2 !important;
+        --mat-slide-toggle-unselected-hover-track-color: #504945 !important;
+        --mat-slide-toggle-unselected-icon-color: #504945 !important;
+        --mat-slide-toggle-unselected-pressed-handle-color: #a89984 !important;
+        --mat-slide-toggle-unselected-pressed-state-layer-color: #ebdbb2 !important;
+        --mat-slide-toggle-unselected-pressed-track-color: #504945 !important;
+        --mat-slide-toggle-unselected-track-color: #504945 !important;
+
+        /* Sliders */
+        --mat-slider-active-track-color: #b8bb26 !important;
+        --mat-slider-disabled-active-track-color: #ebdbb2 !important;
+        --mat-slider-disabled-handle-color: #ebdbb2 !important;
+        --mat-slider-disabled-inactive-track-color: #ebdbb2 !important;
+        --mat-slider-focus-handle-color: #b8bb26 !important;
+        --mat-slider-focus-state-layer-color: rgba(
+            184,
+            187,
+            38,
+            0.2
+        ) !important;
+        --mat-slider-handle-color: #b8bb26 !important;
+        --mat-slider-hover-handle-color: #b8bb26 !important;
+        --mat-slider-hover-state-layer-color: rgba(
+            184,
+            187,
+            38,
+            0.05
+        ) !important;
+        --mat-slider-inactive-track-color: #504945 !important;
+        --mat-slider-label-container-color: #b8bb26 !important;
+        --mat-slider-label-label-text-color: #282828 !important;
+        --mat-slider-ripple-color: #b8bb26 !important;
+        --mat-slider-with-overlap-handle-outline-color: #282828 !important;
+        --mat-slider-with-tick-marks-active-container-color: #282828 !important;
+        --mat-slider-with-tick-marks-disabled-container-color: #ebdbb2 !important;
+        --mat-slider-with-tick-marks-inactive-container-color: #a89984 !important;
+
+        /* Snack Bars / Notifications */
+        --mat-snack-bar-button-color: #b8bb26 !important;
+        --mat-snack-bar-container-color: #ebdbb2 !important;
+        --mat-snack-bar-supporting-text-color: #282828 !important;
+
+        /* Chips */
+        --mat-chip-disabled-label-text-color: rgba(
+            235,
+            219,
+            178,
+            0.38
+        ) !important;
+        --mat-chip-disabled-outline-color: rgba(235, 219, 178, 0.12) !important;
+        --mat-chip-elevated-selected-container-color: #504945 !important;
+        --mat-chip-flat-disabled-selected-container-color: rgba(
+            235,
+            219,
+            178,
+            0.12
+        ) !important;
+        --mat-chip-focus-outline-color: #a89984 !important;
+        --mat-chip-focus-state-layer-color: #a89984 !important;
+        --mat-chip-hover-state-layer-color: #a89984 !important;
+        --mat-chip-label-text-color: #a89984 !important;
+        --mat-chip-outline-color: #a89984 !important;
+        --mat-chip-selected-disabled-trailing-icon-color: #ebdbb2 !important;
+        --mat-chip-selected-focus-state-layer-color: #b8bb26 !important;
+        --mat-chip-selected-hover-state-layer-color: #b8bb26 !important;
+        --mat-chip-selected-label-text-color: #b8bb26 !important;
+        --mat-chip-selected-trailing-action-state-layer-color: #b8bb26 !important;
+        --mat-chip-selected-trailing-icon-color: #b8bb26 !important;
+        --mat-chip-trailing-action-state-layer-color: #a89984 !important;
+        --mat-chip-with-icon-disabled-icon-color: #ebdbb2 !important;
+        --mat-chip-with-icon-icon-color: #a89984 !important;
+        --mat-chip-with-icon-selected-icon-color: #b8bb26 !important;
+        --mat-chip-with-trailing-icon-disabled-trailing-icon-color: #ebdbb2 !important;
+        --mat-chip-with-trailing-icon-trailing-icon-color: #a89984 !important;
+
+        /* Menus */
+        --mat-menu-divider-color: #504945 !important;
+        --mat-menu-item-label-text-color: #ebdbb2 !important;
+        --mat-menu-item-icon-color: #a89984 !important;
+        --mat-menu-item-hover-state-layer-color: rgba(
+            235,
+            219,
+            178,
+            0.08
+        ) !important;
+        --mat-menu-item-focus-state-layer-color: rgba(
+            235,
+            219,
+            178,
+            0.12
+        ) !important;
+        --mat-menu-container-color: #3c3836 !important;
+
+        /* Main Checkboxes */
+        --mat-checkbox-disabled-label-color: rgba(
+            235,
+            219,
+            178,
+            0.38
+        ) !important;
+        --mat-checkbox-disabled-selected-checkmark-color: #282828 !important;
+        --mat-checkbox-disabled-selected-icon-color: rgba(
+            235,
+            219,
+            178,
+            0.38
+        ) !important;
+        --mat-checkbox-disabled-unselected-icon-color: rgba(
+            235,
+            219,
+            178,
+            0.38
+        ) !important;
+        --mat-checkbox-label-text-color: #ebdbb2 !important;
+        --mat-checkbox-selected-checkmark-color: #282828 !important;
+        --mat-checkbox-selected-focus-icon-color: #b8bb26 !important;
+        --mat-checkbox-selected-focus-state-layer-color: #b8bb26 !important;
+        --mat-checkbox-selected-hover-icon-color: #b8bb26 !important;
+        --mat-checkbox-selected-hover-state-layer-color: #b8bb26 !important;
+        --mat-checkbox-selected-icon-color: #b8bb26 !important;
+        --mat-checkbox-selected-pressed-icon-color: #b8bb26 !important;
+        --mat-checkbox-selected-pressed-state-layer-color: #ebdbb2 !important;
+        --mat-checkbox-unselected-focus-icon-color: #ebdbb2 !important;
+        --mat-checkbox-unselected-focus-state-layer-color: #ebdbb2 !important;
+        --mat-checkbox-unselected-hover-icon-color: #ebdbb2 !important;
+        --mat-checkbox-unselected-hover-state-layer-color: #ebdbb2 !important;
+        --mat-checkbox-unselected-icon-color: #a89984 !important;
+        --mat-checkbox-unselected-pressed-state-layer-color: #b8bb26 !important;
+
+        /* Tooltips */
+        --mat-tooltip-container-color: #ebdbb2 !important;
+        --mat-tooltip-supporting-text-color: #282828 !important;
+
+        /* Progress Bars and Spinners */
+        --mat-progress-bar-active-indicator-color: #b8bb26 !important;
+        --mat-progress-bar-track-color: #504945 !important;
+        --mat-progress-spinner-active-indicator-color: #b8bb26 !important;
+
+        /* Select Elements */
+        --mat-select-panel-background-color: #3c3836 !important;
+        --mat-select-enabled-trigger-text-color: #ebdbb2 !important;
+        --mat-select-disabled-trigger-text-color: rgba(
+            235,
+            219,
+            178,
+            0.38
+        ) !important;
+        --mat-select-placeholder-text-color: #a89984 !important;
+        --mat-select-enabled-arrow-color: #a89984 !important;
+        --mat-select-disabled-arrow-color: rgba(235, 219, 178, 0.38) !important;
+        --mat-select-focused-arrow-color: #b8bb26 !important;
+        --mat-select-invalid-arrow-color: #fb4934 !important;
+
+        /* Radio Buttons */
+        --mat-radio-checked-ripple-color: #b8bb26 !important;
+        --mat-radio-disabled-label-color: rgba(235, 219, 178, 0.38) !important;
+        --mat-radio-disabled-selected-icon-color: #ebdbb2 !important;
+        --mat-radio-disabled-unselected-icon-color: #ebdbb2 !important;
+        --mat-radio-label-text-color: #ebdbb2 !important;
+        --mat-radio-ripple-color: #ebdbb2 !important;
+        --mat-radio-selected-focus-icon-color: #b8bb26 !important;
+        --mat-radio-selected-hover-icon-color: #b8bb26 !important;
+        --mat-radio-selected-icon-color: #b8bb26 !important;
+        --mat-radio-selected-pressed-icon-color: #b8bb26 !important;
+        --mat-radio-unselected-focus-icon-color: #ebdbb2 !important;
+        --mat-radio-unselected-hover-icon-color: #ebdbb2 !important;
+        --mat-radio-unselected-icon-color: #a89984 !important;
+        --mat-radio-unselected-pressed-icon-color: #ebdbb2 !important;
+
+        /* Floating Action Buttons */
+        --mat-fab-container-color: #504945 !important;
+        --mat-fab-disabled-state-container-color: rgba(
+            235,
+            219,
+            178,
+            0.12
+        ) !important;
+        --mat-fab-disabled-state-foreground-color: rgba(
+            235,
+            219,
+            178,
+            0.38
+        ) !important;
+        --mat-fab-foreground-color: #b8bb26 !important;
+        --mat-fab-ripple-color: rgba(184, 187, 38, 0.12) !important;
+        --mat-fab-small-container-color: #504945 !important;
+        --mat-fab-small-disabled-state-container-color: rgba(
+            235,
+            219,
+            178,
+            0.12
+        ) !important;
+        --mat-fab-small-disabled-state-foreground-color: rgba(
+            235,
+            219,
+            178,
+            0.38
+        ) !important;
+        --mat-fab-small-foreground-color: #b8bb26 !important;
+        --mat-fab-small-ripple-color: rgba(184, 187, 38, 0.12) !important;
+        --mat-fab-small-state-layer-color: #b8bb26 !important;
+        --mat-fab-state-layer-color: #b8bb26 !important;
+
+        /* Tabs */
+        --mat-tab-active-focus-indicator-color: #b8bb26 !important;
+        --mat-tab-active-focus-label-text-color: #ebdbb2 !important;
+        --mat-tab-active-hover-indicator-color: #b8bb26 !important;
+        --mat-tab-active-hover-label-text-color: #ebdbb2 !important;
+        --mat-tab-active-indicator-color: #b8bb26 !important;
+        --mat-tab-active-label-text-color: #ebdbb2 !important;
+        --mat-tab-active-ripple-color: #ebdbb2 !important;
+        --mat-tab-divider-color: #504945 !important;
+        --mat-tab-inactive-focus-label-text-color: #ebdbb2 !important;
+        --mat-tab-inactive-hover-label-text-color: #ebdbb2 !important;
+        --mat-tab-inactive-label-text-color: #ebdbb2 !important;
+        --mat-tab-inactive-ripple-color: #ebdbb2 !important;
+        --mat-tab-pagination-icon-color: #ebdbb2 !important;
+        --mat-tab-disabled-ripple-color: #a89984 !important;
+
+        /* Focus */
+        --mat-focus-indicator-border-color: #b8bb26 !important;
+
+        /* Synthetic */
+        --bard-color-synthetic--chat-window-surface: var(
+            --gem-sys-color--surface
+        ) !important;
+        --bard-color-synthetic--sidenav-background-color: var(
+            --gem-sys-color--surface-container
+        ) !important;
+        --bard-color-synthetic--sidenav-background-color-mystuff-update: var(
+            --bard-color-sidenav-background-v2
+        ) !important;
+        --bard-color-synthetic--sidenav-border: var(
+            --gem-sys-color--surface-container
+        ) !important;
+        --bard-color-synthetic--sidenav-border-mystuff-update: var(
+            --gem-sys-color--outline-low
+        ) !important;
+        --bard-color-synthetic--mat-card-background: var(
+            --gem-sys-color--surface-container
+        ) !important;
+        --bard-color-synthetic--chat-window-surface-container: var(
+            --gem-sys-color--surface-container
+        ) !important;
+        --bard-color-synthetic--chat-window-surface-container-high: var(
+            --gem-sys-color--surface-container-high
+        ) !important;
+        --bard-color-synthetic--chat-window-surface-container-highest: var(
+            --gem-sys-color--surface-container-highest
+        ) !important;
+    }
+
+    /* Force Dark Theme Application */
+    body,
+    body.dark-theme,
+    body.light-theme {
+        background-color: var(--gem-sys-color--surface) !important;
+        color: var(--gem-sys-color--on-surface) !important;
+    }
+
+    /* Remove Background Gradients/Images */
+    body::before,
+    body::after {
+        background: none !important;
+    }
+
+    /* --- Modals and Pickers --- */
+    .picker-close-button {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .picker-close-button:hover {
+        background-color: rgba(235, 219, 178, 0.05) !important;
+    }
+    .picker-close-button:active {
+        background-color: rgba(235, 219, 178, 0.1) !important;
+    }
+    .picker-close-button-svg {
+        fill: #a89984 !important;
+    }
+    .content-library.loading .picker-loading-container {
+        background-color: #3c3836 !important;
+    }
+
+    .goog-modalpopup,
+    .modal-dialog {
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+        background: #3c3836 !important;
+        border: 1px solid #665c54 !important;
+        color: #ebdbb2 !important;
+    }
+
+    .goog-modalpopup-bg,
+    .modal-dialog-bg {
+        background: rgba(29, 32, 33, 0.7) !important;
+    }
+
+    .modal-dialog-title {
+        background-color: #504945 !important;
+        color: #fbf1c7 !important;
+    }
+
+    .modal-dialog-content {
+        background-color: #3c3836 !important;
+    }
+
+    .modal-dialog-buttons button {
+        background-color: #504945 !important;
+        border: 1px solid #665c54 !important;
+        color: #ebdbb2 !important;
+    }
+
+    .modal-dialog-buttons button:hover,
+    .modal-dialog-buttons button:active {
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2) !important;
+        background-color: #665c54 !important;
+        border: 1px solid #a89984 !important;
+        color: #fbf1c7 !important;
+    }
+
+    .modal-dialog-buttons button:active {
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    .modal-dialog-buttons button:focus {
+        border: 1px solid #b8bb26 !important;
+    }
+
+    .modal-dialog-buttons button[disabled] {
+        background: #3c3836 !important;
+        border: 1px solid #504945 !important;
+        color: #665c54 !important;
+    }
+
+    /* Primary modal button */
+    .modal-dialog-buttons .goog-buttonset-action {
+        background-color: #b8bb26 !important;
+        border: 1px solid #98971a !important;
+        color: #282828 !important;
+    }
+
+    .modal-dialog-buttons .goog-buttonset-action:hover,
+    .modal-dialog-buttons .goog-buttonset-action:active {
+        background-color: #98971a !important;
+        border: 1px solid #79740e !important;
+        color: #fbf1c7 !important;
+    }
+
+    .modal-dialog-buttons .goog-buttonset-action:active {
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    .modal-dialog-buttons .goog-buttonset-action:focus {
+        box-shadow: inset 0 0 0 1px #3c3836 !important;
+        border: 1px solid #98971a !important;
+        outline: 1px solid #b8bb26 !important;
+    }
+
+    .google-picker.modal-dialog {
+        box-shadow:
+            0 4px 8px 3px rgba(0, 0, 0, 0.2),
+            0 1px 3px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    .google-picker.transparent-picker.modal-dialog,
+    .google-picker.transparent-picker.modal-dialog-content {
+        background-color: transparent !important;
+    }
+
+    /* --- Shadows and Elevations --- */
+    .initial-input-area.discovery-feed-ssr .initial-input-area-container {
+        box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    .full-width-input .initial-input-area-container {
+        box-shadow:
+            0 0 16px 0 rgba(235, 219, 178, 0.1),
+            0 0 2px 0 rgba(235, 219, 178, 0.05) !important;
+    }
+
+    .gds-elevation-0 {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+    }
+    .gds-elevation-1 {
+        box-shadow:
+            0 2px 1px -1px rgba(0, 0, 0, 0.3),
+            0 1px 1px 0 rgba(0, 0, 0, 0.24),
+            0 1px 3px 0 rgba(0, 0, 0, 0.22) !important;
+    }
+    .gds-elevation-2 {
+        box-shadow:
+            0 3px 3px -2px rgba(0, 0, 0, 0.3),
+            0 3px 4px 0 rgba(0, 0, 0, 0.24),
+            0 1px 8px 0 rgba(0, 0, 0, 0.22) !important;
+    }
+    .gds-elevation-3 {
+        box-shadow:
+            0 3px 5px -1px rgba(0, 0, 0, 0.3),
+            0 6px 10px 0 rgba(0, 0, 0, 0.24),
+            0 1px 18px 0 rgba(0, 0, 0, 0.22) !important;
+    }
+    .gds-elevation-4 {
+        box-shadow:
+            0 5px 5px -3px rgba(0, 0, 0, 0.3),
+            0 8px 10px 1px rgba(0, 0, 0, 0.24),
+            0 3px 14px 2px rgba(0, 0, 0, 0.22) !important;
+    }
+    .gds-elevation-5 {
+        box-shadow:
+            0 7px 8px -4px rgba(0, 0, 0, 0.3),
+            0 12px 17px 2px rgba(0, 0, 0, 0.24),
+            0 5px 22px 4px rgba(0, 0, 0, 0.22) !important;
+    }
+    .gds-elevation-0-5 {
+        box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    /* --- Scrollbar --- */
+    ::-webkit-scrollbar {
+        width: 12px !important;
+        height: 12px !important;
+    }
+    ::-webkit-scrollbar-track {
+        background: #282828 !important;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: #504945 !important;
+        border-radius: 6px !important;
+        border: 3px solid #282828 !important;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #665c54 !important;
+    }
+
+    /* --- Miscellaneous Selectors --- */
+    html {
+        --mat-focus-indicator-border-color: #b8bb26 !important;
+    }
+
+    generated-image single-image .placeholder.loading,
+    generated-video single-image .placeholder.loading {
+        background: #3c3836 !important;
+    }
+
+    initial-input-area-container textarea {
+        background-color: transparent !important;
+    }
+
+    /* Button Hover Shadows */
+    :where(.theme-host) a[mat-flat-button]:hover,
+    :where(.theme-host) button[mat-flat-button]:hover {
+        box-shadow:
+            0 2px 1px -1px rgba(0, 0, 0, 0.3),
+            0 1px 1px 0 rgba(0, 0, 0, 0.24),
+            0 1px 3px 0 rgba(0, 0, 0, 0.22) !important;
+    }
+
+    :where(.theme-host) button[mat-flat-button].gds-upsell-button:hover,
+    :where(.theme-host) button[mat-flat-button].gds-referral-button:hover {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+    }
+
+    :where(.theme-host) mat-action-list.gds-mode-switch-menu-list {
+        --mat-list-list-item-disabled-state-layer-color: transparent !important;
+    }
+
+    div:has(> h1.text-animated) {
+        filter: sepia();
+    }
+}
