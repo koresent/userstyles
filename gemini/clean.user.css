@@ -1,8 +1,8 @@
 /* ==UserStyle==
 @name         ✦ [Gemini] Clean
 @namespace    github.com/koresent/userstyles
-@version      1.0.0
-@description  Hides unnecessary UI elements and promotions on the Gemini page.
+@version      1.1.0
+@description  Hides unnecessary UI elements, removes promotions, and optimizes chat layout for full-width view.
 @author       Koresent
 @license      GPL-3.0
 @homepageURL  https://github.com/koresent/userstyles
@@ -49,5 +49,32 @@
     .mat-mdc-button > .mat-icon {
         margin-right: 0;
         margin-left: 0;
+    }
+
+    /* Set the chat container to utilize the full page width */
+    div.conversation-container,
+    div.conversation-container > user-query {
+        max-width: 100% !important;
+    }
+
+    /* Adjust the default width of the sidebar component */
+    :root,
+    body,
+    bard-sidenav {
+        --bard-sidenav-closed-width: 48px !important;
+    }
+
+    /* Standardize sidebar button dimensions and alignment */
+    bard-sidenav .mat-mdc-icon-button {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .side-nav-menu-button {
+        opacity: 0%;
     }
 }
