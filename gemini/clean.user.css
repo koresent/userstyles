@@ -39,12 +39,6 @@
         top: 0 !important;
     }
 
-    /* Action buttons positioning below responses */
-    div:has(> regenerate-button) {
-        position: absolute !important;
-        left: 0px !important;
-    }
-
     /* Share & Export button positioning */
     div:has(> button[aria-label="Поделиться и экспортировать"]) {
         position: absolute !important;
