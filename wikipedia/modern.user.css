@@ -1,0 +1,229 @@
+/* ==UserStyle==
+@name         ✦ [Wikipedia] Modern
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Modern rounded layout for Wikipedia
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/wikipedia/modern.user.css
+==/UserStyle== */
+
+@-moz-document domain("wikipedia.org"),
+domain("wikimedia.org"),
+domain("wiktionary.org"),
+domain("wikivoyage.org"),
+domain("mediawiki.org"),
+domain("wikinews.org") {
+    :root {
+        --box-radius: 16px;
+        --font-heading:
+            "Linux Libertine", "Georgia", "Times", "Source Serif Pro", serif;
+    }
+
+    /* Headings Typography */
+    .vector-page-titlebar .firstHeading,
+    .mw-body h1,
+    .mw-body-content h1,
+    .mw-heading h1,
+    .mw-heading h2,
+    .mw-heading h3,
+    .mw-heading h4,
+    .mw-heading h5,
+    .mw-heading h6,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: var(--font-heading) !important;
+        font-weight: normal !important;
+        border: none !important;
+    }
+
+    /* Modernized Containers */
+    .mw-parser-output .navbox,
+    .mw-parser-output .sidebar,
+    #article_de_qualite,
+    .layouttemplate,
+    .wbmi-entityview-captionsPanel,
+    .fileinfotpl-type-information,
+    #filetoc,
+    .cadre_portail,
+    li.gallerybox div.thumb,
+    .mw-toolbox,
+    .wikilien_alternatif,
+    .bandeau-portail,
+    .navbox-container,
+    table.navbox,
+    .thumb > div.thumbinner,
+    .catlinks,
+    body:not(.mw-mf) .mw-parser-output div.infobox_v3,
+    .infobox_v2,
+    .boite-grise,
+    .infobox,
+    .vector-toc {
+        padding: 16px !important;
+        border-style: solid !important;
+        border-width: 1px !important;
+        border-radius: var(--box-radius) !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    /* Fix infobox padding */
+    .infobox th,
+    .infobox td,
+    .infobox_v3 th,
+    .infobox_v3 td {
+        padding: 4px 6px !important;
+    }
+
+    .infobox_v3 caption,
+    .infobox caption,
+    .entete {
+        padding-bottom: 12px !important;
+        background: none !important;
+    }
+
+    /* Figures & Images */
+    figure[typeof~="mw:File/Thumb"] {
+        border: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin-bottom: 1em !important;
+    }
+
+    figure[typeof~="mw:File/Thumb"] > :not(figcaption) .mw-file-element,
+    figure[typeof~="mw:File/Frame"] > :not(figcaption) .mw-file-element {
+        border: none !important;
+        border-radius: 10px 10px 0 0 !important;
+    }
+
+    figure[typeof~="mw:File/Thumb"] > :not(figcaption),
+    figure[typeof~="mw:File/Frame"] > :not(figcaption) {
+        background: var(--bg-dark) !important;
+        border-top-left-radius: 10px !important;
+        border-top-right-radius: 10px !important;
+    }
+
+    figure[typeof~="mw:File/Thumb"] > .mw-file-description {
+        padding: 0 !important;
+    }
+
+    figure[typeof~="mw:File/Thumb"] > figcaption,
+    figure[typeof~="mw:File/Frame"] > figcaption,
+    figcaption {
+        border-radius: 0 0 10px 10px !important;
+        border: 0 !important;
+        padding: 12px 16px 16px !important;
+        line-height: 1.4 !important;
+    }
+
+    img {
+        border-radius: 8px !important;
+    }
+
+    /* Tables */
+    .wikitable {
+        border-collapse: separate !important;
+        border-spacing: 0 !important;
+        border-radius: var(--box-radius) !important;
+        border-style: solid !important;
+        border-width: 1px !important;
+        overflow: hidden !important;
+    }
+
+    .wikitable > * > tr > th,
+    .wikitable > * > tr > td {
+        padding: 8px 12px !important;
+        border-style: solid !important;
+        border-width: 0 1px 1px 0 !important;
+    }
+
+    .wikitable > * > tr > th:last-child,
+    .wikitable > * > tr > td:last-child {
+        border-right-width: 0 !important;
+    }
+
+    .wikitable > * > tr:last-child > th,
+    .wikitable > * > tr:last-child > td {
+        border-bottom-width: 0 !important;
+    }
+
+    /* Search input & Header */
+    .vector-sticky-header {
+        backdrop-filter: blur(16px) !important;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    .cdx-text-input__input,
+    .cdx-text-input__input:enabled {
+        border-style: solid !important;
+        border-width: 1px !important;
+        border-radius: 20px !important;
+        padding-left: 46px !important;
+    }
+
+    .cdx-search-input--has-end-button {
+        border: none !important;
+        background: transparent !important;
+    }
+
+    .cdx-search-input__end-button:enabled {
+        border-radius: 0 20px 20px 0 !important;
+        display: none !important;
+    }
+
+    /* Menus & Dropdowns */
+    .cdx-menu {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+        border-radius: var(--box-radius) !important;
+        border: 0 !important;
+    }
+
+    .cdx-menu__listbox {
+        overflow: visible !important;
+    }
+
+    /* Banners / Notices */
+    .bandeau-article,
+    .bandeau-niveau-detail,
+    .bandeau-section.bandeau-niveau-information {
+        border-radius: var(--box-radius) !important;
+        border-style: solid !important;
+        border-width: 1px 1px 1px 4px !important;
+        padding: 1em !important;
+        margin: 1em 0 !important;
+    }
+
+    /* Code & Preformatted text */
+    pre,
+    code,
+    .mw-code {
+        border-radius: 8px !important;
+        border-style: solid !important;
+        border-width: 1px !important;
+        padding: 4px 8px;
+    }
+
+    pre {
+        padding: 12px;
+    }
+
+    /* Scrollbars */
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent !important;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+    }
+}
