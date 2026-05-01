@@ -1,0 +1,742 @@
+/* ==UserStyle==
+@name         ✦ [Argo CD] Gruvbox Dark
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Gruvbox Dark theme for Argo CD
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/argo-cd/gruvbox.user.css
+==/UserStyle== */
+
+@-moz-document regexp("https?://(.*\.)?argo\..*"),
+    regexp("https?://(.*\.)?argocd\..*"),
+	regexp("https?://(.*\.)?gitops\..*")
+{
+    /* Base Gruvbox Palette */
+    :root {
+        --gb-bg: #282828;
+        --gb-bg1: #3c3836;
+        --gb-bg2: #504945;
+        --gb-fg: #ebdbb2;
+        --gb-fg0: #fbf1c7;
+        --gb-gray: #928374;
+        --gb-green: #b8bb26;
+        --gb-red: #fb4934;
+        --gb-yellow: #fabd2f;
+        --gb-blue: #83a598;
+        --gb-orange: #fe8019;
+    }
+
+    /* Global Resets */
+    body,
+    .theme-light,
+    .theme-dark {
+        background-color: var(--gb-bg) !important;
+        color: var(--gb-fg) !important;
+    }
+
+    /* Typography */
+    a,
+    a:hover,
+    a:focus {
+        color: var(--gb-green) !important;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6,
+    .title {
+        color: var(--gb-fg0) !important;
+    }
+
+    .muted,
+    .help-tip {
+        color: var(--gb-gray) !important;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        background-color: var(--gb-bg1) !important;
+        color: var(--gb-fg) !important;
+        border-right: 1px solid var(--gb-bg2) !important;
+    }
+
+    .sidebar__logo-container,
+    .sidebar__collapse-button,
+    .sidebar--collapsed .sidebar__filter-button i {
+        color: var(--gb-gray) !important;
+    }
+
+    .sidebar__nav-item {
+        color: var(--gb-gray) !important;
+    }
+
+    .sidebar__nav-item i {
+        color: var(--gb-gray) !important;
+    }
+
+    .sidebar__nav-item--active {
+        color: var(--gb-fg0) !important;
+    }
+
+    .sidebar__nav-item--active i {
+        color: var(--gb-orange) !important;
+    }
+
+    /* Top Bar */
+    .top-bar,
+    .theme-light .top-bar,
+    .theme-dark .top-bar {
+        background: var(--gb-bg1) !important;
+        border-bottom: 1px solid var(--gb-bg2) !important;
+    }
+
+    .theme-light .top-bar__title,
+    .theme-dark .top-bar__title {
+        color: var(--gb-blue) !important;
+    }
+
+    .top-bar__filter-item a {
+        color: var(--gb-gray) !important;
+    }
+
+    .top-bar__filter--selected::before {
+        background-color: var(--gb-blue) !important;
+    }
+
+    .theme-light .top-bar__breadcrumbs,
+    .theme-dark .top-bar__breadcrumbs {
+        color: var(--gb-fg) !important;
+    }
+
+    .top-bar__breadcrumbs a {
+        color: var(--gb-green) !important;
+    }
+
+    .top-bar__breadcrumbs a:hover {
+        background-color: var(--gb-bg2) !important;
+    }
+
+    .top-bar__sep {
+        border-left-color: var(--gb-bg2) !important;
+    }
+
+    /* Containers & Cards */
+    .white-box,
+    .theme-light .white-box,
+    .theme-dark .white-box,
+    .argo-table-list__row,
+    .theme-light .argo-table-list__row,
+    .theme-dark .argo-table-list__row,
+    .application-status-panel,
+    .theme-light .application-status-panel,
+    .theme-dark .application-status-panel {
+        background-color: var(--gb-bg1) !important;
+        color: var(--gb-fg) !important;
+        border: 1px solid var(--gb-bg2) !important;
+        box-shadow: none !important;
+    }
+
+    .white-box h6 {
+        color: var(--gb-fg0) !important;
+    }
+
+    .white-box__details-label {
+        color: var(--gb-gray) !important;
+    }
+
+    .theme-light .white-box__details-row .columns,
+    .theme-dark .white-box__details-row .columns {
+        border-bottom: 1px solid var(--gb-bg2) !important;
+    }
+
+    .stream::before {
+        background-color: var(--gb-bg2) !important;
+    }
+
+    /* Application Status Panel Specifics */
+    .application-status-panel__more-button {
+        color: var(--gb-gray) !important;
+        border-color: var(--gb-bg2) !important;
+    }
+
+    .theme-light .application-status-panel__item,
+    .theme-dark .application-status-panel__item {
+        color: var(--gb-fg) !important;
+    }
+
+    .theme-light .application-status-panel__item:not(:first-child),
+    .theme-dark .application-status-panel__item:not(:first-child) {
+        border-left-color: var(--gb-bg2) !important;
+    }
+
+    .application-status-panel__item a.error {
+        color: var(--gb-red) !important;
+    }
+
+    .application-status-panel__item a.warning {
+        color: var(--gb-yellow) !important;
+    }
+
+    .application-status-panel__item a.info {
+        color: var(--gb-green) !important;
+    }
+
+    .theme-light .application-status-panel__item label,
+    .theme-dark .application-status-panel__item label {
+        color: var(--gb-gray) !important;
+    }
+
+    .theme-light .application-status-panel__item-value,
+    .theme-dark .application-status-panel__item-value {
+        color: var(--gb-fg0) !important;
+    }
+
+    .application-status-panel__item-value--highlight {
+        color: var(--gb-blue) !important;
+    }
+
+    .application-status-panel__item-value--Running a,
+    .application-status-panel__item-value--Terminating a {
+        color: var(--gb-blue) !important;
+    }
+
+    .application-status-panel__item-value--Error a,
+    .application-status-panel__item-value--Failed a {
+        color: var(--gb-red) !important;
+    }
+
+    .application-status-panel__item-value--Succeeded a {
+        color: var(--gb-green) !important;
+    }
+
+    .theme-light .application-status-panel__item-value__revision,
+    .theme-dark .application-status-panel__item-value__revision {
+        color: var(--gb-gray) !important;
+    }
+
+    .application-status-panel__item-value__status-button {
+        border-color: var(--gb-bg2) !important;
+    }
+
+    .application-status-panel__item-value__status-button:hover {
+        background-color: var(--gb-bg2) !important;
+    }
+
+    /* Application Resource Tree */
+    .application-resource-tree__line {
+        border-top-color: var(--gb-gray) !important;
+    }
+
+    .application-resource-tree__edge
+        .application-resource-tree__line:last-child:after {
+        color: var(--gb-gray) !important;
+    }
+
+    .application-resource-tree--network .application-resource-tree__line {
+        background-image: linear-gradient(
+            90deg,
+            var(--gb-blue) 50%,
+            transparent 50%
+        ) !important;
+    }
+
+    .application-resource-tree__node,
+    .theme-light .application-resource-tree__node,
+    .theme-dark .application-resource-tree__node {
+        background-color: var(--gb-bg1) !important;
+        color: var(--gb-fg) !important;
+        border: 1px solid var(--gb-bg2) !important;
+        box-shadow: none !important;
+    }
+
+    .application-resource-tree__node .icon-background {
+        color: var(--gb-bg2) !important;
+    }
+
+    .application-resource-tree__node.active {
+        border-color: var(--gb-green) !important;
+    }
+
+    .theme-light .application-resource-tree__node--orphaned,
+    .theme-dark .application-resource-tree__node--orphaned {
+        background-color: var(--gb-bg) !important;
+    }
+
+    .application-resource-tree__node--load-balancer {
+        background-color: var(--gb-bg2) !important;
+    }
+
+    .application-resource-tree__node--expansion,
+    .theme-light .application-resource-tree__node--expansion,
+    .theme-dark .application-resource-tree__node--expansion,
+    .application-resource-tree__node--podgroup--expansion,
+    .theme-light .application-resource-tree__node--podgroup--expansion,
+    .theme-dark .application-resource-tree__node--podgroup--expansion {
+        background-color: var(--gb-bg1) !important;
+        box-shadow: none !important;
+        border: 1px solid var(--gb-bg2) !important;
+    }
+
+    .theme-light .application-resource-tree__node--pod,
+    .theme-dark .application-resource-tree__node--pod {
+        background-color: var(--gb-bg2) !important;
+    }
+
+    .application-resource-tree__node--lower-section__pod-group__pod-container__pods {
+        background-color: var(--gb-bg) !important;
+    }
+
+    .application-resource-tree__node--lower-section__pod-group__pod {
+        background-color: var(--gb-bg2) !important;
+    }
+
+    .application-resource-tree__node--lower-section__pod-group__pod--succeeded,
+    .application-resource-tree__node--lower-section__pod-group__pod--healthy {
+        background-color: var(--gb-green) !important;
+    }
+
+    .application-resource-tree__node--lower-section__pod-group__pod--pending,
+    .application-resource-tree__node--lower-section__pod-group__pod--suspended {
+        background-color: var(--gb-yellow) !important;
+    }
+
+    .application-resource-tree__node--lower-section__pod-group__pod--running,
+    .application-resource-tree__node--lower-section__pod-group__pod--progressing {
+        background-color: var(--gb-blue) !important;
+    }
+
+    .application-resource-tree__node--lower-section__pod-group__pod--failed,
+    .application-resource-tree__node--lower-section__pod-group__pod--degraded {
+        background-color: var(--gb-red) !important;
+        border: 2px solid var(--gb-bg) !important;
+    }
+
+    .application-resource-tree__node--lower-section__pod-group__pod--unknown,
+    .application-resource-tree__node--lower-section__pod-group__pod--missing {
+        background-color: var(--gb-gray) !important;
+    }
+
+    .application-resource-tree__node--lower-section__pod-group__pod__star-icon {
+        color: var(--gb-yellow) !important;
+    }
+
+    .application-resource-tree__node--lower-section__pod-group__pod__stat-icon-app {
+        background-color: var(--gb-blue) !important;
+    }
+
+    .application-resource-tree__node--lower-section__pod-group__pod__stat-icon-neighbors {
+        background-color: var(--gb-gray) !important;
+    }
+
+    .application-resource-tree__node--lower-section__pod-group__pod__stat__bar {
+        background-color: var(--gb-bg2) !important;
+    }
+
+    .application-resource-tree__node--lower-section__pod-group__pod__stat__bar--fill {
+        background-color: var(--gb-blue) !important;
+    }
+
+    .application-resource-tree__node--lower-section__pod-group__pod__stat__bar--neighbors {
+        background-color: var(--gb-gray) !important;
+    }
+
+    .application-resource-tree__node-kind-icon {
+        color: var(--gb-gray) !important;
+    }
+
+    .application-resource-tree__node-kind-icon--big {
+        background: var(--gb-bg2) !important;
+    }
+
+    .theme-light .application-resource-tree__node-kind-icon--big,
+    .theme-dark .application-resource-tree__node-kind-icon--big {
+        border: 4px solid var(--gb-bg1) !important;
+    }
+
+    .application-resource-tree__node-labels
+        .application-resource-tree__node-label {
+        background-color: var(--gb-bg2) !important;
+        color: var(--gb-fg) !important;
+        border: 1px solid var(--gb-bg2) !important;
+    }
+
+    .application-resource-tree__node-kind {
+        color: var(--gb-gray) !important;
+    }
+
+    @keyframes shadow-pulse {
+        0% {
+            box-shadow: 0 0 0 0px rgba(184, 187, 38, 0.4);
+        }
+        100% {
+            box-shadow: 0 0 0 15px rgba(184, 187, 38, 0);
+        }
+    }
+
+    /* Lists & Tables */
+    .argo-table-list__head {
+        color: var(--gb-gray) !important;
+    }
+
+    .argo-table-list__row .title-text {
+        color: var(--gb-fg0) !important;
+    }
+
+    .argo-table-list--clickable .argo-table-list__row:hover {
+        background-color: var(--gb-bg2) !important;
+        box-shadow: 0 0 0 1px var(--gb-green) !important;
+    }
+
+    .argo-table-list__row.selected {
+        background-color: var(--gb-bg2) !important;
+    }
+
+    /* Buttons */
+    .argo-button {
+        color: var(--gb-green) !important;
+    }
+
+    .argo-button:not(.disabled):not([disabled]):hover,
+    .argo-button:not(.disabled):not([disabled]):focus {
+        background-color: var(--gb-bg2) !important;
+    }
+
+    .argo-button--base {
+        background-color: var(--gb-bg2) !important;
+        color: var(--gb-fg) !important;
+    }
+
+    .argo-button--base:not(.disabled):not([disabled]):hover,
+    .argo-button--base:not(.disabled):not([disabled]):focus {
+        background-color: var(--gb-green) !important;
+        color: var(--gb-bg) !important;
+        border-color: var(--gb-green) !important;
+    }
+
+    .argo-button--base-o {
+        color: var(--gb-green) !important;
+        box-shadow: inset 0 0 0 1px var(--gb-green) !important;
+    }
+
+    .argo-button--base-o:not(.disabled):not([disabled]):hover,
+    .argo-button--base-o:not(.disabled):not([disabled]):focus {
+        background-color: var(--gb-green) !important;
+        color: var(--gb-bg) !important;
+    }
+
+    .argo-button--radius,
+    .argo-button--radius-2 {
+        background-color: var(--gb-green) !important;
+        color: var(--gb-bg) !important;
+        border: none !important;
+    }
+
+    .argo-button--radius:hover,
+    .argo-button--radius:focus {
+        background-color: var(--gb-fg0) !important;
+    }
+
+    /* Forms & Inputs */
+    .theme-light .argo-field,
+    .theme-dark .argo-field,
+    .theme-light .argo-textarea,
+    .theme-dark .argo-textarea,
+    .argo-select {
+        color: var(--gb-fg) !important;
+        border-bottom: 2px solid var(--gb-bg2) !important;
+        background-color: transparent !important;
+    }
+
+    .argo-field:focus,
+    .argo-textarea:focus,
+    .argo-select:focus {
+        border-color: var(--gb-green) !important;
+    }
+
+    .theme-light .argo-form-row label,
+    .theme-dark .argo-form-row label {
+        color: var(--gb-gray) !important;
+    }
+
+    .argo-field:focus + label.argo-label-placeholder,
+    .argo-textarea:focus + label.argo-label-placeholder {
+        color: var(--gb-green) !important;
+    }
+
+    /* Checkboxes & Radios */
+    .argo-checkbox input + span,
+    .argo-radio input + span {
+        border-color: var(--gb-gray) !important;
+    }
+
+    .argo-checkbox input:checked + span {
+        background-color: var(--gb-green) !important;
+    }
+
+    .argo-radio input:checked + span {
+        background-color: var(--gb-green) !important;
+        border-color: var(--gb-green) !important;
+    }
+
+    .argo-checkbox-slide input + span {
+        background-color: var(--gb-bg2) !important;
+    }
+
+    .argo-checkbox-slide input:checked + span {
+        background-color: var(--gb-green) !important;
+    }
+
+    /* Status Icons */
+    .status-icon--failed {
+        color: var(--gb-red) !important;
+    }
+    .status-icon--success {
+        color: var(--gb-green) !important;
+    }
+    .status-icon--waiting,
+    .status-icon--cancelled,
+    .status-icon--init {
+        color: var(--gb-gray) !important;
+    }
+    .status-icon--running {
+        color: var(--gb-blue) !important;
+    }
+    .status-icon--pending {
+        color: var(--gb-yellow) !important;
+    }
+
+    /* Background */
+    .application-details__tree,
+    .applications-list,
+    .page__content-wrapper {
+        background-color: #1d2021;
+    }
+
+    /* Filters */
+    .filter,
+    .filters-group .filters-group__title,
+    .filters-group__toggle {
+        color: var(--gb-gray) !important;
+    }
+
+    .filter__header {
+        color: var(--gb-gray) !important;
+    }
+
+    .filter__collapse {
+        color: var(--gb-fg) !important;
+    }
+
+    .filter__error {
+        color: var(--gb-red) !important;
+    }
+
+    .filter__error__retry,
+    .filter__loading {
+        color: var(--gb-blue) !important;
+    }
+
+    .filter__item--selected {
+        background-color: var(--gb-bg2) !important;
+        color: var(--gb-fg0) !important;
+    }
+
+    .filter__header .argo-button,
+    .filters-group__header .argo-button {
+        background: var(--gb-bg2) !important;
+        color: var(--gb-fg) !important;
+    }
+
+    .filter__header .argo-button:hover,
+    .filters-group__header .argo-button:hover {
+        background: var(--gb-bg1) !important;
+        color: var(--gb-fg0) !important;
+    }
+
+    /* Filters - Inputs */
+    .filter .autocomplete__input {
+        background-color: var(--gb-bg) !important;
+    }
+
+    /* Application Details & Graph Options */
+    .application-details__warning {
+        color: var(--gb-yellow) !important;
+    }
+
+    .application-details__refreshing-label {
+        background-color: var(--gb-green) !important;
+        color: var(--gb-bg) !important;
+        border: 1px solid var(--gb-green) !important;
+    }
+
+    .application-details__container span {
+        color: var(--gb-blue) !important;
+    }
+
+    .application-details__resource-icon,
+    .application-details__view-type i {
+        color: var(--gb-gray) !important;
+    }
+
+    .application-details__view-type i.selected {
+        color: var(--gb-fg0) !important;
+    }
+
+    .application-details__action-menu.disabled {
+        color: var(--gb-bg2) !important;
+    }
+
+    .application-details__action-menu:focus {
+        background-color: var(--gb-bg1) !important;
+    }
+
+    .application-details__dropdown-anchor-inner {
+        border-left: 1px solid var(--gb-bg2) !important;
+    }
+
+    .application-details__dropdown-anchor-inner:hover,
+    .application-details
+        .argo-button:has(.application-details__dropdown-anchor-inner):hover
+        .application-details__dropdown-anchor-inner {
+        background-color: var(--gb-bg2) !important;
+    }
+
+    .application-details .graph-options-panel,
+    .theme-light .application-details .graph-options-panel,
+    .theme-dark .application-details .graph-options-panel {
+        background: var(--gb-bg1) !important;
+        box-shadow: none !important;
+        border: 1px solid var(--gb-bg2) !important;
+    }
+
+    .application-details .graph-options-panel a {
+        color: var(--gb-gray) !important;
+    }
+
+    .application-details .graph-options-panel a.group-nodes-button:hover {
+        background-color: var(--gb-bg2) !important;
+    }
+
+    .application-details .graph-options-panel a.group-nodes-button:active {
+        border-color: var(--gb-blue) !important;
+    }
+
+    .application-details .graph-options-panel a.group-nodes-button-on {
+        background-color: var(--gb-green) !important;
+        color: var(--gb-bg) !important;
+        border-color: var(--gb-green) !important;
+    }
+
+    .application-details .graph-options-panel a.group-nodes-button-on:hover {
+        background-color: var(--gb-fg0) !important;
+    }
+
+    .application-details .graph-options-panel .separator,
+    .theme-light .application-details .graph-options-panel .separator,
+    .theme-dark .application-details .graph-options-panel .separator {
+        border-right: 1px solid var(--gb-bg2) !important;
+    }
+
+    .application-details .graph-options-panel .zoom-value {
+        background-color: var(--gb-bg) !important;
+        color: var(--gb-fg) !important;
+        border: 1px solid var(--gb-bg2) !important;
+    }
+
+    .resource-parent-node-info-title {
+        color: var(--gb-gray) !important;
+    }
+
+    .theme-dark .applications-list__title {
+        color: var(--gb-green) !important;
+    }
+
+    .theme-dark .applications-list__search {
+        background-color: var(--gb-bg);
+        border: none;
+    }
+
+    /* Application Node Info */
+    .application-node-info__manifest .tabs__content,
+    .theme-light .application-node-info__manifest .tabs__content,
+    .theme-dark .application-node-info__manifest .tabs__content {
+        background-color: var(--gb-bg1) !important;
+    }
+
+    .application-node-info__manifest--raw {
+        color: var(--gb-gray) !important;
+    }
+
+    .application-node-info__label {
+        background-color: var(--gb-bg2) !important;
+        color: var(--gb-fg) !important;
+        border: 1px solid var(--gb-bg2) !important;
+    }
+
+    .application-node-info__checkboxes label,
+    .theme-light .application-node-info__checkboxes label,
+    .theme-dark .application-node-info__checkboxes label {
+        color: var(--gb-gray) !important;
+    }
+
+    .application-node-info__err_msg {
+        color: var(--gb-red) !important;
+    }
+
+    .application-node-info__container {
+        border-bottom: 1px solid var(--gb-bg2) !important;
+    }
+
+    .pod-logs-viewer {
+        color: var(--gb-fg);
+        background: var(--gb-bg);
+    }
+
+    /* Tabs */
+    div.tabs:nth-child(1) > div:nth-child(1) {
+        background-color: var(--gb-bg1);
+    }
+
+    .tabs__nav a,
+    .theme-light .tabs__nav a,
+    .theme-dark .tabs__nav a,
+    .tabs__nav.transparent a {
+        color: var(--gb-gray) !important;
+    }
+
+    .tabs__nav a.active,
+    .theme-light .tabs__nav.transparent a.active,
+    .theme-dark .tabs__nav.transparent a.active {
+        color: var(--gb-fg0) !important;
+    }
+
+    .tabs__nav a i {
+        color: var(--gb-gray) !important;
+    }
+
+    .tabs__nav.transparent,
+    .theme-dark .tabs__nav.transparent {
+        border-bottom: 1px solid var(--gb-bg2) !important;
+    }
+
+    .tabs__indicator {
+        background: var(--gb-blue) !important;
+    }
+
+    .tabs .fa-stack[data-count]:after {
+        color: var(--gb-bg) !important;
+        background: var(--gb-red) !important;
+    }
+}
