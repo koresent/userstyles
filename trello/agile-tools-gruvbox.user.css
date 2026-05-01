@@ -1,0 +1,83 @@
+/* ==UserStyle==
+@name         ✦ [Trello Agile Tools] Gruvbox Dark
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Gruvbox Dark theme for Trello Agile Tools
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/trello/agile-tools-gruvbox.user.css
+==/UserStyle== */
+
+@-moz-document domain("trello.com") {
+    .plugin-color-blue {
+        background-color: #076678 !important;
+        color: #ebdbb2 !important;
+    }
+    .plugin-color-blue.is-clickable:hover {
+        background-color: #458588 !important;
+    }
+    .plugin-color-green {
+        background-color: #427b58 !important;
+        color: #ebdbb2 !important;
+    }
+    .plugin-color-green.is-clickable:hover {
+        background-color: #689d6a !important;
+    }
+    .plugin-color-orange {
+        background-color: #af3a03 !important;
+        color: #ebdbb2 !important;
+    }
+    .plugin-color-orange.is-clickable:hover {
+        background-color: #d65d0e !important;
+    }
+    .plugin-color-red {
+        background-color: #9d0006 !important;
+        color: #ebdbb2 !important;
+    }
+    .plugin-color-red.is-clickable:hover {
+        background-color: #cc241d !important;
+    }
+    .plugin-color-yellow {
+        background-color: #b57614 !important;
+        color: #ebdbb2 !important;
+    }
+    .plugin-color-yellow.is-clickable:hover {
+        background-color: #d79921 !important;
+    }
+    .plugin-color-purple {
+        background-color: #8f3f71 !important;
+        color: #ebdbb2 !important;
+    }
+    .plugin-color-purple.is-clickable:hover {
+        background-color: #b16286 !important;
+    }
+    .plugin-color-pink {
+        background-color: #8f3f71 !important;
+        color: #ebdbb2 !important;
+    }
+    .plugin-color-pink.is-clickable:hover {
+        background-color: #b16286 !important;
+    }
+    .plugin-color-sky {
+        background-color: #427b58 !important;
+        color: #ebdbb2 !important;
+    }
+    .plugin-color-sky.is-clickable:hover {
+        background-color: #689d6a !important;
+    }
+    .plugin-color-lime {
+        background-color: #79740e !important;
+        color: #ebdbb2 !important;
+    }
+    .plugin-color-lime.is-clickable:hover {
+        background-color: #98971a !important;
+    }
+    .plugin-color-light-gray {
+        background-color: #504945 !important;
+    }
+    .plugin-color-light-gray.is-clickable:hover {
+        background-color: #3c3836 !important;
+    }
+}
