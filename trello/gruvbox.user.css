@@ -1,0 +1,104 @@
+/* ==UserStyle==
+@name         ✦ [Trello] Gruvbox Dark
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Gruvbox Dark theme for Trello
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/trello/gruvbox.user.css
+==/UserStyle== */
+
+@-moz-document domain("trello.com") {
+    :root,
+    .DNczSsoZlJuTvn, /* Board title */
+    .PhzBALMp63PY_y, /* Text on the "Add title" button */
+    .D5362KDaoepd5s /* "Share" button */ {
+        --ds-surface: #282828 !important;
+        --ds-surface-raised: #282828 !important;
+        --ds-surface-sunken: #3c3836 !important;
+        --ds-background-input: #3c3836 !important;
+        --ds-background-disabled: rgba(146, 131, 116, 0.05) !important;
+        --ds-background-neutral-subtle: rgba(0, 0, 0, 0) !important;
+        --ds-background-neutral: rgba(146, 131, 116, 0.1) !important;
+        --ds-background-neutral-hovered: rgba(146, 131, 116, 0.2) !important;
+        --ds-background-neutral-pressed: rgba(146, 131, 116, 0.3) !important;
+        --ds-background-neutral-bold: #3c3836 !important;
+        --ds-background-neutral-bold-hovered: #504945 !important;
+        --ds-background-neutral-bold-pressed: #665c54 !important;
+        --ds-background-accent-gray-subtler: #3c3836 !important;
+        --ds-background-accent-orange-subtle: #d65d0e !important;
+        --ds-background-accent-magenta-subtler: #b16286 !important;
+        --ds-background-accent-yellow-subtle: #d79921 !important;
+        --ds-background-accent-red-subtle: #cc241d !important;
+        --ds-background-accent-red-subtler: #9d0006 !important;
+        --ds-background-accent-red-bolder: #d3869b !important;
+        --ds-background-accent-blue-subtle: #458588 !important;
+        --ds-background-accent-lime-subtle: #98971a !important;
+        --ds-background-accent-gray-subtle: #504945 !important;
+        --ds-background-brand-bold: #98971a !important;
+        --ds-background-brand-bold-hovered: #787714 !important;
+        --ds-background-brand-bold-pressed: #5a570f !important;
+        --ds-background-danger-bold: #cc241d !important;
+        --ds-background-danger-bold-hovered: #a00c0b !important;
+        --ds-background-danger-bold-pressed: #730906 !important;
+        --ds-background-success-bold: #689d6a !important;
+        --ds-background-success-bold-hovered: #547b55 !important;
+        --ds-background-success-bold-pressed: #415d41 !important;
+        --ds-background-discovery-bold: #b16286 !important;
+        --ds-background-discovery-bold-hovered: #8d4e6b !important;
+        --ds-background-discovery-bold-pressed: #6a3b50 !important;
+        --ds-background-warning: rgba(215, 153, 33, 0.15) !important;
+        --ds-background-warning-hovered: rgba(215, 153, 33, 0.25) !important;
+        --ds-border: rgba(146, 131, 116, 0.25) !important;
+        --ds-border-input: rgba(146, 131, 116, 0.25) !important;
+        --ds-border-focused: #b8bb26 !important;
+        --ds-skeleton: #3c3836 !important;
+        --ds-text: #ebdbb2 !important;
+        --ds-background-selected: #3c3836 !important;
+        --ds-text-subtle: #bdae93 !important;
+        --ds-text-disabled: #7c6f64 !important;
+        --ds-text-inverse: #fbf1c7 !important;
+        --ds-text-selected: #b8bb26 !important;
+        --ds-text-accent-red: #fb4934 !important;
+        --ds-text-danger: #fb4934 !important;
+        --ds-text-warning: #fabd2f !important;
+        --ds-icon: #bdae93 !important;
+        --ds-icon-subtle: #928374 !important;
+        --ds-icon-disabled: #7c6f64 !important;
+        --ds-icon-inverse: #282828 !important;
+        --ds-icon-accent-green: #8ec07c !important;
+        --ds-icon-accent-purple: #d3869b !important;
+        --ds-icon-accent-red: #fb4934 !important;
+        --ds-icon-accent-yellow: #fabd2f !important;
+        --ds-link: #b8bb26 !important;
+        --ds-icon-selected: #b8bb26 !important;
+        --ds-link-pressed: #98971a !important;
+        --ds-background-selected-pressed: #323208 !important;
+        --ds-background-selected-hovered: #323208 !important;
+        --ds-shadow-raised:
+            rgba(60, 56, 54, 0.25) 0 1px 1px, rgba(60, 56, 54, 0.13) 0 0 1px 1px !important;
+        --dynamic-button: #3c3836 !important;
+        --dynamic-button-hovered: #504945 !important;
+        --dynamic-button-pressed: #665c54 !important;
+        --dynamic-button-highlighted: #504945 !important;
+        --dynamic-button-highlighted-hovered: #665c54 !important;
+        --dynamic-button-primary: #98971a !important;
+        --dynamic-button-primary-hovered: #787714 !important;
+        --dynamic-button-primary-text: #ebdbb2 !important;
+        --dynamic-button-pressed-text: #ebdbb2 !important;
+        --dynamic-button-highlighted-text: #ebdbb2 !important;
+        --dynamic-text: #fbf1c7 !important;
+        --dynamic-icon: #bdae93 !important;
+        --tr-icon-star: #fabd2f !important;
+        --accent-background: #1d2021 !important;
+        --tr-background-list: #1d2021 !important;
+        --ds-text-subtlest: #7c6f64 !important;
+        --ds-icon-success: #b8bb26 !important;
+    }
+
+    #trello-inbox-root {
+        background-color: #1d2021 !important;
+    }
+}
