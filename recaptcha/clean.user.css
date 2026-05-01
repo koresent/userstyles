@@ -1,0 +1,26 @@
+/* ==UserStyle==
+@name         ✦ [reCAPTCHA] Clean
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Remove unnecessary elements from reCAPTCHA
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/recaptcha/clean.user.css
+==/UserStyle== */
+
+@-moz-document regexp("^https?://(www\\.)?google.com/recaptcha/api2/+.*")
+{
+    .rc-anchor-normal .rc-anchor-pt, /* Privacy policy and so on */
+    .rc-anchor-logo-text /* reCAPTCHA label under the logo */ {
+        display: none;
+    }
+
+    /* Aligning the logo after removing the label */
+    .rc-anchor-logo-portrait {
+        display: flex;
+        align-items: center;
+        height: 51.5px;
+    }
+}
