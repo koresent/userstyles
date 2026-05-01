@@ -1,0 +1,642 @@
+/* ==UserStyle==
+@name         ✦ [Google Search] Gruvbox Dark
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Gruvbox Dark theme for Google Search
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/google/gruvbox.user.css
+==/UserStyle== */
+
+@-moz-document url-prefix("https://www.google.com/search"),
+               url-prefix("https://www.google.com/webhp"),
+               url("https://www.google.com/")
+{
+    :root {
+        /* Main background */
+        --xhUGwc: #282828 !important;
+        /* Normal text */
+        --YLNNHc: #ebdbb2 !important;
+        /* Accent color for links */
+        --JKqx2: #b8bb26 !important;
+        /* Dividers and borders */
+        --mXZkqc: #3c3836 !important;
+        /* Accent highlights */
+        --Nsm0ce: #b8bb26 !important;
+        /* Bright text for emphasis */
+        --bbQxAb: #fbf1c7 !important;
+        /* Secondary text */
+        --IXoxUe: #ebdbb2 !important;
+        /* Borders */
+        --gS5jXb: #3c3836 !important;
+        /* Some backgrounds */
+        --EpFNW: #282828 !important;
+        /* Primary accents */
+        --Pa8Wlb: #b8bb26 !important;
+        /* Borders in dark mode */
+        --ONhrGd: #3c3836 !important;
+        /* Surface backgrounds */
+        --cIehld: #282828 !important;
+    }
+
+    /* General body and text overrides */
+    body,
+    html {
+        background: #282828 !important;
+        color: #ebdbb2 !important;
+    }
+
+    a {
+        color: #83a598 !important;
+        text-decoration: none !important;
+    }
+
+    a:hover,
+    a:active {
+        color: #fbf1c7 !important;
+        text-decoration: underline !important;
+    }
+
+    a:visited {
+        color: #d3869b !important;
+    }
+
+    /* Search bar and input */
+    .RNNXgb {
+        background: #3c3836 !important;
+        border: 1px solid #3c3836 !important;
+    }
+
+    .gLFyf {
+        color: #ebdbb2 !important;
+        background: transparent !important;
+    }
+
+    .Tg7LZd {
+        color: #282828 !important;
+    }
+
+    .sfbg {
+        background: #282828 !important;
+    }
+
+    .g {
+        background: #282828 !important;
+        border: none !important;
+    }
+
+    .s {
+        color: #ebdbb2 !important;
+    }
+
+    .iUh30 {
+        color: #b8bb26 !important;
+        /* URLs */
+    }
+
+    .VpH8hd {
+        /* Bright text for titles */
+        color: #fbf1c7 !important;
+    }
+
+    /* Navigation and pagination */
+    #hdtb {
+        background: #282828 !important;
+        border-bottom: 1px solid #3c3836 !important;
+    }
+
+    .hdtb-mitem a {
+        color: #ebdbb2 !important;
+    }
+
+    .hdtb-mitem a:hover {
+        color: #fbf1c7 !important;
+    }
+
+    #footcnt {
+        background: #282828 !important;
+    }
+
+    .fbar {
+        background: #282828 !important;
+        border-top: 1px solid #3c3836 !important;
+    }
+
+    /* Sidebar and knowledge panel */
+    .BKwUvf {
+        background: #282828 !important;
+        border: 1px solid #3c3836 !important;
+    }
+
+    .kp-blk {
+        background: #282828 !important;
+    }
+
+    .mod {
+        color: #ebdbb2 !important;
+    }
+
+    /* Icons and SVGs */
+    .z1asCe svg {
+        fill: #ebdbb2 !important;
+    }
+
+    /* Ensure dark mode for other elements */
+    .srp {
+        background: #282828 !important;
+    }
+
+    .gb_y {
+        background: #282828 !important;
+    }
+
+    .gb_A {
+        background: #b8bb26 !important;
+        color: #282828 !important;
+    }
+
+    /* Override any light backgrounds */
+    .Ww4FFb .mnr-c:not(:empty),
+    .mnr-c:not(:empty) .Ww4FFb {
+        background: #282828 !important;
+        box-shadow: none !important;
+    }
+
+    .KLEmSd {
+        border-bottom: 1px solid #3c3836 !important;
+    }
+
+    /* Tooltips and popups */
+    .QyJI3d {
+        background: #282828 !important;
+        color: #ebdbb2 !important;
+        border: 1px solid #3c3836 !important;
+    }
+
+    /* Ensure text visibility */
+    .RES9jf {
+        color: #ebdbb2 !important;
+    }
+
+    .ZYHQ7e {
+        color: #ebdbb2 !important;
+    }
+
+    .GS5rRd {
+        color: #b8bb26 !important;
+    }
+
+    /* Filters and Tabs Section */
+    .YNk70c {
+        background: #282828 !important;
+    }
+
+    .bNg8Rb {
+        color: #fbf1c7 !important;
+    }
+
+    .GG4mbd,
+    .P3mIxe {
+        background: #282828 !important;
+        /* Navigation background */
+    }
+
+    .beZ0tf,
+    .O1uzAe {
+        background: #282828 !important;
+        /* List background */
+    }
+
+    .XVMlrc,
+    .C6AK7c {
+        color: #ebdbb2 !important;
+        /* Tab links */
+        background: transparent !important;
+    }
+
+    .XVMlrc:hover,
+    .C6AK7c:hover {
+        color: #fbf1c7 !important;
+        /* Hover bright text */
+    }
+
+    .mXwfNd {
+        color: #ebdbb2 !important;
+        /* Tab text container */
+    }
+
+    .R1QWuf {
+        color: #ebdbb2 !important;
+        /* Tab label text */
+    }
+
+    /* Active tab */
+    [aria-current="page"] .mXwfNd {
+        color: #fbf1c7 !important;
+        /* Bright for active */
+        border-bottom: 2px solid #b8bb26 !important;
+        /* Accent underline */
+    }
+
+    /* More button and dropdown */
+    .mOKdDc {
+        background: #282828 !important;
+        color: #ebdbb2 !important;
+    }
+
+    .mOKdDc:hover {
+        color: #fbf1c7 !important;
+    }
+
+    /* Scroll arrows */
+    .wgbRNb,
+    .sr9hec {
+        background: #3c3836 !important;
+        /* Divider for buttons */
+        color: #ebdbb2 !important;
+    }
+
+    .wgbRNb:hover {
+        background: #b8bb26 !important;
+        color: #282828 !important;
+    }
+
+    /* Dropdown menu */
+    .H9P06b,
+    .R0DW9c {
+        background: #282828 !important;
+        border: 1px solid #3c3836 !important;
+    }
+
+    .sjVJQd,
+    .rNHry {
+        color: #ebdbb2 !important;
+    }
+
+    .sjVJQd:hover {
+        color: #fbf1c7 !important;
+    }
+    /* Related Searches Section */
+    .y6Uyqe {
+        background: #282828 !important;
+    }
+
+    .EIaa9b {
+        background: #282828 !important;
+    }
+
+    .AJLUJb {
+        background: #282828 !important;
+    }
+
+    .b2Rnsc,
+    .vIifob {
+        background: #282828 !important;
+        color: #ebdbb2 !important;
+    }
+
+    .qR29te {
+        background: #282828 !important;
+    }
+
+    .ngTNl,
+    .ggLgoc {
+        color: #b8bb26 !important;
+    }
+
+    .ngTNl:hover,
+    .ggLgoc:hover {
+        color: #fbf1c7 !important;
+    }
+
+    .B2VR9,
+    .CJHX3e {
+        background: #282828 !important;
+    }
+
+    .wyccme {
+        background: #282828 !important;
+    }
+
+    .oatEtb {
+        background: #282828 !important;
+    }
+
+    .mtv5bd {
+        color: #ebdbb2 !important;
+    }
+
+    .dg6jd,
+    .JGD2rd {
+        color: #ebdbb2 !important;
+    }
+
+    .dg6jd b,
+    .JGD2rd b {
+        color: #fbf1c7 !important;
+    }
+
+    .XbQ34c {
+        background: #282828 !important;
+    }
+
+    .DxHbyd,
+    .OvQkSb,
+    .eJtrMc {
+        background: #282828 !important;
+        border: none !important;
+    }
+
+    .yiwlZe,
+    .z1asCe,
+    .MZy1Rb {
+        fill: #ebdbb2 !important;
+    }
+
+    .yiwlZe svg {
+        fill: #ebdbb2 !important;
+    }
+
+    /* Long Google logo on bottom */
+    .d6cvqb.BBwThe .SJajHc,
+    .SJajHc.NVbCr,
+    .SJajHc {
+        filter: invert(30%) sepia(100%) saturate(3000%) hue-rotate(10deg) !important;
+    }
+
+    /* Google logo SVG */
+    .logo svg path {
+        fill: #ebdbb2 !important;
+    }
+
+    .logo a:hover svg path {
+        fill: #fbf1c7 !important;
+    }
+    .cakeVe {
+        background: #282828 !important;
+        color: #ebdbb2 !important;
+    }
+
+    /* Image wrappers */
+    .p7bv.DfMusf {
+        background: #282828 !important;
+    }
+
+    .w43QB.EXH1Ce a.ddkIM.c30Ztd {
+        color: #b8bb26 !important;
+    }
+
+    .w43QB.EXH1Ce a:hover {
+        color: #fbf1c7 !important;
+    }
+
+    /* Image containers */
+    .oYLlHe.DfMusf,
+    .kwICDb.DfMusf.aVUpl.y9pG6d.T3Fozb {
+        background: #3c3836 !important;
+    }
+
+    /* Image info sections */
+    .T3Fozb.s2pXAe.OdBhM.zUdppc.ZTblUe {
+        background: #282828 !important;
+        color: #ebdbb2 !important;
+    }
+
+    .VaiWld {
+        color: #ebdbb2 !important;
+    }
+
+    .yVCOtc.CvgGZ.LJEGod.t6uYac {
+        color: #fbf1c7 !important;
+    }
+
+    .Yt787.JGD2rd {
+        color: #fbf1c7 !important;
+    }
+
+    /* Source info */
+    .DH9lqb {
+        color: #ebdbb2 !important;
+    }
+
+    .wep10b.vDF3Oc.jIrdcd {
+        color: #b8bb26 !important;
+    }
+
+    .iDBaYb.d6R6kf {
+        background: transparent !important;
+        color: #ebdbb2 !important;
+    }
+
+    .LbKnXb.YAG2qc.UYJxh {
+        color: #ebdbb2 !important;
+    }
+
+    .R8BTeb.q8U8x.LJEGod.du278d.i0Rdmd {
+        color: #b8bb26 !important;
+    }
+
+    /* Icons */
+    .oRVWZ.GB3ilc.Vwoesf img.XNo5Ab.lWlVCe {
+        filter: brightness(1.2) contrast(1.2);
+    }
+
+    /* Ensure no light backgrounds */
+    .VwgOIc .vCUuC.m3LIae {
+        background: #282828 !important;
+    }
+
+    /* Domain text */
+    .VuuXrf {
+        color: #ebdbb2 !important;
+    }
+
+    /* URL color */
+    .qLRx3bб,
+    cite,
+    cite a:link,
+    cite a:visited {
+        color: #8ec07c !important;
+    }
+    .ylgVCe {
+        color: #fabd2f;
+    }
+    .gb_H .gb_F,
+    .gb_H .gb_E {
+        fill: #3c3836;
+    }
+
+    .lnXdpd > path:nth-child(1) {
+        fill: #ebdbb2;
+    }
+
+    /* Autocomplete dropdown menu */
+    .aajZCb {
+        background: #3c3836 !important;
+    }
+
+    .sbct {
+        background: #3c3836 !important;
+        color: #ebdbb2 !important;
+    }
+
+    .sbct:hover {
+        background: #83a59840 !important;
+        color: #ebdbb2 !important;
+    }
+
+    .xtSCL {
+        border-top: 1px solid #554f4c;
+    }
+
+    /* Suggestion text */
+    .wM6W7d,
+    .wM6W7d span {
+        color: #ebdbb2 !important;
+    }
+
+    /* Secondary text like "Images" */
+    .ClJ9Yb,
+    .dKU7sc {
+        color: #b8bb26 !important;
+    }
+
+    /* Delete button, bright text */
+    .sbai,
+    .JCHpcb {
+        color: #fbf1c7 !important;
+    }
+
+    /* Main container */
+    .RJPOee.mNfcNd {
+        background: #282828 !important;
+        color: #ebdbb2 !important;
+    }
+
+    /* Text paragraphs */
+    .rPeykc {
+        color: #ebdbb2 !important;
+    }
+
+    /* Code snippets */
+    .mv6bHd {
+        color: #fbf1c7 !important; /* Bright text for code */
+        background: #3c3836 !important;
+        border-radius: 4px !important;
+        padding: 2px 4px !important;
+    }
+
+    /* Highlighted code parts */
+    .Bkvjgc {
+        color: #b8bb26 !important; /* Accent for values */
+    }
+
+    /* Comments in code */
+    .a7yfkb {
+        color: #928374 !important; /* Gruvbox gray for comments */
+    }
+
+    /* Code blocks */
+    .ecCNFc {
+        background: #3c3836 !important;
+        border: 1px solid #3c3836 !important;
+        border-radius: 8px !important;
+    }
+
+    .FS7GEb code {
+        background: #282828 !important;
+        color: #ebdbb2 !important;
+    }
+
+    /* Headers */
+    .uP58nb {
+        color: #fbf1c7 !important; /* Bright text for headings */
+    }
+
+    /* Lists */
+    ul {
+        color: #ebdbb2 !important;
+    }
+
+    /* Buttons and interactive elements */
+    .cMkUmd {
+        background: #3c3836 !important;
+        color: #ebdbb2 !important;
+    }
+
+    .cMkUmd:hover {
+        background: #504945 !important; /* Slightly lighter for hover */
+    }
+
+    .cMkUmd[aria-pressed="true"] {
+        background: #b8bb26 !important;
+        color: #282828 !important;
+    }
+
+    /* Tooltips and snackbars */
+    .b77HKf {
+        background: #282828 !important;
+        color: #ebdbb2 !important;
+    }
+
+    .Txngnb {
+        color: #ebdbb2 !important;
+    }
+
+    /* Feedback bubbles */
+    .NqsWgf {
+        background: #282828 !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    .oj0Zgb {
+        color: #fbf1c7 !important;
+    }
+
+    .PPs2Ob {
+        color: #ebdbb2 !important;
+    }
+
+    /* Ensure icons are visible */
+    .z1asCe svg {
+        fill: #ebdbb2 !important;
+    }
+    .dDrxod {
+        background: #1d2021;
+        border-bottom: 1px solid #3c3836;
+    }
+    .x7ndcb {
+        color: #fabd2f;
+    }
+
+    .vM0jzc {
+        color: #ff933b;
+    }
+
+    .usJj9c .zz3gNc {
+        color: #928374;
+    }
+
+    .QVRyCf,
+    .cUnQKe .aoRk1c .QVRyCf {
+        background: #076678 !important;
+    }
+
+    .EIJn2 {
+        color: #ebdbb2;
+    }
+
+    .BMebGe.LwdV0e.OJeuxf .niO4u {
+        background-color: #98971a !important;
+    }
+
+    .z1asCe svg {
+        fill: #1d2021 !important;
+    }
+
+    .sbic {
+        filter: sepia();
+    }
+}
