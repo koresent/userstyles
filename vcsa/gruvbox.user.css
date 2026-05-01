@@ -1,0 +1,1260 @@
+/* ==UserStyle==
+@name         ✦ [vCSA] Gruvbox Dark
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Gruvbox Dark theme for vCSA
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/vcsa/gruvbox.user.css
+==/UserStyle== */
+
+@-moz-document regexp("https?://vcsa\\..*") {
+    /* ==========================================================================
+       GRUVBOX DARK PALETTE & VSPHERE CLIENT OVERRIDES
+       ========================================================================== */
+    :root,
+    body,
+    [cds-theme="dark"] {
+        /* --- Core Palette --- */
+        --gb-bg-hard: #1d2021;
+        --gb-bg: #282828;
+        --gb-bg-soft: #32302f;
+        --gb-bg-card: #3c3836;
+        --gb-border: #504945;
+        --gb-border-hover: #665c54;
+        --gb-gray: #928374;
+        --gb-text-muted: #a89984;
+        --gb-text-main: #ebdbb2;
+        --gb-text-bright: #fbf1c7;
+
+        /* --- Accent Colors --- */
+        --gb-red: #fb4934;
+        --gb-red-dark: #cc241d;
+        --gb-green: #b8bb26;
+        --gb-green-dark: #98971a;
+        --gb-green-active: #79740e;
+        --gb-yellow: #fabd2f;
+        --gb-yellow-dark: #d79921;
+        --gb-blue: #83a598;
+        --gb-blue-dark: #458588;
+        --gb-purple: #d3869b;
+        --gb-orange: #fe8019;
+        --gb-orange-dark: #d65d0e;
+        --gb-highlight: #3e3d1f;
+
+        /* --- Clarity Specific Variable Overrides --- */
+        --cds-global-color-gray-1000: var(--gb-bg-hard);
+        --cds-global-color-gray-900: var(--gb-bg);
+        --cds-global-color-gray-800: var(--gb-bg-soft);
+        --cds-global-color-gray-700: var(--gb-bg-card);
+        --cds-global-color-gray-600: var(--gb-border);
+        --cds-global-color-gray-500: var(--gb-border-hover);
+        --cds-global-color-gray-400: #7c6f64;
+        --cds-global-color-gray-300: var(--gb-gray);
+        --cds-global-color-gray-200: var(--gb-text-muted);
+        --cds-global-color-gray-100: var(--gb-text-main);
+        --cds-global-color-gray-0: var(--gb-text-bright);
+
+        --cds-global-color-blue-700: var(--gb-green);
+        --cds-global-color-blue-800: var(--gb-green-dark);
+        --cds-global-color-blue-100: rgba(184, 187, 38, 0.1);
+
+        --cds-global-color-green-700: var(--gb-green);
+        --cds-global-color-red-700: var(--gb-red);
+        --cds-global-color-yellow-700: var(--gb-yellow-dark);
+
+        --clr-app-background-color: var(--gb-bg);
+        --clr-global-app-background: var(--gb-bg);
+        --clr-card-bg-color: var(--gb-bg-card);
+        --clr-datagrid-row-hover-color: var(--gb-bg-soft);
+        --clr-datagrid-row-selected-color: var(--gb-border);
+
+        --clr-h1-color: var(--gb-text-bright);
+        --clr-h2-color: var(--gb-text-bright);
+        --clr-h3-color: var(--gb-text-bright);
+        --clr-h4-color: var(--gb-text-main);
+        --clr-p-color: var(--gb-text-main);
+        --clr-color-neutral-1000: var(--gb-text-main);
+    }
+
+    /* ==========================================================================
+       GLOBAL RESETS & LAYOUT
+       ========================================================================== */
+    body,
+    html,
+    .main-container,
+    .app-frame-inner,
+    .app-frame-outer {
+        background-color: var(--gb-bg) !important;
+        color: var(--gb-text-main) !important;
+    }
+
+    /* Scrollbars (prevent white glare) */
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+        background: var(--gb-bg);
+    }
+    ::-webkit-scrollbar-thumb {
+        background: var(--gb-border);
+        border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--gb-border-hover);
+    }
+    ::-webkit-scrollbar-corner {
+        background: var(--gb-bg);
+    }
+
+    /* Global Typography Resets */
+    a {
+        background-color: transparent;
+    }
+
+    mark {
+        background-color: var(--gb-yellow-dark);
+        color: var(--gb-bg);
+    }
+
+    pre {
+        border-color: var(--gb-border);
+    }
+
+    code.clr-code {
+        color: var(--gb-red);
+    }
+
+    ul.list-unstyled:not([cds-list]) li::marker {
+        color: transparent;
+    }
+
+    h1:not([cds-text]),
+    h2:not([cds-text]),
+    h3:not([cds-text]),
+    h4:not([cds-text]) {
+        color: var(--gb-text-bright);
+    }
+
+    h5:not([cds-text]),
+    h6:not([cds-text]) {
+        color: var(--gb-text-main);
+    }
+
+    body:not([cds-text]),
+    html:not([cds-text]) {
+        color: var(--gb-text-main);
+        background-color: var(--gb-bg);
+    }
+
+    body p:not([cds-text]),
+    body .p0:not([cds-text]),
+    body p.p0:not([cds-text]),
+    body .p2:not([cds-text]),
+    body p.p2:not([cds-text]),
+    body .p3:not([cds-text]),
+    body p.p3:not([cds-text]),
+    body .p4:not([cds-text]),
+    body p.p4:not([cds-text]),
+    body .p5:not([cds-text]),
+    body p.p5:not([cds-text]),
+    body .p6:not([cds-text]),
+    body p.p6:not([cds-text]),
+    body .p7:not([cds-text]),
+    body p.p7:not([cds-text]),
+    body .p8:not([cds-text]),
+    body p.p8:not([cds-text]) {
+        color: var(--gb-text-main);
+    }
+
+    html {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    a:link {
+        color: var(--gb-blue);
+    }
+
+    a:visited,
+    a:visited:hover {
+        color: var(--gb-purple);
+    }
+
+    a:hover {
+        color: var(--gb-green);
+    }
+
+    a:active {
+        color: var(--gb-orange);
+    }
+
+    /* ==========================================================================
+       BUTTONS
+       ========================================================================== */
+    .btn {
+        border-color: var(--gb-green);
+        background-color: transparent;
+        color: var(--gb-green);
+    }
+
+    .btn cds-icon,
+    .btn clr-icon {
+        color: var(--gb-green);
+    }
+
+    .btn:hover {
+        background-color: var(--gb-bg-soft);
+        color: var(--gb-green-dark);
+    }
+
+    .btn:hover cds-icon,
+    .btn:hover clr-icon {
+        color: var(--gb-green-dark);
+    }
+
+    .btn:active {
+        box-shadow: 0 0.1rem var(--gb-green-dark) inset;
+    }
+
+    .btn.disabled,
+    .btn:disabled {
+        color: var(--gb-gray);
+        background-color: transparent;
+        border-color: var(--gb-border);
+    }
+
+    /* Outline Buttons */
+    a.btn,
+    .btn.btn-secondary,
+    .btn-secondary .btn {
+        border-color: var(--gb-green);
+        background-color: transparent;
+        color: var(--gb-green);
+    }
+
+    a.btn cds-icon,
+    a.btn clr-icon,
+    .btn.btn-secondary cds-icon,
+    .btn.btn-secondary clr-icon,
+    .btn-secondary .btn cds-icon,
+    .btn-secondary .btn clr-icon {
+        color: var(--gb-green);
+    }
+
+    a.btn:hover,
+    .btn.btn-secondary:hover,
+    .btn-secondary .btn:hover {
+        background-color: var(--gb-bg-soft);
+        color: var(--gb-green-dark);
+    }
+
+    /* Primary Buttons */
+    .btn.btn-info,
+    .btn-info .btn,
+    .btn.btn-primary,
+    .btn-primary .btn {
+        border-color: var(--gb-green);
+        background-color: var(--gb-green);
+        color: var(--gb-bg);
+    }
+
+    .btn.btn-info cds-icon,
+    .btn.btn-info clr-icon,
+    .btn-info .btn cds-icon,
+    .btn-info .btn clr-icon,
+    .btn.btn-primary cds-icon,
+    .btn.btn-primary clr-icon,
+    .btn-primary .btn cds-icon,
+    .btn-primary .btn clr-icon {
+        color: var(--gb-bg);
+    }
+
+    .btn.btn-info:hover,
+    .btn-info .btn:hover,
+    .btn.btn-primary:hover,
+    .btn-primary .btn:hover {
+        background-color: var(--gb-green-dark);
+        color: var(--gb-text-bright);
+    }
+
+    .btn.btn-info:active,
+    .btn-info .btn:active,
+    .btn.btn-primary:active,
+    .btn-primary .btn:active {
+        box-shadow: 0 0.1rem var(--gb-green-active) inset;
+    }
+
+    .btn.btn-info.disabled,
+    .btn.btn-info:disabled,
+    .btn-info .btn.disabled,
+    .btn-info .btn:disabled,
+    .btn.btn-primary.disabled,
+    .btn.btn-primary:disabled,
+    .btn-primary .btn.disabled,
+    .btn-primary .btn:disabled {
+        color: var(--gb-gray);
+        background-color: var(--gb-bg-card);
+        border-color: var(--gb-border);
+    }
+
+    /* Success Buttons */
+    .btn.btn-success,
+    .btn-success .btn {
+        border-color: var(--gb-green);
+        background-color: var(--gb-green);
+        color: var(--gb-bg);
+    }
+
+    .btn.btn-success:hover,
+    .btn-success .btn:hover {
+        background-color: var(--gb-green-dark);
+        color: var(--gb-bg);
+    }
+
+    /* Warning Buttons */
+    .btn.btn-warning,
+    .btn-warning .btn {
+        border-color: var(--gb-orange);
+        background-color: var(--gb-orange);
+        color: var(--gb-bg);
+    }
+
+    .btn.btn-warning:hover,
+    .btn-warning .btn:hover {
+        background-color: var(--gb-orange-dark);
+        color: var(--gb-text-bright);
+    }
+
+    /* Danger Buttons */
+    .btn.btn-danger,
+    .btn-danger .btn {
+        border-color: var(--gb-red);
+        background-color: var(--gb-red);
+        color: var(--gb-bg);
+    }
+
+    .btn.btn-danger:hover,
+    .btn-danger .btn:hover {
+        background-color: var(--gb-red-dark);
+        color: var(--gb-text-bright);
+    }
+
+    /* Outline Variants */
+    .btn.btn-outline,
+    .btn.btn-outline .btn {
+        border-color: var(--gb-green);
+        background-color: transparent;
+        color: var(--gb-green);
+    }
+
+    .btn.btn-outline:hover {
+        background-color: var(--gb-bg-soft);
+        color: var(--gb-green-dark);
+    }
+
+    .btn.btn-success-outline,
+    .btn.btn-outline-success {
+        border-color: var(--gb-green);
+        color: var(--gb-green);
+    }
+
+    .btn.btn-success-outline:hover {
+        background-color: var(--gb-bg-soft);
+        color: var(--gb-green-dark);
+    }
+
+    .btn.btn-warning-outline,
+    .btn.btn-outline-warning {
+        border-color: var(--gb-orange);
+        color: var(--gb-orange);
+    }
+
+    .btn.btn-warning-outline:hover {
+        background-color: var(--gb-bg-soft);
+        color: var(--gb-orange-dark);
+    }
+
+    .btn.btn-danger-outline,
+    .btn.btn-outline-danger {
+        border-color: var(--gb-red);
+        color: var(--gb-red);
+    }
+
+    .btn.btn-danger-outline:hover {
+        background-color: var(--gb-bg-soft);
+        color: var(--gb-red-dark);
+    }
+
+    /* Link Buttons */
+    .btn.btn-link,
+    .btn-link .btn {
+        color: var(--gb-blue);
+    }
+
+    .btn.btn-link:hover {
+        color: var(--gb-blue-dark);
+    }
+
+    /* Button Group/Dropdown */
+    .btn-group.btn-primary .dropdown-toggle {
+        background-color: var(--gb-green);
+        border-color: var(--gb-green);
+        color: var(--gb-bg);
+    }
+
+    /* ==========================================================================
+       CHECKBOX & RADIO
+       ========================================================================== */
+    .checkbox.btn input[type="checkbox"]:checked + label,
+    .radio.btn input[type="radio"]:checked + label {
+        background-color: var(--gb-green);
+        color: var(--gb-bg);
+    }
+
+    .btn-group .btn input[type="radio"]:focus,
+    .btn-group .btn input[type="checkbox"]:focus {
+        box-shadow: 0 0 0.25rem var(--gb-green);
+        border-color: var(--gb-green);
+    }
+
+    /* ==========================================================================
+       ALERTS & CLOSABLES
+       ========================================================================== */
+    .close {
+        color: var(--gb-text-muted);
+    }
+
+    .close:focus,
+    .close:hover,
+    .close:active {
+        color: var(--gb-text-main);
+    }
+
+    .close cds-icon,
+    .close clr-icon {
+        fill: var(--gb-text-muted);
+    }
+
+    .close:hover cds-icon {
+        fill: var(--gb-text-main);
+    }
+
+    /* General Alert Style */
+    .alert {
+        background: var(--gb-bg-card);
+        color: var(--gb-text-main);
+        border-color: var(--gb-border);
+    }
+
+    .alert.alert-info {
+        background: var(--gb-bg-card);
+        color: var(--gb-blue);
+        border-color: var(--gb-blue-dark);
+    }
+
+    .alert.alert-info .alert-icon {
+        color: var(--gb-blue);
+    }
+
+    .alert.alert-success {
+        background: var(--gb-bg-soft);
+        color: var(--gb-green);
+        border-color: var(--gb-green-dark);
+    }
+
+    .alert.alert-success .alert-icon {
+        color: var(--gb-green);
+    }
+
+    .alert.alert-warning {
+        background: var(--gb-bg-soft);
+        color: var(--gb-orange);
+        border-color: var(--gb-orange-dark);
+    }
+
+    .alert.alert-warning .alert-icon {
+        color: var(--gb-orange);
+    }
+
+    .alert.alert-danger {
+        background: var(--gb-bg-soft);
+        color: var(--gb-red);
+        border-color: var(--gb-red-dark);
+    }
+
+    .alert.alert-danger .alert-icon {
+        color: var(--gb-red);
+    }
+
+    /* App Level Alerts (Solid) */
+    .alert-app-level.alert-info {
+        background: var(--gb-blue-dark);
+        color: var(--gb-bg);
+    }
+
+    .alert-app-level.alert-danger {
+        background: var(--gb-red-dark);
+        color: var(--gb-text-bright);
+    }
+
+    .alert-app-level.alert-warning {
+        background: var(--gb-orange-dark);
+        color: var(--gb-text-bright);
+    }
+
+    .alert-app-level.alert-success {
+        background: var(--gb-green-dark);
+        color: var(--gb-bg);
+    }
+
+    /* ==========================================================================
+       CARDS
+       ========================================================================== */
+    .card {
+        background-color: var(--gb-bg-card);
+        border-color: var(--gb-border);
+    }
+
+    .card.clickable:hover {
+        box-shadow: 0 0.15rem var(--gb-green);
+        border-color: var(--gb-green);
+    }
+
+    .card .list-group-item {
+        background-color: var(--gb-bg-card);
+        border-bottom-color: var(--gb-border);
+        color: var(--gb-text-main);
+    }
+
+    h3.card-header,
+    .card-header,
+    h4.card-title,
+    .card-title {
+        color: var(--gb-text-bright);
+        border-bottom-color: var(--gb-border);
+    }
+
+    .card-text,
+    .card-media-block .card-media-description {
+        color: var(--gb-text-main);
+    }
+
+    .card-block {
+        border-bottom-color: var(--gb-border);
+    }
+
+    /* ==========================================================================
+       DROPDOWNS
+       ========================================================================== */
+    .dropdown .dropdown-toggle:not(.btn),
+    .dropdown button.dropdown-toggle:not(.btn) {
+        color: var(--gb-text-main);
+    }
+
+    .dropdown-menu {
+        background-color: var(--gb-bg-card);
+        border-color: var(--gb-border);
+        box-shadow: 0 0.05rem 0.15rem rgba(0, 0, 0, 0.5);
+    }
+
+    .dropdown-menu .dropdown-header {
+        color: var(--gb-text-bright);
+    }
+
+    .dropdown-menu .btn,
+    .dropdown-menu .dropdown-item {
+        color: var(--gb-text-main);
+    }
+
+    .dropdown-menu .btn:hover,
+    .dropdown-menu .dropdown-item:hover {
+        background-color: var(--gb-border);
+        color: var(--gb-text-bright);
+    }
+
+    .dropdown-menu .btn.active,
+    .dropdown-menu .dropdown-item.active {
+        background-color: var(--gb-green);
+        color: var(--gb-bg);
+    }
+
+    .dropdown-menu .dropdown-divider {
+        border-bottom-color: var(--gb-border);
+    }
+
+    /* ==========================================================================
+       LOGIN
+       ========================================================================== */
+    .login-wrapper .login {
+        background: var(--gb-bg-card);
+    }
+
+    .login-wrapper .login .title,
+    .login-wrapper .login .subtitle,
+    .login-wrapper .login .welcome {
+        color: var(--gb-text-bright);
+    }
+
+    /* ==========================================================================
+       MODALS
+       ========================================================================== */
+    .modal-dialog {
+        background-color: var(--gb-bg-card);
+        border-color: var(--gb-border);
+    }
+
+    .modal-header .modal-title {
+        color: var(--gb-text-bright);
+    }
+
+    .modal-body-wrapper .modal-body {
+        color: var(--gb-text-main);
+    }
+
+    .modal-backdrop {
+        background-color: var(--gb-bg-hard);
+        opacity: 0.8;
+    }
+
+    /* ==========================================================================
+       HEADER (Top panel)
+       ========================================================================== */
+    header,
+    .header,
+    header.header,
+    .header-7 {
+        color: var(--gb-text-main) !important;
+        background-color: var(--gb-bg-hard) !important;
+        border-bottom: 1px solid var(--gb-border) !important;
+    }
+
+    header .branding .title,
+    .header .branding .title {
+        color: var(--gb-text-bright);
+    }
+
+    header .nav-link,
+    .header .nav-link,
+    header .nav-icon,
+    .header-actions .nav-link {
+        color: var(--gb-text-main) !important;
+        opacity: 0.8;
+    }
+
+    header .nav-link:hover,
+    .header .nav-link:hover,
+    .header-actions .nav-link:hover {
+        background-color: var(--gb-bg-card) !important;
+        color: var(--gb-text-bright) !important;
+        opacity: 1;
+    }
+
+    header .nav-link.active,
+    .header .nav-link.active {
+        background: var(--gb-bg-soft);
+        color: var(--gb-green);
+    }
+
+    /* Search Input */
+    .search-box input,
+    .search-box .combobox-container input {
+        background-color: var(--gb-bg-soft) !important;
+        border: 1px solid var(--gb-border) !important;
+        color: var(--gb-text-bright) !important;
+    }
+
+    .search-box cds-icon {
+        color: var(--gb-text-muted) !important;
+    }
+
+    /* ==========================================================================
+       NAVIGATION PANELS
+       ========================================================================== */
+    .nav {
+        box-shadow: 0 -0.05rem var(--gb-border) inset;
+    }
+
+    .nav .nav-item.active > .nav-link {
+        color: var(--gb-text-bright);
+        box-shadow: 0 -0.05rem var(--gb-green) inset;
+    }
+
+    .nav .nav-link {
+        color: var(--gb-text-muted);
+    }
+
+    .nav .nav-link:hover,
+    .nav .nav-link.active {
+        color: var(--gb-text-main);
+    }
+
+    .sub-nav,
+    .subnav {
+        background-color: var(--gb-bg-card);
+        box-shadow: 0 -0.05rem var(--gb-border) inset;
+    }
+
+    /* Vertical Nav */
+    .clr-vertical-nav {
+        background-color: var(--gb-bg-soft);
+        border-right: 1px solid var(--gb-border);
+    }
+
+    .clr-vertical-nav .nav-link {
+        color: var(--gb-text-muted);
+    }
+
+    .clr-vertical-nav .nav-link:hover {
+        background-color: var(--gb-bg-card);
+        color: var(--gb-text-bright);
+    }
+
+    .clr-vertical-nav .nav-link.active {
+        background-color: var(--gb-bg-card);
+        color: var(--gb-text-bright);
+    }
+
+    .clr-vertical-nav .nav-link.active:before {
+        border-left-color: var(--gb-green);
+    }
+
+    .clr-vertical-nav .nav-link.active .nav-icon {
+        fill: var(--gb-green);
+    }
+
+    /* Main panels (vsc-left-panel, vsc-center-panel) */
+    .vui-panel,
+    .main-nav-panel {
+        background-color: var(--gb-bg) !important;
+        border-right: 1px solid var(--gb-border) !important;
+    }
+
+    /* Gutters */
+    .gutter-horizontal,
+    .gutter-vertical {
+        background-color: var(--gb-bg-hard) !important;
+        border-color: var(--gb-border) !important;
+    }
+
+    /* Inventory tree */
+    .cdk-tree,
+    .vsc-inventory-tree-view {
+        background-color: var(--gb-bg) !important;
+        color: var(--gb-text-main) !important;
+    }
+
+    /* Tree items */
+    .clr-treenode-link,
+    .vsc-tree-node-text {
+        color: var(--gb-text-main) !important;
+        border-radius: 3px;
+    }
+
+    /* Tree item hover state */
+    .clr-treenode-link:hover,
+    .cdk-tree-node:hover .clr-treenode-link {
+        background-color: var(--gb-bg-card) !important;
+        color: var(--gb-text-bright) !important;
+    }
+
+    /* Active tree item */
+    .clr-treenode-link.active,
+    .cdk-tree-node.active > .clr-treenode-link {
+        background-color: var(--gb-border) !important;
+        color: var(--gb-green) !important;
+        font-weight: bold;
+    }
+
+    /* Tree icons (folders, VMs, clusters) */
+    .vsphere-icon-folder {
+        color: var(--gb-yellow-dark) !important;
+    }
+    .vsphere-icon-vm-on {
+        color: var(--gb-green) !important;
+    }
+    .vsphere-icon-vm-off {
+        color: var(--gb-gray) !important;
+    }
+    .vsphere-icon-datacenter {
+        color: var(--gb-blue) !important;
+    }
+    .vsphere-icon-cluster {
+        color: var(--gb-purple) !important;
+    }
+
+    /* ==========================================================================
+       BADGES & LABELS
+       ========================================================================== */
+    .badge {
+        background-color: var(--gb-gray);
+        color: var(--gb-bg);
+    }
+
+    .badge.badge-info {
+        background: var(--gb-blue);
+    }
+    .badge.badge-success {
+        background: var(--gb-green);
+    }
+    .badge.badge-warning {
+        background: var(--gb-orange);
+    }
+    .badge.badge-danger {
+        background: var(--gb-red);
+    }
+
+    .label {
+        border-color: var(--gb-gray);
+        color: var(--gb-text-main);
+    }
+
+    .label.label-info {
+        background: var(--gb-bg-soft);
+        color: var(--gb-blue);
+        border-color: var(--gb-blue);
+    }
+
+    .label.label-success {
+        background: var(--gb-bg-soft);
+        color: var(--gb-green);
+        border-color: var(--gb-green);
+    }
+
+    .label.label-warning {
+        background: var(--gb-bg-soft);
+        color: var(--gb-orange);
+        border-color: var(--gb-orange);
+    }
+
+    .label.label-danger {
+        background: var(--gb-bg-soft);
+        color: var(--gb-red);
+        border-color: var(--gb-red);
+    }
+
+    /* ==========================================================================
+       PROGRESS
+       ========================================================================== */
+    .progress > progress {
+        color: var(--gb-green);
+        background-color: var(--gb-border);
+    }
+
+    .progress > progress::-webkit-progress-value {
+        background-color: var(--gb-green);
+    }
+
+    .progress > progress::-webkit-progress-bar {
+        background-color: var(--gb-border);
+    }
+
+    /* ==========================================================================
+       SPINNERS
+       ========================================================================== */
+    .spinner:after {
+        border-color: var(--gb-green);
+        border-right-color: transparent !important;
+        border-bottom-color: transparent !important;
+    }
+
+    .spinner:before {
+        border-color: var(--gb-border);
+    }
+
+    /* ==========================================================================
+       TABLES / DATAGRID
+       ========================================================================== */
+    .table {
+        background-color: var(--gb-bg-card);
+        color: var(--gb-text-main);
+        border-color: var(--gb-border);
+    }
+
+    .table th {
+        background-color: var(--gb-bg-soft);
+        color: var(--gb-text-bright);
+        border-bottom-color: var(--gb-border);
+    }
+
+    .table td {
+        border-top-color: var(--gb-border);
+    }
+
+    .datagrid,
+    .datagrid-host {
+        background-color: var(--gb-bg-card) !important;
+        border-color: var(--gb-border);
+        border: none !important;
+    }
+
+    .datagrid .datagrid-column,
+    .datagrid-header .datagrid-row {
+        background-color: var(--gb-bg-soft) !important;
+        color: var(--gb-text-bright) !important;
+        border-bottom: 2px solid var(--gb-border) !important;
+    }
+
+    .datagrid-row {
+        background-color: var(--gb-bg-card) !important;
+        color: var(--gb-text-main) !important;
+        border-top-color: var(--gb-border);
+        border-bottom: 1px solid var(--gb-border) !important;
+    }
+
+    .datagrid-row:hover {
+        background-color: var(--gb-border) !important;
+    }
+
+    .datagrid .datagrid-row.datagrid-selected .datagrid-row-sticky {
+        background-color: inherit;
+    }
+
+    .datagrid .datagrid-row.datagrid-selected input[type="text"],
+    .datagrid .datagrid-row.datagrid-selected input[type="password"],
+    .datagrid .datagrid-row.datagrid-selected input[type="number"],
+    .datagrid .datagrid-row.datagrid-selected input[type="email"],
+    .datagrid .datagrid-row.datagrid-selected input[type="url"],
+    .datagrid .datagrid-row.datagrid-selected input[type="tel"],
+    .datagrid .datagrid-row.datagrid-selected input[type="date"],
+    .datagrid .datagrid-row.datagrid-selected input[type="time"],
+    .datagrid .datagrid-row.datagrid-selected input[type="datetime-local"],
+    .datagrid .datagrid-row.datagrid-selected .clr-input-wrapper .clr-input,
+    .datagrid .datagrid-row.datagrid-selected .clr-input-group {
+        color: var(--gb-text-bright);
+    }
+
+    .datagrid-cell {
+        color: var(--gb-text-main) !important;
+    }
+
+    .datagrid-footer {
+        background-color: var(--gb-bg-soft) !important;
+        border-top: 1px solid var(--gb-border) !important;
+        color: var(--gb-text-main) !important;
+    }
+
+    .pagination-list .pagination-current {
+        background-color: var(--gb-bg-card);
+        border-color: var(--gb-green);
+        color: var(--gb-text-bright);
+    }
+
+    /* ==========================================================================
+       FORMS & INPUTS
+       ========================================================================== */
+    .clr-input,
+    .clr-textarea,
+    .clr-select {
+        color: var(--gb-text-main);
+        border-bottom-color: var(--gb-gray);
+        background: linear-gradient(
+                to bottom,
+                transparent 95%,
+                var(--gb-green) 95%
+            )
+            no-repeat;
+        background-size: 0% 100%;
+        transition: background-size 0.2s ease;
+    }
+
+    .clr-input:focus,
+    .clr-textarea:focus,
+    .clr-select:focus {
+        border-bottom-color: var(--gb-green);
+        background-size: 100% 100%;
+    }
+
+    .clr-textarea {
+        background-color: var(--gb-bg-soft);
+        border: 1px solid var(--gb-gray);
+    }
+
+    ::placeholder {
+        color: var(--gb-gray);
+    }
+
+    .clr-control-label {
+        color: var(--gb-text-main);
+    }
+
+    .clr-subtext {
+        color: var(--gb-text-muted);
+    }
+
+    /* Validation */
+    .clr-error .clr-subtext {
+        color: var(--gb-red);
+    }
+    .clr-error .clr-input {
+        border-bottom-color: var(--gb-red);
+    }
+
+    .clr-success .clr-subtext {
+        color: var(--gb-green);
+    }
+    .clr-success .clr-input {
+        border-bottom-color: var(--gb-green);
+    }
+
+    /* Checkboxes & Radio buttons */
+    .clr-checkbox-wrapper input[type="checkbox"] + .clr-control-label:before,
+    .clr-radio-wrapper input[type="radio"] + .clr-control-label:before {
+        border-color: var(--gb-gray);
+        background-color: var(--gb-bg-soft);
+    }
+
+    .clr-checkbox-wrapper
+        input[type="checkbox"]:checked
+        + .clr-control-label:before {
+        background: var(--gb-green);
+        border-color: var(--gb-green);
+    }
+
+    .clr-radio-wrapper input[type="radio"]:checked + .clr-control-label:before {
+        border-color: var(--gb-green);
+        box-shadow: inset 0 0 0 0.3rem var(--gb-green);
+    }
+
+    /* ==========================================================================
+       TOOLTIPS
+       ========================================================================== */
+    .tooltip > .tooltip-content {
+        background-color: var(--gb-bg-hard);
+        color: var(--gb-text-main);
+        border: 1px solid var(--gb-border);
+    }
+
+    .tooltip.tooltip-top-right > .tooltip-content:before {
+        border-top-color: var(--gb-bg-hard);
+    }
+
+    /* ==========================================================================
+       TABS (Summary, Monitor, etc.)
+       ========================================================================== */
+    .nav .nav-link {
+        color: var(--gb-text-muted) !important;
+    }
+
+    .nav .nav-link.active {
+        color: var(--gb-green) !important;
+        background-color: transparent !important;
+        box-shadow: inset 0 -3px 0 var(--gb-green) !important;
+    }
+
+    .nav .nav-link:hover:before,
+    .nav .nav-link.active:before {
+        border-bottom-color: var(--gb-green);
+    }
+
+    /* ==========================================================================
+       ACCORDION
+       ========================================================================== */
+    .clr-accordion-header {
+        background-color: var(--gb-bg-card);
+        color: var(--gb-text-main);
+        border-bottom: 1px solid var(--gb-border);
+    }
+
+    .clr-accordion-content {
+        background-color: var(--gb-bg-soft);
+        color: var(--gb-text-main);
+    }
+
+    .clr-accordion-panel-open > .clr-accordion-header {
+        background-color: var(--gb-border);
+    }
+
+    /* ==========================================================================
+       MISC OVERRIDES
+       ========================================================================== */
+    /* Focus states */
+    .clr-focus-indicator {
+        background-color: var(--gb-green);
+    }
+
+    /* Input autofill fix for dark theme */
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+        -webkit-text-fill-color: var(--gb-text-main);
+        -webkit-box-shadow: 0 0 0px 1000px var(--gb-bg-soft) inset;
+        transition: background-color 5000s ease-in-out 0s;
+    }
+
+    body.user-tabbing :focus {
+        outline: 2px solid var(--gb-blue);
+    }
+
+    /* ==========================================================================
+       SPECIFIC VSPHERE OVERRIDES
+       ========================================================================== */
+    /* Main background behind cards (fixes white patches) */
+    .content-area,
+    .content-container,
+    vsc-summary,
+    vsc-object-view {
+        background-color: var(--gb-bg) !important;
+    }
+
+    /* Card components (inner specific vsc) */
+    appfx-card {
+        background-color: var(--gb-bg-card) !important;
+        border: 1px solid var(--gb-border) !important;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    /* Card headers */
+    .card-header {
+        background-color: var(--gb-bg-soft) !important;
+        border-bottom: 1px solid var(--gb-border) !important;
+        color: var(--gb-text-bright) !important;
+    }
+
+    .card-title {
+        color: var(--gb-text-bright) !important;
+        font-weight: 600;
+    }
+
+    /* Card content */
+    .card-block {
+        color: var(--gb-text-main) !important;
+    }
+
+    /* Card footer */
+    .card-footer {
+        background-color: var(--gb-bg-soft) !important;
+        border-top: 1px solid var(--gb-border) !important;
+    }
+
+    /* Links/Buttons inside cards */
+    .card-footer .btn-link,
+    .card .btn-link {
+        color: var(--gb-blue) !important;
+    }
+    .card-footer .btn-link:hover {
+        color: var(--gb-green) !important;
+    }
+
+    /* Object titlebar (VM name location) */
+    vsc-object-titlebar {
+        background-color: inherit !important;
+        border-bottom: 1px solid var(--gb-border) !important;
+    }
+    vsc-object-titlebar .title {
+        color: var(--gb-text-bright) !important;
+    }
+
+    /* Status labels (Usage bars) */
+    .usage-block .usage-value {
+        color: var(--gb-text-bright) !important;
+        font-weight: bold;
+    }
+
+    /* Summary tables fix (borderless) */
+    .table.table-noborder td {
+        border: none !important;
+        color: var(--gb-text-main) !important;
+    }
+
+    /* Left labels (CPU, Memory) slightly darker */
+    .left-header {
+        color: var(--gb-text-muted) !important;
+        font-weight: 600;
+    }
+
+    /* Resource icons bluish tint */
+    .resource-usage-item-row cds-icon {
+        color: var(--gb-blue) !important;
+    }
+
+    /* Guest OS Console Preview */
+    .guestos-summary-image-container {
+        border: 1px solid var(--gb-border) !important;
+        background-color: #000 !important;
+    }
+
+    /* Quick actions */
+    .quick-action-link {
+        color: var(--gb-text-main) !important;
+    }
+    .quick-action-link:hover {
+        color: var(--gb-green) !important;
+    }
+
+    .datagrid .datagrid-table .datagrid-placeholder {
+        background: var(--gb-bg-hard);
+    }
+
+    .datagrid .datagrid-row .datagrid-column,
+    .datagrid .datagrid-row .datagrid-column .datagrid-column-title {
+        /* Bright cream text for readability */
+        color: var(--gb-text-bright) !important;
+        /* Dark medium background to differentiate from row background */
+        background-color: var(--gb-bg-soft) !important;
+        /* Standard Gruvbox border color */
+        border-bottom-color: var(--gb-border) !important;
+    }
+
+    .datagrid-footer .column-switch-wrapper .column-toggle--action {
+        border-color: var(--gb-green) !important;
+        background-color: var(--gb-border) !important;
+        color: var(--gb-text-bright) !important;
+    }
+
+    [data-theme="dark"] > div[_nghost-rcy-c323],
+    [data-theme="dark"] [_nghost-rcy-c323] > div[_ngcontent-rcy-c323] {
+        border-right: 0.05rem solid var(--gb-bg-card) !important;
+        background-color: var(--gb-bg-hard) !important;
+    }
+
+    .column-switch {
+        background-color: var(--gb-bg);
+        border-color: var(--gb-bg-card);
+        box-shadow: none;
+        color: var(--gb-text-bright);
+    }
+
+    .clr-checkbox-wrapper .clr-control-label {
+        color: var(--gb-text-main);
+    }
+
+    #keyboard,
+    #fullscreen,
+    #cad {
+        background-color: var(--gb-text-main);
+        border: none;
+        border-radius: 8px;
+        color: var(--gb-bg-hard);
+    }
+
+    .datagrid .datagrid-row .datagrid-row-sticky {
+        background-color: inherit;
+    }
+
+    [_nghost-rcy-c288] #search-term-ref[_ngcontent-rcy-c288] {
+        border-radius: 5px;
+    }
+
+    header .search-box .box-container-highlight,
+    header .search .box-container-highlight,
+    .header .search-box .box-container-highlight,
+    .header .search .box-container-highlight {
+        background-color: inherit;
+    }
+
+    [_nghost-rcy-c287] {
+        background-color: var(--gb-bg-hard);
+        color: var(--gb-text-main);
+    }
+
+    [_nghost-rcy-c286] .highlight[_ngcontent-rcy-c286] {
+        background-color: var(--gb-highlight);
+    }
+}
