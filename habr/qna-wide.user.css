@@ -1,0 +1,29 @@
+/* ==UserStyle==
+@name         ✦ [QNA Habr] Wide
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Wide layout for QNA Habr
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/habr/qna-wide.user.css
+==/UserStyle== */
+
+@-moz-document domain("qna.habr.com") {
+    /* Wide layout */
+    .layout {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    /* Rounded buttons */
+    .btn,
+    .btn_primary,
+    .btn_outline_blue {
+        border-radius: 6px !important;
+        font-weight: 500 !important;
+        transition: background-color 0.2s ease !important;
+    }
+}
