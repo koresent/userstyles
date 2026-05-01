@@ -1,0 +1,37 @@
+/* ==UserStyle==
+@name         ✦ [Stack Overflow] Clean
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Remove unnecessary elements from Stack Overflow
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/stack-overflow/clean.user.css
+==/UserStyle== */
+
+@-moz-document domain("stackexchange.com"),
+domain("stackoverflow.com"),
+domain("serverfault.com"),
+domain("superuser.com"),
+domain("askubuntu.com") {
+    #left-sidebar,
+    #footer,
+    #sidebar {
+        display: none;
+    }
+
+    #mainbar {
+        width: 100%;
+    }
+
+    #content {
+        margin: unset;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    pre {
+        white-space: pre-wrap;
+    }
+}
