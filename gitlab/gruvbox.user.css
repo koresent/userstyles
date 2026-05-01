@@ -1,0 +1,895 @@
+/* ==UserStyle==
+@name         ✦ [GitLab] Gruvbox Dark
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Gruvbox Dark theme for GitLab
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/gitlab/gruvbox.user.css
+==/UserStyle== */
+
+@-moz-document regexp("https?://(.*\.)?gitlab\..*"),
+    regexp("https?://(.*\.)?git\..*")
+{
+    :root {
+        /* Gruvbox Core Palette */
+        --gb-bg0: #1d2021;
+        --gb-bg1: #3c3836;
+        --gb-bg2: #504945;
+        --gb-bg3: #665c54;
+        --gb-bg4: #7c6f64;
+        --gb-fg0: #fbf1c7;
+        --gb-fg1: #ebdbb2;
+        --gb-fg2: #d5c4a1;
+        --gb-fg3: #bdae93;
+        --gb-fg4: #a89984;
+
+        --gb-red: #cc241d;
+        --gb-red-bright: #fb4934;
+        --gb-green: #98971a;
+        --gb-green-bright: #b8bb26;
+        --gb-yellow: #d79921;
+        --gb-yellow-bright: #fabd2f;
+        --gb-blue: #458588;
+        --gb-blue-bright: #83a598;
+        --gb-purple: #b16286;
+        --gb-purple-bright: #d3869b;
+        --gb-aqua: #689d6a;
+        --gb-aqua-bright: #8ec07c;
+
+        /* Extended & Custom Colors */
+        --gb-black: black;
+        --gb-gray-dark: #707070;
+        --gb-gray-light: #949494;
+        --gb-gray-bright: #928374;
+        --gb-blue-dark: #234445;
+        --gb-blue-dark-variant: #14244d;
+        --gb-green-variant: #a2a43d;
+        --gb-red-variant: #f1513e;
+        --gb-yellow-hover: #cdd02a;
+        --gb-yellow-active: #d9dc52;
+        --gb-yellow-strong: #dee067;
+
+        --gb-graph-0: #3c3836;
+        --gb-graph-1: #505110;
+        --gb-graph-2: #797b19;
+        --gb-graph-3: #999b20;
+
+        /* Alpha Colors */
+        --gb-bg1-alpha-10: rgba(60, 56, 54, 0.1);
+        --gb-bg1-alpha-20: rgba(60, 56, 54, 0.2);
+        --gb-bg1-alpha-40: rgba(60, 56, 54, 0.4);
+        --gb-bg1-alpha-80: rgba(60, 56, 54, 0.8);
+
+        --gb-bg2-alpha-20: rgba(80, 73, 69, 0.2);
+
+        --gb-bg3-alpha-10: rgba(102, 92, 84, 0.1);
+        --gb-bg3-alpha-20: rgba(102, 92, 84, 0.2);
+
+        --gb-bg4-alpha-20: rgba(124, 111, 100, 0.2);
+        --gb-bg4-alpha-70: rgba(124, 111, 100, 0.7);
+
+        --gb-fg4-alpha-20: rgba(168, 153, 132, 0.2);
+        --gb-fg4-alpha-40: rgba(168, 153, 132, 0.4);
+        --gb-fg4-alpha-70: rgba(168, 153, 132, 0.7);
+        --gb-fg4-alpha-80: rgba(168, 153, 132, 0.8);
+
+        --gb-red-bright-alpha-20: rgba(251, 73, 52, 0.2);
+        --gb-red-bright-alpha-30: rgba(251, 73, 52, 0.3);
+        --gb-red-bright-alpha-60: rgba(251, 73, 52, 0.6);
+
+        --gb-green-bright-alpha-20: rgba(184, 187, 38, 0.2);
+        --gb-green-bright-alpha-30: rgba(184, 187, 38, 0.3);
+        --gb-green-bright-alpha-50: rgba(184, 187, 38, 0.5);
+        --gb-green-bright-alpha-60: rgba(184, 187, 38, 0.6);
+        --gb-green-bright-alpha-80: rgba(184, 187, 38, 0.8);
+
+        --gb-yellow-bright-alpha-20: rgba(250, 189, 47, 0.2);
+
+        --gb-aqua-bright-alpha-20: rgba(142, 192, 124, 0.2);
+
+        --gb-blue-bright-alpha-25: rgba(131, 165, 152, 0.25);
+        --gb-blue-bright-alpha-30: rgba(131, 165, 152, 0.3);
+
+        --gb-purple-bright-alpha-20: rgba(211, 134, 155, 0.2);
+
+        /* GitLab Component Variables */
+        --blue-50: var(--gb-blue-bright-alpha-30) !important;
+        --ci-icon-danger-background-color: var(
+            --gb-red-bright-alpha-20
+        ) !important;
+        --ci-icon-danger-icon-background-color: var(
+            --gb-red-bright-alpha-20
+        ) !important;
+        --ci-icon-danger-icon-color: var(--gb-red-bright) !important;
+        --ci-icon-danger-text-color: var(--gb-red-bright) !important;
+        --ci-icon-info-background-color: var(
+            --gb-aqua-bright-alpha-20
+        ) !important;
+        --ci-icon-info-icon-background-color: var(
+            --gb-aqua-bright-alpha-20
+        ) !important;
+        --ci-icon-info-icon-color: var(--gb-aqua-bright) !important;
+        --ci-icon-info-text-color: var(--gb-aqua-bright) !important;
+        --ci-icon-neutral-background-color: var(--gb-bg1-alpha-20) !important;
+        --ci-icon-neutral-icon-background-color: var(
+            --gb-bg1-alpha-10
+        ) !important;
+        --ci-icon-neutral-icon-color: var(--gb-fg4) !important;
+        --ci-icon-neutral-text-color: var(--gb-fg4) !important;
+        --ci-icon-success-background-color: var(
+            --gb-green-bright-alpha-20
+        ) !important;
+        --ci-icon-success-icon-background-color: var(
+            --gb-green-bright-alpha-20
+        ) !important;
+        --ci-icon-success-icon-color: var(--gb-green-bright) !important;
+        --ci-icon-success-text-color: var(--gb-green-bright) !important;
+        --ci-icon-warning-background-color: var(
+            --gb-yellow-bright-alpha-20
+        ) !important;
+        --ci-icon-warning-icon-background-color: var(
+            --gb-yellow-bright-alpha-20
+        ) !important;
+        --ci-icon-warning-icon-color: var(--gb-yellow-bright) !important;
+        --ci-icon-warning-text-color: var(--gb-yellow-bright) !important;
+        --gl-action-confirm-background-color-active: var(
+            --gb-yellow-hover
+        ) !important;
+        --gl-action-confirm-background-color-focus: var(
+            --gl-action-confirm-background-color-hover
+        );
+        --gl-action-confirm-background-color-hover: var(
+            --gb-yellow-hover
+        ) !important;
+        --gl-action-confirm-foreground-color-active: var(--gl-color-blue-900);
+        --gl-action-confirm-foreground-color-default: var(--gl-color-blue-500);
+        --gl-action-confirm-foreground-color-hover: var(--gl-color-blue-700);
+        --gl-action-neutral-background-color-active: var(--gb-bg2) !important;
+        --gl-action-neutral-background-color-default: var(--gb-bg0) !important;
+        --gl-action-neutral-background-color-hover: var(
+            --gb-fg4-alpha-40
+        ) !important;
+        --gl-action-neutral-border-color-hover: var(--gb-bg2) !important;
+        --gl-action-neutral-foreground-color-default: var(--gb-fg1) !important;
+        --gl-action-selected-background-color-default: var(--gb-bg2) !important;
+        --gl-action-selected-background-color-hover: var(--gb-bg1) !important;
+        --gl-action-selected-border-color-default: transparent !important;
+        --gl-action-selected-border-color-hover: var(
+            --gb-green-bright-alpha-60
+        ) !important;
+        --gl-action-selected-foreground-color-default: var(--gb-fg1) !important;
+        --gl-action-selected-foreground-color-hover: var(
+            --gb-blue-dark-variant
+        ) !important;
+        --gl-action-strong-confirm-background-color-default: var(
+            --gb-green-bright
+        ) !important;
+        --gl-action-strong-confirm-background-color-hover: var(
+            --gb-yellow-strong
+        ) !important;
+        --gl-action-strong-neutral-background-color-default: var(
+            --gb-bg4
+        ) !important;
+        --gl-action-strong-neutral-background-color-hover: var(
+            --gb-fg4-alpha-80
+        ) !important;
+        --gl-alert-danger-background-color: var(--gb-bg0) !important;
+        --gl-alert-danger-border-top-color: var(--gb-red-bright) !important;
+        --gl-alert-info-background-color: var(--gb-bg0) !important;
+        --gl-alert-info-border-top-color: var(--gb-aqua-bright) !important;
+        --gl-alert-neutral-background-color: var(--gb-bg0) !important;
+        --gl-alert-neutral-title-color: var(--gb-green-bright) !important;
+        --gl-alert-success-background-color: var(--gb-bg0) !important;
+        --gl-alert-success-border-top-color: var(--gb-green-bright) !important;
+        --gl-badge-info-background-color-default: var(
+            --gb-aqua-bright-alpha-20
+        ) !important;
+        --gl-badge-info-text-color-default: var(--gb-aqua-bright) !important;
+        --gl-badge-muted-background-color-default: var(
+            --gb-bg1-alpha-40
+        ) !important;
+        --gl-badge-muted-background-color-hover: var(
+            --gb-fg4-alpha-20
+        ) !important;
+        --gl-badge-muted-border-color-hover: var(--gb-bg2-alpha-20) !important;
+        --gl-badge-muted-text-color-active: var(--gb-fg1) !important;
+        --gl-badge-muted-text-color-default: var(--gb-fg1) !important;
+        --gl-badge-muted-text-color-hover: var(--gb-fg1) !important;
+        --gl-badge-neutral-background-color-default: var(
+            --gb-bg1-alpha-40
+        ) !important;
+        --gl-badge-neutral-icon-color-default: var(--gb-fg1) !important;
+        --gl-badge-neutral-text-color-default: var(--gb-fg1) !important;
+        --gl-badge-success-background-color-default: var(
+            --gb-green-bright
+        ) !important;
+        --gl-badge-success-icon-color-default: var(--gb-bg1) !important;
+        --gl-badge-success-text-color-default: var(--gb-bg1) !important;
+        --gl-badge-tier-background-color-default: var(
+            --gb-purple-bright
+        ) !important;
+        --gl-badge-tier-icon-color-default: var(--gb-black) !important;
+        --gl-badge-tier-text-color-default: var(--gb-black) !important;
+        --gl-background-color-default: var(--gb-bg0) !important;
+        --gl-background-color-overlap: var(--gb-bg0) !important;
+        --gl-background-color-section: var(--gb-bg0) !important;
+        --gl-background-color-strong: var(--gb-bg0) !important;
+        --gl-background-color-subtle: var(--gb-bg0) !important;
+        --gl-banner-intro-border-color: var(--gb-aqua-bright) !important;
+        --gl-banner-promo-background-color: var(--gb-bg0) !important;
+        --gl-banner-promo-border-color: var(--gb-green-bright) !important;
+        --gl-border-color-default: var(--gb-bg1) !important;
+        --gl-border-color-subtle: var(--gb-bg1-alpha-20) !important;
+        --gl-button-confirm-primary-background-color-active: var(
+            --gb-fg4-alpha-40
+        ) !important;
+        --gl-button-confirm-primary-background-color-default: var(
+            --gb-green-bright
+        ) !important;
+        --gl-button-confirm-primary-background-color-focus: var(
+            --gb-fg4-alpha-40
+        ) !important;
+        --gl-button-confirm-primary-background-color-hover: var(
+            --gb-yellow-active
+        ) !important;
+        --gl-button-confirm-primary-border-color-active: var(
+            --gb-fg4-alpha-40
+        ) !important;
+        --gl-button-confirm-primary-border-color-default: var(
+            --gb-bg2
+        ) !important;
+        --gl-button-confirm-primary-border-color-hover: var(
+            --gb-fg4
+        ) !important;
+        --gl-button-confirm-primary-foreground-color-active: var(
+            --gb-black
+        ) !important;
+        --gl-button-confirm-primary-foreground-color-default: var(
+            --gb-black
+        ) !important;
+        --gl-button-confirm-primary-foreground-color-focus: var(
+            --gb-black
+        ) !important;
+        --gl-button-confirm-primary-foreground-color-hover: var(
+            --gb-black
+        ) !important;
+        --gl-button-confirm-secondary-background-color-acive: var(
+            --gl-button-confirm-secondary-background-color-default
+        ) !important;
+        --gl-button-confirm-secondary-background-color-default: var(
+            --gb-green-bright-alpha-80
+        ) !important;
+        --gl-button-confirm-secondary-background-color-hover: var(
+            --gb-green-bright
+        ) !important;
+        --gl-button-confirm-secondary-foreground-color-active: var(
+            --gb-black
+        ) !important;
+        --gl-button-confirm-secondary-foreground-color-default: var(
+            --gb-black
+        ) !important;
+        --gl-button-confirm-secondary-foreground-color-hover: var(
+            --gb-black
+        ) !important;
+        --gl-button-confirm-tertiary-foreground-color-active: var(
+            --gb-black
+        ) !important;
+        --gl-button-confirm-tertiary-foreground-color-default: var(
+            --gb-fg1
+        ) !important;
+        --gl-button-confirm-tertiary-foreground-color-hover: var(
+            --gb-black
+        ) !important;
+        --gl-button-danger-primary-background-color-default: var(
+            --gb-red-bright-alpha-30
+        ) !important;
+        --gl-button-danger-primary-background-color-hover: var(
+            --gb-red-bright-alpha-60
+        ) !important;
+        --gl-button-danger-primary-border-color-default: var(
+            --gb-red-bright
+        ) !important;
+        --gl-button-danger-primary-border-color-hover: var(
+            --gb-red-bright
+        ) !important;
+        --gl-button-danger-primary-foreground-color-default: var(
+            --gb-fg1
+        ) !important;
+        --gl-button-danger-primary-foreground-color-hover: var(
+            --gb-red-bright
+        ) !important;
+        --gl-button-danger-secondary-background-color-default: var(
+            --gb-red-bright-alpha-30
+        ) !important;
+        --gl-button-danger-secondary-background-color-hover: var(
+            --gb-red-bright-alpha-60
+        ) !important;
+        --gl-button-danger-secondary-border-color-default: var(
+            --gb-red-bright
+        ) !important;
+        --gl-button-danger-secondary-border-color-hover: var(
+            --gb-red-bright
+        ) !important;
+        --gl-button-danger-secondary-foreground-color-default: var(
+            --gb-fg1
+        ) !important;
+        --gl-button-danger-secondary-foreground-color-hover: var(
+            --gb-red-bright
+        ) !important;
+        --gl-button-default-primary-background-color-default: var(
+            --gb-bg1
+        ) !important;
+        --gl-button-default-primary-background-color-hover: var(
+            --gb-fg4-alpha-40
+        ) !important;
+        --gl-button-default-primary-border-color-default: var(
+            --gb-bg2
+        ) !important;
+        --gl-button-default-primary-border-color-hover: var(
+            --gb-bg2
+        ) !important;
+        --gl-button-default-primary-foreground-color-default: var(
+            --gb-fg1
+        ) !important;
+        --gl-button-default-tertiary-background-color-active: var(
+            --gb-bg2
+        ) !important;
+        --gl-button-default-tertiary-background-color-default: transparent !important;
+        --gl-button-default-tertiary-background-color-focus: var(
+            --gb-fg4-alpha-20
+        ) !important;
+        --gl-button-default-tertiary-background-color-hover: var(
+            --gb-bg2
+        ) !important;
+        --gl-button-default-tertiary-foreground-color-default: var(
+            --gb-fg1
+        ) !important;
+        --gl-button-default-tertiary-foreground-color-focus: var(
+            --gb-fg4
+        ) !important;
+        --gl-button-disabled-background-color: var(
+            --gb-bg3-alpha-20
+        ) !important;
+        --gl-button-disabled-border-color: var(--gb-bg4-alpha-20) !important;
+        --gl-button-disabled-foreground-color: var(--gb-fg3) !important;
+        --gl-button-link-text-color-default: var(--gb-blue-bright) !important;
+        --gl-button-selected-border-color-default: var(--gb-fg4) !important;
+        --gl-color-brand-charcoal: var(--gb-bg0) !important;
+        --gl-color-neutral-800: var(--gb-bg2) !important;
+        --gl-control-background-color-default: var(--gb-bg1) !important;
+        --gl-control-background-color-disabled: var(
+            --gb-bg3-alpha-20
+        ) !important;
+        --gl-control-background-color-readonly: var(
+            --gb-bg3-alpha-10
+        ) !important;
+        --gl-control-background-color-selected-default: var(
+            --gb-green-bright
+        ) !important;
+        --gl-control-background-color-selected-focus: var(
+            --gb-fg4-alpha-40
+        ) !important;
+        --gl-control-background-color-selected-hover: var(
+            --gb-yellow-hover
+        ) !important;
+        --gl-control-border-color-default: var(--gb-bg2) !important;
+        --gl-control-border-color-hover: var(--gb-fg4) !important;
+        --gl-control-border-color-selected-default: var(
+            --gb-green-bright
+        ) !important;
+        --gl-control-indicator-color-selected: var(--gb-bg0) !important;
+        --gl-control-placeholder-color: var(--gb-gray-bright) !important;
+        --gl-dropdown-background-color: var(--gb-bg0) !important;
+        --gl-dropdown-border-color: var(--gb-bg2) !important;
+        --gl-dropdown-option-background-color-selected-default: var(
+            --gb-green-bright-alpha-30
+        ) !important;
+        --gl-dropdown-option-background-color-selected-hover: var(
+            --gb-fg4-alpha-20
+        ) !important;
+        --gl-dropdown-option-background-color-unselected-default: transparent !important;
+        --gl-dropdown-option-background-color-unselected-hover: var(
+            --gb-fg4-alpha-20
+        ) !important;
+        --gl-dropdown-option-indicator-color-selected-default: var(
+            --gb-green-bright-alpha-80
+        ) !important;
+        --gl-dropdown-option-indicator-color-selected-focus: var(
+            --gb-green-bright
+        ) !important;
+        --gl-dropdown-option-indicator-color-selected-hover: var(
+            --gb-green-bright
+        ) !important;
+        --gl-dropdown-option-text-color-default: var(--gb-fg1) !important;
+        --gl-feedback-danger-icon-color: var(--gb-red-bright) !important;
+        --gl-feedback-info-background-color: var(
+            --gb-aqua-bright-alpha-20
+        ) !important;
+        --gl-feedback-info-icon-color: var(--gb-aqua-bright) !important;
+        --gl-feedback-strong-background-color: var(--gb-bg1) !important;
+        --gl-feedback-strong-text-color: var(--gb-fg1) !important;
+        --gl-feedback-warning-icon-color: var(--gb-yellow-bright) !important;
+        --gl-filtered-search-token-data-background-color-default: var(
+            --gb-bg2
+        ) !important;
+        --gl-filtered-search-token-data-background-color-hover: var(
+            --gb-fg4-alpha-70
+        ) !important;
+        --gl-filtered-search-token-operator-background-color-default: var(
+            --gb-bg0
+        ) !important;
+        --gl-filtered-search-token-operator-background-color-hover: var(
+            --gb-bg4-alpha-70
+        ) !important;
+        --gl-filtered-search-token-type-background-color-default: var(
+            --gb-bg0
+        ) !important;
+        --gl-filtered-search-token-type-background-color-hover: var(
+            --gb-bg4-alpha-70
+        ) !important;
+        --gl-focus-ring-outer-color: var(--gb-green-bright-alpha-60) !important;
+        --gl-icon-color-info: var(--gb-aqua-bright) !important;
+        --gl-link-mention-background-color-current: var(
+            --gb-green-bright-alpha-20
+        ) !important;
+        --gl-link-mention-background-color-default: var(
+            --gb-blue-bright-alpha-25
+        ) !important;
+        --gl-link-mention-text-color-current: var(--gb-green-bright) !important;
+        --gl-link-mention-text-color-default: var(--gb-blue-bright) !important;
+        --gl-progress-bar-indicator-color-danger: var(
+            --gl-status-danger-icon-color
+        );
+        --gl-progress-bar-indicator-color-default: var(
+            --gl-status-info-icon-color
+        );
+        --gl-progress-bar-indicator-color-success: var(
+            --gl-status-success-icon-color
+        );
+        --gl-progress-bar-indicator-color-warning: var(
+            --gl-status-warning-icon-color
+        );
+        --gl-progress-bar-track-color: var(--gb-bg2) !important;
+        --gl-status-brand-background-color: var(
+            --gb-purple-bright-alpha-20
+        ) !important;
+        --gl-status-brand-icon-color: var(--gb-purple-bright) !important;
+        --gl-status-brand-text-color: var(--gb-purple-bright) !important;
+        --gl-status-danger-background-color: var(
+            --gb-red-bright-alpha-20
+        ) !important;
+        --gl-status-danger-icon-color: var(--gb-red-bright) !important;
+        --gl-status-danger-text-color: var(--gb-red-bright) !important;
+        --gl-status-info-background-color: var(
+            --gb-aqua-bright-alpha-20
+        ) !important;
+        --gl-status-info-icon-color: var(--gb-aqua-bright) !important;
+        --gl-status-info-text-color: var(--gb-aqua-bright) !important;
+        --gl-status-neutral-background-color: var(--gb-bg1-alpha-20) !important;
+        --gl-status-neutral-icon-color: var(--gb-bg4) !important;
+        --gl-status-neutral-text-color: var(--gb-bg4) !important;
+        --gl-status-success-background-color: var(
+            --gb-green-bright-alpha-20
+        ) !important;
+        --gl-status-success-icon-color: var(--gb-green-bright) !important;
+        --gl-status-success-text-color: var(--gb-green-bright) !important;
+        --gl-status-warning-background-color: var(
+            --gb-yellow-bright
+        ) !important;
+        --gl-status-warning-icon-color: var(--gb-yellow-bright) !important;
+        --gl-status-warning-text-color: var(
+            --gb-yellow-bright-alpha-20
+        ) !important;
+        --gl-tab-selected-indicator-color-default: var(
+            --gb-green-bright
+        ) !important;
+        --gl-text-color: var(--gb-fg1) !important;
+        --gl-text-color-default: var(--gb-fg1) !important;
+        --gl-text-color-link: var(--gb-blue-bright) !important;
+        --gl-text-color-strong: var(--gb-fg1) !important;
+        --gl-text-color-subtle: var(--gb-gray-bright) !important;
+        --gl-text-danger: var(--gb-red-bright) !important;
+        --gl-text-secondary: var(--gb-fg3) !important;
+        --gl-text-color-success: var(--gb-green-bright) !important;
+        --gl-toggle-switch-icon-color-checked-default: var(
+            --gb-green-bright
+        ) !important;
+        --gl-toggle-switch-icon-color-checked-hover: var(
+            --gb-yellow-hover
+        ) !important;
+        --gl-toggle-switch-icon-color-unchecked-default: var(
+            --gb-bg4
+        ) !important;
+        --gl-toggle-switch-icon-color-unchecked-focus: var(--gb-fg4) !important;
+        --gl-token-background-color: var(--gb-bg2) !important;
+        --gray-400: var(--gl-control-border-color-default) !important;
+        --green-600: var(--gb-green-variant) !important;
+        --red-500: var(--gb-red-variant) !important;
+        --system-note-icon-background-color: var(--gb-green-bright) !important;
+        --user-contribution-graph-cell-level-0: var(--gb-graph-0) !important;
+        --user-contribution-graph-cell-level-1: var(--gb-graph-1) !important;
+        --user-contribution-graph-cell-level-2: var(--gb-graph-2) !important;
+        --user-contribution-graph-cell-level-3: var(--gb-graph-3) !important;
+        --user-contribution-graph-cell-level-4: var(
+            --gb-green-bright
+        ) !important;
+        color-scheme: dark;
+    }
+
+    .page-initialised .content-wrapper,
+    .content-wrapper .container-fluid,
+    .content-wrapper .container-sm,
+    .content-wrapper .container-md,
+    .content-wrapper .container-lg,
+    .content-wrapper .container-xl {
+        background-color: var(--gb-bg0);
+    }
+
+    .group-list-tree .group-row-contents:hover {
+        border-color: var(--gb-blue);
+        background-color: var(--gb-blue-dark);
+    }
+
+    /* General styles for selection and headings */
+    ::-moz-selection {
+        background: var(--gb-fg4-alpha-20);
+    }
+    ::selection {
+        background: var(--gb-fg4-alpha-20);
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: var(--gb-fg1) !important;
+    }
+    link {
+        color: var(--gb-blue-bright) !important;
+    }
+
+    /* Styles for code and buttons */
+    code {
+        background-color: var(--gb-bg1-alpha-80) !important;
+    }
+    select:hover {
+        background-color: var(--gb-bg2) !important;
+        box-shadow: inset 0 0 0 1px var(--gb-bg2) !important;
+    }
+    .btn-link:hover {
+        color: var(--gb-gray-light) !important;
+    }
+    .user-bar {
+        background-color: var(--super-sidebar-user-bar-bg) !important;
+    }
+    .text-muted {
+        color: var(--gb-gray-bright) !important;
+    }
+    .gl-text-gray-900 {
+        color: var(--gb-fg1) !important;
+    }
+
+    /* Styles for project lists */
+    .projects-list > li {
+        border-bottom: 1px solid var(--gl-border-color-default) !important;
+    }
+    .projects-list .project-cell {
+        border-bottom: 1px solid var(--gl-border-color-default) !important;
+    }
+
+    /* Styles for the sidebar (Super Sidebar) */
+    .super-sidebar {
+        --super-sidebar-accent-color-fg: var(--gb-green-bright) !important;
+        --super-sidebar-accent-color: var(--gb-green-bright) !important;
+        --super-sidebar-bg: var(--gb-bg0) !important;
+        --super-sidebar-user-bar-bg: var(--gb-bg0) !important;
+        --super-sidebar-border-color: var(--gb-bg1) !important;
+        --super-sidebar-user-bar-button-bg: var(--gb-bg1) !important;
+        --super-sidebar-user-bar-button-border-color: var(--gb-bg1) !important;
+        --super-sidebar-nav-item-current-bg: var(--gb-bg2) !important;
+        --super-sidebar-nav-item-hover-bg: var(--gb-bg1) !important;
+        --super-sidebar-user-bar-button-hover-bg: var(--gb-bg2) !important;
+        --super-sidebar-context-header-color: var(--gb-fg1) !important;
+        --super-sidebar-user-bar-button-color: var(--gb-fg1) !important;
+        --super-sidebar-search-bar-button-bg: var(--gb-bg1) !important;
+    }
+    .gl-fill-current {
+        fill: var(--gb-green-bright) !important;
+    }
+    #dropdown-toggle-btn-104 > span > svg,
+    #dropdown-toggle-btn-42 > span > svg,
+    #dropdown-toggle-btn-51 > span > svg,
+    #dropdown-toggle-btn-70 > span > svg,
+    #dropdown-toggle-btn-106 > span > svg {
+        fill: var(--gb-black) !important;
+    }
+
+    /* Styles for input fields and input groups */
+    .input-group-text {
+        background-color: var(--gb-bg1) !important;
+        color: var(--gb-fg3) !important;
+        border: 1px solid var(--gb-bg2) !important;
+    }
+    .input-group-prepend,
+    .input-group-append {
+        background-color: var(--gb-bg1) !important;
+        color: var(--gb-fg1) !important;
+    }
+    .gl-bg-gray-10 {
+        background-color: var(--gb-bg0) !important;
+    }
+
+    /* Styles for cards, tables, and issues */
+    .gl-card-body,
+    .tree-table,
+    .subscription-table {
+        background-color: var(--gb-bg0) !important;
+    }
+    .gl-card-header,
+    .tree-table header,
+    .subscription-table header {
+        background-color: var(--gb-bg0) !important;
+    }
+    .ci-icon.ci-icon-variant-success {
+        border-color: var(--gb-green-bright) !important;
+        background-color: var(--gb-green-bright) !important;
+        color: var(--gb-gray-dark) !important;
+    }
+    .tree-item-file-name {
+        color: var(--gb-fg1) !important;
+    }
+    .issue.closed {
+        background-color: var(--gb-bg0) !important;
+    }
+    .info-well {
+        background-color: var(--gb-bg0) !important;
+        color: var(--gb-fg1) !important;
+    }
+    .nav-links li:not(.md-header-toolbar).active a {
+        box-shadow: inset 0 -2px 0 0
+            var(--gl-tab-selected-indicator-color-default) !important;
+    }
+    .note-form-actions {
+        background-color: var(--gb-bg0) !important;
+    }
+    .new-note,
+    .gl-static.merge-request-tabs-holder {
+        background-color: var(--gl-background-color-default) !important;
+    }
+    option {
+        background-color: var(--gb-bg0) !important;
+    }
+    tr:hover:not(.tree-truncated-warning) {
+        background-color: var(--gb-bg1) !important;
+        color: var(--gb-bg4) !important;
+    }
+    table.table.tree-table.gl-table-fixed thead tr th {
+        background-color: var(--gb-bg0) !important;
+    }
+
+    /* Styles for network graphs */
+    .network-graph > svg:nth-child(1) > rect:nth-child(5) {
+        fill: var(--gb-bg0) !important;
+    }
+    .network-graph > svg:nth-child(1) > rect:nth-child(4) {
+        fill: var(--gb-bg0) !important;
+    }
+    .network-graph {
+        background-color: var(--gb-bg0) !important;
+    }
+
+    /* Additional styles for cards and code */
+    .card {
+        background-color: var(--gb-bg0) !important;
+    }
+    .md :not(pre.code) > code {
+        background-color: var(--gb-bg4-alpha-20) !important;
+    }
+    .repo-breadcrumb {
+        background-color: var(--gb-bg0) !important;
+    }
+
+    /* Styles for form elements */
+    .form-control {
+        transition:
+            color 0.2s cubic-bezier(0.22, 0.61, 0.36, 1),
+            background-color 0.2s cubic-bezier(0.22, 0.61, 0.36, 1),
+            border-color 0.2s cubic-bezier(0.22, 0.61, 0.36, 1),
+            box-shadow 0.2s cubic-bezier(0.22, 0.61, 0.36, 1),
+            text-decoration-color 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+    .form-control:disabled {
+        background-color: var(--gb-bg3-alpha-20) !important;
+        border-color: var(--gb-bg4-alpha-20) !important;
+    }
+    .form-control:hover {
+        background-color: var(
+            --gl-action-neutral-background-color-hover
+        ) !important;
+        border: var(--gl-action-neutral-border-color-hover) !important;
+        box-shadow: var(--gl-action-neutral-border-color-hover) !important;
+        transition:
+            color 0.2s cubic-bezier(0.22, 0.61, 0.36, 1),
+            background-color 0.2s cubic-bezier(0.22, 0.61, 0.36, 1),
+            border-color 0.2s cubic-bezier(0.22, 0.61, 0.36, 1),
+            box-shadow 0.2s cubic-bezier(0.22, 0.61, 0.36, 1),
+            text-decoration-color 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+
+    /* Styles for Markdown tables */
+    .md table:not(.code) tbody {
+        background-color: var(--gb-bg0) !important;
+    }
+    .md table:not(.code) thead tr th,
+    table.table:not(.gl-table) thead tr th {
+        background-color: var(--gb-bg0) !important;
+    }
+
+    /* Styles for hover/focus effects and links */
+    .dark:hover:gl-bg-gray-200:hover:where(.gl-dark *) {
+        background-color: var(--gb-bg4-alpha-20) !important;
+    }
+    .dark:focus:gl-bg-gray-200:focus:where(.gl-dark *) {
+        background-color: var(--gb-fg4-alpha-40) !important;
+    }
+    .has-\>a\:hover:gl-bg-blue-50:has(> a:hover) {
+        background-color: var(--gb-bg4-alpha-20) !important;
+    }
+    .has-\>a\:hover:gl-border-blue-200:has(> a:hover) {
+        border-color: var(--gl-border-color-subtle) !important;
+    }
+    .gl-link:active,
+    .gl-link:focus,
+    .gl-link:focus:active {
+        outline: none;
+    }
+    .gl-bg-red-50 {
+        background-color: var(--gb-red-bright-alpha-20) !important;
+    }
+
+    /* Styles for navigation links */
+    .nav-links li:not(.md-header-toolbar).active a,
+    .nav-links li:not(.md-header-toolbar).active button,
+    .nav-links li:not(.md-header-toolbar) a.active {
+        color: var(--gl-text-color-strong) !important;
+        transition:
+            color 0.2s cubic-bezier(0.22, 0.61, 0.36, 1),
+            background-color 0.2s cubic-bezier(0.22, 0.61, 0.36, 1),
+            border-color 0.2s cubic-bezier(0.22, 0.61, 0.36, 1),
+            box-shadow 0.2s cubic-bezier(0.22, 0.61, 0.36, 1),
+            text-decoration-color 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+    .nav-links li:not(.md-header-toolbar) a,
+    .nav-links li:not(.md-header-toolbar) button {
+        color: var(--gl-text-color-subtle) !important;
+        transition:
+            color 0.2s cubic-bezier(0.22, 0.61, 0.36, 1),
+            background-color 0.2s cubic-bezier(0.22, 0.61, 0.36, 1),
+            border-color 0.2s cubic-bezier(0.22, 0.61, 0.36, 1),
+            box-shadow 0.2s cubic-bezier(0.22, 0.61, 0.36, 1),
+            text-decoration-color 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+    .nav-links li:not(.md-header-toolbar) a:hover,
+    .nav-links li:not(.md-header-toolbar) a:active,
+    .nav-links li:not(.md-header-toolbar) a:focus,
+    .nav-links li:not(.md-header-toolbar) button:hover,
+    .nav-links li:not(.md-header-toolbar) button:active,
+    .nav-links li:not(.md-header-toolbar) button:focus {
+        color: var(--gl-text-color-strong) !important;
+    }
+
+    /* Additional styles for UI elements */
+    .emoji-picker-category-header {
+        background: linear-gradient(
+            to bottom,
+            var(--gb-bg0) 50%,
+            transparent 100%
+        );
+    }
+    .awards .gl-button.selected {
+        background-color: var(--gb-green-bright-alpha-20) !important;
+        border-color: var(--gb-green-bright-alpha-50) !important;
+    }
+    .zen-backdrop.fullscreen {
+        background-color: var(--gb-bg0) !important;
+    }
+    .system-note-icon:not(.mr-system-note-empty)::before {
+        background: linear-gradient(
+            to bottom,
+            transparent,
+            var(--gb-green-bright)
+        );
+    }
+    .right-sidebar .promotion-issue-sidebar .btn-link {
+        color: var(--gb-blue-bright) !important;
+    }
+    .list-group-item {
+        background-color: var(--gb-bg0);
+    }
+    .gl-badge.badge-tier .gl-badge-icon {
+        fill: var(--gl-badge-tier-icon-color-default) !important;
+    }
+
+    /* Styles for CI icons (Job Status Icons) */
+    .ci-icon.ci-icon-variant-neutral {
+        color: var(--ci-icon-neutral-text-color);
+        background-color: var(--ci-icon-neutral-background-color);
+        border: 2px solid var(--ci-icon-neutral-background-color);
+    }
+    .ci-icon.ci-icon-variant-success {
+        border-color: var(--ci-icon-success-icon-color) !important;
+        background-color: var(--ci-icon-success-background-color) !important;
+        color: var(--ci-icon-success-icon-color) !important;
+    }
+    .ci-icon.ci-icon-variant-danger {
+        border-color: var(--ci-icon-danger-icon-color) !important;
+        background-color: var(--ci-icon-danger-background-color) !important;
+        color: var(--ci-icon-danger-icon-color) !important;
+    }
+    .ci-icon.ci-icon-variant-warning {
+        border-color: var(--ci-icon-warning-icon-color) !important;
+        background-color: var(--ci-icon-warning-background-color) !important;
+        color: var(--ci-icon-warning-icon-color) !important;
+    }
+
+    /* Styles for file tree elements and banners */
+    #tree-holder
+        > section
+        > div.gl-flex.gl-flex-col.gl-items-stretch.gl-justify-end.\@sm\/panel\:gl-flex-row.\@sm\/panel\:gl-items-center.\@sm\/panel\:gl-gap-5.gl-my-5
+        > div
+        .gl-new-dropdown-chevron {
+        fill: var(--gb-black) !important;
+    }
+    .gl-banner-introduction .gl-card-body {
+        background-color: transparent !important;
+    }
+    #keyboard-shortcut-modal___BV_modal_body_
+        > div.gl-sticky.gl-top-0.gl-flex.gl-items-center.gl-bg-white.gl-px-5.gl-py-5 {
+        background-color: var(--gb-bg0);
+    }
+    #__BVID__314,
+    #__BVID__296 {
+        border-color: var(--gl-border-color-subtle) !important;
+    }
+
+    /* Styles for alert titles */
+    .gl-alert-info .gl-alert-title {
+        color: var(--gl-alert-info-title-color) !important;
+    }
+    .gl-alert-success .gl-alert-title {
+        color: var(--gl-alert-success-title-color) !important;
+    }
+    .gl-alert-warning .gl-alert-title {
+        color: var(--gl-alert-warning-title-color) !important;
+    }
+    .gl-alert-danger .gl-alert-title {
+        color: var(--gl-alert-danger-title-color) !important;
+    }
+
+    /* Additional styles for content elements */
+    #content-body > div:nth-child(3) > div:nth-child(2) > div > div {
+        background-color: transparent !important;
+    }
+    #content-body
+        > div:nth-child(3)
+        > div.gl-mb-7.gl-mt-8.gl-flex.gl-flex-row.gl-items-center.gl-gap-x-5
+        > div
+        > div
+        > button {
+        background-color: var(--gb-bg0) !important;
+        border: 2px solid var(--gl-border-color-default) !important;
+    }
+    #content-body
+        > div:nth-child(3)
+        > div.gl-mb-7.gl-mt-8.gl-flex.gl-flex-row.gl-items-center.gl-gap-x-5
+        > div
+        > div {
+        background: linear-gradient(
+            315deg,
+            var(--gl-border-color-subtle),
+            var(--gl-border-color-default)
+        ) !important;
+    }
+}
