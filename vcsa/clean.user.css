@@ -1,0 +1,24 @@
+/* ==UserStyle==
+@name         ✦ [vCSA] Clean
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Remove unnecessary elements from vCSA
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/vcsa/clean.user.css
+==/UserStyle== */
+
+@-moz-document regexp("https?://vcsa\\..*")
+{
+    #feedbackIcon, /* Leave feedback */
+    .tid-control-bar-help-menu, /* Help */
+    #appRefreshAction /* Refresh button */ {
+        display: none;
+    }
+
+    [_nghost-rcy-c288] #search-term-ref[_ngcontent-rcy-c288] {
+        padding: 5px;
+    }
+}
