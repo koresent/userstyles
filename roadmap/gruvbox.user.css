@@ -1,0 +1,167 @@
+/* ==UserStyle==
+@name         ✦ [Roadmap] Gruvbox Light
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Gruvbox Light theme for Roadmap
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/brave/gruvbox.user.css
+==/UserStyle== */
+
+@-moz-document domain("roadmap.sh") {
+    :root {
+        --rdm-tw-ring-offset-color: #1d2021;
+        --tw-ring-offset-color: #1d2021;
+        --tw-gradient-from: #1d2021;
+        --tw-gradient-via: #1d2021;
+        --tw-gradient-to: #1d2021;
+
+        --rdm-color-red-100: #fb4934;
+        --rdm-color-red-200: #cc241d;
+        --rdm-color-red-300: #9d0006;
+        --rdm-color-red-700: #9d0006;
+
+        --rdm-color-green-200: #b8bb26;
+        --rdm-color-green-500: #b8bb26;
+
+        --rdm-color-blue-300: #83a598;
+        --rdm-color-purple-300: #d3869b;
+        --rdm-color-purple-400: #d3869b;
+
+        --rdm-color-gray-100: #ebdbb2;
+        --rdm-color-gray-200: #ebdbb2;
+        --rdm-color-gray-300: #bdae93;
+        --rdm-color-gray-400: #a89984;
+        --rdm-color-gray-500: #928374;
+        --rdm-color-gray-600: #7c6f64;
+        --rdm-color-gray-900: #1d2021;
+
+        --rdm-color-black: #1d2021;
+        --rdm-color-white: #fbf1c7;
+
+        --color-red-50: #f2d5cf;
+        --color-red-100: #fb4934;
+        --color-red-200: #cc241d;
+        --color-red-300: #9d0006;
+        --color-red-400: #9d0006;
+        --color-red-500: #fb4934;
+        --color-red-600: #cc241d;
+        --color-red-700: #9d0006;
+        --color-red-800: #8f3f3f;
+        --color-red-900: #7c1d1d;
+
+        --color-orange-50: #fabd2f;
+        --color-orange-200: #fabd2f;
+        --color-orange-300: #d65d0e;
+        --color-orange-500: #d65d0e;
+        --color-orange-600: #af3c0f;
+        --color-orange-700: #af3c0f;
+
+        --color-yellow-50: #fdf4c1;
+        --color-yellow-100: #fbf1c7;
+        --color-yellow-200: #fbf1c7;
+        --color-yellow-300: #fabd2f;
+        --color-yellow-400: #b8bb26;
+        --color-yellow-500: #b8bb26;
+        --color-yellow-600: #b8bb26;
+        --color-yellow-700: #928374;
+        --color-yellow-800: #7c6f64;
+        --color-yellow-900: #665c54;
+
+        --color-green-50: #b8bb26;
+        --color-green-100: #b8bb26;
+        --color-green-200: #b8bb26;
+        --color-green-300: #b8bb26;
+        --color-green-400: #b8bb26;
+        --color-green-500: #b8bb26;
+        --color-green-600: #928374;
+        --color-green-700: #7c6f64;
+        --color-green-800: #665c54;
+        --color-green-900: #504439;
+
+        --color-blue-50: #83a598;
+        --color-blue-100: #83a598;
+        --color-blue-200: #83a598;
+        --color-blue-300: #83a598;
+        --color-blue-400: #83a598;
+        --color-blue-500: #83a598;
+        --color-blue-600: #665c54;
+        --color-blue-700: #504439;
+        --color-blue-800: #3c3836;
+
+        --color-purple-100: #d3869b;
+        --color-purple-200: #d3869b;
+        --color-purple-300: #d3869b;
+        --color-purple-400: #d3869b;
+        --color-purple-500: #d3869b;
+        --color-purple-600: #b16286;
+        --color-purple-700: #8f3f71;
+        --color-purple-800: #7c1d54;
+
+        --color-gray-50: #ebdbb2;
+        --color-gray-100: #ebdbb2;
+        --color-gray-200: #d5c4a1;
+        --color-gray-300: #bdae93;
+        --color-gray-400: #a89984;
+        --color-gray-500: #928374;
+        --color-gray-600: #7c6f64;
+        --color-gray-700: #665c54;
+        --color-gray-800: #504439;
+        --color-gray-900: #1d2021;
+
+        --color-black: #1d2021;
+        --color-white: #fbf1c7;
+
+        --color-amber-100: #fbf1c7;
+        --color-amber-200: #f2e5bc;
+        --color-amber-300: #ebdbb2;
+        --color-amber-600: #bdae93;
+        --color-amber-700: #a89984;
+        --color-amber-900: #665c54;
+        --color-emerald-500: #b8bb26;
+        --color-emerald-600: #8ec07c;
+        --color-teal-100: #8ec07c;
+        --color-teal-200: #7daea3;
+        --color-teal-700: #689d6a;
+        --color-slate-50: #fbf1c7;
+        --color-slate-100: #ebdbb2;
+        --color-slate-200: #d5c4a1;
+        --color-slate-300: #bdae93;
+        --color-slate-400: #a89984;
+        --color-slate-500: #928374;
+        --color-slate-600: #7c6f64;
+        --color-slate-700: #665c54;
+        --color-slate-800: #504439;
+        --color-slate-900: #1d2021;
+        --color-zinc-200: #bdae93;
+        --color-zinc-400: #928374;
+        --color-zinc-500: #7c6f64;
+        --color-zinc-800: #504439;
+        --color-neutral-100: #ebdbb2;
+        --color-stone-800: #504439;
+        --color-stone-900: #1d2021;
+    }
+
+    /* Logo coloring */
+    a.flex.items-center.text-lg.font-medium.text-white svg path:first-of-type {
+        fill: var(--color-neutral-100);
+    }
+
+    /* Change font in Roadmap */
+    #resource-svg-wrap svg {
+        font-family: "Aptos", sans-serif !important;
+        font-weight: bold;
+    }
+
+    /* Progress bar fill */
+    .bg-\[\#172a3a\] {
+        background-color: #98971a69;
+    }
+
+    /* Page background coloring */
+    body {
+        background-color: var(--color-black);
+    }
+}
