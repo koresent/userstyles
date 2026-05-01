@@ -1,0 +1,32 @@
+/* ==UserStyle==
+@name         ✦ [Brave Search] Clean
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Remove unnecessary elements from Brave Search
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/brave/clean.user.css
+==/UserStyle== */
+
+@-moz-document domain("search.brave.com") {
+    #searchform-actions,                                  /* Search form action buttons */
+    footer,                                               /* Page footer */
+    div[class^="video-cluster-show-more-container"],      /* "Show more" button for video clusters */
+    #search-elsewhere,                                    /* External search engine redirection links */
+    .image-result.image-result-search-elsewhere,          /* External search engine links within image results */
+    #chatllm-actions .main-actions button:nth-child(2),   /* AI chat interface: Share response action */
+    #chatllm-actions .main-actions button:nth-child(3),   /* AI chat interface: Upvote action */
+    #chatllm-actions .main-actions button:nth-child(4),   /* AI chat interface: Downvote action */
+    cite.chatllm-disclaimer,                              /* AI-generated content liability disclaimer */
+    div[class^="thumbnail-wrapper"] > a,                  /* Search result website thumbnail previews */
+    section.infobox-section:has(.infobox-profiles-body)   /* Infobox containing predefined site search profiles */ {
+        display: none !important;
+    }
+
+    /* Remove redundant bottom border from infobox sections after hiding the profiles section */
+    section.infobox-section {
+        border-bottom: none !important;
+    }
+}
