@@ -1,0 +1,60 @@
+/* ==UserStyle==
+@name         ✦ [Nitter] Gruvbox Dark
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Gruvbox Dark theme for Nitter
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/nitter/gruvbox.user.css
+==/UserStyle== */
+
+@-moz-document regexp("https?://(.*\.)?nitter\..*"),
+    regexp("https?://(.*\.)?x\..*"),
+	regexp("https?://(.*\.)?twitter\..*")
+{
+    body {
+        /* Main Colors */
+        --bg_color: #282828 !important;
+        --fg_color: #ebdbb2 !important;
+        --fg_faded: #928374 !important;
+        --fg_dark: var(--fg_faded) !important;
+        --fg_nav: var(--accent) !important;
+
+        /* Panels & Elements */
+        --bg_panel: #32302f !important;
+        --bg_elements: #1d2021 !important;
+        --bg_overlays: #3c3836 !important;
+        --bg_hover: #504945 !important;
+
+        /* Grayscale and Borders */
+        --grey: var(--fg_faded) !important;
+        --dark_grey: #504945 !important;
+        --darker_grey: #3c3836 !important;
+        --darkest_grey: #282828 !important;
+        --border_grey: #504945 !important;
+
+        /* Accents */
+        --accent: #b8bb26 !important;
+        --accent_light: #fbf1c7 !important;
+        --accent_dark: #98971a !important;
+        --accent_border: rgba(184, 187, 38, 0.5) !important;
+
+        /* Buttons and Interactive Elements */
+        --play_button: #fabd2f !important;
+        --play_button_hover: #fe8019 !important;
+
+        --more_replies_dots: #b8bb26 !important;
+        --error_red: #fb4934 !important;
+
+        /* Miscellaneous */
+        --verified_blue: #83a598 !important;
+        --icon_text: #fbf1c7 !important;
+
+        --tab: #665c54 !important;
+        --tab_selected: var(--accent) !important;
+
+        --profile_stat: #a89984 !important;
+    }
+}
