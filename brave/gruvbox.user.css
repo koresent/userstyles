@@ -1,0 +1,225 @@
+/* ==UserStyle==
+@name         ✦ [Brave Search] Gruvbox Dark
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Gruvbox Dark theme for Brave Search
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/brave/gruvbox.user.css
+==/UserStyle== */
+
+@-moz-document domain("search.brave.com") {
+    :root,
+    :root.dark,
+    :host(.dark),
+    :root[data-theme="dark"] {
+        /* Gruvbox Dark Medium Palette Base */
+        --gb-bg: #282828;
+        --gb-bg-soft: #32302f;
+        --gb-bg1: #3c3836;
+        --gb-bg2: #504945;
+        --gb-bg3: #665c54;
+        --gb-bg4: #7c6f64;
+        --gb-fg: #ebdbb2;
+        --gb-fg-bright: #fbf1c7;
+        --gb-fg-muted: #a89984;
+        --gb-gray: #928374;
+        --gb-accent: #b8bb26;
+        --gb-accent-dim: #98971a;
+        --gb-link: #83a598;
+        --gb-visited: #d3869b;
+        --gb-error: #cc241d;
+        --gb-warning: #d65d0e;
+        --gb-success: #689d6a;
+
+        /* Core Backgrounds */
+        --color-page-background: var(--gb-bg) !important;
+        --color-search-background-page: var(--gb-bg) !important;
+        --color-search-background-container: var(--gb-bg) !important;
+        --color-search-background-sidebar: var(--gb-bg) !important;
+        --color-schemes-background: var(--gb-bg) !important;
+        --color-schemes-surface: var(--gb-bg) !important;
+        --color-schemes-surface-bright: var(--gb-bg1) !important;
+        --color-schemes-surface-dim: var(--gb-bg) !important;
+        --color-schemes-surface-container-lowest: var(--gb-bg) !important;
+        --color-schemes-surface-container-low: var(--gb-bg) !important;
+        --color-schemes-surface-container: var(--gb-bg1) !important;
+        --color-schemes-surface-container-high: var(--gb-bg2) !important;
+        --color-schemes-surface-container-highest: var(--gb-bg2) !important;
+        --color-fixed-background: var(--gb-bg) !important;
+
+        /* Search Components Backgrounds */
+        --color-search-background-search-bar: var(--gb-bg1) !important;
+        --color-search-background-ask-input-field: var(--gb-bg1) !important;
+        --color-search-background-enrichment-cards: var(--gb-bg1) !important;
+        --color-search-background-user-message-bubble: var(--gb-bg1) !important;
+        --color-search-background-highlight: var(--gb-bg2) !important;
+        --color-search-background-suggest-highlight: var(--gb-bg2) !important;
+        --color-search-background-settings: var(--gb-bg1) !important;
+        --color-search-background-interactive-normal: var(--gb-bg2) !important;
+        --color-search-background-interactive-pale: var(--gb-bg1) !important;
+        --color-container-background: var(--gb-bg1) !important;
+        --color-container-highlight: var(--gb-bg2) !important;
+        --color-serp-header-background: var(--gb-bg) !important;
+        --color-serp-highlight-subtle: var(--gb-bg1) !important;
+
+        /* Text Colors */
+        --color-text-primary: var(--gb-fg) !important;
+        --color-schemes-on-surface: var(--gb-fg) !important;
+        --color-schemes-on-background: var(--gb-fg) !important;
+        --color-text-secondary: var(--gb-fg-muted) !important;
+        --color-schemes-on-surface-variant: var(--gb-fg-muted) !important;
+        --color-text-tertiary: var(--gb-gray) !important;
+        --color-fixed-foreground: var(--gb-fg) !important;
+
+        /* Accent & Interactive Elements */
+        --color-schemes-primary: var(--gb-accent) !important;
+        --color-schemes-primary-fixed: var(--gb-accent) !important;
+        --color-schemes-primary-fixed-dim: var(--gb-accent-dim) !important;
+        --color-schemes-on-primary: var(--gb-bg) !important;
+        --color-text-interactive: var(--gb-accent) !important;
+        --color-icon-interactive: var(--gb-accent) !important;
+        --color-search-icon-interactive: var(--gb-accent) !important;
+        --color-button-background: var(--gb-accent) !important;
+        --color-button-hover: rgba(184, 187, 38, 0.1) !important;
+        --color-search-button-filled-background-normal: var(
+            --gb-accent
+        ) !important;
+        --color-search-button-filled-background-hover: var(
+            --gb-accent-dim
+        ) !important;
+        --color-search-button-pale-background-normal: rgba(
+            184,
+            187,
+            38,
+            0.1
+        ) !important;
+        --color-search-button-pale-background-hover: rgba(
+            184,
+            187,
+            38,
+            0.2
+        ) !important;
+        --color-search-button-ask-input-field-background-normal: var(
+            --gb-bg2
+        ) !important;
+        --color-search-button-ask-input-field-background-hover: var(
+            --gb-bg3
+        ) !important;
+        --color-search-button-outline-outline-hover: var(
+            --gb-accent
+        ) !important;
+
+        /* Links */
+        --color-search-links-link: var(--gb-link) !important;
+        --color-link-visited: var(--gb-visited) !important;
+        --color-text-interactive-visited: var(--gb-visited) !important;
+
+        /* Dividers & Borders */
+        --color-divider-faint: var(--gb-bg1) !important;
+        --color-divider-subtle: var(--gb-bg2) !important;
+        --color-divider-strong: var(--gb-bg3) !important;
+        --color-divider-interactive: var(--gb-accent-dim) !important;
+        --color-search-divider-subtle: var(--gb-bg2) !important;
+        --color-search-divider-strong: var(--gb-bg3) !important;
+        --color-search-divider-subtle-container: var(--gb-bg2) !important;
+        --color-search-divider-interactive: var(--gb-accent-dim) !important;
+        --color-search-divider-ask-input-field: var(--gb-bg3) !important;
+        --color-schemes-outline: var(--gb-bg3) !important;
+        --color-schemes-outline-variant: var(--gb-bg2) !important;
+        --color-code-border: var(--gb-bg3) !important;
+
+        /* Gradients */
+        --gradient-llm: linear-gradient(
+            180deg,
+            var(--gb-bg1) 0%,
+            var(--gb-bg) 100%
+        ) !important;
+        --gradient-search-navigation: linear-gradient(
+            307deg,
+            var(--gb-accent-dim) 0%,
+            var(--gb-accent) 100%
+        ) !important;
+
+        /* Base Scales Overrides (prevents fallback to standard dark theme colors) */
+        --color-search-primary-5: var(--gb-bg-soft) !important;
+        --color-search-primary-10: var(--gb-bg1) !important;
+        --color-search-primary-20: var(--gb-bg2) !important;
+        --color-search-primary-30: var(--gb-bg3) !important;
+        --color-search-primary-40: var(--gb-accent-dim) !important;
+        --color-search-primary-50: var(--gb-accent) !important;
+        --color-search-primary-60: #d7d76a !important; /* Lighter shade for contrast */
+        --color-search-primary-70: var(--gb-fg-bright) !important;
+
+        --color-neutral-5: var(--gb-bg) !important;
+        --color-neutral-10: var(--gb-bg1) !important;
+        --color-neutral-20: var(--gb-bg2) !important;
+        --color-neutral-30: var(--gb-bg3) !important;
+        --color-neutral-40: var(--gb-bg4) !important;
+        --color-neutral-50: var(--gb-gray) !important;
+        --color-neutral-60: var(--gb-fg-muted) !important;
+        --color-neutral-70: var(--gb-fg) !important;
+
+        /* Code Block Colors */
+        --color-code-01: var(--gb-fg) !important;
+        --color-code-02: var(--gb-link) !important;
+        --color-code-03: var(--gb-accent) !important;
+        --color-code-04: var(--gb-warning) !important;
+        --color-code-05: var(--gb-visited) !important;
+    }
+
+    /* Bright text overrides */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .title,
+    .heading {
+        color: var(--gb-fg-bright) !important;
+    }
+
+    /* Search matching text highlight */
+    strong,
+    b {
+        color: var(--gb-fg-bright) !important;
+        background-color: rgba(184, 187, 38, 0.15) !important;
+    }
+
+    /* Input Fields */
+    input,
+    textarea {
+        color: var(--gb-fg) !important;
+        border-color: var(--gb-bg3) !important;
+    }
+
+    input:focus,
+    textarea:focus {
+        border-color: var(--gb-accent) !important;
+        outline-color: var(--gb-accent) !important;
+    }
+
+    /* Highlight color */
+    :root:not(.light) .llm-output {
+        --highlight-color: #83a59836;
+    }
+
+    /* Sepia logo */
+    a.nav-logo[href="/"] img {
+        filter: sepia();
+    }
+
+    /* Remove favicon background */
+    div[class^="favicon-wrapper"] {
+        height: 0px !important;
+        width: 0px !important;
+    }
+
+    /* Rounded favicon */
+    img[class^="favicon"] {
+        border-radius: 20px !important;
+    }
+}
