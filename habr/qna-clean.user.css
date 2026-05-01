@@ -1,0 +1,19 @@
+/* ==UserStyle==
+@name         ✦ [QNA Habr] Clean
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Remove unnecessary elements from QNA Habr
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/habr/qna-clean.user.css
+==/UserStyle== */
+
+@-moz-document domain("qna.habr.com") {
+    .promo-block, /* Promo in left menu */
+	.layout__footer, /* Footer */
+	.offered-services /* Job openings */ {
+        display: none !important;
+    }
+}
