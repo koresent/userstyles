@@ -1,0 +1,24 @@
+/* ==UserStyle==
+@name         ✦ [Roadmap] Clean
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Removes subscription purchase prompts and clutter from Roadmap.sh
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/roadmap/clean.user.css
+==/UserStyle== */
+
+@-moz-document domain("roadmap.sh") {
+    a.text-yellow-400.xl\:flex, /* Subscription offer in the header */
+    button.animate-fade-in, /* Subscription offer in the middle of the screen */
+    .bg-slate-900.py-6.pb-10.text-white.sm\:py-16, /* Footer */
+    .border-b.border-t.bg-white.py-6.text-left.sm\:py-16.sm\:text-center, /* "Join the community" section */
+    div.absolute.left-\[\-18px\].top-\[110px\].h-full, /* Social media links on the right side of the roadmap */
+    div.ai-chat.animate-fade-slide-up, /* AI assistant */
+    button.flex.items-center.gap-1\.5.rounded-lg.bg-white, /* "Buy subscription" button on the home page */
+    .bg-slate-900 > div.min-h-\[70px\] /* Teams section on the home page */ {
+        display: none;
+    }
+}
