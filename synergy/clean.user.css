@@ -1,0 +1,36 @@
+/* ==UserStyle==
+@name         ✦ [LMS Synergy] Clean
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Remove unnecessary elements from LMS Synergy
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/synergy/clean.user.css
+==/UserStyle== */
+
+@-moz-document domain("lms.synergy.ru") {
+    .banner,
+    #gosuslugi_warn,
+    #special_synergy_friends_welcome,
+    a.item:nth-child(1),
+    #footer,
+    .header-eyes,
+    #user-lang,
+    #wrap-alert-survey1477,
+    .filter-info,
+    .alerttop {
+        display: none !important;
+    }
+
+    .inner-center {
+        width: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .logo-container .logo-svg {
+        filter: invert();
+    }
+}
