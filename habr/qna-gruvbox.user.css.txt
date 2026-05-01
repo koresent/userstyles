@@ -1,0 +1,200 @@
+/* ==UserStyle==
+@name         ✦ [QNA Habr] Gruvbox Dark
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Gruvbox Dark theme for QNA Habr
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/habr/qna-gruvbox.user.css
+==/UserStyle== */
+
+@-moz-document domain("qna.habr.com") {
+    :root {
+        /* --- Gruvbox Dark Palette --- */
+        --bg0: #282828;
+        --bg1: #3c3836;
+        --bg2: #504945;
+        --bg_dark: #1d2021;
+
+        --fg0: #fbf1c7;
+        --fg1: #ebdbb2;
+        --fg2: #d5c4a1;
+        --fg3: #bdae93;
+        --fg4: #a89984;
+
+        --gray: #928374;
+        --gray-2: #665c54;
+
+        --red: #fb4934;
+        --green: #b8bb26;
+        --yellow: #fabd2f;
+        --blue: #83a598;
+        --purple: #d3869b;
+        --aqua: #8ec07c;
+        --orange: #fe8019;
+
+        --blue-alt: #458588;
+    }
+
+    /* --- Borders & Dividers --- */
+    #TMpanel,
+    .user-panel,
+    .question-head,
+    .content-list__item,
+    .panel-heading__title_underline,
+    .content-list_sidebar-block .content-list__item {
+        border-bottom: 1px solid var(--bg1) !important;
+    }
+
+    /* --- Core Backgrounds --- */
+    #TMpanel, .layout__navbar, .layout__topbar, .page__body, .panel-heading_inner,
+    .layout__body::before, .layout__body, .page__header, .page__tabs, .page__filters,
+    #answer-form {
+        background-color: var(--bg0) !important;
+    }
+
+    /* --- Typography & UI Elements --- */
+    .question__title, .question__title-link { color: var(--blue-alt); }
+    .question__text, .page__text, .comment__text, .answer__text, .main-menu__link, .panel-heading__title, .field__label, .question__complexity-text {
+        color: var(--fg1);
+    }
+    .question__pub-date, .question__views-count_full, .user-summary__nickname, .user-summary__about,
+    .user-summary__date, .user-summary__answers-count, .inline-list_meta-attrs .inline-list__item span,
+    .mini-counter__count_grey, .mini-counter__value {
+        color: var(--fg3);
+    }
+
+    .user-summary__name { color: var(--green); }
+    .user-panel__user-name { color: var(--fg0); }
+    .section-header__title { color: var(--yellow); }
+    .question__invate-expert { color: var(--green); }
+    .question__date, .question__views-count, .question__author, .question__deleted { color: var(--orange); }
+    .answer__date, .date { color: var(--gray-2); }
+    .user-summary .author_mark { color: var(--purple); }
+
+    .icon_svg,
+    #icon_menu_notification [class^="path"] {
+        filter: sepia();
+    }
+
+    /* --- Button Components --- */
+
+    /* Generic Button Style */
+    .btn { border-width: 2px; }
+
+    /* Green (Primary) */
+    .btn_outline_green, .btn_green, .btn_like, .empty-block__button, .button_upload, .btn_green.btn_add-question {
+        background-color: var(--green) !important;
+        color: var(--bg0) !important;
+        border: none !important;
+    }
+    .btn_outline_green:hover, .btn_green:hover, .btn_like:hover, .empty-block__button:hover, .button_upload:hover {
+        background-color: var(--yellow) !important;
+    }
+
+    /* Blue (Engagement) */
+    .btn_outline_blue, .btn_invate, .btn_subscribe, .btn_solution {
+        background-color: var(--blue) !important;
+        color: var(--bg0) !important;
+        border: none !important;
+    }
+    .btn_outline_blue:hover, .btn_invate:hover, .btn_subscribe:hover, .btn_solution:hover {
+        background-color: var(--blue-alt) !important;
+        color: var(--fg0) !important;
+    }
+    .btn_outline_blue .btn__counter, .btn_invate .btn__counter, .btn_subscribe .btn__counter, .btn_solution .btn__counter {
+        color: var(--bg_dark);
+    }
+
+    /* Gray (Secondary) */
+    .btn_outline_grey, .btn_cancel, .btn_link > span, .btn_complexity {
+        background-color: var(--gray) !important;
+        color: var(--bg0) !important;
+        border: none !important;
+    }
+    .btn_outline_grey:hover, .btn_cancel:hover, .btn_link:hover > span {
+        background-color: var(--fg4) !important;
+    }
+
+    /* Transparent / Link Buttons */
+    .link_light_grey, .events-list__more, .link_toggle, .btn_cancel, .btn_link > span {
+        background-color: transparent !important;
+        color: var(--fg3) !important;
+    }
+    .link_light_grey:hover, .events-list__more:hover, .link_toggle:hover {
+        color: var(--yellow) !important;
+    }
+
+    /* --- Links & Tags --- */
+    a, .link, .btn_comment-send, .link_dark_grey, .tag__title, .user-panel__user-name_sidebar, .tags-list__item.subscribed a {
+        color: var(--green);
+    }
+    a:hover { color: var(--yellow); }
+    .question__answers_has-solution .mini-counter__count, .question__answers_has-solution .mini-counter__value { color: var(--green); }
+
+    /* --- Like Button SVG Fix --- */
+    .btn__counter { border-left: 0; }
+    .btn_like { display: inline-flex; align-items: center; font-size: 14px; }
+    .btn_like span:first-child { display: none; }
+    .btn_like::before {
+        content: "";
+        display: inline-block;
+        width: 16px; height: 16px;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="%23282828" d="M960 640h-64q27 0 45.5 18.5t18.5 45t-18.5 45.5t-45.5 19q27 0 45.5 18.5t18.5 45t-18.5 45.5t-45.5 19h-64q27 0 45.5 18.5T896 960t-18.5 45.5T832 1024H320q-32 0-128-32T64 960q-28 0-46-16.5T0 896V640q0-35 18.5-79T60 513q1-1 4-1q54 0 105-14.5t85.5-34t64.5-44t44-40.5t21-27q20-30 56.5-66.5t64.5-62t49.5-60T576 96V64q0-27 19-45.5T640 0t45 18.5T704 64v128q0 43-10 74.5T672 312t-22 32.5t-10 39.5q0 18 10 31t24 19t28 9.5t24 3.5l10 1q117 0 202.5 39.5T1024 576q0 26-18.5 45T960 640z"/></svg>');
+        background-size: contain;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+    }
+
+    /* --- Form Elements & Code --- */
+    .logo-wrapper svg path { fill: var(--green) !important; }
+
+    input.suggest__field {
+        background: var(--bg1);
+        color: var(--fg1);
+    }
+    input.suggest__field::placeholder { color: var(--fg1); }
+
+    .question__text pre code.hljs, .page__text pre code.hljs,
+    .comment__text pre code.hljs, .answer__text pre code.hljs,
+    #answer-form textarea.field__input {
+        background-color: var(--bg_dark);
+        color: var(--fg1) !important;
+    }
+
+    #answer-form {
+        border: 1px solid var(--bg1);
+        padding: 16px;
+        border-radius: 8px;
+    }
+
+    #answer-form .icons-bar {
+        background-color: var(--bg1);
+        border: 1px solid var(--bg2);
+        border-radius: 4px;
+        padding: 4px;
+    }
+    #answer-form .icons-bar__item_control svg { fill: var(--fg1); }
+    #answer-form .icons-bar__item_control:hover svg { fill: var(--blue); }
+
+    #answer-form textarea.field__input {
+        border: 1px solid var(--bg2);
+        font-family: "Maple Mono NF", monospace;
+    }
+
+    #answer-form .answer-form__avatar-img svg {
+        fill: var(--fg1);
+        background-color: var(--bg1);
+        border-radius: 50%;
+        padding: 4px;
+    }
+
+    /* --- Cleanup --- */
+    .column_sidebar.column_sidebar-stick-top { position: inherit; }
+    .icons-bar__item, .icons-bar__item:last-child { border: none; }
+    .question__complexity .svg-icon_level-1, .question__complexity .svg-icon_level-2, .tags-list__item_more {
+        display: none;
+    }
+}
