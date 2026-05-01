@@ -1,0 +1,342 @@
+/* ==UserStyle==
+@name         ✦ [Yandex Music] Gruvbox Dark
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Gruvbox Dark theme for Yandex Music
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/yandex-music/gruvbox.user.css
+==/UserStyle== */
+
+@-moz-document domain("music.yandex.ru") {
+    :root,
+    .ym-dark-theme,
+    .ym-light-theme {
+        /* Gruvbox Dark Medium palette */
+        --bg0: #282828;
+        --bg1: #3c3836;
+        --bg2: #504945;
+        --bg3: #665c54;
+        --bg4: #7c6f64;
+        --bg-hard: #1d2021;
+
+        --fg: #ebdbb2;
+        --fg0: #fbf1c7;
+        --fg4: #a89984;
+        --gray: #928374;
+
+        --green: #b8bb26;
+        --green-dim: #98971a;
+        --green-dark: #79740e;
+
+        --red: #fb4934;
+        --red-dark: #cc241d;
+
+        --purple: #d3869b;
+        --purple-dark: #b16286;
+        --aqua: #83a598;
+        --aqua-dark: #458588;
+
+        /* Base backgrounds */
+        --ym-background-color-primary-enabled-basic: var(--bg0) !important;
+        --ym-background-color-primary-enabled-content: var(--bg0) !important;
+        --ym-background-color-primary-enabled-popover: var(--bg1) !important;
+        --ym-background-color-primary-enabled-overlay: rgba(
+            40,
+            40,
+            40,
+            0.8
+        ) !important;
+        --ym-background-color-primary-enabled-vibe: linear-gradient(
+            180deg,
+            var(--bg-hard),
+            var(--bg0)
+        ) !important;
+        --ym-background-color-primary-enabled-header: rgba(
+            40,
+            40,
+            40,
+            0.9
+        ) !important;
+        --ym-background-color-primary-enabled-player: var(--bg1) !important;
+        --ym-background-color-primary-enabled-tooltip: var(--bg2) !important;
+
+        /* Shimmers */
+        --ym-background-color-primary-enabled-shimmer: linear-gradient(
+            90deg,
+            rgba(60, 56, 54, 0.5) 40%,
+            rgba(80, 73, 69, 0.3) 50%,
+            rgba(60, 56, 54, 0.5) 60%
+        ) !important;
+        --ym-background-color-secondary-enabled-blur: var(--bg1) !important;
+        --ym-background-color-secondary-enabled-shimmer: linear-gradient(
+            90deg,
+            rgba(235, 219, 178, 0.05) 40%,
+            rgba(235, 219, 178, 0.1) 50%,
+            rgba(235, 219, 178, 0.05) 60%
+        ) !important;
+
+        /* Logos */
+        --ym-logo-color-primary-enabled: var(--fg0) !important;
+        --ym-logo-color-primary-variant: var(--green) !important;
+        --ym-logo-color-primary-player: var(--green) !important;
+
+        /* Primary controls (Accent) */
+        --ym-controls-color-primary-default-disabled: var(--bg2) !important;
+        --ym-controls-color-primary-default-enabled: var(--green) !important;
+        --ym-controls-color-primary-default-hovered: var(
+            --green-dim
+        ) !important;
+        --ym-controls-color-primary-default-pressed: var(
+            --green-dark
+        ) !important;
+        --ym-controls-color-primary-default-focused_stroke: rgba(
+            184,
+            187,
+            38,
+            0.5
+        ) !important;
+
+        /* Text on primary controls */
+        --ym-controls-color-primary-on_default-disabled: var(--gray) !important;
+        --ym-controls-color-primary-on_default-enabled: var(--bg0) !important;
+
+        /* Primary outlines */
+        --ym-controls-color-primary-outline-disabled: var(--bg1) !important;
+        --ym-controls-color-primary-outline-enabled: var(--bg2) !important;
+        --ym-controls-color-primary-outline-hovered: var(--bg3) !important;
+        --ym-controls-color-primary-outline-hovered_stroke: var(
+            --green
+        ) !important;
+        --ym-controls-color-primary-outline-selected_stroke: var(
+            --green
+        ) !important;
+        --ym-controls-color-primary-outline-pressed: var(--bg4) !important;
+        --ym-controls-color-primary-outline-focused_stroke: rgba(
+            184,
+            187,
+            38,
+            0.5
+        ) !important;
+
+        /* Text on primary outlines */
+        --ym-controls-color-primary-on_outline-disabled: var(--gray) !important;
+        --ym-controls-color-primary-on_outline-enabled: var(--fg) !important;
+
+        /* Primary text */
+        --ym-controls-color-primary-text-disabled: var(--gray) !important;
+        --ym-controls-color-primary-text-enabled: var(--fg) !important;
+        --ym-controls-color-primary-text-enabled_variant: var(--fg0) !important;
+        --ym-controls-color-primary-text-hovered: var(--green) !important;
+        --ym-controls-color-primary-text-hovered_variant: var(--fg0) !important;
+        --ym-controls-color-primary-text-vibe: linear-gradient(
+            180deg,
+            rgba(251, 241, 199, 0.92) 8.63%,
+            rgba(235, 219, 178, 0.72) 77.58%
+        ) !important;
+        --ym-controls-color-primary-text-vibe_icon: rgba(
+            235,
+            219,
+            178,
+            0.72
+        ) !important;
+
+        /* Secondary controls */
+        --ym-controls-color-secondary-default-disabled: rgba(
+            235,
+            219,
+            178,
+            0.08
+        ) !important;
+        --ym-controls-color-secondary-default-enabled: rgba(
+            235,
+            219,
+            178,
+            0.08
+        ) !important;
+        --ym-controls-color-secondary-default-hovered: rgba(
+            235,
+            219,
+            178,
+            0.12
+        ) !important;
+        --ym-controls-color-secondary-default-pressed: rgba(
+            235,
+            219,
+            178,
+            0.24
+        ) !important;
+        --ym-controls-color-secondary-default-focused: rgba(
+            40,
+            40,
+            40,
+            0.5
+        ) !important;
+        --ym-controls-color-secondary-default-focused_stroke: rgba(
+            235,
+            219,
+            178,
+            0.5
+        ) !important;
+
+        /* Text on secondary controls */
+        --ym-controls-color-secondary-on_default-disabled: rgba(
+            235,
+            219,
+            178,
+            0.24
+        ) !important;
+        --ym-controls-color-secondary-on_default-enabled: var(--fg) !important;
+        --ym-controls-color-secondary-on_default-enabled_variant: rgba(
+            235,
+            219,
+            178,
+            0.5
+        ) !important;
+        --ym-controls-color-secondary-on_default-hovered: var(--fg0) !important;
+
+        /* Secondary outlines */
+        --ym-controls-color-secondary-outline-disabled_stroke: var(
+            --bg1
+        ) !important;
+        --ym-controls-color-secondary-outline-enabled_stroke: var(
+            --bg2
+        ) !important;
+        --ym-controls-color-secondary-outline-hovered_stroke: var(
+            --bg4
+        ) !important;
+        --ym-controls-color-secondary-outline-selected: var(--bg1) !important;
+        --ym-controls-color-secondary-outline-selected_stroke: var(
+            --fg
+        ) !important;
+        --ym-controls-color-secondary-outline-pressed: var(--bg2) !important;
+        --ym-controls-color-secondary-outline-focused_stroke: var(
+            --bg2
+        ) !important;
+
+        /* Text on secondary outlines */
+        --ym-controls-color-secondary-on_outline-disabled: var(
+            --gray
+        ) !important;
+        --ym-controls-color-secondary-on_outline-enabled: var(--fg) !important;
+        --ym-controls-color-secondary-on_outline-enabled_variant: var(
+            --fg4
+        ) !important;
+
+        /* Secondary text */
+        --ym-controls-color-secondary-text-disabled: rgba(
+            235,
+            219,
+            178,
+            0.08
+        ) !important;
+        --ym-controls-color-secondary-text-enabled: var(--fg4) !important;
+        --ym-controls-color-secondary-text-enabled_variant: var(
+            --fg
+        ) !important;
+        --ym-controls-color-secondary-text-hovered: var(--fg0) !important;
+        --ym-controls-color-secondary-text-selected: var(--green) !important;
+
+        /* Cards */
+        --ym-controls-color-secondary-card-disabled: rgba(
+            60,
+            56,
+            54,
+            0.8
+        ) !important;
+        --ym-controls-color-secondary-card-enabled: var(--bg1) !important;
+        --ym-controls-color-secondary-card-hovered: var(--bg2) !important;
+
+        /* Yandex Plus gradient */
+        --ym-controls-color-plus-default-disabled: rgba(
+            235,
+            219,
+            178,
+            0.08
+        ) !important;
+        --ym-controls-color-plus-default-enabled: linear-gradient(
+            90deg,
+            var(--purple),
+            var(--purple-dark) 30%,
+            var(--aqua) 75%,
+            var(--aqua-dark)
+        ) !important;
+        --ym-controls-color-plus-default-hovered: linear-gradient(
+            90deg,
+            rgba(211, 134, 155, 0.9),
+            rgba(177, 98, 134, 0.9) 30%,
+            rgba(131, 165, 152, 0.9) 75%,
+            rgba(69, 133, 136, 0.9)
+        ) !important;
+        --ym-controls-color-plus-default-pressed: rgba(
+            235,
+            219,
+            178,
+            0.24
+        ) !important;
+        --ym-controls-color-plus-default-focused_stroke: rgba(
+            235,
+            219,
+            178,
+            0.5
+        ) !important;
+        --ym-controls-color-plus-on_default-disabled: var(--gray) !important;
+        --ym-controls-color-plus-on_default-enabled: rgba(
+            251,
+            241,
+            199,
+            0.9
+        ) !important;
+
+        /* Accents and States */
+        --ym-controls-color-accent-default-enabled: var(--red) !important;
+        --ym-controls-color-accent-default-hovered: var(--red-dark) !important;
+        --ym-controls-color-accent-default-pressed: var(--fg0) !important;
+        --ym-controls-color-accent-default-focused_stroke: rgba(
+            251,
+            73,
+            52,
+            0.24
+        ) !important;
+        --ym-controls-color-accent-on_default-enabled: var(--fg) !important;
+
+        /* Messages */
+        --ym-message-color-successful-text-enabled: var(--green) !important;
+        --ym-message-color-error-text-enabled: var(--red) !important;
+
+        /* Sliders and borders */
+        --ym-outline-color-primary-disabled: rgba(
+            235,
+            219,
+            178,
+            0.04
+        ) !important;
+        --ym-surface-color-primary-enabled-list: rgba(
+            235,
+            219,
+            178,
+            0.08
+        ) !important;
+        --ym-surface-color-primary-enabled-entity: rgba(
+            40,
+            40,
+            40,
+            0.64
+        ) !important;
+        --ym-slider-color-primary-disabled: rgba(
+            235,
+            219,
+            178,
+            0.08
+        ) !important;
+        --ym-slider-color-primary-progress: rgba(
+            235,
+            219,
+            178,
+            0.16
+        ) !important;
+        --ym-slider-color-primary-enabled: var(--green) !important;
+    }
+}
