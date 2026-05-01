@@ -1,0 +1,90 @@
+/* ==UserStyle==
+@name         ✦ [TrueNAS] Gruvbox Dark
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Gruvbox Dark theme for TrueNAS
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/truenas/gruvbox.user.css
+==/UserStyle== */
+
+@-moz-document regexp("https?://(.*\.)?nas\..*"),
+    regexp("https?://(.*\.)?truenas\..*")
+{
+    html,
+    ix-blank-layout.ng-star-inserted {
+        --bg1: #282828 !important;
+        --fg1: #ebdbb2 !important;
+        --topbar: #3c3836 !important;
+        --topbar-txt: #fbf1c7 !important;
+        --accent: #b8bb26 !important;
+        --bg2: #3c3836 !important;
+        --fg2: #d5c4a1 !important;
+        --alt-bg1: rgba(124, 118, 100, 0.8) !important;
+        --alt-bg2: rgba(124, 118, 100, 0.5) !important;
+        --alt-fg1: #fbf1c7 !important;
+        --alt-fg2: #ebdbb2 !important;
+
+        --yellow: #fabd2f !important;
+        --orange: #fe8019 !important;
+        --red: #fb4934 !important;
+        --magenta: #d3869b !important;
+        --violet: #b16286 !important;
+        --blue: #83a598 !important;
+        --cyan: #8ec07c !important;
+        --green: #b8bb26 !important;
+        --pink: #d3869b !important;
+        --aqua: #8ec07c !important;
+        --tomato: #d65d0e !important;
+        --teal: #689d6a !important;
+        --slategray: #928374 !important;
+        --salmon: #cc241d !important;
+
+        --primary: #b8bb26 !important;
+        --lines: #665c54 !important;
+        --accentColors:
+            #b16286, #fe8019, #8ec07c, #83a598, #fabd2f, #d3869b, #fb4934,
+            #b8bb26, #d3869b, #8ec07c, #d65d0e, #689d6a, #928374, #cc241d !important;
+
+        --yellow-txt: #282828 !important;
+        --orange-txt: #282828 !important;
+        --red-txt: #fbf1c7 !important;
+        --magenta-txt: #282828 !important;
+        --violet-txt: #fbf1c7 !important;
+        --blue-txt: #282828 !important;
+        --cyan-txt: #282828 !important;
+        --green-txt: #282828 !important;
+        --pink-txt: #282828 !important;
+        --aqua-txt: #282828 !important;
+        --tomato-txt: #fbf1c7 !important;
+        --teal-txt: #fbf1c7 !important;
+        --slategray-txt: #fbf1c7 !important;
+        --salmon-txt: #282828 !important;
+
+        --black: #1d2021 !important;
+        --white: #fbf1c7 !important;
+        --grey: #a89984 !important;
+
+        --focus-bg: rgba(124, 118, 100, 0.55) !important;
+        --focus-brd: rgba(235, 219, 178, 0.25) !important;
+
+        --primary-txt: #282828 !important;
+        --accent-txt: #282828 !important;
+        --highlight: #282828 !important;
+
+        --contrast-darker: #1d2021 !important;
+        --contrast-darkest: #1d2021 !important;
+        --contrast-lighter: #504945 !important;
+        --contrast-lightest: #665c54 !important;
+        --primary-lighter: #98971a !important;
+    }
+
+    .sidenav-copyright-txt, /* Footer */
+	.copyright, /* Copyright */
+	#send-feedback, /* Feedback */
+	.logo-wrapper/* Splashscreen */ {
+        display: none;
+    }
+}
