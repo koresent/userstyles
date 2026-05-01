@@ -1,0 +1,100 @@
+/* ==UserStyle==
+@name         ✦ [Stack Overflow] Gruvbox Dark
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Gruvbox Dark theme for Stack Overflow
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/stack-overflow/gruvbox.user.css
+==/UserStyle== */
+
+@-moz-document domain("stackexchange.com"), domain("stackoverflow.com"), domain("serverfault.com"), domain("superuser.com"), domain("askubuntu.com") {
+    body:not(.theme-highcontrast).theme-dark,
+    body:not(.theme-highcontrast):not(.theme-dark) .theme-dark__forced,
+    body:not(.theme-highcontrast).theme-dark.themed,
+    body:not(.theme-highcontrast):not(.theme-dark) .theme-dark__forced.themed {
+        --white: #282828;
+        --black-050: #282828;
+        --black-100: #32302f;
+        --black-150: #3c3836;
+        --black-200: #504945;
+        --black-225: #665c54;
+        --black-250: #7c6f64;
+        --black-300: #928374;
+        --black-350: #a89984;
+        --black-400: #bdae93;
+        --black-500: #d5c4a1;
+        --black-600: #ebdbb2;
+        --black: #fbf1c7;
+        --orange-100: #3f400d;
+        --orange-200: #686a16;
+        --orange-300: #92941e;
+        --orange-400: #bcbf27;
+        --orange-500: #dadd55;
+        --orange-600: #eceeaa;
+        --blue-100: #202c28;
+        --blue-200: #364a42;
+        --blue-300: #4b675d;
+        --blue-400: #618577;
+        --blue-500: #89a99d;
+        --blue-600: #c4d4ce;
+        --green-100: #203419;
+        --green-200: #355629;
+        --green-300: #4b793a;
+        --green-400: #609b4b;
+        --green-500: #88bd75;
+        --green-600: #c4deba;
+        --red-100: #4b0901;
+        --red-200: #7d0f02;
+        --red-300: #af1603;
+        --red-400: #e11c04;
+        --red-500: #fb4c37;
+        --red-600: #fda59b;
+        --yellow-100: #4b3502;
+        --yellow-200: #7d5803;
+        --yellow-300: #ae7b04;
+        --yellow-400: #e09e05;
+        --yellow-500: #fac038;
+        --yellow-600: #fddf9b;
+        --purple-100: #38141e;
+        --purple-200: #5e2232;
+        --purple-300: #833046;
+        --purple-400: #a83d5a;
+        --purple-500: #c96983;
+        --purple-600: #e4b4c1;
+        --gold-100: #4b3502;
+        --gold-200: #7d5803;
+        --gold-300: #ae7b04;
+        --gold-400: #e09e05;
+        --gold-500: #fac038;
+        --gold-600: #fddf9b;
+        --silver-100: #3c3836;
+        --silver-200: #665c54;
+        --silver-300: #928374;
+        --silver-400: #a89984;
+        --bronze-100: #4c2200;
+        --bronze-200: #7f3901;
+        --bronze-300: #b25001;
+        --bronze-400: #e56701;
+        --bronze-500: #fe8f34;
+        --bronze-600: #ffc799;
+        --highlight-attribute: #fabd2f;
+        --highlight-bg: #1d2021;
+        --highlight-comment: #928374;
+        --highlight-keyword: #8ec07c;
+        --highlight-literal: #b8bb26;
+        --highlight-namespace: #b8bb26;
+        --highlight-punctuation: #ebdbb2;
+        --highlight-symbol: #d3869b;
+        --highlight-variable: #83a598;
+    }
+
+    /* Logo styling */
+    body.theme-dark .s-topbar .s-topbar--logo .-img,
+    .theme-dark__forced .s-topbar .s-topbar--logo .-img,
+    body.theme-system .theme-dark__forced .s-topbar .s-topbar--logo .-img {
+        filter: sepia(100%) contrast(70%);
+    }
+}
