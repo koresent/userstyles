@@ -1,0 +1,220 @@
+/* ==UserStyle==
+@name         ✦ [reCAPTCHA] Gruvbox Dark
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Gruvbox Dark theme for reCAPTCHA
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/recaptcha/gruvbox.user.css
+==/UserStyle== */
+
+:root {
+    /* Gruvbox Dark Palette */
+    --bg0: #282828;
+    --bg0-hard: #1d2021;
+    --bg1: #3c3836;
+    --bg2: #504945;
+    --bg3: #665c54;
+    --fg0: #fbf1c7;
+    --fg1: #ebdbb2;
+    --fg2: #d5c4a1;
+    --green: #b8bb26;
+    --green-dim: #98971a;
+    --red: #fb4934;
+}
+
+body div[style*="border: 1px solid rgb(204"] {
+    border: 1px solid var(--bg2) !important;
+}
+
+html .g-recaptcha-bubble-arrow[style*="border-color: transparent rgb(204"] {
+    border-color: transparent var(--bg2) transparent transparent !important;
+}
+
+html .g-recaptcha-bubble-arrow[style*="border-color: transparent rgb(255"],
+html .g-recaptcha-bubble-arrow[style*="255) transparent transparent"] {
+    border-color: transparent var(--bg0) transparent transparent !important;
+}
+
+html
+    .g-recaptcha-bubble-arrow[style*="border-color: transparent transparent transparent rgb(204"] {
+    border-color: transparent transparent transparent var(--bg2) !important;
+}
+
+html
+    .g-recaptcha-bubble-arrow[style*="border-color: transparent transparent transparent rgb(255"] {
+    border-color: transparent transparent transparent var(--bg0) !important;
+}
+
+@-moz-document regexp("^https?://(www\\.)?google.com/recaptcha/api2/+.*")
+{
+    body,
+    html {
+        background: var(--bg0);
+        color: var(--fg0);
+    }
+
+    .rc-anchor-light {
+        background: var(--bg0);
+        color: var(--fg0);
+        overflow: hidden;
+    }
+
+    .recaptcha-checkbox-border {
+        background-color: var(--bg0-hard);
+        border: 2px solid var(--bg2);
+    }
+
+    .recaptcha-checkbox-hover .recaptcha-checkbox-border,
+    .recaptcha-checkbox-hover .recaptcha-checkbox-spinner-gif,
+    .recaptcha-checkbox-focus .recaptcha-checkbox-border,
+    .recaptcha-checkbox-focus .recaptcha-checkbox-spinner-gif,
+    .recaptcha-checkbox-focused .recaptcha-checkbox-border,
+    .recaptcha-checkbox-focused .recaptcha-checkbox-spinner-gif {
+        border: 2px solid var(--green);
+    }
+
+    .recaptcha-checkbox-active .recaptcha-checkbox-border,
+    .recaptcha-checkbox-active .recaptcha-checkbox-spinner-gif {
+        background-color: var(--bg0-hard);
+    }
+
+    .recaptcha-checkbox-disabled .recaptcha-checkbox-border,
+    .recaptcha-checkbox-disabled .recaptcha-checkbox-spinner-gif {
+        background-color: var(--bg1);
+    }
+
+    .recaptcha-checkbox-clearOutline.recaptcha-checkbox-focused
+        .recaptcha-checkbox-border,
+    .recaptcha-checkbox-clearOutline.recaptcha-checkbox-focused
+        .recaptcha-checkbox-spinner-gif {
+        border: 2px solid var(--fg1);
+    }
+
+    .recaptcha-checkbox-expired .recaptcha-checkbox-border,
+    .recaptcha-checkbox-expired .recaptcha-checkbox-spinner-gif {
+        border-color: var(--red);
+    }
+
+    .rc-response-input-field,
+    .rc-separator {
+        border: 1px solid var(--bg2);
+    }
+
+    .rc-audiochallenge-response-field input {
+        background: var(--bg0-hard);
+        color: var(--fg2);
+    }
+
+    #rc-imageselect {
+        background-color: var(--bg0);
+        outline-color: var(--bg2);
+    }
+
+    .rc-button-reload,
+    .rc-button-audio,
+    .rc-button-help,
+    .rc-audiochallenge-tdownload-link,
+    .rc-button-image {
+        filter: invert(1) brightness(120%);
+        transition: all 0.5s ease;
+    }
+
+    .rc-controls .rc-challenge-help,
+    .rc-audiochallenge-instructions,
+    .rc-doscaptcha-body-text,
+    .rc-anchor-light .rc-anchor-logo-text,
+    .rc-anchor-light .rc-anchor-pt a:link,
+    .rc-anchor-light .rc-anchor-pt a:visited {
+        color: var(--fg1);
+    }
+
+    .rc-anchor-light.rc-anchor-normal {
+        border-color: var(--bg2);
+    }
+
+    .rc-audiochallenge-play-button .rc-button-default {
+        background: var(--bg2);
+        color: var(--fg0);
+    }
+
+    .rc-audiochallenge-play-button .rc-button-default:hover {
+        background: var(--bg3);
+        color: var(--fg1);
+    }
+
+    a[href*="recaptcha"],
+    .rc-doscaptcha-body-text a {
+        color: var(--green);
+        transition: all 0.5s ease;
+    }
+
+    a[href*="recaptcha"]:hover,
+    .rc-doscaptcha-body-text a:hover {
+        color: var(--green-dim);
+    }
+
+    .rc-button-default {
+        background: var(--green);
+        color: var(--fg0);
+        transition: all 0.5s ease;
+    }
+
+    .rc-button-default:hover {
+        background: var(--green-dim);
+        color: var(--fg1);
+    }
+
+    .rc-button-default:focus {
+        box-shadow: 0 0 0 1pt var(--green);
+    }
+
+    .rc-button-default-disabled {
+        background: var(--green);
+        opacity: 0.5;
+    }
+
+    .rc-imageselect-desc-wrapper,
+    .rc-doscaptcha-header {
+        background: var(--green);
+        color: var(--fg0);
+    }
+
+    .rc-imageselect-checkbox {
+        filter: grayscale(1) brightness(110%);
+    }
+
+    .recaptcha-checkbox-spinner {
+        filter: grayscale(1) brightness(130%);
+        mix-blend-mode: exclusion;
+    }
+
+    .recaptcha-checkbox-borderAnimation {
+        filter: invert(1) hue-rotate(180deg);
+        mix-blend-mode: exclusion;
+    }
+
+    .rc-imageselect-incorrect-response,
+    .rc-imageselect-error-dynamic-more,
+    .rc-imageselect-error-select-more,
+    .rc-imageselect-error-select-something {
+        color: var(--red);
+        background-color: var(--bg0);
+    }
+
+    #rc-anchor-alert,
+    .rc-anchor-alert,
+    .recaptcha-error-message {
+        color: var(--red);
+    }
+
+    .recaptcha-error {
+        border: 1px solid var(--red);
+    }
+
+    .rc-anchor {
+        box-shadow: none;
+    }
+}
