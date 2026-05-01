@@ -1,0 +1,138 @@
+/* ==UserStyle==
+@name         ✦ [Kavita] Gruvbox Dark
+@namespace    github.com/koresent/userstyles
+@version      1.0.0
+@description  Gruvbox Dark theme for Kavita
+@author       Koresent
+@license      GPL-3.0
+@homepageURL  https://github.com/koresent/userstyles
+@supportURL   https://github.com/koresent/userstyles/issues
+@updateURL    https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/kavita/gruvbox.user.css
+==/UserStyle== */
+
+@-moz-document regexp("https?://(.*\.)?kavita\..*"),
+    regexp("https?://(.*\.)?books\..*")
+{
+    :root,
+    :root .default {
+        /* System styles */
+        --elevation-layer0: rgba(40, 40, 40, 0);
+        --elevation-layer1: rgba(60, 56, 54, 0.4);
+        --elevation-layer2: rgba(60, 56, 54, 0.6);
+        --elevation-layer3: rgba(80, 73, 69, 0.5);
+        --elevation-layer4: rgba(80, 73, 69, 0.7);
+        --elevation-layer10: rgba(235, 219, 178, 0.4);
+
+        --elevation-layer0-dark-solid: #1d2021;
+        --elevation-layer1-dark-solid: #282828;
+        --elevation-layer2-dark-solid: #32302f;
+        --elevation-layer3-dark-solid: #3c3836;
+        --elevation-layer4-dark-solid: #504945;
+        --elevation-layer5-dark-solid: #665c54;
+
+        /* Base colors */
+        --primary-color: #b8bb26;
+        --primary-color-dark-shade: #98971a;
+        --primary-color-darker-shade: #79740e;
+        --primary-color-darkest-shade: #424605;
+
+        --error-color: #fb4934;
+        --error-accent-color: #cc241d;
+        --warning-color: #fabd2f;
+        --body-text-color: #ebdbb2;
+        --text-muted-color: #928374;
+
+        --btn-icon-filter: sepia(0.5) hue-rotate(30deg) brightness(90%);
+        --primary-color-scrollbar: rgba(184, 187, 38, 0.3);
+        --default-state-scrollbar: transparent;
+
+        /* Override bootstrap css variables */
+        --bs-body-bg: #282828;
+        --bs-primary-rgb: 184, 187, 38;
+
+        /* Colorscape (Gradients) */
+        --colorscape-enabled: true;
+        --colorscape-primary-color: rgb(40, 40, 40);
+        --colorscape-lighter-color: rgb(60, 56, 54);
+        --colorscape-darker-color: rgb(29, 32, 33);
+        --colorscape-complementary-color: rgb(50, 48, 47);
+
+        /* Meta and Globals */
+        --theme-color: #1d2021;
+        --color-scheme: dark;
+
+        /* Navbar */
+        --navbar-bg-color: #1d2021;
+        --navbar-text-color: #ebdbb2;
+        --navbar-fa-icon-color: #ebdbb2;
+        --navbar-btn-hover-outline-color: #b8bb26;
+
+        /* Inputs */
+        --input-bg-color: #3c3836;
+        --input-bg-readonly-color: #32302f;
+        --input-focused-border-color: #b8bb26;
+        --input-text-color: #ebdbb2;
+        --input-placeholder-color: #928374;
+        --input-border-color: #504945;
+        --input-focus-boxshadow-color: rgba(184, 187, 38, 0.3);
+
+        /* Buttons */
+        --btn-primary-bg-color: #b8bb26;
+        --btn-primary-text-color: #282828;
+        --btn-secondary-bg-color: #504945;
+        --btn-secondary-text-color: #ebdbb2;
+        --btn-alt-bg-color: #458588; /* Gruvbox Blue */
+        --btn-alt-border-color: #83a598;
+
+        /* Nav (Tabs) */
+        --nav-tab-border-color: #3c3836;
+        --nav-tab-active-text-color: #fabd2f;
+        --nav-tab-hover-text-color: #b8bb26;
+        --nav-tab-border-bottom: #b8bb26;
+
+        /* Modal & Popover */
+        --modal-bg-color: #282828;
+        --popover-body-bg-color: #3c3836;
+        --popover-bg-color: #1d2021;
+        --popover-border-color: #504945;
+
+        /* Side Nav */
+        --side-nav-bg-color: #1d2021;
+        --side-nav-hover-bg-color: #3c3836;
+        --side-nav-text-color: #ebdbb2;
+        --side-nav-item-active-color: #b8bb26;
+
+        /* List items */
+        --list-group-item-bg-color: transparent;
+        --list-group-hover-bg-color: #3c3836;
+        --list-group-item-border-color: #3c3836;
+
+        /* Card */
+        --card-bg-color: #32302f;
+        --card-hover-bg-color: #3c3836;
+        --card-body-bg-color: rgba(29, 32, 33, 0.85);
+
+        /* Accordion */
+        --accordion-header-text-color: #b8bb26;
+        --accordion-header-bg-color: #3c3836;
+        --accordion-body-bg-color: #282828;
+
+        /* Charts - Gruvbox Rainbow */
+        --charts-palette1: #fb4934; /* Red */
+        --charts-palette2: #b8bb26; /* Green */
+        --charts-palette3: #fabd2f; /* Yellow */
+        --charts-palette4: #83a598; /* Blue */
+        --charts-palette5: #d3869b; /* Purple */
+        --charts-palette6: #8ec07c; /* Aqua */
+        --charts-palette7: #fe8019; /* Orange */
+
+        /* Login */
+        --login-card-bg-color: #282828;
+        --login-input-background-color: #3c3836;
+        --login-background-color: #1d2021;
+
+        /* Misc */
+        --hr-color: #3c3836;
+        --rating-star-color: #fabd2f;
+    }
+}
