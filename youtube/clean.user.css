@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         ✦ [YouTube] Clean
 @namespace    github.com/koresent/userstyles
-@version      1.3.0
+@version      1.4.0
 @description  Interface cleanup: removes distractions, shorts, and redundant UI elements.
 @author       Koresent
 @license      GPL-3.0
@@ -30,13 +30,15 @@
     #guide-button.ytd-masthead, /* Sidebar: Toggle button (hamburger) */
     #header-entry[is-header] a#endpoint, /* Sidebar: Subscriptions button */
 
-    /* --- SECTION: TOPBAR (MASTHEAD) CLEANUP --- */
+    /* --- SECTION: TOPBAR (MASTHEAD) & GLOBAL CLEANUP --- */
     #end > div:nth-child(2) > ytd-button-renderer:nth-child(1), /* Topbar: Create/Upload button */
     ytd-notification-topbar-button-renderer.style-scope, /* Topbar: Notifications bell */
     .ytSearchboxComponentYtdTextInputAssistantWrapper, /* Topbar: Virtual keyboard */
     #voice-search-button, /* Topbar: Voice search */
     .ytSearchboxComponentSearchButton, /* Topbar: Search button icon */
     #country-code.ytd-topbar-logo-renderer, /* Topbar: Country code next to logo */
+    #masthead-ad, /* Topbar: Banner ad below the top bar */
+    yt-mealbar-promo-renderer, /* Global: "Try YouTube Premium" and feature discovery popups */
 
     /* --- SECTION: VIDEO PAGE & PLAYER UI --- */
     ytd-menu-renderer.ytd-watch-metadata > div:nth-child(2), /* Video: Save & Clip buttons */
@@ -64,10 +66,14 @@
     button[aria-label="Share"] .ytSpecButtonShapeNextButtonTextContent, /* Video: Share button text (EN) */
     #community-post, /* Share: Create Community post */
     #share-targets, /* Share: Social media target list */
-    #share-channel, /* Channel: Share channel button */
-    #flagging-button, /* Channel: Report/Flag button */
     .ytp-cards-button, /* Player: "More videos" info cards button */
     yt-thumbnail-hover-overlay-toggle-actions-view-model, /* Thumbnail: Hover actions (Add to playlist/Watch later) */
+    #merch-shelf, /* Video: Merch shelf */
+    #ticket-shelf, /* Video: Ticket shelf */
+    ytd-donation-shelf-renderer, /* Video: Donations */
+    #panels-full-bleed-container, /* Video: Engagement panels */
+    #secondary, /* Video: Right sidebar (related videos) */
+    .watch-skeleton, /* Video: Leftover loading skeletons */
 
     /* --- SECTION: FEED, CHANNEL & SEARCH RESULTS --- */
     ytd-rich-section-renderer.style-scope:nth-child(1), /* Feed: "New for you" section */
@@ -79,11 +85,30 @@
     #about-these-results, /* Search: "About these results" info */
     div.ytFlexibleActionsViewModelAction:nth-child(2), /* Channel: "Join" button */
     #contents ytd-rich-section-renderer, /* Feed: General Shorts containers */
-    ytd-merch-shelf-renderer, /* Video: Merchandise shelf */
+    ytd-merch-shelf-renderer, /* Video: Merchandise shelf alternative */
     .yt-lockup-metadata-view-model__menu-button, /* Cards: Context menu button */
     yt-tab-shape:not([tab-title="Видео"]):not([tab-title="Плейлисты"]):not([tab-title="Videos"]):not([tab-title="Playlists"]), /* Channel: Unnecessary tabs */
     .tabGroupShapeSlider, /* Channel: Tab slider line */
-    .ytChipBarViewModelChipWrapper:has(button[role="tab"]) /* Feed: Extra sorting chips */ {
+    .ytChipBarViewModelChipWrapper:has(button[role="tab"]), /* Feed: Extra sorting chips */
+    ytd-reel-shelf-renderer, /* Feed: Standalone Shorts shelf */
+    ytd-inline-survey-renderer, /* Feed: In-feed surveys */
+    ytd-primetime-promo-renderer, /* Feed: Promos for paid movies/shows */
+    ytd-banner-promo-renderer, /* Feed: Top banner promos */
+    ytd-ad-slot-renderer, /* Feed: Ad containers mixed in the grid */
+    ytd-channel-legal-info-renderer, /* Channel: Useless legal info at the bottom */
+    #share-channel, /* Channel: Share channel button */
+    #flagging-button, /* Channel: Report/Flag button */
+
+    /* --- SECTION: MOBILE UI (m.youtube.com) --- */
+    ytm-reel-shelf-renderer, /* Mobile Feed: Shorts shelves */
+    ytm-rich-section-renderer, /* Mobile Feed: Generic container for Shorts/Promos */
+    .pivot-shorts, /* Mobile Nav: Shorts tab in the bottom navigation bar */
+    ytm-post-renderer, /* Mobile Feed: Community posts and polls */
+    ytm-promoted-video-renderer, /* Mobile Feed: Promoted videos and ads in the feed */
+    ytm-mealbar-promo-renderer, /* Mobile Global: Upsell popups (App/Premium) */
+    ytm-companion-ad-renderer, /* Mobile Player: Ads under the mobile player */
+    ytm-item-section-renderer[section-identifier="related-items"], /* Mobile Video: Related/recommended videos block */
+    ytm-companion-slot /* Mobile Player: Ad slot container below video */ {
         display: none !important;
     }
 
@@ -119,16 +144,6 @@
     }
 
     .ytSearchboxComponentDesktop:hover .ytSearchboxComponentClearButtonWrapper {
-        opacity: 1;
-    }
-
-    /* Dim secondary recommendations (sidebar) to reduce distraction */
-    #secondary-inner {
-        opacity: 0.1;
-        transition: opacity 0.5s ease;
-    }
-
-    #secondary-inner:hover {
         opacity: 1;
     }
 
