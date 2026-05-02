@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         ✦ [YouTube] Clean
 @namespace    github.com/koresent/userstyles
-@version      1.4.0
+@version      1.5.0
 @description  Interface cleanup: removes distractions, shorts, and redundant UI elements.
 @author       Koresent
 @license      GPL-3.0
@@ -41,6 +41,8 @@
     yt-mealbar-promo-renderer, /* Global: "Try YouTube Premium" and feature discovery popups */
 
     /* --- SECTION: VIDEO PAGE & PLAYER UI --- */
+    ytd-live-chat-frame, /* Video: Live stream chat frame */
+    ytd-miniplayer, /* Global: Picture-in-picture miniplayer */
     ytd-menu-renderer.ytd-watch-metadata > div:nth-child(2), /* Video: Save & Clip buttons */
     ytd-menu-renderer.ytd-watch-metadata > yt-button-shape:nth-child(4), /* Video: Extra options menu (...) */
     .cbTitleButtonContainer, /* Third-party: DeArrow pencil icon */
@@ -76,6 +78,8 @@
     .watch-skeleton, /* Video: Leftover loading skeletons */
 
     /* --- SECTION: FEED, CHANNEL & SEARCH RESULTS --- */
+    ytd-channel-video-player-renderer, /* Channel: Autoplaying trailer at the top */
+    ytd-inline-preview-renderer, /* Feed: Video preview on hover */
     ytd-rich-section-renderer.style-scope:nth-child(1), /* Feed: "New for you" section */
     ytd-rich-shelf-renderer, /* Feed: Shorts shelf */
     yt-related-chip-cloud-renderer.style-scope, /* Sidebar: Recommendation filters */
@@ -108,7 +112,8 @@
     ytm-mealbar-promo-renderer, /* Mobile Global: Upsell popups (App/Premium) */
     ytm-companion-ad-renderer, /* Mobile Player: Ads under the mobile player */
     ytm-item-section-renderer[section-identifier="related-items"], /* Mobile Video: Related/recommended videos block */
-    ytm-companion-slot /* Mobile Player: Ad slot container below video */ {
+    ytm-companion-slot, /* Mobile Player: Ad slot container below video */
+    ytm-cinematic-container-renderer /* Mobile Player: Cinematic lighting background */ {
         display: none !important;
     }
 
