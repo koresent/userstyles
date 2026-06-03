@@ -110,4 +110,9 @@
         border-bottom-left-radius: 20px !important;
         border-bottom-right-radius: 20px !important;
     }
+
+    /* Remove text from "Add task" button */
+    .bucket-footer button span:last-child {
+        display: none !important;
+    }
 }
