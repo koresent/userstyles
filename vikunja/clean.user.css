@@ -1,0 +1,113 @@
+/* ==UserStyle==
+@name           ✦ Vikunja Clean
+@namespace      github.com/koresent/userstyles
+@version        1.0.0
+@description    Hides unnecessary UI elements & optimizes layout.
+@author         Koresent
+@license        GPL-3.0
+@homepageURL    https://github.com/koresent/userstyles
+@supportURL     https://github.com/koresent/userstyles/issues
+@updateURL      https://raw.githubusercontent.com/koresent/userstyles/refs/heads/main/vikunja/clean.user.css
+==/UserStyle== */
+
+@-moz-document domain("tasks.umbra.team") {
+    /* --- REMOVE UI CLUTTER --- */
+    .switch-view-container, /* View switcher */
+    .menu-show-button, /* Sidebar toggle button */
+    .kanban .bucket-header .icon.has-text-success, /* Auto-complete column indicator */
+    .task-id, /* Task card ID */
+    .bucket.new-bucket .base-button span:last-child, /* "New column" button text label */
+    .show-tasks, /* Current tasks section on main dashboard */
+    .content.has-text-centered h2 /* Welcome greeting on main dashboard */ {
+        display: none !important;
+    }
+
+    /* --- NAVIGATION BAR OPTIMIZATION --- */
+
+    /* Global navbar height reduction and padding adjustment */
+    .navbar[data-v-078b6750] {
+        min-height: 2.5rem !important;
+        height: 2.5rem !important;
+        padding: 0 0.5rem !important;
+        --navbar-gap-width: 0rem !important;
+    }
+
+    /* Align navbar layout groups horizontally */
+    .navbar[data-v-078b6750] .navbar-start,
+    .navbar[data-v-078b6750] .navbar-end {
+        display: flex !important;
+        align-items: center !important;
+        height: 2.5rem !important;
+    }
+
+    /* Center brand container and scale logo image */
+    .navbar[data-v-078b6750] .navbar-brand {
+        display: flex !important;
+        align-items: center !important;
+        height: 100% !important;
+    }
+
+    .navbar[data-v-078b6750] .logo[data-v-37e7bbe3] {
+        height: 1.5rem !important;
+        width: auto !important;
+        display: block !important;
+        object-fit: contain !important;
+    }
+
+    /* Hide duplicated logo instances if present */
+    .navbar[data-v-078b6750] .logo[data-v-37e7bbe3]:nth-child(2) {
+        display: none !important;
+    }
+
+    /* Project title styling and margin adjustments */
+    .navbar[data-v-078b6750] .project-title[data-v-078b6750] {
+        font-size: 1rem !important;
+        line-height: 2.5rem !important;
+        margin: 0 0.75rem !important;
+    }
+
+    /* Pull project settings block to the right towards navbar-end */
+    .project-title-wrapper[data-v-078b6750] {
+        flex-grow: 0 !important;
+        margin-left: auto !important;
+        margin-right: 1rem !important;
+    }
+
+    /* User avatar container scaling */
+    .navbar[data-v-078b6750] .avatar {
+        height: 2rem !important;
+        width: 2rem !important;
+        flex-shrink: 0 !important;
+        margin: 0 0.5rem !important;
+    }
+
+    .navbar[data-v-078b6750] .avatar img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 50%;
+    }
+
+    /* --- LAYOUT & KANBAN TWEAKS --- */
+
+    /* Shift main content container closer to the top navbar */
+    .app-content {
+        padding: 3.2rem 1.5rem 0 !important;
+    }
+
+    /* De-emphasize secondary action icons and footer buttons */
+    .dropdown.options .dropdown-trigger,
+    .kanban .bucket-footer .button {
+        opacity: 0.5 !important;
+    }
+
+    /* Apply rounded corners to Kanban columns and footers */
+    .bucket {
+        border-radius: 20px !important;
+    }
+
+    .bucket-footer {
+        border-bottom-left-radius: 20px !important;
+        border-bottom-right-radius: 20px !important;
+    }
+}
