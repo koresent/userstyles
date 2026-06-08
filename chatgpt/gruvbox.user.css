@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         ✦ [ChatGPT] Gruvbox Dark
 @namespace    github.com/koresent/userstyles
-@version      2.0.0
+@version      3.0.0
 @description  Gruvbox Dark theme for ChatGPT
 @author       Koresent
 @license      GPL-3.0
@@ -11,216 +11,245 @@
 ==/UserStyle== */
 
 @-moz-document domain("chatgpt.com") {
-    :root {
-        /* Dark Medium Theme */
-        --bg0: #282828;
-        --bg0_h: #1d2021;
-        --bg1: #3c3836;
-        --bg2: #504945;
-        --fg0: #fbf1c7;
-        --fg1: #ebdbb2;
-        --fg4: #a89984;
-        --red: #fb4934;
-        --green: #b8bb26;
-        --yellow: #fabd2f;
-        --blue: #83a598;
-        --purple: #d3869b;
-        --aqua: #8ec07c;
-        --orange: #fe8019;
+    :root,
+    html,
+    .dark,
+    [data-oled],
+    [data-chat-theme],
+    html.mini-root.dark {
+        /* Gruvbox Dark Medium constants */
+        --gruv-bg0: #282828;
+        --gruv-bg0-h: #1d2021;
+        --gruv-bg1: #3c3836;
+        --gruv-bg2: #504945;
+        --gruv-fg0: #fbf1c7;
+        --gruv-fg1: #ebdbb2;
+        --gruv-fg4: #a89984;
+
+        --gruv-red: #fb4934;
+        --gruv-green: #b8bb26;
+        --gruv-yellow: #fabd2f;
+        --gruv-blue: #83a598;
+        --gruv-purple: #d3869b;
+        --gruv-aqua: #8ec07c;
+        --gruv-orange: #fe8019;
+
+        /* Interface variables */
+        --bg-primary: var(--gruv-bg0) !important;
+        --bg-secondary: var(--gruv-bg0) !important;
+        --bg-tertiary: var(--gruv-bg1) !important;
+        --bg-quaternary: var(--gruv-bg1) !important;
+        --main-surface-background: var(--gruv-bg0) !important;
+        --main-surface-primary: var(--gruv-bg0) !important;
+        --sidebar-surface-primary: var(--gruv-bg0) !important;
+        --message-surface: var(--gruv-bg0-h) !important;
+        --bg-elevated-primary: var(--gruv-bg1) !important;
+        --bg-elevated-secondary: var(--gruv-bg0-h) !important;
+        --sidebar-surface: var(--gruv-bg0) !important;
+
+        /* Transparency */
+        --interactive-bg-secondary-default: transparent !important;
+        --interactive-bg-secondary-hover: rgba(60, 56, 54, 0.6) !important;
+        --interactive-bg-secondary-press: rgba(80, 73, 69, 0.8) !important;
+        --interactive-bg-secondary-inactive: transparent !important;
+        --interactive-bg-secondary-selected: rgba(60, 56, 54, 0.8) !important;
+
+        --interactive-bg-tertiary-default: transparent !important;
+        --interactive-bg-tertiary-hover: rgba(60, 56, 54, 0.5) !important;
+        --interactive-bg-tertiary-press: rgba(80, 73, 69, 0.7) !important;
+
+        --bg-token-bg-tertiary: transparent !important;
+        --main-surface-secondary-selected: rgba(60, 56, 54, 0.8) !important;
+        --surface-hover: rgba(60, 56, 54, 0.5) !important;
+
+        /* Reset OpenAI Tailwind palettes */
+        --gray-25: var(--gruv-fg0) !important;
+        --gray-50: var(--gruv-fg1) !important;
+        --gray-100: var(--gruv-bg2) !important;
+        --gray-250: var(--gruv-fg4) !important;
+        --gray-550: var(--gruv-fg4) !important;
+        --gray-600: var(--gruv-fg4) !important;
+        --gray-700: var(--gruv-bg1) !important;
+        --gray-800: var(--gruv-bg0) !important;
+        --gray-850: var(--gruv-bg0-h) !important;
+        --gray-900: var(--gruv-bg0-h) !important;
+        --gray-925: var(--gruv-bg0-h) !important;
+        --gray-950: var(--gruv-bg0-h) !important;
+        --gray-1000: var(--gruv-bg0-h) !important;
+        --black: var(--gruv-bg0-h) !important;
+
+        /* Text and icons */
+        --text-primary: var(--gruv-fg1) !important;
+        --text-secondary: var(--gruv-fg4) !important;
+        --text-tertiary: var(--gruv-fg4) !important;
+        --content-primary: var(--gruv-fg1) !important;
+        --content-secondary: var(--gruv-fg4) !important;
+        --icon-primary: var(--gruv-fg1) !important;
+        --icon-secondary: var(--gruv-fg4) !important;
+        --icon-tertiary: var(--gruv-fg4) !important;
+
+        /* Input field */
+        --composer-surface-primary: var(--gruv-bg0-h) !important;
+        --composer-blue-bg: var(--gruv-bg1) !important;
+        --composer-blue-hover: var(--gruv-bg2) !important;
+        --composer-blue-text: var(--gruv-blue) !important;
+
+        /* Borders */
+        --border-default: var(--gruv-bg1) !important;
+        --border-light: var(--gruv-bg1) !important;
+        --border-medium: var(--gruv-bg1) !important;
+        --border-heavy: var(--gruv-bg2) !important;
+        --border-sharp: transparent !important;
+
+        /* System buttons */
+        --interactive-bg-primary-default: var(--gruv-green) !important;
+        --interactive-bg-primary-hover: #a3a634 !important;
+        --interactive-label-primary-default: var(--gruv-bg0) !important;
+        --interactive-icon-primary-default: var(--gruv-bg0) !important;
     }
 
-    .dark {
-        --bg-primary: var(--bg0);
-        --bg-secondary: var(--bg0);
-
-        --main-surface-background: var(--bg0);
-        --message-surface: var(--bg0_h);
-
-        --text-primary: var(--fg1);
-        --text-secondary: var(--fg4);
-        --text-tertiary: var(--fg4);
-
-        --border-light: var(--bg1);
-        --border-medium: var(--bg1);
-        --border-heavy: var(--bg1);
-        --bg-elevated-secondary: var(--bg0);
-
-        --theme-submit-btn-bg: var(--blue);
+    /* Top-level backgrounds */
+    html body,
+    header#page-header,
+    #stage-slideover-sidebar,
+    .stage-sidebar-pure-surface,
+    .bg-token-main-surface-primary,
+    div[class*="sidebar"],
+    .bg-token-bg-tertiary,
+    .bg-gray-solid-800,
+    .bg-gray-solid-700 {
+        background-color: var(--gruv-bg0) !important;
     }
 
-    /* "Thought for..." timer */
-    .dark .light,
-    .light,
-    html {
-        --interactive-label-tertiary-default: var(--green) !important;
-    }
-    .loading-shimmer > span {
-        color: var(--green);
-    }
-
-    /* Vertical divider line */
-    .border-green-600 {
-        border-color: var(--bg1);
-    }
-
-    /* Buttons */
-    .btn-green {
-        background-color: var(--green);
-        color: var(--bg0);
-    }
-
-    .btn-green:hover {
-        background-color: #a3a634;
-        color: var(--bg0);
-    }
-
-    /* Chat background */
-    .bg-token-main-surface-primary {
-        background-color: var(--main-surface-background);
-    }
-
-    /* Textbox background */
-    .dark\:bg-\[\#303030\]:is(.dark *) {
-        background-color: var(--main-surface-background);
-    }
-
-    /* Voice input icon background */
-    .dark\:bg-white:is(.dark *) {
-        background-color: var(--fg1);
-    }
-
-    /* Voice input icon text color */
-    .dark\:text-black:is(.dark *) {
-        color: var(--bg0);
-    }
-
-    /* Buttons like Search, Reason, Deep research, and Create image */
-    .dark\:bg-\[\#2A4A6D\]:is(.dark *) {
-        background-color: var(--blue);
-        color: var(--bg0);
-    }
-
-    /* Markdown inline */
-    code:not([class*="language-"]) {
-        padding: 0.15rem 0.3rem;
-        border-radius: 4.5px;
-        background-color: var(--bg0_h);
-    }
-
-    /* Fix codeblocks being affected by rule above */
-    pre code {
+    /* Background reset for header buttons, selectors, and profile via data-tags and IDs */
+    [data-testid="accounts-profile-button"],
+    [data-testid="model-switcher-dropdown-button"],
+    [data-testid="conversation-options-button"],
+    [data-testid="share-chat-button"],
+    [id^="radix-"],
+    nav[aria-label],
+    #stage-sidebar-tiny-bar,
+    .bg-transparent {
         background-color: transparent !important;
-    }
-
-    /* Remove border from codeblocks */
-    .border-token-border-medium {
         border: none !important;
+        box-shadow: none !important;
+        outline: none !important;
     }
 
-    /* Codeblock colors */
-    :is(.light .dark, .dark) {
-        .ͼk {
-            background-color: transparent;
-            color: var(--fg1);
-        }
-        .ͼk .cm-content {
-            caret-color: var(--fg1);
-        }
-        .ͼk .cm-cursor,
-        .ͼk .cm-dropCursor {
-            border-left-color: var(--fg1);
-        }
-        .ͼk.cm-focused .cm-selectionBackgroundm .cm-selectionBackground,
-        .ͼk .cm-content ::selection {
-            background-color: var(--bg1);
-        }
-        .ͼk .cm-activeLine {
-            background-color: var(--bg0_h);
-        }
-        .ͼk .cm-gutters {
-            background-color: var(--bg0_h);
-            color: var(--fg4);
-        }
-        .ͼk .cm-activeLineGutter {
-            background-color: var(--bg1);
-        }
-        .ͼl {
-            color: var(--fg4);
-        }
-        .ͼm {
-            color: var(--blue);
-        }
-        .ͼn {
-            color: var(--purple);
-        }
-        .ͼo {
-            color: var(--yellow);
-        }
-        .ͼp {
-            color: var(--red);
-        }
-        .ͼq {
-            color: var(--orange);
-        }
-        .ͼr {
-            color: var(--green);
-        }
-        .ͼs {
-            color: var(--orange);
-        }
-        .ͼt {
-            color: var(--purple);
-        }
-        .ͼu {
-            color: var(--yellow);
-        }
-        .ͼv {
-            color: var(--blue);
-        }
-        .ͼw {
-            color: var(--blue);
-            text-decoration: underline;
-        }
-        .ͼx {
-            color: var(--red);
-            text-decoration: underline;
-        }
-        .ͼy .cm-lineNumbers .cm-gutterElement {
-            padding-left: 8px;
-        }
-        .ͼy .cm-cursor,
-        .ͼy .cm-dropCursor {
-            border-left-width: 2px;
-        }
-        .ͼy .cm-matchingBracket {
-            outline: 1px solid var(--blue);
-            color: inherit;
-        }
-        .ͼy .cm-nonmatchingBracket {
-            outline: 1px solid var(--red);
-            color: inherit;
-        }
+    /* Clean hover state for cleared buttons */
+    [data-testid="model-switcher-dropdown-button"]:hover,
+    [data-testid="conversation-options-button"]:hover,
+    [data-testid="share-chat-button"]:hover,
+    [data-testid="accounts-profile-button"]:hover,
+    [id^="radix-"] button:hover,
+    nav button:hover {
+        background-color: var(--gruv-bg1) !important;
+        border-radius: 8px !important;
     }
 
-    /* Send button background */
+    /* Apply colors to text classes */
+    .text-token-text-primary,
+    .header-wordmark,
+    .truncate,
+    div[class*="truncate"] {
+        color: var(--gruv-fg1) !important;
+    }
+    .text-token-text-secondary,
+    .text-token-text-tertiary,
+    .font-normal,
+    [dir="auto"] {
+        color: var(--gruv-fg4) !important;
+    }
+
+    /* SVG icon fill */
+    svg,
+    .icon,
+    .icon-sm,
+    .icon-lg,
+    use {
+        color: var(--gruv-fg4) !important;
+        fill: currentColor !important;
+    }
+
+    /* Brightness for active selector and logo text */
+    .header-wordmark,
+    [data-testid="model-switcher-dropdown-button"] span {
+        color: var(--gruv-fg1) !important;
+    }
+
+    /* Input zone */
+    form[data-type="unified-composer"] div[data-composer-surface="true"] {
+        background-color: var(--gruv-bg0-h) !important;
+        border: 1px solid var(--gruv-bg1) !important;
+    }
+
+    /* Message submit button */
     #composer-submit-button,
-    .btn-primary:is(.dark *) {
-        background-color: var(--green);
+    .composer-submit-btn,
+    [data-testid="send-button"] {
+        background-color: var(--gruv-green) !important;
+        color: var(--gruv-bg0) !important;
+    }
+    #composer-submit-button svg,
+    [data-testid="send-button"] svg {
+        fill: var(--gruv-bg0) !important;
+        color: var(--gruv-bg0) !important;
     }
 
-    /* Send button icon */
-    #composer-submit-button > svg:nth-child(1) {
-        fill: var(--bg1);
+    /* Radix dropdown containers */
+    div[role="menu"],
+    div[role="dialog"],
+    [popover="hint"] {
+        background-color: var(--gruv-bg0-h) !important;
+        color: var(--gruv-fg1) !important;
+        border: 1px solid var(--gruv-bg1) !important;
+    }
+    [role="menuitem"]:hover,
+    .__menu-item:hover {
+        background-color: var(--gruv-bg1) !important;
+        color: var(--gruv-fg0) !important;
     }
 
-    /* Unread content badge */
-    .bg-blue-500 {
-        background-color: var(--blue);
+    /* Layer border resets */
+    #stage-slideover-sidebar,
+    .border-e,
+    .border-t,
+    .border-token-border-extra-light,
+    div[class*="border-token"] {
+        border: none !important;
+        border-color: transparent !important;
     }
 
-    /* User avatar */
-    .dark\:bg-blue-500:is(.dark *) {
-        color: var(--bg1);
-        background-color: var(--blue);
+    /* Syntax highlighting for built-in CodeMirror */
+    [class*="ͼ"] {
+        background-color: var(--gruv-bg0-h) !important;
+        color: var(--gruv-fg1) !important;
+    }
+    .ͼt {
+        color: var(--gruv-fg4) !important;
+    }
+    .ͼu,
+    .ͼ13,
+    .ͼ14 {
+        color: var(--gruv-blue) !important;
+    }
+    .ͼv,
+    .ͼ11 {
+        color: var(--gruv-purple) !important;
+    }
+    .ͼw,
+    .ͼ12 {
+        color: var(--gruv-yellow) !important;
+    }
+    .ͼx,
+    .ͼ15 {
+        color: var(--gruv-red) !important;
+    }
+    .ͼy,
+    .ͼ10 {
+        color: var(--gruv-orange) !important;
+    }
+    .ͼz {
+        color: var(--gruv-green) !important;
     }
 }
