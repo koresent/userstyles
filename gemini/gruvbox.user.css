@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         ✦ [Gemini] Gruvbox Dark
 @namespace    github.com/koresent/userstyles
-@version      2.0.0
+@version      2.0.1
 @description  Gruvbox Dark theme for Gemini
 @author       Koresent
 @license      GPL-3.0
@@ -68,6 +68,8 @@
         --lumi-sys-color-acc-color--accent: var(--gb-green) !important;
         --lumi-sys-color-acc-color--accent-container: var(--gb-bg2) !important;
         --lumi-sys-color-acc-color--accent-fixed: var(--gb-green-br) !important;
+
+        --lumi-sys-color--on-surface-variant: var(--gb-fg4) !important;
 
         /* Code Blocks */
         --lumi-sys-color--code-background: var(--gb-bg1) !important;
