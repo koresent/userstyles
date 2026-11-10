@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         ✦ [ChatGPT] Gruvbox Dark
 @namespace    github.com/koresent/userstyles
-@version      3.0.0
+@version      3.1.0
 @description  Gruvbox Dark theme for ChatGPT
 @author       Koresent
 @license      GPL-3.0
@@ -13,17 +13,25 @@
 @-moz-document domain("chatgpt.com") {
     :root,
     html,
+    body,
     .dark,
+    [data-theme],
     [data-oled],
     [data-chat-theme],
+    .chatgpt-theme,
     html.mini-root.dark {
         /* Gruvbox Dark Medium constants */
         --gruv-bg0: #282828;
         --gruv-bg0-h: #1d2021;
+        --gruv-bg0-s: #32302f;
         --gruv-bg1: #3c3836;
         --gruv-bg2: #504945;
+        --gruv-bg3: #665c54;
+        --gruv-bg4: #7c6f64;
         --gruv-fg0: #fbf1c7;
         --gruv-fg1: #ebdbb2;
+        --gruv-fg2: #d5c4a1;
+        --gruv-fg3: #bdae93;
         --gruv-fg4: #a89984;
 
         --gruv-red: #fb4934;
@@ -34,7 +42,76 @@
         --gruv-aqua: #8ec07c;
         --gruv-orange: #fe8019;
 
-        /* Interface variables */
+        /* Core surfaces & backgrounds */
+        --color-surface: var(--gruv-bg0) !important;
+        --color-surface-canvas: var(--gruv-bg0-h) !important;
+        --color-surface-card: var(--gruv-bg0) !important;
+        --color-surface-secondary: var(--gruv-bg0-h) !important;
+        --color-surface-tertiary: var(--gruv-bg1) !important;
+        --color-surface-elevated: var(--gruv-bg1) !important;
+        --color-surface-elevated-secondary: var(--gruv-bg0-h) !important;
+
+        --app-color-background-surface: var(--gruv-bg0) !important;
+        --app-color-background-surface-under: var(--gruv-bg0-h) !important;
+        --app-color-background-shell: var(--gruv-bg0) !important;
+        --app-color-background-elevated-primary: var(--gruv-bg1) !important;
+        --app-color-background-elevated-secondary: var(--gruv-bg0-h) !important;
+        --app-color-background-editor-opaque: var(--gruv-bg0-h) !important;
+
+        --color-background-primary: var(--gruv-bg0) !important;
+        --color-background-secondary: var(--gruv-bg0-h) !important;
+        --color-background-composer-surface: var(--gruv-bg0-h) !important;
+        --composer-layout-surface-background: var(--gruv-bg0-h) !important;
+
+        /* User & other message bubbles */
+        --color-background-user-message: var(--gruv-bg1) !important;
+        --color-background-user-message-compact: var(--gruv-bg1) !important;
+        --color-text-user-message: var(--gruv-fg1) !important;
+        --color-background-other-user-message: var(--gruv-bg1) !important;
+
+        /* Text & typography */
+        --color-text: var(--gruv-fg1) !important;
+        --color-text-prose: var(--gruv-fg1) !important;
+        --color-text-emphasis: var(--gruv-fg0) !important;
+        --color-text-secondary: var(--gruv-fg4) !important;
+        --color-text-tertiary: var(--gruv-fg4) !important;
+        --app-color-text-foreground: var(--gruv-fg1) !important;
+        --app-color-text-secondary: var(--gruv-fg4) !important;
+        --color-text-primary-solid: var(--gruv-bg0) !important;
+        --color-text-accent-solid: var(--gruv-bg0) !important;
+
+        /* Borders */
+        --color-border: var(--gruv-bg1) !important;
+        --color-border-subtle: var(--gruv-bg1) !important;
+        --color-border-strong: var(--gruv-bg2) !important;
+        --app-color-border: var(--gruv-bg1) !important;
+        --app-color-border-light: var(--gruv-bg1) !important;
+        --app-color-border-heavy: var(--gruv-bg2) !important;
+
+        /* Interactive & Buttons */
+        --color-accent: var(--gruv-green) !important;
+        --codex-theme-accent-color: var(--gruv-green) !important;
+        --codex-base-accent: var(--gruv-green) !important;
+        --color-background-accent-solid: var(--gruv-green) !important;
+        --color-background-accent-solid-hover: #98971a !important;
+        --color-background-primary-solid: var(--gruv-green) !important;
+        --color-background-primary-solid-hover: #98971a !important;
+        --color-text-on-accent: var(--gruv-bg0) !important;
+
+        --color-background-secondary-ghost-hover: var(--gruv-bg1) !important;
+        --color-background-secondary-ghost-active: var(--gruv-bg2) !important;
+        --color-background-primary-ghost-hover: var(--gruv-bg1) !important;
+        --color-background-primary-ghost-active: var(--gruv-bg2) !important;
+
+        /* Code & Syntax */
+        --codeblock-background-color: var(--gruv-bg0-h) !important;
+        --codeblock-syntax-1: var(--gruv-yellow) !important;
+        --codeblock-syntax-2: var(--gruv-blue) !important;
+        --codeblock-syntax-3: var(--gruv-green) !important;
+        --codeblock-syntax-4: var(--gruv-red) !important;
+        --codeblock-syntax-5: var(--gruv-purple) !important;
+
+        /* Legacy fallback variables */
         --bg-primary: var(--gruv-bg0) !important;
         --bg-secondary: var(--gruv-bg0) !important;
         --bg-tertiary: var(--gruv-bg1) !important;
@@ -42,27 +119,23 @@
         --main-surface-background: var(--gruv-bg0) !important;
         --main-surface-primary: var(--gruv-bg0) !important;
         --sidebar-surface-primary: var(--gruv-bg0) !important;
+        --sidebar-surface: var(--gruv-bg0) !important;
         --message-surface: var(--gruv-bg0-h) !important;
         --bg-elevated-primary: var(--gruv-bg1) !important;
         --bg-elevated-secondary: var(--gruv-bg0-h) !important;
-        --sidebar-surface: var(--gruv-bg0) !important;
-
-        /* Transparency */
-        --interactive-bg-secondary-default: transparent !important;
-        --interactive-bg-secondary-hover: rgba(60, 56, 54, 0.6) !important;
-        --interactive-bg-secondary-press: rgba(80, 73, 69, 0.8) !important;
-        --interactive-bg-secondary-inactive: transparent !important;
-        --interactive-bg-secondary-selected: rgba(60, 56, 54, 0.8) !important;
-
-        --interactive-bg-tertiary-default: transparent !important;
-        --interactive-bg-tertiary-hover: rgba(60, 56, 54, 0.5) !important;
-        --interactive-bg-tertiary-press: rgba(80, 73, 69, 0.7) !important;
-
-        --bg-token-bg-tertiary: transparent !important;
-        --main-surface-secondary-selected: rgba(60, 56, 54, 0.8) !important;
-        --surface-hover: rgba(60, 56, 54, 0.5) !important;
-
-        /* Reset OpenAI Tailwind palettes */
+        --composer-surface-primary: var(--gruv-bg0-h) !important;
+        --text-primary: var(--gruv-fg1) !important;
+        --text-secondary: var(--gruv-fg4) !important;
+        --text-tertiary: var(--gruv-fg4) !important;
+        --content-primary: var(--gruv-fg1) !important;
+        --content-secondary: var(--gruv-fg4) !important;
+        --icon-primary: var(--gruv-fg1) !important;
+        --icon-secondary: var(--gruv-fg4) !important;
+        --icon-tertiary: var(--gruv-fg4) !important;
+        --border-default: var(--gruv-bg1) !important;
+        --border-light: var(--gruv-bg1) !important;
+        --border-medium: var(--gruv-bg1) !important;
+        --border-heavy: var(--gruv-bg2) !important;
         --gray-25: var(--gruv-fg0) !important;
         --gray-50: var(--gruv-fg1) !important;
         --gray-100: var(--gruv-bg2) !important;
@@ -77,179 +150,166 @@
         --gray-950: var(--gruv-bg0-h) !important;
         --gray-1000: var(--gruv-bg0-h) !important;
         --black: var(--gruv-bg0-h) !important;
-
-        /* Text and icons */
-        --text-primary: var(--gruv-fg1) !important;
-        --text-secondary: var(--gruv-fg4) !important;
-        --text-tertiary: var(--gruv-fg4) !important;
-        --content-primary: var(--gruv-fg1) !important;
-        --content-secondary: var(--gruv-fg4) !important;
-        --icon-primary: var(--gruv-fg1) !important;
-        --icon-secondary: var(--gruv-fg4) !important;
-        --icon-tertiary: var(--gruv-fg4) !important;
-
-        /* Input field */
-        --composer-surface-primary: var(--gruv-bg0-h) !important;
-        --composer-blue-bg: var(--gruv-bg1) !important;
-        --composer-blue-hover: var(--gruv-bg2) !important;
-        --composer-blue-text: var(--gruv-blue) !important;
-
-        /* Borders */
-        --border-default: var(--gruv-bg1) !important;
-        --border-light: var(--gruv-bg1) !important;
-        --border-medium: var(--gruv-bg1) !important;
-        --border-heavy: var(--gruv-bg2) !important;
-        --border-sharp: transparent !important;
-
-        /* System buttons */
-        --interactive-bg-primary-default: var(--gruv-green) !important;
-        --interactive-bg-primary-hover: #a3a634 !important;
-        --interactive-label-primary-default: var(--gruv-bg0) !important;
-        --interactive-icon-primary-default: var(--gruv-bg0) !important;
+        --white: var(--gruv-fg0) !important;
     }
 
-    /* Top-level backgrounds */
-    html body,
-    header#page-header,
-    #stage-slideover-sidebar,
-    .stage-sidebar-pure-surface,
-    .bg-token-main-surface-primary,
-    div[class*="sidebar"],
-    .bg-token-bg-tertiary,
-    .bg-gray-solid-800,
-    .bg-gray-solid-700 {
-        background-color: var(--gruv-bg0) !important;
-    }
-
-    /* Background reset for header buttons, selectors, and profile via data-tags and IDs */
-    [data-testid="accounts-profile-button"],
-    [data-testid="model-switcher-dropdown-button"],
-    [data-testid="conversation-options-button"],
-    [data-testid="share-chat-button"],
-    [id^="radix-"],
-    nav[aria-label],
-    #stage-sidebar-tiny-bar,
-    .bg-transparent {
-        background-color: transparent !important;
-        border: none !important;
-        box-shadow: none !important;
-        outline: none !important;
-    }
-
-    /* Clean hover state for cleared buttons */
-    [data-testid="model-switcher-dropdown-button"]:hover,
-    [data-testid="conversation-options-button"]:hover,
-    [data-testid="share-chat-button"]:hover,
-    [data-testid="accounts-profile-button"]:hover,
-    [id^="radix-"] button:hover,
-    nav button:hover {
-        background-color: var(--gruv-bg1) !important;
-        border-radius: 8px !important;
-    }
-
-    /* Apply colors to text classes */
-    .text-token-text-primary,
-    .header-wordmark,
-    .truncate,
-    div[class*="truncate"] {
-        color: var(--gruv-fg1) !important;
-    }
-    .text-token-text-secondary,
-    .text-token-text-tertiary,
-    .font-normal,
-    [dir="auto"] {
-        color: var(--gruv-fg4) !important;
-    }
-
-    /* SVG icon fill */
-    svg,
-    .icon,
-    .icon-sm,
-    .icon-lg,
-    use {
-        color: var(--gruv-fg4) !important;
-        fill: currentColor !important;
-    }
-
-    /* Brightness for active selector and logo text */
-    .header-wordmark,
-    [data-testid="model-switcher-dropdown-button"] span {
-        color: var(--gruv-fg1) !important;
-    }
-
-    /* Input zone */
-    form[data-type="unified-composer"] div[data-composer-surface="true"] {
+    /* Core layout containers */
+    html,
+    body {
         background-color: var(--gruv-bg0-h) !important;
-        border: 1px solid var(--gruv-bg1) !important;
+        color: var(--gruv-fg1) !important;
     }
 
-    /* Message submit button */
+    main,
+    aside,
+    nav,
+    [id="app-shell-sidebar"],
+    .app-shell-left-panel,
+    .bg-surface,
+    header {
+        background-color: var(--gruv-bg0) !important;
+        color: var(--gruv-fg1) !important;
+    }
+
+    .bg-surface-secondary {
+        background-color: var(--gruv-bg0-h) !important;
+    }
+
+    /* Chat bubble styling */
+    .bg-user-message,
+    [class*="bubble"] {
+        background-color: var(--gruv-bg1) !important;
+        color: var(--gruv-fg1) !important;
+        border: 1px solid var(--gruv-bg2) !important;
+    }
+    .text-user-message,
+    .bg-user-message * {
+        color: var(--gruv-fg1) !important;
+    }
+
+    /* Sidebar navigation items and history */
+    aside a,
+    nav a,
+    .sidebar-item,
+    button.sidebar-item {
+        color: var(--gruv-fg1) !important;
+        border-left: none !important;
+    }
+    aside a:hover,
+    nav a:hover,
+    .sidebar-item:hover,
+    button.sidebar-item:hover,
+    [data-state="open"].sidebar-item {
+        background-color: var(--gruv-bg1) !important;
+    }
+
+    /* Single indicator at the left edge for active sidebar item */
+    aside [role="group"][aria-current="page"].sidebar-item,
+    aside .sidebar-item[aria-current="page"],
+    aside button.sidebar-item[aria-current="page"] {
+        background-color: var(--gruv-bg1) !important;
+        color: var(--gruv-fg0) !important;
+        border-left: 3px solid var(--gruv-green) !important;
+        border-radius: 0 8px 8px 0 !important;
+    }
+    aside .sidebar-item[aria-current="page"] a,
+    aside .sidebar-item[aria-current="page"] button {
+        border-left: none !important;
+    }
+
+    /* Composer wrappers reset */
+    form,
+    form[data-composer-placement],
+    div[class*="ComposerLayout"],
+    div[class*="LegacyExpandable"],
+    div[class*="ComposerModeSurface"],
+    div[data-above-composer-portal],
+    div[class*="floatingComposerInset"],
+    div[data-thread-scroll-footer="true"] {
+        background-color: transparent !important;
+        border-color: transparent !important;
+        box-shadow: none !important;
+    }
+
+    /* Composer surface pill */
+    form[data-composer-placement="home"] div[class*="ComposerLayoutBody"],
+    div[class*="ComposerLayoutRoot"][data-composer-radius-variant],
+    div[class*="ComposerLayoutRoot"][data-composer-layout="single-line"],
+    div[data-thread-find-composer="true"] div[class*="ComposerLayoutRoot"] {
+        background-color: var(--gruv-bg1) !important;
+        border: 1px solid var(--gruv-bg2) !important;
+        border-radius: 28px !important;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+    }
+    form[data-composer-placement="home"] div[class*="ComposerLayoutBody"]:focus-within,
+    div[class*="ComposerLayoutRoot"]:focus-within {
+        border-color: var(--gruv-green) !important;
+        box-shadow: 0 0 0 1px var(--gruv-green), 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+    }
+
+    /* Input text fields */
+    textarea,
+    #pending-home-input,
+    #prompt-textarea,
+    .ProseMirror {
+        color: var(--gruv-fg1) !important;
+        background-color: transparent !important;
+    }
+    textarea::placeholder,
+    .placeholder::before,
+    [data-placeholder]::before {
+        color: var(--gruv-fg4) !important;
+    }
+
+    /* Submit and action buttons */
+    button[aria-label*="Отправить"],
+    button[aria-label*="Send"],
+    [data-testid="send-button"],
     #composer-submit-button,
-    .composer-submit-btn,
-    [data-testid="send-button"] {
+    button.bg-composer-primary {
         background-color: var(--gruv-green) !important;
         color: var(--gruv-bg0) !important;
     }
+    button[aria-label*="Отправить"] svg,
+    button[aria-label*="Send"] svg,
+    [data-testid="send-button"] svg,
     #composer-submit-button svg,
-    [data-testid="send-button"] svg {
+    button.bg-composer-primary svg {
         fill: var(--gruv-bg0) !important;
         color: var(--gruv-bg0) !important;
     }
 
-    /* Radix dropdown containers */
+    /* Dropdowns, Dialogs, Menus & Tooltips */
     div[role="menu"],
     div[role="dialog"],
-    [popover="hint"] {
+    div[role="listbox"],
+    div[data-radix-popper-content-wrapper] > div,
+    [popover] {
         background-color: var(--gruv-bg0-h) !important;
         color: var(--gruv-fg1) !important;
         border: 1px solid var(--gruv-bg1) !important;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
     }
     [role="menuitem"]:hover,
-    .__menu-item:hover {
+    [role="option"]:hover,
+    [role="menuitem"][data-highlighted] {
         background-color: var(--gruv-bg1) !important;
         color: var(--gruv-fg0) !important;
     }
 
-    /* Layer border resets */
-    #stage-slideover-sidebar,
-    .border-e,
-    .border-t,
-    .border-token-border-extra-light,
-    div[class*="border-token"] {
-        border: none !important;
-        border-color: transparent !important;
-    }
-
-    /* Syntax highlighting for built-in CodeMirror */
-    [class*="ͼ"] {
+    /* Code blocks & syntax highlighting */
+    pre,
+    code,
+    pre code,
+    .cm-editor,
+    [class*="codeblock"] {
         background-color: var(--gruv-bg0-h) !important;
         color: var(--gruv-fg1) !important;
+        border-color: var(--gruv-bg1) !important;
     }
-    .ͼt {
-        color: var(--gruv-fg4) !important;
-    }
-    .ͼu,
-    .ͼ13,
-    .ͼ14 {
-        color: var(--gruv-blue) !important;
-    }
-    .ͼv,
-    .ͼ11 {
-        color: var(--gruv-purple) !important;
-    }
-    .ͼw,
-    .ͼ12 {
-        color: var(--gruv-yellow) !important;
-    }
-    .ͼx,
-    .ͼ15 {
-        color: var(--gruv-red) !important;
-    }
-    .ͼy,
-    .ͼ10 {
-        color: var(--gruv-orange) !important;
-    }
-    .ͼz {
-        color: var(--gruv-green) !important;
+
+    /* Scrollbars */
+    * {
+        scrollbar-color: var(--gruv-bg2) var(--gruv-bg0) !important;
     }
 }
