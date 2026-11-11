@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         ✦ [ChatGPT] Gruvbox Dark
 @namespace    github.com/koresent/userstyles
-@version      3.1.0
+@version      3.2.0
 @description  Gruvbox Dark theme for ChatGPT
 @author       Koresent
 @license      GPL-3.0
@@ -60,8 +60,9 @@
 
         --color-background-primary: var(--gruv-bg0) !important;
         --color-background-secondary: var(--gruv-bg0-h) !important;
-        --color-background-composer-surface: var(--gruv-bg0-h) !important;
-        --composer-layout-surface-background: var(--gruv-bg0-h) !important;
+        --color-background-composer-surface: var(--gruv-bg1) !important;
+        --composer-layout-surface-background: var(--gruv-bg1) !important;
+        --color-background-home-suggestion-hover: var(--gruv-bg1) !important;
 
         /* User & other message bubbles */
         --color-background-user-message: var(--gruv-bg1) !important;
@@ -77,8 +78,42 @@
         --color-text-tertiary: var(--gruv-fg4) !important;
         --app-color-text-foreground: var(--gruv-fg1) !important;
         --app-color-text-secondary: var(--gruv-fg4) !important;
+        --app-color-text-foreground-secondary: var(--gruv-fg4) !important;
+        --app-color-text-foreground-tertiary: var(--gruv-fg4) !important;
         --color-text-primary-solid: var(--gruv-bg0) !important;
         --color-text-accent-solid: var(--gruv-bg0) !important;
+        --color-codex-description: var(--gruv-fg4) !important;
+
+        /* Icons */
+        --color-codex-icon: var(--gruv-fg4) !important;
+        --color-codex-icon-active: var(--gruv-fg0) !important;
+        --codex-icon-active: var(--gruv-fg0) !important;
+        --app-color-icon-primary: var(--gruv-fg1) !important;
+        --app-color-icon-secondary: var(--gruv-fg4) !important;
+        --app-color-icon-tertiary: var(--gruv-fg4) !important;
+
+        /* Chromatic content & project colors */
+        --color-content-gray: var(--gruv-fg4) !important;
+        --color-content-slate: var(--gruv-blue) !important;
+        --color-content-purple: var(--gruv-purple) !important;
+        --color-content-magenta: var(--gruv-purple) !important;
+        --color-content-pink: #d3869b !important;
+        --color-content-blue: var(--gruv-blue) !important;
+        --color-content-cyan: var(--gruv-aqua) !important;
+        --color-content-green: var(--gruv-green) !important;
+        --color-content-lime: var(--gruv-green) !important;
+        --color-content-yellow: var(--gruv-yellow) !important;
+        --color-content-orange: var(--gruv-orange) !important;
+        --color-content-red: var(--gruv-red) !important;
+
+        --color-avatar-blue: var(--gruv-blue) !important;
+        --color-avatar-red: var(--gruv-red) !important;
+        --color-avatar-green: var(--gruv-green) !important;
+        --color-avatar-light-blue: var(--gruv-aqua) !important;
+        --color-avatar-yellow: var(--gruv-yellow) !important;
+        --color-avatar-gray: var(--gruv-bg3) !important;
+        --color-avatar-orange: var(--gruv-orange) !important;
+        --color-avatar-purple: var(--gruv-purple) !important;
 
         /* Borders */
         --color-border: var(--gruv-bg1) !important;
@@ -98,10 +133,33 @@
         --color-background-primary-solid-hover: #98971a !important;
         --color-text-on-accent: var(--gruv-bg0) !important;
 
+        --color-background-accent-soft-alpha: rgba(184, 187, 38, 0.15) !important;
+        --color-background-accent-soft-alpha-hover: rgba(184, 187, 38, 0.25) !important;
+        --color-text-accent-soft: var(--gruv-green) !important;
+
+        --color-text-header-upgrade: var(--gruv-yellow) !important;
+        --color-background-header-upgrade-hover: var(--gruv-bg1) !important;
+        --color-text-menu-upgrade: var(--gruv-yellow) !important;
+        --upgrade-promotion-foreground: var(--gruv-yellow) !important;
+
+        --color-text-button-outline: var(--gruv-fg1) !important;
+        --color-border-button-outline: var(--gruv-bg2) !important;
+        --color-background-button-outline-hover: var(--gruv-bg2) !important;
+
         --color-background-secondary-ghost-hover: var(--gruv-bg1) !important;
         --color-background-secondary-ghost-active: var(--gruv-bg2) !important;
         --color-background-primary-ghost-hover: var(--gruv-bg1) !important;
         --color-background-primary-ghost-active: var(--gruv-bg2) !important;
+
+        /* Deep Research & Document Viewers */
+        --agent-activity-summary-color: var(--gruv-fg1) !important;
+        --agent-activity-child-color: var(--gruv-fg4) !important;
+        --color-background-artifact-preview: var(--gruv-bg0) !important;
+        --color-artifact-powerpoint-surface: var(--gruv-bg0) !important;
+        --color-artifact-photo-paper: var(--gruv-bg0) !important;
+        --color-file-canvas: var(--gruv-blue) !important;
+        --preview-deck-tinted-paper: var(--gruv-bg1) !important;
+        --color-background-viewer-control: var(--gruv-bg1) !important;
 
         /* Code & Syntax */
         --codeblock-background-color: var(--gruv-bg0-h) !important;
@@ -216,6 +274,53 @@
     aside .sidebar-item[aria-current="page"] button {
         border-left: none !important;
     }
+    aside .sidebar-item[aria-current="page"] svg,
+    aside [aria-current="page"] .text-codex-icon-active,
+    aside .sidebar-item.bg-secondary-ghost-hover svg,
+    aside [data-state="open"].sidebar-item svg {
+        color: var(--gruv-fg0) !important;
+        fill: currentColor !important;
+    }
+    aside .sidebar-item svg,
+    aside .sidebar-item .text-codex-icon {
+        color: var(--gruv-fg4) !important;
+    }
+
+    /* Project icons */
+    aside [class*="text-content-green"],
+    [class*="text-content-green"] {
+        color: var(--gruv-green) !important;
+    }
+    aside [class*="text-content-blue"],
+    [class*="text-content-blue"] {
+        color: var(--gruv-blue) !important;
+    }
+    aside [class*="text-content-orange"],
+    [class*="text-content-orange"] {
+        color: var(--gruv-orange) !important;
+    }
+    aside [class*="text-content-purple"],
+    [class*="text-content-purple"] {
+        color: var(--gruv-purple) !important;
+    }
+    aside [class*="text-content-pink"],
+    aside [class*="text-content-magenta"],
+    [class*="text-content-pink"],
+    [class*="text-content-magenta"] {
+        color: #d3869b !important;
+    }
+    aside [class*="text-content-yellow"],
+    [class*="text-content-yellow"] {
+        color: var(--gruv-yellow) !important;
+    }
+    aside [class*="text-content-red"],
+    [class*="text-content-red"] {
+        color: var(--gruv-red) !important;
+    }
+    aside [class*="text-content-cyan"],
+    [class*="text-content-cyan"] {
+        color: var(--gruv-aqua) !important;
+    }
 
     /* Composer wrappers reset */
     form,
@@ -295,6 +400,180 @@
     [role="menuitem"][data-highlighted] {
         background-color: var(--gruv-bg1) !important;
         color: var(--gruv-fg0) !important;
+    }
+    .text-codex-description,
+    [class*="ComposerTopMenu"] [class*="description"],
+    [class*="ComposerTopMenu"] .text-codex-description,
+    [role="menu"] .text-codex-description,
+    [data-radix-popper-content-wrapper] .text-codex-description {
+        color: var(--gruv-fg4) !important;
+    }
+    [role="menuitem"]:hover .text-codex-description,
+    [role="menuitem"][data-highlighted] .text-codex-description,
+    [role="option"]:hover .text-codex-description {
+        color: var(--gruv-fg2) !important;
+    }
+
+    /* Upgrade & plan buttons */
+    button.text-text-header-upgrade,
+    a.text-text-header-upgrade,
+    [class*="text-text-header-upgrade"] {
+        color: var(--gruv-yellow) !important;
+    }
+    button.text-text-header-upgrade svg,
+    a.text-text-header-upgrade svg {
+        color: var(--gruv-yellow) !important;
+        fill: currentColor !important;
+    }
+    button.text-text-header-upgrade:hover,
+    a.text-text-header-upgrade:hover {
+        background-color: var(--gruv-bg1) !important;
+    }
+    button.border-button-outline,
+    button.text-button-outline,
+    aside button.border-button-outline {
+        background-color: var(--gruv-bg1) !important;
+        border: 1px solid var(--gruv-bg2) !important;
+        color: var(--gruv-fg1) !important;
+    }
+    button.border-button-outline:hover,
+    button.text-button-outline:hover,
+    aside button.border-button-outline:hover {
+        background-color: var(--gruv-bg2) !important;
+        color: var(--gruv-fg0) !important;
+    }
+
+    /* Reasoning mode toggle in composer */
+    div[class*="bg-(--composer-layout-surface-background)"],
+    div[class*="ComposerLayoutRoot"] div[class*="rounded-full"][class*="bg-"] {
+        background-color: var(--gruv-bg1) !important;
+    }
+    button[aria-pressed="true"],
+    button.accentSubtle-jm2vVC,
+    [class*="accentSubtle"] {
+        background-color: rgba(184, 187, 38, 0.15) !important;
+        color: var(--gruv-green) !important;
+    }
+    button[aria-pressed="true"] svg,
+    button.accentSubtle-jm2vVC svg,
+    [class*="accentSubtle"] svg {
+        color: var(--gruv-green) !important;
+    }
+    button[aria-pressed="true"]:hover,
+    button.accentSubtle-jm2vVC:hover,
+    [class*="accentSubtle"]:hover {
+        background-color: rgba(184, 187, 38, 0.25) !important;
+        color: var(--gruv-fg0) !important;
+    }
+    button[aria-pressed="true"]:hover svg,
+    button.accentSubtle-jm2vVC:hover svg,
+    [class*="accentSubtle"]:hover svg {
+        color: var(--gruv-fg0) !important;
+    }
+
+    /* Suggestion chips, prompt starters & tool icons */
+    [class*="suggestion"] svg,
+    [data-testid*="suggestion"] svg,
+    .suggestionMenu-EeXWU_ svg,
+    [class*="prompt-starter"] svg {
+        color: var(--gruv-fg4) !important;
+    }
+    [class*="suggestion"]:hover svg,
+    .suggestionMenu-EeXWU_:hover svg {
+        color: var(--gruv-fg1) !important;
+    }
+
+    /* Footer disclaimers */
+    [data-home-onboarding-region="disclaimer"],
+    div[class*="text-codex-description"][class*="text-center"],
+    .composer-disclaimer,
+    [class*="disclaimer"] {
+        color: var(--gruv-fg4) !important;
+    }
+
+    /* Deep research, agent activity & document preview cards */
+    button[aria-expanded] span,
+    .group\/activity-header,
+    .group\/activity-section,
+    [data-spacing="grouped"]/agent-activity,
+    [class*="activity-header"],
+    [class*="activity-section"] {
+        color: var(--gruv-fg1) !important;
+    }
+    .group\/activity-header svg,
+    .group\/activity-section svg,
+    button[aria-expanded] svg {
+        color: var(--gruv-fg4) !important;
+    }
+
+    [data-document-preview-frame],
+    [class*="WithActions"],
+    [class*="attachment-detail-report"],
+    .artifact-preview-deck,
+    [class*="DocumentPreview"] {
+        background-color: var(--gruv-bg0) !important;
+        border: 1px solid var(--gruv-bg2) !important;
+        border-radius: 12px !important;
+        color: var(--gruv-fg1) !important;
+    }
+    [class*="WithActions"] [data-document-preview-frame] ~ [class*="Actions-"] {
+        border-bottom: 1px solid var(--gruv-bg1) !important;
+    }
+    [data-document-preview-frame] svg,
+    [class*="WithActions"] svg,
+    [class*="attachment-detail"] svg {
+        color: var(--gruv-fg2) !important;
+    }
+    [data-document-preview-frame] .bg-blue-600,
+    [data-document-preview-frame] [class*="bg-"][class*="blue"],
+    [class*="WithActions"] [class*="bg-"][class*="blue"],
+    [data-document-preview-frame] .text-file-canvas {
+        background-color: var(--gruv-blue) !important;
+        color: var(--gruv-bg0) !important;
+    }
+
+    /* Expanded research viewer, canvas & document typography */
+    [class*="PageDocument"],
+    [class*="PageContent"],
+    [data-page-document-canvas],
+    [class*="canvasSurface"],
+    .Viewer-ALA646,
+    .ViewerContent-Cg8AgN,
+    .Scrollport-kY3Nlm,
+    [data-page-reading-column] {
+        background-color: var(--gruv-bg0) !important;
+        color: var(--gruv-fg1) !important;
+    }
+    [class*="header-"][data-viewer-placement],
+    [class*="viewer-header"],
+    .viewer-header-scroll-mask {
+        background-color: var(--gruv-bg0-s) !important;
+        border-bottom: 1px solid var(--gruv-bg1) !important;
+        color: var(--gruv-fg1) !important;
+    }
+
+    /* Research & document tables */
+    [class*="PageDocument"] table,
+    [data-document-preview-frame] table,
+    [data-page-document-canvas] table {
+        border-color: var(--gruv-bg2) !important;
+    }
+    [class*="PageDocument"] :is(th, td),
+    [data-document-preview-frame] :is(th, td),
+    [data-page-document-canvas] :is(th, td) {
+        border-color: var(--gruv-bg2) !important;
+        color: var(--gruv-fg1) !important;
+    }
+    [class*="PageDocument"] th,
+    [data-document-preview-frame] th,
+    [data-page-document-canvas] th {
+        background-color: var(--gruv-bg1) !important;
+        color: var(--gruv-fg0) !important;
+    }
+    [class*="PageDocument"] tr:hover td,
+    [data-document-preview-frame] tr:hover td,
+    [data-page-document-canvas] tr:hover td {
+        background-color: var(--gruv-bg0-s) !important;
     }
 
     /* Code blocks & syntax highlighting */
