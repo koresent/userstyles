@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         ✦ [Google Search] Gruvbox Dark
 @namespace    github.com/koresent/userstyles
-@version      1.2.2
+@version      1.2.3
 @description  Gruvbox Dark theme for Google Search
 @author       Koresent
 @license      GPL-3.0
@@ -492,6 +492,50 @@
         box-shadow: 0 8px 24px rgba(29, 32, 33, 0.75) !important;
     }
 
+    [role="dialog"] h1,
+    [role="dialog"] h2,
+    [role="dialog"] h3,
+    [role="dialog"] [role="heading"],
+    [role="dialog"] .ktjOx,
+    [role="dialog"] .kWTy2b,
+    [role="dialog"] .kWTy2b *,
+    #lQ3q8c,
+    .kWTy2b,
+    .kWTy2b *,
+    .Az7nhe,
+    .B5wtDf,
+    .K7Usvd,
+    .K7Usvd * {
+        color: #fbf1c7 !important;
+    }
+
+    .qPht6c,
+    .KaXEge,
+    .UzD4Gd,
+    .KaXEge div,
+    .KaXEge span:not(.BBwThe) {
+        color: #ebdbb2 !important;
+    }
+
+    .sTZCE,
+    .POTWCf {
+        border-color: #504945 !important;
+    }
+
+    .ZWOrEc,
+    .ZWOrEc svg,
+    .ZWOrEc svg path {
+        color: #a89984 !important;
+        fill: #a89984 !important;
+    }
+
+    .ZWOrEc:hover,
+    .ZWOrEc:hover svg,
+    .ZWOrEc:hover svg path {
+        color: #fbf1c7 !important;
+        fill: #fbf1c7 !important;
+    }
+
     [role="dialog"] label,
     [role="dialog"] .PNy5Ef,
     .PNy5Ef {
@@ -647,21 +691,57 @@
     }
 
     /* AI Button in Search Box */
+    .plR5qb {
+        color: #ebdbb2 !important;
+    }
+
+    .plR5qb .lTxWLe {
+        color: #ebdbb2 !important;
+    }
+
+    .plR5qb .PD3zdc,
+    .plR5qb svg,
+    .plR5qb path {
+        color: #ebdbb2 !important;
+        fill: #ebdbb2 !important;
+    }
+
     .plR5qb .bvUkz,
     .plR5qb:not(.Sw4CSc) .bvUkz,
     .plR5qb:not(.VzUPFe) .bvUkz,
     .plR5qb .u4Uk3c {
         background: #3c3836 !important;
+        border: 1px solid #504945 !important;
         border-radius: 100px !important;
     }
 
     .plR5qb:hover .bvUkz {
         background: #504945 !important;
+        border-color: #665c54 !important;
+    }
+
+    /* Active AI Mode Button */
+    .plR5qb.VzUPFe .lTxWLe,
+    .plR5qb.VzUPFe .PD3zdc,
+    .plR5qb.VzUPFe svg,
+    .plR5qb.VzUPFe path {
+        color: #8ec07c !important;
+        fill: #8ec07c !important;
+    }
+
+    .plR5qb.VzUPFe .bvUkz {
+        background: #504945 !important;
+        border: 1px solid #665c54 !important;
+    }
+
+    .plR5qb.VzUPFe:hover .bvUkz {
+        background: #665c54 !important;
     }
 
     .plR5qb .tgPjse,
     .plR5qb .CcxW7b {
-        opacity: 0.3 !important;
+        opacity: 0 !important;
+        display: none !important;
     }
 
     /* Autocomplete Dropdown Menu */
@@ -823,21 +903,16 @@
         border-color: #b8bb26 !important;
     }
 
-    /* AI Overview Card Container */
-    .hdzaWe {
-        background: #3c3836 !important;
-        border: 1px solid #504945 !important;
-        border-radius: 24px !important;
-        padding: 20px 24px !important;
-        box-sizing: border-box !important;
-    }
-
+    /* AI Overview Containers - Clean, borderless layout matching stock Google */
+    .hdzaWe,
+    .EyBRub,
     .EyBRub.jUja0e,
-    .EyBRub {
+    .FkX2oe {
         background: transparent !important;
         border: none !important;
         border-radius: 0 !important;
         box-shadow: none !important;
+        padding: 0 !important;
     }
 
     /* AI Overview Fog Overlay */
@@ -853,41 +928,118 @@
         -webkit-mask: none !important;
     }
 
-    /* AI Overview Text & Elements */
+    /* AI Overview Header Gemini Logo */
+    .ux3nGb svg,
+    .ux3nGb svg path,
+    .zF5l1e,
+    .zF5l1e path,
+    .CKgc1d svg,
+    .CKgc1d svg path {
+        fill: #8ec07c !important;
+        color: #8ec07c !important;
+    }
+
+    /* AI Overview Header Text */
+    .WJFise,
+    .ux3nGb strong {
+        color: #fbf1c7 !important;
+        font-weight: 600 !important;
+    }
+
+    /* AI Overview Section Headings & Bold Text */
+    .ZLzG0d,
+    .ZLzG0d *,
+    .MheKwc,
+    .uP58nb,
+    .hdzaWe h1,
+    .hdzaWe h2,
+    .hdzaWe h3,
+    .hdzaWe strong,
+    .hdzaWe b,
+    .pWvJNd strong,
+    .pWvJNd b {
+        color: #fbf1c7 !important;
+        font-weight: 600 !important;
+    }
+
+    /* AI Overview Body Text */
     .hdzaWe,
-    .hdzaWe *:not(a):not(button):not(svg):not(path),
     .qRuFed,
     .CKgc1d,
-    .ux3nGb,
+    .pWvJNd,
+    .pWvJNd p,
+    .pWvJNd div,
+    .pWvJNd span,
+    .pWvJNd li,
     .SGF5Lb,
     .X5IHHb,
     .ud4r5d,
-    .bzXtMb,
-    [data-hveid] .qRuFed {
+    .bzXtMb {
         color: #ebdbb2 !important;
     }
 
-    .WJFise,
-    .MheKwc,
-    .ZLzG0d,
-    .uP58nb,
-    .hdzaWe strong,
-    .hdzaWe b {
-        color: #fbf1c7 !important;
-    }
-
+    /* AI Overview Links */
     .hdzaWe a,
     .qRuFed a,
     .CKgc1d a,
-    .X5IHHb a {
+    .pWvJNd a,
+    .X5IHHb a,
+    a.gQWhZ,
+    a.PMDqCb {
         color: #83a598 !important;
     }
 
     .hdzaWe a:hover,
     .qRuFed a:hover,
     .CKgc1d a:hover,
-    .X5IHHb a:hover {
+    .pWvJNd a:hover,
+    .X5IHHb a:hover,
+    a.gQWhZ:hover,
+    a.PMDqCb:hover {
         color: #b8bb26 !important;
+    }
+
+    /* AI Overview Citation Badges */
+    .vDOt8c,
+    button.vDOt8c {
+        background: #3c3836 !important;
+        border: 1px solid #504945 !important;
+        color: #ebdbb2 !important;
+        border-radius: 100px !important;
+    }
+
+    .vDOt8c:hover,
+    button.vDOt8c:hover {
+        background: #504945 !important;
+        color: #fbf1c7 !important;
+        border-color: #665c54 !important;
+    }
+
+    /* AI Overview Action Buttons (copy, share, feedback) */
+    .bKxaof,
+    .eGAasd,
+    .cEme7d {
+        background: #3c3836 !important;
+        border: 1px solid #504945 !important;
+        color: #a89984 !important;
+        border-radius: 50% !important;
+    }
+
+    .bKxaof:hover,
+    .eGAasd:hover,
+    .cEme7d:hover {
+        background: #504945 !important;
+        color: #fbf1c7 !important;
+        border-color: #665c54 !important;
+    }
+
+    .bKxaof svg,
+    .eGAasd svg,
+    .cEme7d svg,
+    .bKxaof path,
+    .eGAasd path,
+    .cEme7d path {
+        fill: currentColor !important;
     }
 
     /* AI Mode Highlighted Citations */
@@ -900,64 +1052,75 @@
         color: #fbf1c7 !important;
     }
 
-    /* AI Overview Sources Card */
-    .ofHStc {
-        background: #282828 !important;
-        border: 1px solid #504945 !important;
-        color: #ebdbb2 !important;
-        border-radius: 12px !important;
+    /* RHS Sources Panel - Align to top so it hugs content height instead of stretching */
+    .FkX2oe {
+        align-items: flex-start !important;
     }
 
+    .FkX2oe > div:has(.ofHStc),
+    .ofHStc,
     .oRipZb,
-    .IQTBxd,
-    .eFSEae,
-    .lE72Gc,
-    .lDiRL,
-    .HPRIw {
+    .IQTBxd {
+        align-self: flex-start !important;
+        height: auto !important;
         background: transparent !important;
         border: none !important;
-        border-radius: 0 !important;
-        color: #ebdbb2 !important;
+        box-shadow: none !important;
+        padding: 0 !important;
     }
 
-    .N4Jf1d,
-    .FkX2oe {
-        background: #3c3836 !important;
+    /* AI Overview Sources Card */
+    .eFSEae {
+        background: #282828 !important;
         border: 1px solid #504945 !important;
+        border-radius: 24px !important;
         color: #ebdbb2 !important;
-        border-radius: 12px !important;
+        box-shadow: 0 4px 12px rgba(29, 32, 33, 0.4) !important;
     }
 
-    .N4Jf1d:hover,
-    .FkX2oe:hover {
-        background: #504945 !important;
-        color: #fbf1c7 !important;
+    .lE72Gc {
+        background: #282828 !important;
+        border-radius: 24px !important;
     }
 
-    .ofHStc .EsfOKc,
-    .ofHStc .EsfOKc * {
+    .eFSEae .EsfOKc,
+    .eFSEae .EsfOKc * {
         color: #8ec07c !important;
     }
 
-    .ofHStc .gpZmoc,
-    .ofHStc .gpZmoc * {
-        color: #83a598 !important;
+    .eFSEae .gpZmoc,
+    .eFSEae .gpZmoc * {
+        color: #ebdbb2 !important;
     }
 
-    .ofHStc a:hover .gpZmoc,
-    .ofHStc a:hover .gpZmoc * {
+    .eFSEae a:hover .gpZmoc,
+    .eFSEae a:hover .gpZmoc * {
         color: #b8bb26 !important;
     }
 
-    .ofHStc .hxIQcc,
-    .ofHStc .hxIQcc * {
+    .eFSEae .hxIQcc,
+    .eFSEae .hxIQcc * {
         color: #a89984 !important;
+    }
+
+    .N4Jf1d {
+        background: #3c3836 !important;
+        border: 1px solid #504945 !important;
+        color: #ebdbb2 !important;
+        border-radius: 100px !important;
+    }
+
+    .N4Jf1d:hover {
+        background: #504945 !important;
+        color: #fbf1c7 !important;
+        border-color: #665c54 !important;
     }
 
     /* AI Question Input Box & Buttons */
     .d4HWzd::before {
         background: #3c3836 !important;
         border: 1px solid #504945 !important;
+        border-radius: 24px !important;
         box-shadow: 0 4px 16px rgba(29, 32, 33, 0.65) !important;
     }
 
@@ -971,7 +1134,10 @@
     .TXv1xf,
     .Z3UdVc,
     .ITIRGe::placeholder,
-    .e3RQ5d::placeholder {
+    .e3RQ5d::placeholder,
+    .gLFyf::placeholder,
+    textarea.gLFyf::placeholder,
+    input.gLFyf::placeholder {
         color: #a89984 !important;
     }
 
@@ -1038,16 +1204,42 @@
         color: #fbf1c7 !important;
     }
 
-    .uMMzHc,
-    .uMMzHc.sKprld {
-        background: #b8bb26 !important;
-        color: #282828 !important;
+    /* AI Input Action Buttons */
+    .uMMzHc {
+        background: #3c3836 !important;
+        color: #ebdbb2 !important;
+        border: 1px solid #504945 !important;
     }
 
-    button.uMMzHc svg,
-    button.uMMzHc svg path,
     .uMMzHc svg,
     .uMMzHc svg path {
+        fill: #ebdbb2 !important;
+        color: #ebdbb2 !important;
+    }
+
+    .uMMzHc:hover {
+        background: #504945 !important;
+        color: #fbf1c7 !important;
+        border-color: #665c54 !important;
+    }
+
+    .uMMzHc:hover svg,
+    .uMMzHc:hover svg path {
+        fill: #fbf1c7 !important;
+        color: #fbf1c7 !important;
+    }
+
+    .uMMzHc.sKprld,
+    .uMMzHc.u7hiGb {
+        background: #b8bb26 !important;
+        color: #282828 !important;
+        border: 1px solid #98971a !important;
+    }
+
+    .uMMzHc.sKprld svg,
+    .uMMzHc.sKprld svg path,
+    .uMMzHc.u7hiGb svg,
+    .uMMzHc.u7hiGb svg path {
         fill: #282828 !important;
         color: #282828 !important;
     }
