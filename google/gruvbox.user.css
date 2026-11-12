@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         ✦ [Google Search] Gruvbox Dark
 @namespace    github.com/koresent/userstyles
-@version      1.2.3
+@version      1.2.4
 @description  Gruvbox Dark theme for Google Search
 @author       Koresent
 @license      GPL-3.0
@@ -691,8 +691,13 @@
     }
 
     /* AI Button in Search Box */
-    .plR5qb {
+    .plR5qb,
+    .plR5qb .u4Uk3c {
         color: #ebdbb2 !important;
+        background: transparent !important;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
     }
 
     .plR5qb .lTxWLe {
@@ -708,8 +713,7 @@
 
     .plR5qb .bvUkz,
     .plR5qb:not(.Sw4CSc) .bvUkz,
-    .plR5qb:not(.VzUPFe) .bvUkz,
-    .plR5qb .u4Uk3c {
+    .plR5qb:not(.VzUPFe) .bvUkz {
         background: #3c3836 !important;
         border: 1px solid #504945 !important;
         border-radius: 100px !important;
@@ -721,6 +725,13 @@
     }
 
     /* Active AI Mode Button */
+    .plR5qb.VzUPFe,
+    .plR5qb.VzUPFe .u4Uk3c {
+        background: transparent !important;
+        border: none !important;
+        outline: none !important;
+    }
+
     .plR5qb.VzUPFe .lTxWLe,
     .plR5qb.VzUPFe .PD3zdc,
     .plR5qb.VzUPFe svg,
@@ -896,7 +907,6 @@
     }
 
     .cMkUmd[aria-pressed="true"],
-    [aria-pressed="true"].plR5qb,
     [aria-pressed="true"].DBqRk {
         background: #b8bb26 !important;
         color: #282828 !important;
